@@ -1,0 +1,736 @@
+.jqx-rc-tl-blueprint{
+   border-top-left-radius: 6px;
+   moz-border-radius-topleft: 6px;
+   webkit-border-top-left-radius: 6px;
+}
+
+.jqx-rc-tr-blueprint{
+   border-top-right-radius: 6px;
+   moz-border-radius-topright: 6px;
+   webkit-border-top-right-radius: 6px;
+}
+
+.jqx-rc-bl-blueprint{
+   border-bottom-left-radius: 6px;
+   moz-border-radius-bottomleft: 6px;
+   webkit-border-bottom-left-radius: 6px;
+}
+
+.jqx-rc-br-blueprint{
+   border-bottom-right-radius: 6px;
+   moz-border-radius-bottomright: 6px;
+   webkit-border-bottom-right-radius: 6px;
+}
+
+.jqx-rc-t-blueprint{
+   border-top-left-radius: 6px;
+   border-top-right-radius: 6px;
+   moz-border-radius-topleft: 6px;
+   moz-border-radius-topright: 6px;
+   webkit-border-top-left-radius: 6px;
+   webkit-border-top-right-radius: 6px;
+}
+
+.jqx-rc-b-blueprint{
+   border-bottom-left-radius: 6px;
+   border-bottom-right-radius: 6px;
+   moz-border-radius-bottomleft: 6px;
+   moz-border-radius-bottomright: 6px;
+   webkit-border-bottom-left-radius: 6px;
+   webkit-border-bottom-right-radius: 6px;
+}
+
+.jqx-rc-r-blueprint{
+   border-bottom-right-radius: 6px;
+   border-top-right-radius: 6px;
+   moz-border-radius-bottomright: 6px;
+   moz-border-radius-topright: 6px;
+   webkit-border-bottom-right-radius: 6px;
+   webkit-border-top-right-radius: 6px;
+}
+
+.jqx-rc-l-blueprint{
+   border-bottom-left-radius: 6px;
+   border-top-left-radius: 6px;
+   moz-border-radius-bottomleft: 6px;
+   moz-border-radius-topleft: 6px;
+   webkit-border-bottom-left-radius: 6px;
+   webkit-border-top-left-radius: 6px;
+}
+
+.jqx-rc-all-blueprint{
+   border-radius: 6px;
+   moz-border-radius: 6px;
+   webkit-border-radius: 6px;
+}
+
+.jqx-widget-blueprint{
+   color: inherit;
+}
+
+.jqx-grid-column-sortdescbutton-blueprint{
+   position: relative;
+   max-height: 16px;
+   height: 16px !important;
+   top: 50%;
+   margin-top: -8px;
+   background-position: 0 -16px;
+   background-image: url('images/blueprint/ui-icons_ffffff_256x240.png');
+}
+
+.jqx-grid-column-sortascbutton-blueprint{
+   position: relative;
+   max-height: 16px;
+   height: 16px !important;
+   top: 50%;
+   margin-top: -8px;
+   background-position: -65px -16px;
+   background-image: url('images/blueprint/ui-icons_ffffff_256x240.png');
+}
+
+.jqx-grid-column-menubutton-blueprint{
+   position: relative;
+   max-height: 16px;
+   height: 16px !important;
+   top: 50%;
+   margin-top: -8px;
+   background-position: -65px -16px;
+   background-image: url('images/blueprint/ui-icons_ffffff_256x240.png');
+   border-width: 0px;
+}
+
+.jqx-grid-blueprint .jqx-widget-header-blueprint{
+   border-width: 0px !important;
+}
+
+.jqx-tree-item-arrow-expand-blueprint,
+.jqx-tree-item-arrow-expand-hover-blueprint{
+   background-position: -65px -16px;
+   background-image: url('images/blueprint/ui-icons_222222_256x240.png');
+}
+
+.jqx-tree-item-arrow-collapse-blueprint,
+.jqx-tree-item-arrow-collapse-hover-blueprint{
+   background-position: -32px -16px;
+   background-image: url('images/blueprint/ui-icons_222222_256x240.png');
+}
+
+.jqx-menu-item-arrow-right-blueprint,
+.jqx-menu-item-arrow-right-selected-blueprint{
+   background-position: -32px -16px;
+   background-image: url('images/blueprint/ui-icons_222222_256x240.png');
+}
+
+.jqx-menu-item-arrow-left-blueprint,
+.jqx-menu-item-arrow-left-selected-blueprint{
+   background-position: -96px -16px;
+   background-image: url('images/blueprint/ui-icons_222222_256x240.png');
+}
+
+.jqx-progressbar-blueprint .jqx-fill-state-pressed-blueprint{
+   background: #626262;
+   border-width: 0px;
+   border-right: 1px solid #626262;
+   color: #fff;
+   font-weight: bold;
+}
+
+.jqx-progressbar-value-vertical-blueprint{
+   border-width: 0px !important;
+   border-bottom: 1px solid #626262 !important;
+}
+
+.jqx-tabs-title-blueprint{
+   border: 1px solid #666;
+   background: #555 url('images/blueprint/ui-bg_glass_20_555555_1x400.png') 50% 50% repeat-x;
+   color: #fff;
+   font-weight: bold;
+}
+
+.jqx-tabs-header-blueprint{
+   margin: 2px;
+   border-radius: 6px;
+   moz-border-radius: 6px;
+   webkit-border-radius: 6px;
+}
+
+.jqx-tabs-header-bottom-blueprint{
+   margin-top: -2px !important;
+   padding-top: 2px;
+}
+
+.jqx-tabs-content-blueprint{
+   border-width: 0px !important;
+}
+
+.jqx-radiobutton-blueprint .jqx-fill-state-pressed-blueprint{
+   background: #ec8e0c;
+   border: 1px solid #fed22f;
+}
+
+.jqx-calendar-cell-blueprint{
+   background: #333333 url('images/blueprint/ui-bg_gloss-wave_25_333333_500x100.png') 50% 50% repeat-x;
+   border: 1px solid #333;
+   color: #fff;
+   padding: .2em;
+   text-align: right;
+   text-decoration: none;
+   moz-border-radius: 0px !important;
+   webkit-border-radius: 0px !important;
+   border-radius: 0px !important;
+}
+
+.jqx-calendar-cell-today-blueprint{
+   background: #ffe45c url( 'images/blueprint/ui-bg_highlight-soft_75_ffe45c_1x100.png' ) 50% top repeat-x;
+   border: 1px solid #fed22f;
+   color: #363636;
+}
+
+.jqx-calendar-title-container-blueprint{
+   border-radius: 6px;
+   moz-border-radius: 6px;
+   webkit-border-radius: 6px;
+}
+
+.jqx-calendar-month-container-blueprint{
+   border: none !important;
+}
+
+.jqx-calendar-blueprint{
+   padding: 2px;
+}
+
+.jqx-calendar-blueprint .jqx-icon-arrow-left-blueprint{
+   background-image: url('images/blueprint/ui-icons_ffffff_256x240.png');
+   background-position: -80px -192px;
+   width: 16px;
+   height: 16px;
+   left: 5px;
+   position: relative;
+}
+
+.jqx-calendar-blueprint .jqx-icon-arrow-right-blueprint{
+   background-image: url('images/blueprint/ui-icons_ffffff_256x240.png');
+   background-position: -48px -192px;
+   width: 16px;
+   height: 16px;
+   right: 5px;
+   position: relative;
+}
+
+.jqx-calendar-blueprint .jqx-icon-arrow-left-hover-blueprint{
+   background-image: url('images/blueprint/ui-icons_cccccc_256x240.png');
+   background-position: -80px -192px;
+}
+
+.jqx-calendar-blueprint .jqx-icon-arrow-right-hover-blueprint{
+   background-image: url('images/blueprint/ui-icons_cccccc_256x240.png');
+   background-position: -48px -192px;
+}
+
+.jqx-navigationbar-blueprint{
+   overflow: auto;
+}
+
+.jqx-grid-column-header-blueprint{
+   border-width: 0px !important;
+}
+
+.jqx-icon-arrow-up-blueprint,
+.jqx-menu-item-arrow-up-blueprint,
+.jqx-menu-item-arrow-up-blueprint,
+.jqx-menu-item-arrow-top-up-blueprint,
+.jqx-icon-arrow-up-blueprint,
+.jqx-icon-arrow-up-hover-blueprint,
+.jqx-icon-arrow-up-selected-blueprint{
+   background-position: 0 -16px;
+   background-image: url('images/blueprint/ui-icons_cccccc_256x240.png');
+}
+
+.jqx-icon-arrow-down-blueprint,
+.jqx-tree-item-arrow-expand-blueprint,
+.jqx-tree-item-arrow-expand-hover-blueprint,
+.jqx-menu-item-arrow-down-blueprint,
+.jqx-menu-item-arrow-down-blueprint,
+.jqx-menu-item-arrow-down-blueprint{
+   background-position: -65px -16px;
+   background-image: url('images/blueprint/ui-icons_cccccc_256x240.png');
+}
+
+.jqx-icon-arrow-left-blueprint,
+.jqx-tabs-arrow-left-blueprint,
+.jqx-menu-item-arrow-left-blueprint,
+.jqx-menu-item-arrow-top-left{
+   background-position: -96px -17px;
+   background-image: url('images/blueprint/ui-icons_cccccc_256x240.png');
+}
+
+.jqx-icon-arrow-right-blueprint,
+.jqx-tree-item-arrow-collapse-blueprint,
+.jqx-tree-item-arrow-collapse-hover-blueprint,
+.jqx-tabs-arrow-right-blueprint,
+.jqx-menu-item-arrow-right-blueprint,
+.jqx-menu-item-arrow-top-right-blueprint{
+   background-position: -32px -17px;
+   background-image: url('images/blueprint/ui-icons_cccccc_256x240.png');
+}
+
+.jqx-icon-arrow-up-hover-blueprint{
+   background-position: 0 -16px;
+   background-image: url('images/blueprint/ui-icons_cccccc_256x240.png');
+}
+
+.jqx-icon-arrow-down-hover-blueprint{
+   background-position: -65px -16px;
+   background-image: url('images/blueprint/ui-icons_cccccc_256x240.png');
+}
+
+.jqx-icon-arrow-left-selected-blueprint{
+   background-position: -96px -17px;
+   background-image: url('images/blueprint/ui-icons_cccccc_256x240.png');
+}
+
+.jqx-icon-arrow-right-selected-blueprint{
+   background-position: -32px -17px;
+   background-image: url('images/blueprint/ui-icons_cccccc_256x240.png');
+}
+
+.jqx-icon-arrow-up-selected-blueprint{
+   background-position: 0 -16px;
+   background-image: url('images/blueprint/ui-icons_cccccc_256x240.png');
+}
+
+.jqx-icon-arrow-down-selected-blueprint{
+   background-position: -65px -16px;
+   background-image: url('images/blueprint/ui-icons_cccccc_256x240.png');
+}
+
+.jqx-icon-arrow-left-selected-blueprint,
+.jqx-tree-item-arrow-collapse-rtl-blueprint,
+.jqx-tree-item-arrow-collapse-hover-rtl-blueprint{
+   background-position: -96px -17px;
+   background-image: url('images/blueprint/ui-icons_cccccc_256x240.png');
+}
+
+.jqx-icon-arrow-right-selected-blueprint{
+   background-position: -32px -17px;
+   background-image: url('images/blueprint/ui-icons_cccccc_256x240.png');
+}
+
+.jqx-icon-close-blueprint{
+   background-image: url('images/blueprint/ui-icons_cccccc_256x240.png');
+   background-position: -80px -128px;
+   cursor: pointer;
+}
+
+.jqx-icon-close-hover-blueprint{
+   background-image: url('images/blueprint/ui-icons_cccccc_256x240.png');
+   background-position: -80px -128px;
+   cursor: pointer;
+}
+
+.jqx-window-blueprint{
+   padding: 2px;
+}
+
+.jqx-window-header-blueprint{
+   moz-border-radius: 6px;
+   border-radius: 6px;
+   webkit-border-radius: 6px;
+}
+
+.jqx-window-content-blueprint{
+   border-width: 0px !important;
+}
+
+.jqx-window-close-button-blueprint{
+   background-position: -96px -128px;
+   background-image: url('images/blueprint/ui-icons_ffffff_256x240.png');
+   moz-border-radius: 6px;
+   border-radius: 6px;
+   webkit-border-radius: 6px;
+}
+
+.jqx-window-collapse-button-blueprint{
+   background-position: 0 -16px;
+   background-image: url('images/blueprint/ui-icons_ffffff_256x240.png');
+}
+
+.jqx-window-collapse-button-hover-blueprint{
+   background-image: url('images/blueprint/ui-icons_cccccc_256x240.png');
+   background-color: #fff;
+   border-radius: 6px;
+   moz-border-radius: 6px;
+   webkit-border-radius: 6px;
+}
+
+.jqx-window-collapse-button-collapsed-blueprint,
+.jqx-window-collapse-button-collapsed-hover-blueprint{
+   background-position: -65px -16px;
+}
+
+.jqx-window-modal-blueprint{
+}
+
+.jqx-window-close-button-hover-blueprint{
+   background-color: #fff;
+   background-position: -96px -128px;
+   background-image: url('images/blueprint/ui-icons_cccccc_256x240.png');
+   cursor: pointer;
+   width: 16px;
+   height: 16px;
+}
+
+.jqx-grid-cell-blueprint,
+.jqx-grid-group-cell-blueprint{
+   background: #000;
+   color: #fff;
+}
+
+.jqx-widget-blueprint{
+   line-height: 17px;
+   font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+   font-size: 12px;
+   font-style: normal;
+}
+
+.jqx-widget-content-blueprint{
+   font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+   background: #000000 url('images/blueprint/ui-bg_inset-soft_25_000000_1x100.png') 50% bottom repeat-x;
+   border-color: #666666;
+   color: #fff;
+   font-size: 12px;
+}
+
+.jqx-widget-content-blueprint a{
+   color: #fff;
+}
+
+.jqx-widget-header-blueprint{
+   font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+   background: #333333 url('images/blueprint/ui-bg_gloss-wave_25_333333_500x100.png') 50% 50% repeat-x;
+   border-color: #333;
+   color: #fff;
+   font-size: 12px;
+}
+
+.jqx-widget-header-blueprint a{
+   color: #fff;
+}
+
+.jqx-fill-state-normal-blueprint{
+   border-color: #666666;
+   background: #555555 url('images/blueprint/ui-bg_glass_20_555555_1x400.png') 50% 50% repeat-x;
+   color: #eeeeee;
+}
+
+.jqx-fill-state-normal-blueprint a,
+.jqx-fill-state-normal-blueprint a: link,
+.jqx-fill-state-normal-blueprint a: visited{
+   color: #eeeeee;
+   text-decoration: none;
+}
+
+.jqx-fill-state-hover-blueprint{
+   border-color: #59b4d4;
+   background: #0078a3 url('images/blueprint/ui-bg_glass_40_0078a3_1x400.png') 50% 50% repeat-x;
+   color: #ffffff;
+}
+
+.jqx-fill-state-hover-blueprint a,
+.jqx-fill-state-hover-blueprint a: hover{
+   color: #fff;
+   text-decoration: none;
+}
+
+.jqx-fill-state-pressed-blueprint{
+   border-color: #ffaf0f;
+   background: #f58400 url('images/blueprint/ui-bg_inset-soft_30_f58400_1x100.png') 50% 50% repeat-x;
+   color: #ffffff;
+}
+
+.jqx-fill-state-pressed-blueprint a,
+.jqx-fill-state-pressed-blueprint a: link,
+.jqx-fill-state-pressed-blueprint a: visited{
+   color: #ffffff;
+   text-decoration: none;
+}
+
+.jqx-fill-state-disabled-blueprint{
+   cursor: default;
+   color: #fff;
+   opacity: .55;
+   filter: Alpha(Opacity=45);
+}
+
+.jqx-input-button-content-blueprint{
+   font-size: 10px;
+}
+
+.jqx-input-icon-blueprint{
+   margin-left: 2px;
+   margin-top: -1px;
+}
+
+.jqx-checkbox-check-checked-blueprint{
+   margin-top: 0px;
+   background-position: -65px -147px;
+   background-image: url('images/blueprint/ui-icons_cccccc_256x240.png');
+}
+
+.jqx-grid-cell-sort-blueprint,
+.jqx-grid-cell-filter-blueprint,
+.jqx-grid-cell-pinned-blueprint{
+   background-color: #626262;
+}
+
+.jqx-grid-cell-alt-blueprint,
+.jqx-grid-cell-sort-alt-blueprint,
+.jqx-grid-cell-filter-alt-blueprint{
+   background-color: #626262;
+}
+
+.jqx-splitter-collapse-button-horizontal-blueprint,
+.jqx-splitter-collapse-button-vertical-blueprint{
+   background: #ec8e0c;
+   border: 1px solid #fdd02e;
+}
+
+.jqx-dropdownlist-content-blueprint{
+   color: #fff;
+}
+
+.jqx-input-blueprint,
+.jqx-input-content-blueprint,
+.jqx-combobox-content-blueprint,
+.jqx-combobox-input-blueprint{
+   background: #fff;
+   color: #333;
+}
+
+.jqx-input-blueprint{
+   overflow: hidden;
+}
+
+.jqx-input-button-header-blueprint{
+   background: #f58400;
+}
+
+.jqx-grid-bottomright-blueprint,
+.jqx-panel-bottomright-blueprint,
+.jqx-listbox-bottomright-blueprint,
+.jqx-scrollbar-state-normal-blueprint{
+   background: #000000;
+}
+
+.jqx-grid-group-expand-blueprint{
+   background-position: 50% 50%;
+   background-repeat: no-repeat;
+   background-image: url('images/icon-down-white.png');
+}
+
+.jqx-grid-group-collapse-blueprint{
+   background-position: 50% 50%;
+   background-repeat: no-repeat;
+   background-image: url('images/icon-right-white.png');
+}
+
+.jqx-scrollbar-thumb-state-normal-blueprint,
+.jqx-scrollbar-thumb-state-normal-horizontal-blueprint{
+   background: #626262;
+}
+
+.jqx-scrollbar-thumb-state-hover-blueprint,
+.jqx-scrollbar-thumb-state-hover-horizontal-blueprint{
+   background: #0078a3;
+}
+
+.jqx-scrollbar-thumb-state-pressed-blueprint,
+.jqx-scrollbar-thumb-state-pressed-horizontal-blueprint{
+   background: #f58400;
+}
+
+.jqx-expander-header-blueprint{
+   border-color: #666;
+   color: #fff;
+   font-weight: bold;
+   border-radius: 6px !important;
+   moz-border-radius: 6px !important;
+   webkit-border-radius: 6px !important;
+}
+
+.jqx-expander-header-hover-blueprint{
+   border-color:  #59b4d4;
+   color: #fff;
+   font-weight: bold;
+}
+
+.jqx-expander-header-expanded-blueprint{
+   border-color:  #ffaf0f;
+   color: #fff;
+   font-weight: bold;
+   border-top-left-radius: 6px !important;
+   border-top-right-radius: 6px !important;
+   moz-border-radius-topleft: 6px !important;
+   moz-border-radius-topright: 6px !important;
+   webkit-border-top-left-radius: 6px !important;
+   webkit-border-top-right-radius: 6px !important;
+   border-bottom-left-radius: 0px !important;
+   border-bottom-right-radius: 0px !important;
+   moz-border-radius-bottomleft: 0px !important;
+   moz-border-radius-bottomright: 0px !important;
+   webkit-border-bottom-left-radius: 0px !important;
+   webkit-border-bottom-right-radius: 0px !important;
+}
+
+.jqx-expander-content-bottom-blueprint{
+   border-bottom-left-radius: 6px !important;
+   border-bottom-right-radius: 6px !important;
+   moz-border-radius-bottomleft: 6px !important;
+   moz-border-radius-bottomright: 6px !important;
+   webkit-border-bottom-left-radius: 6px !important;
+   webkit-border-bottom-right-radius: 6px !important;
+}
+
+.jqx-expander-arrow-top-blueprint{
+   background-position: -65px -16px;
+   background-image: url('images/blueprint/ui-icons_222222_256x240.png');
+}
+
+.jqx-expander-arrow-bottom-blueprint{
+   background-position: 0 -16px;
+   background-image: url('images/blueprint/ui-icons_222222_256x240.png');
+}
+
+.jqx-tabs-selection-tracker-top-blueprint{
+   background: #f69727;
+   border-bottom: 1px solid transparent;
+}
+
+.jqx-tabs-selection-tracker-bottom-blueprint{
+   background-image: #f69727;
+   border-top: 1px solid transparent;
+}
+
+.jqx-scrollbar-blueprint .jqx-icon-arrow-up-blueprint{
+   width: 16px;
+   height: 16px;
+   margin-left: auto;
+}
+
+.jqx-scrollbar-blueprint .jqx-icon-arrow-down-blueprint{
+   width: 16px;
+   height: 16px;
+   margin-left: auto;
+}
+
+.jqx-scrollbar-blueprint .jqx-icon-arrow-left-blueprint{
+   width: 16px;
+   height: 16px;
+   position: relative;
+   top: 50%;
+   margin-top: -8px;
+}
+
+.jqx-scrollbar-blueprint .jqx-icon-arrow-right-blueprint{
+   width: 16px;
+   height: 16px;
+   position: relative;
+   top: 50%;
+   margin-top: -8px;
+}
+
+.jqx-icon-arrow-first-blueprint{
+   background-image: url('images/icon-first-white.png');
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.jqx-icon-arrow-last-blueprint{
+   background-image: url('images/icon-last-white.png');
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.jqx-grid-cell-blueprint > .jqx-grid-group-expand-blueprint{
+   background-image: url('images/icon-down-white.png');
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.jqx-grid-cell-blueprint > .jqx-grid-group-collapse-blueprint{
+   background-image: url('images/icon-right-white.png');
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.jqx-grid-cell-blueprint > .jqx-grid-group-collapse-rtl-blueprint{
+   background-image: url('images/icon-left-white.png');
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.jqx-grid-cell-blueprint > .jqx-grid-group-expand-rtl-blueprint{
+   background-image: url('images/icon-down-white.png');
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.jqx-icon-search-blueprint{
+   background-image: url('images/search_white.png');
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.jqx-icon-calendar-blueprint,
+.jqx-icon-calendar-hover-blueprint,
+.jqx-icon-calendar-pressed-blueprint{
+   background-image: url('images/icon-calendar-white.png');
+}
+
+.jqx-icon-time-blueprint,
+.jqx-icon-time-hover-blueprint,
+.jqx-icon-time-pressed-blueprint{
+   background-image: url('images/icon-time-white.png');
+}
+
+.jqx-menu-minimized-button-blueprint{
+   background-image: url('images/icon-menu-minimized-white.png');
+}
+
+.jqx-editor-toolbar-icon-blueprint{
+   background: url('images/html_editor_white.png') no-repeat;
+}
+
+.jqx-layout-blueprint{
+   background-color: #333;
+}
+
+.jqx-layout-pseudo-window-pin-icon-blueprint{
+   background-image: url('images/pin-white.png');
+}
+
+.jqx-layout-pseudo-window-pinned-icon-blueprint{
+   background-image: url('images/pinned-white.png');
+}
+
+.jqx-scheduler-month-cell-blueprint,
+.jqx-scheduler-time-column-blueprint,
+.jqx-scheduler-toolbar-blueprint{
+   background: #333 !important;
+   color: #fff !important;
+}
+
+.jqx-widget-blueprint .jqx-scheduler-middle-cell-blueprint,
+.jqx-scheduler-middle-cell-blueprint{
+   border-bottom-color: #333 !important;
+}
+
+.jqx-docking-layout-group-floating-blueprint .jqx-window-header-blueprint{
+   background-image: none;
+}
+
+.jqx-kanban-item-blueprint{
+   box-shadow: none;
+}
+

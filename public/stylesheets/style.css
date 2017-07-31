@@ -1,0 +1,220 @@
+html{
+  padding: 0px;
+  margin: 0px;
+  font-family: Calibri;
+  font-size: 14px;
+}
+body{
+  background-color: #000000;
+  margin: 5px 5px 5px 5px;
+
+}
+li {
+  list-style-type: none;
+}
+header{
+  height: 150px;
+  width: auto;
+
+}
+.HideOnStart{
+  display: none;
+}
+header #head{
+  clear:both;
+  position: relative;
+  top:10px;
+}
+h1{
+  color: White;
+}
+header h1{
+  width: 320px;
+  line-height: 100%;
+  font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  float:left;
+  color: royalblue;
+  margin-left: 5px;
+}
+header #version{
+  position: relative;
+  top: 0px; left: 45px;
+  font-size: 12px;
+  color: mediumspringgreen;
+
+}
+header #DashboardLogo{
+  float:left;
+
+}
+header #Logo{
+  float: right;
+  margin-right: 5px;
+}
+header #bldgButtons{
+  float: left;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding-left: 30px;
+  width: 464px;
+  height: 30px;
+  clear:both;
+  display: table;
+  overflow: hidden;
+  visibility: visible;
+
+}
+header #GridBtns{
+  width: 100%;
+  height: 30px;
+
+}
+header #small_images{
+  margin-top: 0px;
+  float: right;
+  display:inline-block;
+  margin-right: 5px;
+
+}
+#small_images img:hover{
+  opacity: .5;
+}
+
+.button{
+  width: 80px;
+  height: 30px;
+  padding: 6px 12px 2px;
+  margin-right: 3px;
+  font-size: 12px;
+  color: White;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #3e3e42;
+}
+
+.button:hover {
+  background-color: #535357;
+}
+
+
+ .active {
+  background-color: #1ca8dd;
+}
+
+
+main{
+  height: 830px;
+  color: White;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar:horizontal{
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: White;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: White;
+}
+ .data{
+   height: 500px;
+   width: 100%;
+   margin-top: 10px;
+   margin-left: 10px;
+   margin-right: 10px;
+ }
+
+ .barChart{
+   margin-left: 230px;
+   color: white;
+ }
+
+#SearchContent{
+  margin-top: 15px;
+  margin-left: 50px;
+}
+
+#YearDropDown{
+  margin-bottom: 10px;
+}
+
+#SearchSelect{
+  margin-left: 40px;
+}
+
+/* Start of tabs */
+
+/* Style the tab */
+div.tab {
+  overflow: hidden;
+  background-color: #3e3e42;
+  border-radius: 10px;
+  width: 100%;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+  border-radius: 10px;
+  color: White;
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+  background-color: #535357;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+  background-color: #1ca8dd;
+}
+
+/* Style the tab content */
+.tabcontent {
+  width: 98.7%;
+  border-radius: 10px;
+  /*display: none; */
+  padding: 6px 12px;
+  background: #252830;
+  border-top: none;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+/* End of tab */

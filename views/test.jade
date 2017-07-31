@@ -1,0 +1,245 @@
+doctype html
+html
+    head
+        title= test
+        //Fav Icon
+        link(rel='shortcut icon', href='/images/scrapdblogo.png')
+        //Css
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet' href='/stylesheets/styles/jqx.base.css' )
+        //JS
+        script(type='text/javascript' src='/javascripts/jquery-1.11.1.min.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxcore.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxchart.core.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxdata.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxdragdrop.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxgrid.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxgrid.aggregates.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxgrid.columnsresize.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxgrid.export.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxgrid.filter.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxgrid.grouping.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxgrid.pager.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxgrid.columnsresize.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxgrid.columnsreorder.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxgrid.edit.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxgrid.selection.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxgrid.sort.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxinput.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxmenu.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxknob.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxlistbox.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxscrollbar.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxbuttons.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxnotification.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxradiobutton.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxchart.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxdraw.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxlistbox.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxdropdownlist.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxwindow.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxpanel.js')
+        script(type='text/javascript' src='/javascripts/jquery-ui.js')
+
+
+body(class='default' onload='WhenBodyLoad()')
+        h1= test
+        main
+            div
+                div
+                    div(id='plant1TubeChart' style='height: 500px; width: 1880px;')
+                    div()
+                        select(id='SelectYear')
+                            option(value='2017')= '2017'
+                            option(value='2016')= '2016'
+                            option(value='2015')= '2015'
+                        button(id='Test')= 'Button'
+                    div(id='TestGrid')= 'Test'
+
+
+    script.
+        //var tubes = !{Tubes};
+        var dataN;
+        var Year;
+        var Plant = 'All'
+        var gridData;
+        var DateForGrid;
+        var gridTheme = "dark";
+        var gridWidth = 1880;
+        var gridHeight = 825;
+
+        //PlantOneTubeDetails();
+        Year = $('#SelectYear').val();
+        Rerun(Year);
+        GridRerun(Year);
+
+        $('#Test').click(function () {
+            Year = $('#SelectYear').val();
+            Rerun(Year);
+            GridRerun(Year);
+        });
+
+        console.log(Year)
+        console.log("Test Page Called");
+
+        function Rerun(Year) {
+
+            $.ajax({
+                type: 'GET',
+                url: '/plantOneFetch/' + Year + '/Tubes',
+                async: false,
+                dataType: 'json',
+                success: function (data) {
+                    dataN = data
+                    //console.log(dataN);
+                },
+                error: function (xhr, status, errorThrown) {
+                    console.log(xhr);
+                    console.log(status);
+                    console.log(errorThrown);
+                }
+            });
+
+            /* data adapter settings */
+            var dataAdapter = new $.jqx.dataAdapter({
+                localdata: dataN,
+                datafields: [
+                    {name: "Date", type: "string"},
+                    {name: "EndingBalance", type: "number"}
+                ]
+            });
+
+            /* chart settings */
+            var chartSettings = {
+                source: dataAdapter,
+                title: "My Chart Title",
+                description: "My Chart Description",
+                padding: {
+                    left: 5,
+                    top: 5,
+                    right: 5,
+                    bottom: 5
+                },
+                titlePadding: {
+                    left: 5,
+                    top: 5,
+                    right: 5,
+                    bottom: 5
+                },
+                enableAnimations: false,
+                colorScheme: "scheme05",
+                enableCrosshairs: true,
+                enableAxisTextAnimation: true,
+                xAxis: {
+                    dataField: "Date",
+                    type: "date",
+                    baseUnit: "month",
+                    valuesOnTicks: false
+                },
+                valueAxis: {
+                    valuesOnTicks: true
+                },
+                seriesGroups: [
+                    {
+                        type: "column",
+                        click: onChartClick,
+                        series: [
+                            {
+                                dataField: "EndingBalance"
+                            }
+                        ]
+                    }
+                ]
+            }
+
+            /* create chart in the container element */
+            $('#plant1TubeChart').jqxChart(chartSettings);
+
+
+        }
+
+        function onChartClick(e) {
+            console.log("chart clicked");
+            var currProj = $('.jqx-chart-tooltip-text').text();
+            //console.log(currProj);
+            var pos = currProj.indexOf("Ending Balance:");
+            //console.log(pos);
+            currProj = currProj.substring(6, pos);
+            console.log(currProj);
+            DateForGrid = currProj;
+        }
+
+
+
+        function GridRerun(Year) {
+
+
+            $.ajax({
+                type: 'GET',
+                url: '/plantAllGridFetch/' + Year,
+                async: false,
+                dataType: 'json',
+                success: function (data) {
+                    gridData = data
+                    //console.log(dataN);
+                },
+                error: function (xhr, status, errorThrown) {
+                    console.log(xhr);
+                    console.log(status);
+                    console.log(errorThrown);
+                }
+            });
+
+            //Start of Grid
+            var plant1AllDataSource = [
+                {name: 'ReasonCodeDesc', type: 'string'},
+                {name: 'Item', type: 'string'},
+                {name: 'Description', type: 'string'},
+                {name: 'WorkOrder', type: 'string'},
+                {name: 'Date', type: 'string'},
+                {name: 'TransactionDate', type: 'string'},
+                {name: 'Quantity', type: 'string'},
+                {name: 'FirstName', type: 'string'},
+                {name: 'Total', type: 'string'}
+            ];
+            var plant1AllColumns = [
+                {text: 'Reason Code Description', datafield: 'ReasonCodeDesc'},
+                {text: 'Item', datafield: 'Item'},
+                {text: 'Description', datafield: 'Description'},
+                {text: 'Work Order', datafield: 'WorkOrder'},
+                {text: 'Date', datafield: 'TransactionDate'},
+                {text: 'Quantity', datafield: 'Quantity'},
+                {text: 'First Name', datafield: 'FirstName'},
+                {text: 'Total', datafield: 'Total'}
+            ];
+
+            var plant1AllSource = {
+                datatype: "json",
+                datafields: plant1AllDataSource,
+                localdata: gridData,
+                async: false,
+                pager: function (pagenum, pagesize, oldpagenum) {
+                    // callback called when a page or page size is changed.
+                }
+            };
+            var plantOneAllDataAdapter = new $.jqx.dataAdapter(plant1AllSource);
+
+            $("#TestGrid").jqxGrid(
+                {
+                    width: gridWidth,
+                    autoHeight: true,
+                    source: plantOneAllDataAdapter,
+                    theme: gridTheme,
+                    editable: false,
+                    columns: plant1AllColumns,
+                    pageable: true,
+                    pagermode: 'simple',
+                    pageSize: 20
+                });
+            // End of Grid
+
+        }
+
+
+
+        function WhenBodyLoad() {}

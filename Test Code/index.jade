@@ -1,0 +1,309 @@
+extends extenders/layout
+
+block content
+    //Start of Header
+    header(class='Info')
+        div(id='head')
+            div(id='pageTitle')
+                h1= title
+                    br
+                    span(id='version')='0.1 Alpha'
+                img(id='DashboardLogo' alt='Dashboard Logo' height='70px' width='70px' src='images/scrapdblogo.png')
+
+            div(id='Logo')
+                img(id='tfiLofo' alt='TfiLogo' src='images/tfi_logo_256.png')
+
+        div(id='bldgButtons')
+            button(id='AllPlantButton' class='button')= 'All Plants'
+            button(id='plant1Button'   class='button')= 'Plant 1'
+            button(id='plant2Button'   class='button')= 'Plant 2'
+            button(id='hqButton'       class='button')= 'Plant 3'
+
+        div(id='small_images')
+            img(src='images/note64x64.png' onclick='findReportNoteWindow()' height='32' width='32')
+            img(src='images/zoom64x64.png' id='searchButton' height='32' width='32')
+            img(src='images/help64x64.png' onclick='helpWindow()' height='32' width='32')
+    //End of Header
+
+    //Start of Windows
+    div(id='Search' class='modal')
+        div(id='SearchContent' class='modal-content')
+            div(class='modal-header')
+                span(class='close')='X'
+                h2= 'Header'
+        div(class='modal-body')
+            p= 'body text'
+            select
+        div(class='modal-footer')
+            input(class='Info' id='SearchSelect' type='button' value='Select')
+    //End of Windows
+
+    //Start of Main
+    main
+        //Start of plant all
+        div(class='Info' id='plantAll')
+            div(class='tab')
+                button(class='tablinks' onclick='openTab(event, "AllPlantDetails")')= 'All'
+            div(id='AllPlantDetails' class='tabcontent')
+                div(id='AllPlantChart' class='data')= 'All Plant Chart'
+                div(id='AllPlantCircleChart' class='data')= 'All Plant Circle Chart'
+                div(id='AllPlantGrid' class='data')= 'All Plant Grid'
+        //End of plant all
+
+        //Start of plant one
+        div(class='Info' id='plant1')
+            div(class='tab')
+                button(class='tablinks' onclick='openTab(event, "plantOneAllDetails")')= 'All Plant'
+                button(class='tablinks' onclick='openTab(event, "plantOneDuctDetails")')= 'Ducts /Bin Seal'
+                button(class='tablinks' onclick='openTab(event, "plantOneTubeDetails")')= 'Tubes'
+                button(class='tablinks' onclick='openTab(event, "plantOneCoversDetails")')= 'Cover'
+                button(class='tablinks' onclick='openTab(event, "plantOneAssemblyDetails")')= 'Assembly'
+                button(class='tablinks' onclick='openTab(event, "plantOneOtherDetails")')= 'Other'
+
+            div(id='plantOneAllDetails' class='tabcontent')
+                div(id='plant1AllChart' class='data')= 'All Plant 1'
+                div(id='plant1AllCircleChart' class='data')= 'Circle Chart'
+                div(id='plant1AllGrid' class='data')
+
+            div(id='plantOneDuctDetails' class='tabcontent')
+                div(id='plant1DuctChart' class='data')= 'Ducts Chart'
+                div(id='plant1DuctCircleChart' class='data')= 'Circle Chart'
+                div(id='plant1DuctGrid' class='data')= 'Ducts Grid'
+
+            div(id='plantOneTubeDetails' class='tabcontent')
+                div(id='plant1TubeChart' class='data')
+                div(id='plant1TubeCircleChart' class='data')= 'Circle Chart'
+                div(id='plant1TubeGrid' class='data')= 'Tubes Grid'
+
+            div(id='plantOneCoversDetails' class='tabcontent')
+                div(id='plant1CoversChart' class='data')= 'Covers Chart'
+                div(id='plant1CoversCircleChart' class='data')= 'Circle Chart'
+                div(id='plant1CoversGrid' class='data')= 'Covers Grid'
+
+            div(id='plantOneAssemblyDetails' class='tabcontent')
+                div(id='plant1AssemblyChart' class='data')= 'Assembly Chart'
+                div(id='plant1AssemblyCircleChart' class='data')= 'Circle Chart'
+                div(id='plant1AssemblyGrid' class='data')= 'Assembly Grid'
+
+            div(id='plantOneOtherDetails' class='tabcontent')
+                div(id='plant1OtherChart' class='data')= 'Other Chart'
+                div(id='plant1OtherCircleChart' class='data')= 'Circle Chart'
+                div(id='plant1OtherGrid' class='data')= 'Other Grid'
+         //End plant one
+
+        //Start of plant two
+        div(class='Info' id='plant2')
+            div(class='tab')
+                button(class='tablinks' onclick='openTab(event, "plantTwoAllDetails")')= 'All Plant 2'
+                button(class='tablinks' onclick='openTab(event, "plantTwoPlenDetails")')= 'Plenums'
+                button(class='tablinks' onclick='openTab(event, "plantTwo2FCDetails")')= 'Flex Hose / Caps'
+                button(class='tablinks' onclick='openTab(event, "plantTwoDownDetails")')= 'Downers'
+
+            div(id='plantTwoAllDetails' class='tabcontent')
+                div(id='plant2AllChart' class='data')= 'All Plant 2'
+                div(id='plant2AllCircleChart' class='data')= 'Circle Chart'
+                div(id='plant2AllGrid' class='data')
+
+            div(id='plantTwoPlenDetails' class='tabcontent')
+                div(id='plant2PlenChart' class='data')= 'Plenums'
+                div(id='plant2PlenCircleChart' class='data')= 'Circle Chart'
+                div(id='plant2PlenGrid' class='data')
+
+            div(id='plantTwo2FCDetails' class='tabcontent')
+                div(id='plant2FCChart' class='data')= 'Flex Hose / Caps'
+                div(id='plant2FCCircleChart' class='data')= 'Circle Chart'
+                div(id='plant2FCGrid' class='data')= 'Grid'
+
+            div(id='plantTwoDownDetails' class='tabcontent')
+                div(id='plant2DownChart' class='data')= 'Downers'
+                div(id='plant2DownCircleChart' class='data')= 'Circle Chart'
+                div(id='plant2DownGrid' class='data')= 'Grid'
+
+        //End of plant two
+
+        //Start of plant three
+        div(class='Info' id='plant3')
+            div(class='tab')
+                button(class='tablinks' onclick='openTab(event, "plantThreeAllDetails")')= 'All HQ'
+                button(class='tablinks' onclick='openTab(event, "plantThreeP8Details")')= 'P8'
+                button(class='tablinks' onclick='openTab(event, "plantThreePrimaryDetails")')= 'Primary Ops'
+                button(class='tablinks' onclick='openTab(event, "plantThreeSleevesDetails")')= 'Sleeves'
+                button(class='tablinks' onclick='openTab(event, "plantThree737WDetails")')= '737 Windows'
+                button(class='tablinks' onclick='openTab(event, "plantThree787WDetails")')= '787 Windows'
+                button(class='tablinks' onclick='openTab(event, "plantThreeBSIDetails")')= 'BSI Windows'
+                button(class='tablinks' onclick='openTab(event, "plantThreeAllWindowsDetails")')= 'All Windows'
+
+            div(id='plantThreeAllDetails' class='tabcontent')
+                div(id='plant3AllChart' class='data')= 'All Plant 3'
+                div(id='plant3AllCircleChart' class='data')= 'Circle Chart'
+                div(id='plant3AllGrid' class='data')= 'Grid'
+
+            div(id='plantThreeP8Details' class='tabcontent')
+                div(id='plant3P8Chart' class='data')= 'P8'
+                div(id='plant3P8CircleChart' class='data')= 'Circle Chart'
+                div(id='plant3P8Grid' class='data')= 'Grid'
+
+            div(id='plantThreePrimaryDetails' class='tabcontent')
+                div(id='plant3PrimaryChart' class='data')= 'Primary Ops'
+                div(id='plant3PrimaryCircleChart' class='data')= 'Circle Chart'
+                div(id='plant3PrimaryGrid' class='data')= 'Grid'
+
+            div(id='plantThreeSleevesDetails' class='tabcontent')
+                div(id='plant3SleevesChart' class='data')= 'Sleeves'
+                div(id='plant3SleevesCircleChart' class='data')= 'Circle Chart'
+                div(id='plant3SleevesGrid' class='data')= 'Grid'
+
+            div(id='plantThree737WDetails' class='tabcontent')
+                div(id='plant3737WChart' class='data')= '737 Windows'
+                div(id='plant3737WCircleChart' class='data')= 'Circle Chart'
+                div(id='plant3737WGrid' class='data')= 'Grid'
+
+            div(id='plantThree787WDetails' class='tabcontent')
+                div(id='plant3787WChart' class='data')= '787 Windows'
+                div(id='plant3787WCircleChart' class='data')= 'Circle Chart'
+                div(id='plant3787WGrid' class='data')= 'Grid'
+
+            div(id='plantThreeBSIDetails' class='tabcontent')
+                div(id='plant3BSIChart' class='data')= 'BSI Windows'
+                div(id='plant3BSICircleChart' class='data')= 'Circle Chart'
+                div(id='plant3BSIGrid' class='data')= 'Grid'
+
+            div(id='plantThreeAllWindowsDetails' class='tabcontent')
+                div(id='plant3AllWindowsChart' class='data' )= 'All Windows'
+                div(id='plant3AllWindowsCircleChart' class='data')= 'Circle Chart'
+                div(id='plant3AllWindowsGrid' class='data')= 'Grid'
+        //End of plant three
+
+    //End of Main
+
+    include ./JSCalls
+    script(type='text/javascript').
+        //var tubes = !{Tubes};
+        //PlantOneTubeDetails();
+
+        //console.log("Plant 1 Tube method Called");
+        /* input data */
+        var data = [
+            {Date: '2016-12-01', EndingBalance: '4704.610000000001'},
+            {Date: '2016-01-01', EndingBalance: '2496.88'},
+            {Date: '2016-02-01', EndingBalance: '7202.1'},
+            {Date: '2016-03-01', EndingBalance: '11442.67'},
+            {Date: '2016-04-01', EndingBalance: '7738.64'},
+            {Date: '2016-05-01', EndingBalance: '17761.25'},
+            {Date: '2016-06-01', EndingBalance: '6200.86'},
+            {Date: '2016-07-01', EndingBalance: '8918.85'},
+            {Date: '2016-08-01', EndingBalance: '7267.12'},
+            {Date: '2016-09-01', EndingBalance: '3760.94'},
+            {Date: '2016-10-01', EndingBalance: '3030.08'},
+            {Date: '2016-11-01', EndingBalance: '2099.29'},
+            {Date: '2017-12-01', EndingBalance: '1797.35'},
+            {Date: '2017-01-01', EndingBalance: '2686.56'},
+            {Date: '2017-02-01', EndingBalance: '5632.47'},
+            {Date: '2017-03-01', EndingBalance: '1166.18'},
+            {Date: '2017-04-01', EndingBalance: '2578.59'},
+            {Date: '2017-05-01', EndingBalance: '862.7'},
+            {Date: '2017-06-01', EndingBalance: '1236.98'},
+            {Date: '2017-07-01', EndingBalance: '712.96'}];
+
+        /* data adapter settings */
+        var dataAdapter = new $.jqx.dataAdapter({
+            localdata: data,
+            datafields: [
+                {name: "Date", type: "string"},
+                {name: "EndingBalance", type: "number"}
+            ]
+        });
+
+        /* chart settings */
+        var chartSettings = {
+            source: dataAdapter,
+            title: "My Chart Title",
+            description: "My Chart Description",
+            padding: {
+                left: 5,
+                top: 5,
+                right: 5,
+                bottom: 5
+            },
+            titlePadding: {
+                left: 5,
+                top: 5,
+                right: 5,
+                bottom: 5
+            },
+            enableAnimations: false,
+            xAxis: {
+                dataField: "Date",
+                type: "date",
+                baseUnit: "month",
+                valuesOnTicks: false
+            },
+            valueAxis: {
+                valuesOnTicks: true
+            },
+            seriesGroups: [
+                {
+                    type: "column",
+                    series: [
+                        {
+                            dataField: "EndingBalance"
+                        }
+                    ]
+                }
+            ]
+        }
+
+        /* create chart in the container element */
+        $('#plant1TubeChart').jqxChart(chartSettings);
+
+
+        // Get the modal
+        var modal = document.getElementById('Search');
+
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        function WhenBodyLoad() {
+            HideTabs();
+            $('#plantAll').show();
+            $('#AllPlantDetails').show();
+        }
+
+        function openTab(evt, Tab) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(Tab).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        
+        function Search() {
+            
+        }
+

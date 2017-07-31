@@ -1,0 +1,77 @@
+doctype html
+html
+    head
+        title= test
+        //Fav Icon
+        link(rel='shortcut icon', href='/images/scrapdblogo.png')
+        //Css
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet' href='/stylesheets/styles/jqx.dark.css' )
+        //JS
+        script(type='text/javascript' src='/javascripts/jquery-1.11.1.min.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxcore.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxdata.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxdraw.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxchart.core.js')
+        script(type='text/javascript' src='/javascripts/chart.js/dist/Chart.js')
+        script(type='text/javascript' src='/javascripts/chart.js/dist/Chart.bundle.js')
+
+
+    body(class='default' onload='WhenBodyLoad()')
+        h1= test
+        div
+            div(id='plant1TubeChart' style='height: 700px; width: 900px;')
+                canvas(id='myChart')
+
+    script.
+        var TD = !{TubesData};
+        console.log(TD);
+
+        var DataArray = [];
+        DataArray = TD;
+        var date = [];
+        var Value = [];
+
+        for(var i = 0; i < DataArray.length; i++){
+            date.push(DataArray[i].Date);
+            Value.push(DataArray[i].EndingBalance);
+
+        }
+
+        var Tubeschart = $('#myChart');
+        var myChart = new Chart(Tubeschart, {
+            type: 'bar',
+            data: {
+                labels: date,
+                datasets: [
+                    {
+                        label: 'Ending Balance',
+                        backgroundColor: 'rgba(0, 140, 219, 1)',
+                        borderColor: 'rgba(0, 140, 219, 1)',
+                        hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
+                        hoverBorderColor: 'rgba(200, 200, 200, 1)',
+                        data: Value
+                    }
+                ]
+            },
+            options: {
+                animation: {
+                    duration: 4000
+                }
+            }
+        });
+
+        Tubeschart.click(function (e) {
+            var activeBars = myChart.getElementsAtEvent(e);
+            var chartData = activeBars[0]['_chart'].config.data;
+            var idx = activeBars[0]['_index'];
+            var label = chartData.labels[idx];
+            var value = chartData.datasets[0].data[idx];
+            console.log("Label: " + label + " Value: " + value);
+        });
+
+
+
+
+
+        function WhenBodyLoad() {}

@@ -98,17 +98,19 @@ function PlantAll(Year, db, connectionString, res) {
                 });
             }
 
+            db.close(function (err) {
+                if(err){
+                    console.log('Plant All Error:' + err)
+                }else{
+                    console.log("the database connection is now closed");
+                }
+
+            });
+
             res.send(JSON.stringify(DataArray));
 
         });
-        db.close(function (err) {
-            if(err){
-                console.log('Plant All' + err)
-            }else{
-                console.log("the database connection is now closed");
-            }
 
-        });
     });
 
 }

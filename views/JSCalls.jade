@@ -1,55 +1,62 @@
 
 script(type='text/javascript').
-        console.log("Doc is ready Called.");
+        console.log('Doc is ready Called.');
 
         //Start of Layout calls
 
-        $.ajax({ //Buttons Calls
-            url: "../javascripts/buttons.js",
+        $.ajax({ // Buttons Calls
+            url: '../javascripts/buttons.js',
             async: false,
             cache: false
         });
-        //End of Layout calls
+
+
+        $.ajax({
+            url: '../javascripts/tabs.js',
+            async: false,
+            cache: false
+        })
+        //End of Layout Calls
 
 
         $.ajax({ // Windows Calls
-            url: "../javascripts/windows.js",
+            url: '../javascripts/windows.js',
             async: false,
             cache: false
         });
 
-        //Start of plant Call
+        //Start of Plant Calls
         $.ajax({ // Plant All Call
-            url: "../javascripts/plantAll.js",
+            url: '../javascripts/plantAll.js',
             async: false,
             cache: false
         });
 
         $.ajax({ // Plant One Call
-            url: "../javascripts/plantOne.js",
+            url: '../javascripts/plantOne.js',
             async: false,
             cache: false
         });
 
         $.ajax({ // Plant Two Call
-            url: "../javascripts/plantTwo.js",
+            url: '../javascripts/plantTwo.js',
             async: false,
             cache: false
         });
 
         $.ajax({ // Plant Three Call
-            url: "../javascripts/plantThree.js",
+            url: '../javascripts/plantThree.js',
             async: false,
             cache: false
         });
 
         $.ajax({ // Plant Four Call
-            url: "../javascripts/plantFour.js",
+            url: '../javascripts/plantFour.js',
             async: false,
             cache: false
         });
 
-        //End of plant calls
+        //End of Plant calls
 
 
 

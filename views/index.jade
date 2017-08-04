@@ -39,138 +39,166 @@ block content
     main
         //Start of plant all
         div(class='Info' id='plantAll')
-            div(class='tab')
-                button(class='tablinks' onclick='openTab(event, "AllPlantDetails")')= 'All'
+            ul
+                li= 'All Plants'
+            //div(class='tab')
+            //    button(class='tablinks' id='AllPlantDetailsButton' onclick='openTab(event, "AllPlantDetails")')= 'All'
             div(id='AllPlantDetails' class='tabcontent')
                 div(id='AllPlantChart' class='data chart')= 'All Plant Chart'
                 //div(id='AllPlantCircleChart' class='data')= 'All Plant Circle Chart'
-                div(id='AllPlantGrid' class='data grid')= 'All Plant Grid'
+                //div(id='AllPlantGrid' class='data grid AllPlantGrid')= 'All Plant Grid'
         //End of plant all
 
         //Start of plant one
         div(class='Info' id='plant1')
-            div(class='tab')
-                button(class='tablinks' onclick='openTab(event, "plantOneAllDetails")')= 'All Plant'
-                button(class='tablinks' onclick='openTab(event, "plantOneDuctDetails")')= 'Ducts /Bin Seal'
-                button(class='tablinks' onclick='openTab(event, "plantOneTubeDetails")')= 'Tubes'
-                button(class='tablinks' onclick='openTab(event, "plantOneCoversDetails")')= 'Cover'
-                button(class='tablinks' onclick='openTab(event, "plantOneAssemblyDetails")')= 'Assembly'
-                button(class='tablinks' onclick='openTab(event, "plantOneOtherDetails")')= 'Other'
+            //div(class='tab')
+            //    button(class='tablinks' id='plantOneAllDetailsButton' onclick='openTab(event, "plantOneAllDetails")')= 'All Plant'
+            //    button(class='tablinks' onclick='openTab(event, "plantOneDuctDetails")')= 'Ducts /Bin Seal'
+            //    button(class='tablinks' onclick='openTab(event, "plantOneTubeDetails")')= 'Tubes'
+            //    button(class='tablinks' onclick='openTab(event, "plantOneCoversDetails")')= 'Cover'
+            //    button(class='tablinks' onclick='openTab(event, "plantOneAssemblyDetails")')= 'Assembly'
+            //    button(class='tablinks' onclick='openTab(event, "plantOneOtherDetails")')= 'Other'
+            ul
+                li= 'All Plant 1'
+                li= 'Ducts/ Bin Seal'
+                li= 'Tubes'
+                li= 'Cover'
+                li= 'Assembly'
+                li= 'Other'
 
             div(id='plantOneAllDetails' class='tabcontent')
                 div(id='plant1AllChart' class='data chart')= 'All Plant 1 Chart'
                 //div(id='plant1AllCircleChart' class='data')= 'Circle Chart'
-                div(id='plant1AllGrid' class='data grid')= 'All Plant 1 Grid'
+                //div(id='plant1AllGrid' class='data grid ')= 'All Plant 1 Grid'
 
             div(id='plantOneDuctDetails' class='tabcontent')
                 div(id='plant1DuctChart' class='data chart')= 'Ducts Chart'
                 //div(id='plant1DuctCircleChart' class='data')= 'Circle Chart'
-                div(id='plant1DuctGrid' class='data grid')= 'Ducts Grid'
+                //div(id='plant1DuctGrid' class='data grid ')= 'Ducts Grid'
 
             div(id='plantOneTubeDetails' class='tabcontent')
-                div(id='plant1TubeChart' class='data chart' style='height: 500px; width: 1880px;')
+                div(id='plant1TubeChart' class='data chart')= 'Tubes Chart'
                 //div(id='plant1TubeCircleChart' class='data')= 'Circle Chart'
-                div(id='plant1TubeGrid' class='data grid')= 'Tubes Grid'
+                //div(id='plant1TubeGrid' class='data grid ')= 'Tubes Grid'
 
             div(id='plantOneCoversDetails' class='tabcontent')
                 div(id='plant1CoversChart' class='data chart')= 'Covers Chart'
                 //div(id='plant1CoversCircleChart' class='data')= 'Circle Chart'
-                div(id='plant1CoversGrid' class='data grid')= 'Covers Grid'
+                //div(id='plant1CoversGrid' class='data grid ')= 'Covers Grid'
 
             div(id='plantOneAssemblyDetails' class='tabcontent')
                 div(id='plant1AssemblyChart' class='data chart')= 'Assembly Chart'
                 //div(id='plant1AssemblyCircleChart' class='data')= 'Circle Chart'
-                div(id='plant1AssemblyGrid' class='data grid')= 'Assembly Grid'
+                //div(id='plant1AssemblyGrid' class='data grid ')= 'Assembly Grid'
 
             div(id='plantOneOtherDetails' class='tabcontent')
                 div(id='plant1OtherChart' class='data chart')= 'Other Chart'
                 //div(id='plant1OtherCircleChart' class='data')= 'Circle Chart'
-                div(id='plant1OtherGrid' class='data grid')= 'Other Grid'
+                //div(id='plant1OtherGrid' class='data grid ')= 'Other Grid'
          //End plant one
 
         //Start of plant two
         div(class='Info' id='plant2')
-            div(class='tab')
-                button(class='tablinks' onclick='openTab(event, "plantTwoAllDetails")')= 'All Plant 2'
-                button(class='tablinks' onclick='openTab(event, "plantTwoPlenDetails")')= 'Plenums'
-                button(class='tablinks' onclick='openTab(event, "plantTwo2FCDetails")')= 'Flex Hose / Caps'
-                button(class='tablinks' onclick='openTab(event, "plantTwoDownDetails")')= 'Downers'
+            //div(class='tab')
+            //    button(class='tablinks' onclick='openTab(event, "plantTwoAllDetails")')= 'All Plant 2'
+            //    button(class='tablinks' onclick='openTab(event, "plantTwoPlenDetails")')= 'Plenums'
+            //    button(class='tablinks' onclick='openTab(event, "plantTwo2FCDetails")')= 'Flex Hose / Caps'
+            //    button(class='tablinks' onclick='openTab(event, "plantTwoDownDetails")')= 'Downers'
+
+            ul
+                li= 'All Plant 2'
+                li= 'Plenums'
+                li= 'Flex Hose / Caps'
+                li= 'Downers'
 
             div(id='plantTwoAllDetails' class='tabcontent')
                 div(id='plant2AllChart' class='data chart')= 'All Plant 2 Chart'
                 //div(id='plant2AllCircleChart' class='data')= 'Circle Chart'
-                div(id='plant2AllGrid' class='data grid')= 'All Plant 2 Grid'
+                //div(id='plant2AllGrid' class='data grid')= 'All Plant 2 Grid'
 
             div(id='plantTwoPlenDetails' class='tabcontent')
                 div(id='plant2PlenChart' class='data chart')= 'Plenums Chart'
                 //div(id='plant2PlenCircleChart' class='data')= 'Circle Chart'
-                div(id='plant2PlenGrid' class='data grid')= 'Plenums Grid'
+                //div(id='plant2PlenGrid' class='data grid')= 'Plenums Grid'
 
             div(id='plantTwo2FCDetails' class='tabcontent')
                 div(id='plant2FCChart' class='data chart')= 'Flex Hose / Caps Chart'
                 //div(id='plant2FCCircleChart' class='data')= 'Circle Chart'
-                div(id='plant2FCGrid' class='data grid')= 'Flex Hose / Caps Grid'
+                //div(id='plant2FCGrid' class='data grid')= 'Flex Hose / Caps Grid'
 
             div(id='plantTwoDownDetails' class='tabcontent')
                 div(id='plant2DownChart' class='data chart')= 'Downers Chart'
                 //div(id='plant2DownCircleChart' class='data')= 'Circle Chart'
-                div(id='plant2DownGrid' class='data grid')= ' Downers Grid'
+                //div(id='plant2DownGrid' class='data grid')= ' Downers Grid'
 
         //End of plant two
 
         //Start of plant three
         div(class='Info' id='plant3')
-            div(class='tab')
-                button(class='tablinks' onclick='openTab(event, "plantThreeAllDetails")')= 'All HQ'
-                button(class='tablinks' onclick='openTab(event, "plantThreeP8Details")')= 'P8'
-                button(class='tablinks' onclick='openTab(event, "plantThreePrimaryDetails")')= 'Primary Ops'
-                button(class='tablinks' onclick='openTab(event, "plantThreeSleevesDetails")')= 'Sleeves'
-                button(class='tablinks' onclick='openTab(event, "plantThree737WDetails")')= '737 Windows'
-                button(class='tablinks' onclick='openTab(event, "plantThree787WDetails")')= '787 Windows'
-                button(class='tablinks' onclick='openTab(event, "plantThreeBSIDetails")')= 'BSI Windows'
-                button(class='tablinks' onclick='openTab(event, "plantThreeAllWindowsDetails")')= 'All Windows'
+            //div(class='tab')
+            //    button(class='tablinks' onclick='openTab(event, "plantThreeAllDetails")')= 'All HQ'
+            //    button(class='tablinks' onclick='openTab(event, "plantThreeP8Details")')= 'P8'
+            //    button(class='tablinks' onclick='openTab(event, "plantThreePrimaryDetails")')= 'Primary Ops'
+            //    button(class='tablinks' onclick='openTab(event, "plantThreeSleevesDetails")')= 'Sleeves'
+            //    button(class='tablinks' onclick='openTab(event, "plantThree737WDetails")')= '737 Windows'
+            //    button(class='tablinks' onclick='openTab(event, "plantThree787WDetails")')= '787 Windows'
+            //    button(class='tablinks' onclick='openTab(event, "plantThreeBSIDetails")')= 'BSI Windows'
+            //    button(class='tablinks' onclick='openTab(event, "plantThreeAllWindowsDetails")')= 'All Windows'
+
+            ul
+                li= 'All Plant 3'
+                li= 'P8'
+                li= 'Primary Ops'
+                li= 'Sleeves'
+                li= '737 Windows'
+                li= '787 Windows'
+                li= 'BSI Windows'
+                li= 'All Windows'
 
             div(id='plantThreeAllDetails' class='tabcontent')
                 div(id='plant3AllChart' class='data chart')= 'All Plant 3 Chart'
                 //div(id='plant3AllCircleChart' class='data')= 'Circle Chart'
-                div(id='plant3AllGrid' class='data grid')= ' All Plant 3 Grid'
+                //div(id='plant3AllGrid' class='data grid')= ' All Plant 3 Grid'
 
             div(id='plantThreeP8Details' class='tabcontent')
                 div(id='plant3P8Chart' class='data')= 'P8 Chart'
                 //div(id='plant3P8CircleChart' class='data')= 'Circle Chart'
-                div(id='plant3P8Grid' class='data grid')= 'p8 Grid'
+                //div(id='plant3P8Grid' class='data grid')= 'p8 Grid'
 
             div(id='plantThreePrimaryDetails' class='tabcontent')
                 div(id='plant3PrimaryChart' class='data chart')= 'Primary Ops chart'
                 //div(id='plant3PrimaryCircleChart' class='data')= 'Circle Chart'
-                div(id='plant3PrimaryGrid' class='data grid')= 'Primary Ops Grid'
+                //div(id='plant3PrimaryGrid' class='data grid')= 'Primary Ops Grid'
 
             div(id='plantThreeSleevesDetails' class='tabcontent')
                 div(id='plant3SleevesChart' class='data chart')= 'Sleeves chart'
                 //div(id='plant3SleevesCircleChart' class='data')= 'Circle Chart'
-                div(id='plant3SleevesGrid' class='data grid')= 'Sleeves Grid'
+                //div(id='plant3SleevesGrid' class='data grid')= 'Sleeves Grid'
 
             div(id='plantThree737WDetails' class='tabcontent')
                 div(id='plant3737WChart' class='data chart')= '737 Windows chart'
                 //div(id='plant3737WCircleChart' class='data')= 'Circle Chart'
-                div(id='plant3737WGrid' class='data grid')= '737 Windows Grid'
+                //div(id='plant3737WGrid' class='data grid')= '737 Windows Grid'
 
             div(id='plantThree787WDetails' class='tabcontent')
                 div(id='plant3787WChart' class='data chart')= '787 Windows chart'
                 //div(id='plant3787WCircleChart' class='data')= 'Circle Chart'
-                div(id='plant3787WGrid' class='data grid')= '787 Windows Grid'
+                //div(id='plant3787WGrid' class='data grid')= '787 Windows Grid'
 
             div(id='plantThreeBSIDetails' class='tabcontent')
                 div(id='plant3BSIChart' class='data chart')= 'BSI Windows chart'
                 //div(id='plant3BSICircleChart' class='data')= 'Circle Chart'
-                div(id='plant3BSIGrid' class='data grid')= 'BSI Windows Grid'
+                //div(id='plant3BSIGrid' class='data grid')= 'BSI Windows Grid'
 
             div(id='plantThreeAllWindowsDetails' class='tabcontent')
                 div(id='plant3AllWindowsChart' class='data chart' )= 'All Windows chart'
                 //div(id='plant3AllWindowsCircleChart' class='data')= 'Circle Chart'
-                div(id='plant3AllWindowsGrid' class='data grid')= 'All Windows Grid'
+                //div(id='plant3AllWindowsGrid' class='data grid')= 'All Windows Grid'
         //End of plant three
 
+
+        section(class='gird')
+            div(id='GridForEverything' class='data')
     //End of Main
 
     include ./JSCalls
@@ -204,28 +232,20 @@ block content
             currProj = currProj.substring(6, pos);
             console.log(currProj);
             DateForGrid = currProj;
+            addfilter(DateForGrid);
         }
 
-        function openTab(evt, Tab) {
-            // Declare all variables
-            var i, tabcontent, tablinks;
-
-            // Get all elements with class="tabcontent" and hide them
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-
-            // Get all elements with class="tablinks" and remove the class "active"
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-
-            // Show the current tab, and add an "active" class to the button that opened the tab
-            document.getElementById(Tab).style.display = "block";
-
-            evt.currentTarget.className += " active";
+        function addfilter (Date) {
+            var filtergroup = new $.jqx.filter();
+            var filter_or_operator = 1;
+            var filtervalue = Date;
+            var filtercondition = 'equal';
+            var filter = filtergroup.createfilter('stringfilter', filtervalue, filtercondition);
+            filtergroup.addfilter(filter_or_operator, filter);
+            // add the filters.
+            $("#GridForEverything").jqxGrid('addfilter', 'MonthDate', filtergroup);
+            // apply the filters.
+            $("#GridForEverything").jqxGrid('applyfilters');
         }
 
         function SelectYear() {
@@ -240,7 +260,7 @@ block content
         }
 
         function plantAllDataFetch (Year) {
-            $.ajax({// Get All
+            $.ajax({// Get All Chart
                 type: 'GET',
                 url: '/plantAllFetch/' + Year + '/All',
                 dataType: 'json',
@@ -257,9 +277,27 @@ block content
                     console.log(errorThrown);
                 }
             });
+
+            $.ajax({//Get All Grid
+                type: 'GET',
+                url: '/plantAllGridFetch/' + Year,
+                async: true,
+                cache: cache,
+                dataType: 'json',
+                success: function (data1) {
+                    gridData = data1
+                    PlantAllGridData(gridData)
+                },
+                error: function (xhr, status, errorThrown) {
+                    console.log(xhr);
+                    console.log(status);
+                    console.log(errorThrown);
+                }
+            });
+            $('.data').jqxChart('refresh');
         }
 
-        function plantOneDataFetch(Year){
+        /*function plantOneDataFetch(Year){
 
             $.ajax({// Get All
                 type: 'GET',
@@ -368,7 +406,7 @@ block content
                     console.log(errorThrown);
                 }
             });
-
+            $('.data').jqxChart('refresh');
         }
         
         function plantTwoDataFetch() {
@@ -444,7 +482,7 @@ block content
                     console.log(errorThrown);
                 }
             });
-
+            $('.data').jqxChart('refresh');
         }
         
         function plantThreeDataFetch() {
@@ -592,7 +630,8 @@ block content
                     console.log(errorThrown);
                 }
             });
-        }
+            $('.data').jqxChart('refresh');
+        }*/
 
         function ReCall(Year) {
             plantAllDataFetch(Year);
@@ -600,8 +639,6 @@ block content
             plantTwoDataFetch(Year);
             plantThreeDataFetch(Year);
             //plantFourDataFetch(Year);
+            //$('.data').jqxChart('refresh');
         }
-        $('.tablinks').on('click',function () {
-            $('.data').jqxChart('refresh');
-            n = null;
-        });
+

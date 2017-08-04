@@ -144,6 +144,16 @@ main{
    margin-right: 10px;
  }
 
+ .grid{
+   background-color: #252830;
+   border-radius: 10px;
+   height: 610px;
+   width: 100%;
+   margin-top: 10px;
+   margin-left: 10px;
+   margin-right: 10px;
+ }
+
  .barChart{
    margin-left: 230px;
    color: white;

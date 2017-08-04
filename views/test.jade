@@ -39,6 +39,7 @@ html
         script(type='text/javascript' src='/javascripts/jqwidgets/jqxdropdownlist.js')
         script(type='text/javascript' src='/javascripts/jqwidgets/jqxwindow.js')
         script(type='text/javascript' src='/javascripts/jqwidgets/jqxpanel.js')
+        script(type='text/javascript' src='/javascripts/jqwidgets/jqxtabs.js')
         script(type='text/javascript' src='/javascripts/jquery-ui.js')
 
 
@@ -46,7 +47,11 @@ body(class='default' onload='WhenBodyLoad()')
         h1= test
         main
             div
-                div
+                div(id='jqxTabs')
+                    ul
+                        li= 'Chart'
+                        li= 'Select'
+                        li= 'Grid'
                     div(id='plant1TubeChart' style='height: 500px; width: 1880px;')
                     div()
                         select(id='SelectYear')
@@ -59,10 +64,10 @@ body(class='default' onload='WhenBodyLoad()')
 
     script.
         //var tubes = !{Tubes};
-        var dataN;
+        var dataN = null;
         var Year;
         var Plant = 'All'
-        var gridData;
+        var gridData = null;
         var DateForGrid;
         var gridTheme = "dark";
         var gridWidth = 1880;
@@ -79,6 +84,12 @@ body(class='default' onload='WhenBodyLoad()')
             GridRerun(Year);
         });
 
+        $('#jqxTabs').jqxTabs({
+            width: '90%',
+            height: 500,
+            position: 'top'
+        });
+
         console.log(Year)
         console.log("Test Page Called");
 
@@ -90,6 +101,7 @@ body(class='default' onload='WhenBodyLoad()')
                 async: false,
                 dataType: 'json',
                 success: function (data) {
+
                     dataN = data
                     //console.log(dataN);
                 },
@@ -100,8 +112,9 @@ body(class='default' onload='WhenBodyLoad()')
                 }
             });
 
+
             /* data adapter settings */
-            var dataAdapter = new $.jqx.dataAdapter({
+            var PlantOneTubesdataAdapter = new $.jqx.dataAdapter({
                 localdata: dataN,
                 datafields: [
                     {name: "Date", type: "string"},
@@ -111,9 +124,9 @@ body(class='default' onload='WhenBodyLoad()')
 
             /* chart settings */
             var chartSettings = {
-                source: dataAdapter,
-                title: "My Chart Title",
-                description: "My Chart Description",
+                source: PlantOneTubesdataAdapter,
+                title: "Test Chart ",
+                description: "My Test Chart",
                 padding: {
                     left: 5,
                     top: 5,
@@ -162,13 +175,28 @@ body(class='default' onload='WhenBodyLoad()')
             console.log("chart clicked");
             var currProj = $('.jqx-chart-tooltip-text').text();
             //console.log(currProj);
-            var pos = currProj.indexOf("Ending Balance:");
+            var pos = currProj.indexOf("EndingBalance:");
             //console.log(pos);
             currProj = currProj.substring(6, pos);
             console.log(currProj);
             DateForGrid = currProj;
+            $("#TestGrid").jqxGrid('ready',function () {
+                addfilter(DateForGrid);
+            });
         }
 
+        var addfilter = function (Date) {
+            var filtergroup = new $.jqx.filter();
+            var filter_or_operator = 1;
+            var filtervalue = Date;
+            var filtercondition = 'equal';
+            var filter = filtergroup.createfilter('stringfilter', filtervalue, filtercondition);
+            filtergroup.addfilter(filter_or_operator, filter);
+            // add the filters.
+            $("#TestGrid").jqxGrid('addfilter', 'MonthDate', filtergroup);
+            // apply the filters.
+            $("#TestGrid").jqxGrid('applyfilters');
+        }
 
 
         function GridRerun(Year) {
@@ -179,9 +207,16 @@ body(class='default' onload='WhenBodyLoad()')
                 url: '/plantAllGridFetch/' + Year,
                 async: false,
                 dataType: 'json',
-                success: function (data) {
-                    gridData = data
-                    //console.log(dataN);
+                success: function (data1) {
+
+                    gridData = data1
+                    console.log(gridData[80342]);
+                    console.log(gridData[175292]);
+
+                    //for(var i = 0; i < gridData.length; i++){
+                    //    console.log(gridData[i].MonthDate + ": " + i);
+                   // }
+
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log(xhr);
@@ -196,45 +231,68 @@ body(class='default' onload='WhenBodyLoad()')
                 {name: 'Item', type: 'string'},
                 {name: 'Description', type: 'string'},
                 {name: 'WorkOrder', type: 'string'},
-                {name: 'Date', type: 'string'},
+                {name: 'MonthDate', type: 'string'},
                 {name: 'TransactionDate', type: 'string'},
-                {name: 'Quantity', type: 'string'},
+                {name: 'Quantity', type: 'number'},
                 {name: 'FirstName', type: 'string'},
-                {name: 'Total', type: 'string'}
+                {name: 'Total', type: 'number'}
+
             ];
             var plant1AllColumns = [
                 {text: 'Reason Code Description', datafield: 'ReasonCodeDesc'},
                 {text: 'Item', datafield: 'Item'},
                 {text: 'Description', datafield: 'Description'},
                 {text: 'Work Order', datafield: 'WorkOrder'},
-                {text: 'Date', datafield: 'TransactionDate'},
+                {text: 'Transaction Date', datafield: 'TransactionDate'},
                 {text: 'Quantity', datafield: 'Quantity'},
                 {text: 'First Name', datafield: 'FirstName'},
-                {text: 'Total', datafield: 'Total'}
+                {text: 'Total', datafield: 'Total'},
+                {text: 'Month Date', datafield: 'MonthDate'}
             ];
 
             var plant1AllSource = {
                 datatype: "json",
                 datafields: plant1AllDataSource,
                 localdata: gridData,
-                async: false,
+                async: true,
+                //totalrecords: 1000000
                 pager: function (pagenum, pagesize, oldpagenum) {
                     // callback called when a page or page size is changed.
                 }
             };
-            var plantOneAllDataAdapter = new $.jqx.dataAdapter(plant1AllSource);
 
-            $("#TestGrid").jqxGrid(
-                {
+            //var rendergridrows = function (params) {
+            //    var data = generatedata(params.startindex, params.endindex);
+            //    return data;
+            //}
+
+            //var generatedata = function (startindex, endindex) {
+            //    var data = {};
+            //    for (var i = startindex; i < endindex; i++) {
+            //        data = gridData[i];
+            //    }
+            //    return data;
+            //}
+
+            var plantOneGridDataAdapter = new $.jqx.dataAdapter(plant1AllSource);
+
+            $("#TestGrid").jqxGrid({
                     width: gridWidth,
-                    autoHeight: true,
-                    source: plantOneAllDataAdapter,
+                    autoHeight: false,
+                    height: 600,
+                    source: plantOneGridDataAdapter,
                     theme: gridTheme,
                     editable: false,
                     columns: plant1AllColumns,
                     pageable: true,
+                    groupable: true,
+                    sortable: true,
+                    enabletooltips: true,
+                    //virtualmode: true,
+                    //rendergridrows: rendergridrows,
+                    filterable: true,
                     pagermode: 'simple',
-                    pageSize: 20
+                    pageSize: 40
                 });
             // End of Grid
 

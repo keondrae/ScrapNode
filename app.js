@@ -13,10 +13,18 @@ var plantOneFetch = require('./routes/PlantOneFetch');
 var plantTwoFetch = require('./routes/PlantTwoFetch');
 var plantThreeFetch = require('./routes/PlantThreeFetch');
 var plantAllGridFetch = require('./routes/PlantAllGridFetch');
-
-var app = express();
-
 var odbc = require('odbc');
+var sql = require("mssql");
+var app = express();
+var config = {
+    server: 'tf-sql-01',
+    database: 'MAS_TFI',
+    driver: 'msnodesqlv8',
+    options: {
+        trustedConnection: true
+   }
+};
+
 var connectionString ="Driver={SQL Server};Server=tf-sql-01;Database=MAS_TFI";
 var db = new odbc.Database();
 var DataArray = [];
@@ -36,20 +44,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/test', test);
-app.get('/plantAllFetch/:year/:tab', function (req, res) {
-    DataArray = [];
-    var Year = req.params.year;
-    var Tab = req.params.tab;
-
-    switch (Tab){
-
-        case 'All':
-            PlantAll(Year, db, connectionString, res);
-            //All
-            break;
-    }
-
-});
+app.use('/plantAllFetch',plantAllFetch);
 app.get('/plantOneFetch/:year/:tab', function (req, res) {
     DataArray = [];
     var Year = req.params.year;
@@ -58,7 +53,7 @@ app.get('/plantOneFetch/:year/:tab', function (req, res) {
     switch (Tab){
 
         case 'All':
-            PlantOneAll(Year, db, connectionString, res);
+           // PlantOneAll(Year, db, connectionString, res);
             //All
             break;
         case 'Duct':
@@ -153,7 +148,7 @@ app.get('/plantThreeFetch/:year/:tab', function (req, res) {
 
 });
 app.get('/plantAllGridFetch/:year', function (req, res) {
-
+    var DataArray = [];
     var Year = req.params.year;
     db.open(connectionString, function (err) {
 
@@ -164,7 +159,7 @@ app.get('/plantAllGridFetch/:year', function (req, res) {
         var sql = "SELECT SY_User.FirstName AS 'FirstName', CI_Item.ItemCodeDesc, CI_ITEM.ItemCode,\n" +
             "  TransactionDate, FiscalCalYear, FiscalCalPeriod,\n" +
             "  TransactionQty, ExtendedCost, UDF_SCRAP_REASON_CODE,\n" +
-            "  UDF_WORK_TICKET_NUMBER\n" +
+            "  UDF_WORK_TICKET_NUMBER, UDF_FACTORY_CODE\n" +
             "FROM IM_ItemTransactionHistory\n" +
             "INNER JOIN CI_ITEM ON IM_ItemTransactionHistory.ItemCode = CI_ITEM.ItemCode\n" +
             "INNER JOIN SY_User ON IM_ItemTransactionHistory.UserUpdatedKey = SY_User.UserKey\n" +
@@ -191,45 +186,47 @@ app.get('/plantAllGridFetch/:year', function (req, res) {
                 var ExtendedCost = rows[i].ExtendedCost;
                 var UDF_SCRAP_REASON_CODE = rows[i].UDF_SCRAP_REASON_CODE;
                 var UDF_WORK_TICKET_NUMBER = rows[i].UDF_WORK_TICKET_NUMBER;
-                var Date;
+                var PrevYear = FiscalCalYear -1;
+                var MonthDate;
                 var ReasonCodeDesc;
+                var PlantNumber = rows[i].UDF_FACTORY_CODE;
 
                 switch (FiscalCalPeriod) {
                     case 1:
-                        Date = FiscalCalYear - 1 + '-12-01';
+                        MonthDate = '1-Dec-' + PrevYear ;
                         break;
                     case 2:
-                        Date = FiscalCalYear + '-01-01';
+                        MonthDate = '1-Jan-' +  FiscalCalYear;
                         break;
                     case 3:
-                        Date = FiscalCalYear + '-02-01';
+                        MonthDate = '1-Feb-' +  FiscalCalYear;
                         break;
                     case 4:
-                        Date = FiscalCalYear + '-03-01';
+                        MonthDate = '1-Mar-' +  FiscalCalYear;
                         break;
                     case 5:
-                        Date = FiscalCalYear + '-04-01';
+                        MonthDate = '1-Apr-' +  FiscalCalYear;
                         break;
                     case 6:
-                        Date = FiscalCalYear + '-05-01';
+                        MonthDate = '1-May-' +  FiscalCalYear;
                         break;
                     case 7:
-                        Date = FiscalCalYear + '-06-01';
+                        MonthDate = '1-Jun-' +  FiscalCalYear;
                         break;
                     case 8:
-                        Date = FiscalCalYear + '-07-01';
+                        MonthDate = '1-Jul-' +  FiscalCalYear;
                         break;
                     case 9:
-                        Date = FiscalCalYear + '-08-01';
+                        MonthDate = '1-Aug-' +  FiscalCalYear;
                         break;
                     case 10:
-                        Date = FiscalCalYear + '-09-01';
+                        MonthDate = '1-Sep-' +  FiscalCalYear;
                         break;
                     case 11:
-                        Date = FiscalCalYear + '-10-01';
+                        MonthDate = '1-Oct-' +  FiscalCalYear;
                         break;
                     case 12:
-                        Date = FiscalCalYear + '-11-01';
+                        MonthDate = '1-Nov-' +  FiscalCalYear;
                         break;
                 }
 
@@ -259,17 +256,17 @@ app.get('/plantAllGridFetch/:year', function (req, res) {
                         ReasonCodeDesc = 'Other';
                         break;
                 }
-
                 DataArray.push({
                     ReasonCodeDesc: ReasonCodeDesc,
                     Item: ItemCode,
                     Description: ItemDesc,
                     WorkOrder: UDF_WORK_TICKET_NUMBER,
-                    Date: Date,
+                    MonthDate: MonthDate,
                     TransactionDate: TransactionDate,
                     Quantity: TransactionQty,
                     FirstName: FirstName,
-                    Total: ExtendedCost
+                    Total: ExtendedCost,
+                    PlantNumber: PlantNumber
                 })
 
             }
@@ -278,7 +275,13 @@ app.get('/plantAllGridFetch/:year', function (req, res) {
             res.send(JSON.stringify(DataArray));
 
         });
+        db.close(function (err) {
+            console.log("the database connection is now closed");
+        });
     });
+
+
+
 
 });
 
@@ -308,6 +311,7 @@ module.exports = app;
 //Start of plant All Function
 function PlantAll(Year, db, connectionString, res) {
     console.log('Plant All');
+
     db.open(connectionString, function (err) {
 
         if (err) {
@@ -316,8 +320,7 @@ function PlantAll(Year, db, connectionString, res) {
 
         var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-00-0000' AND  FiscalYear =" + Year;
 
-        //we now have an open connection to the database
-        //so lets get some data
+        
         db.query(sql, function (err, rows, moreResultSets) {
 
             if (err) {
@@ -385,7 +388,11 @@ function PlantAll(Year, db, connectionString, res) {
             res.send(JSON.stringify(DataArray));
 
         });
+        db.close(function (err) {
+            console.log("the database connection is now closed");
+        });
     });
+
 }
 //End of plant All Function
 
@@ -400,8 +407,7 @@ function PlantOneAll(Year, db, connectionString, res) {
 
         var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-00-0000' AND  FiscalYear =" + Year;
 
-        //we now have an open connection to the database
-        //so lets get some data
+        
         db.query(sql, function (err, rows, moreResultSets) {
 
             if (err) {
@@ -468,6 +474,9 @@ function PlantOneAll(Year, db, connectionString, res) {
 
             res.send(JSON.stringify(DataArray));
 
+        });
+        db.close(function (err) {
+            console.log("the database connection is now closed");
         });
     });
 }
@@ -481,8 +490,7 @@ function PlantOneDuct(Year, db, connectionString, res) {
 
         var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-00-0000' AND  FiscalYear =" + Year;
 
-        //we now have an open connection to the database
-        //so lets get some data
+        
         db.query(sql, function (err, rows, moreResultSets) {
 
             if (err) {
@@ -549,6 +557,9 @@ function PlantOneDuct(Year, db, connectionString, res) {
 
             res.send(JSON.stringify(DataArray));
 
+        });
+        db.close(function (err) {
+            console.log("the database connection is now closed");
         });
     });
 }
@@ -562,8 +573,7 @@ function PlantOneTubes(Year, db, connectionString, res) {
 
         var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-05-0000' AND  FiscalYear =" + Year;
 
-        //we now have an open connection to the database
-        //so lets get some data
+        
         db.query(sql, function (err, rows, moreResultSets) {
 
             if (err) {
@@ -630,6 +640,9 @@ function PlantOneTubes(Year, db, connectionString, res) {
 
             res.send(JSON.stringify(DataArray));
 
+        });
+        db.close(function (err) {
+            console.log("the database connection is now closed");
         });
     });
 }
@@ -643,8 +656,7 @@ function PlantOneCovers(Year, db, connectionString, res) {
 
         var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-04-0000' AND  FiscalYear =" + Year;
 
-        //we now have an open connection to the database
-        //so lets get some data
+        
         db.query(sql, function (err, rows, moreResultSets) {
 
             if (err) {
@@ -711,6 +723,9 @@ function PlantOneCovers(Year, db, connectionString, res) {
 
             res.send(JSON.stringify(DataArray));
 
+        });
+        db.close(function (err) {
+            console.log("the database connection is now closed");
         });
     });
 }
@@ -724,8 +739,7 @@ function PlantOneAssembly(Year, db, connectionString, res) {
 
         var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-00-0000' AND  FiscalYear =" + Year;
 
-        //we now have an open connection to the database
-        //so lets get some data
+        
         db.query(sql, function (err, rows, moreResultSets) {
 
             if (err) {
@@ -792,6 +806,9 @@ function PlantOneAssembly(Year, db, connectionString, res) {
 
             res.send(JSON.stringify(DataArray));
 
+        });
+        db.close(function (err) {
+            console.log("the database connection is now closed");
         });
     });
 }
@@ -805,8 +822,7 @@ function PlantOneOthers(Year, db, connectionString, res) {
 
         var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-00-0000' AND  FiscalYear =" + Year;
 
-        //we now have an open connection to the database
-        //so lets get some data
+        
         db.query(sql, function (err, rows, moreResultSets) {
 
             if (err) {
@@ -874,6 +890,9 @@ function PlantOneOthers(Year, db, connectionString, res) {
             res.send(JSON.stringify(DataArray));
 
         });
+        db.close(function (err) {
+            console.log("the database connection is now closed");
+        });
     });
 }
 //End of Plant One Functions
@@ -881,17 +900,22 @@ function PlantOneOthers(Year, db, connectionString, res) {
 //Start of Plant Two Functions
 function PlantTwoAll(Year, db, connectionString, res) {
     console.log('Plant Two All');
+        var TempArray = [];
+        var Array08 = [];
+        var Array04 = [];
+        var Array05 = [];
+
     db.open(connectionString, function (err) {
 
         if (err) {
             return console.log(err);
         }
 
-        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-00-0000' AND  FiscalYear =" + Year;
-
-        //we now have an open connection to the database
-        //so lets get some data
-        db.query(sql, function (err, rows, moreResultSets) {
+        var sql08 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-08-0000' AND  FiscalYear =" + Year;
+        var sql04 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-04-0000' AND  FiscalYear =" + Year;
+        var sql05 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-05-0000' AND  FiscalYear =" + Year;
+        
+        db.query(sql08, function (err, rows, moreResultSets) {
 
             if (err) {
                 return console.log(err);
@@ -957,6 +981,9 @@ function PlantTwoAll(Year, db, connectionString, res) {
 
             res.send(JSON.stringify(DataArray));
 
+        });
+        db.close(function (err) {
+            console.log("the database connection is now closed");
         });
     });
 }
@@ -970,8 +997,7 @@ function PlantTwoPlenums(Year, db, connectionString, res) {
 
         var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-12-0000' AND  FiscalYear =" + Year;
 
-        //we now have an open connection to the database
-        //so lets get some data
+        
         db.query(sql, function (err, rows, moreResultSets) {
 
             if (err) {
@@ -1038,6 +1064,9 @@ function PlantTwoPlenums(Year, db, connectionString, res) {
 
             res.send(JSON.stringify(DataArray));
 
+        });
+        db.close(function (err) {
+            console.log("the database connection is now closed");
         });
     });
 
@@ -1052,8 +1081,7 @@ function PlantTwoFlexHCaps(Year, db, connectionString, res) {
 
         var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-13-0000' AND  FiscalYear =" + Year;
 
-        //we now have an open connection to the database
-        //so lets get some data
+        
         db.query(sql, function (err, rows, moreResultSets) {
 
             if (err) {
@@ -1121,6 +1149,9 @@ function PlantTwoFlexHCaps(Year, db, connectionString, res) {
             res.send(JSON.stringify(DataArray));
 
         });
+        db.close(function (err) {
+            console.log("the database connection is now closed");
+        });
     });
 
 }
@@ -1134,8 +1165,7 @@ function PlantTwoDowners(Year, db, connectionString, res) {
 
         var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-14-0000' AND  FiscalYear =" + Year;
 
-        //we now have an open connection to the database
-        //so lets get some data
+        
         db.query(sql, function (err, rows, moreResultSets) {
 
             if (err) {
@@ -1202,6 +1232,9 @@ function PlantTwoDowners(Year, db, connectionString, res) {
 
             res.send(JSON.stringify(DataArray));
 
+        });
+        db.close(function (err) {
+            console.log("the database connection is now closed");
         });
     });
 }
@@ -1218,8 +1251,7 @@ function PlantThreeAll(Year, db, connectionString, res) {
 
         var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-00-0000' AND  FiscalYear =" + Year;
 
-        //we now have an open connection to the database
-        //so lets get some data
+        
         db.query(sql, function (err, rows, moreResultSets) {
 
             if (err) {
@@ -1299,8 +1331,7 @@ function PlantThreeP8(Year, db, connectionString, res) {
 
         var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-11-0000' AND  FiscalYear =" + Year;
 
-        //we now have an open connection to the database
-        //so lets get some data
+        
         db.query(sql, function (err, rows, moreResultSets) {
 
             if (err) {
@@ -1380,8 +1411,7 @@ function PlantThreePrimaryOps(Year, db, connectionString, res) {
 
         var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-00-0000' AND  FiscalYear =" + Year;
 
-        //we now have an open connection to the database
-        //so lets get some data
+        
         db.query(sql, function (err, rows, moreResultSets) {
 
             if (err) {
@@ -1461,8 +1491,7 @@ function PlantThreeSleeves(Year, db, connectionString, res) {
 
         var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-06-0000' AND  FiscalYear =" + Year;
 
-        //we now have an open connection to the database
-        //so lets get some data
+        
         db.query(sql, function (err, rows, moreResultSets) {
 
             if (err) {
@@ -1542,8 +1571,7 @@ function PlantThreeWindows737(Year, db, connectionString, res) {
 
         var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-07-0000' AND  FiscalYear =" + Year;
 
-        //we now have an open connection to the database
-        //so lets get some data
+        
         db.query(sql, function (err, rows, moreResultSets) {
 
             if (err) {
@@ -1624,8 +1652,7 @@ function PlantThreeWindows787(Year, db, connectionString, res) {
 
         var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-09-0000' AND  FiscalYear =" + Year;
 
-        //we now have an open connection to the database
-        //so lets get some data
+        
         db.query(sql, function (err, rows, moreResultSets) {
 
             if (err) {
@@ -1705,8 +1732,7 @@ function PlantThreeBSIWindows(Year, db, connectionString, res) {
 
         var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-18-0000' AND  FiscalYear =" + Year;
 
-        //we now have an open connection to the database
-        //so lets get some data
+        
         db.query(sql, function (err, rows, moreResultSets) {
 
             if (err) {
@@ -1786,8 +1812,7 @@ function PlantThreeAllWindows(Year, db, connectionString, res) {
 
         var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-00-0000' AND  FiscalYear =" + Year;
 
-        //we now have an open connection to the database
-        //so lets get some data
+        
         db.query(sql, function (err, rows, moreResultSets) {
 
             if (err) {

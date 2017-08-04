@@ -72,46 +72,58 @@ function PlantAllGridData(data) {
 
     //Start of Grid
     var plant1AllDataSource = [
-        { name: 'RecordID', type: 'string'},
-        { name: 'ItemCode' , type: 'string' },
-        { name: 'ItemCodeDesc' , type: 'string' },
-        { name: 'ProductLine' , type: 'string' }
+        {name: 'ReasonCodeDesc', type: 'string'},
+        {name: 'Item', type: 'string'},
+        {name: 'Description', type: 'string'},
+        {name: 'WorkOrder', type: 'string'},
+        {name: 'MonthDate', type: 'string'},
+        {name: 'TransactionDate', type: 'string'},
+        {name: 'Quantity', type: 'number'},
+        {name: 'FirstName', type: 'string'},
+        {name: 'Total', type: 'number'},
+        {name: 'PlantNumber', type: 'number'}
 
     ];
     var plant1AllColumns = [
-        { text: 'RecordID', datafield: 'RecordID'},
-        { text: 'ItemCode', datafield: 'ItemCode'},
-        { text: 'ItemCodeDesc', datafield: 'ItemCodeDesc'},
-        { text: 'ProductLine', datafield: 'ProductLine'}
+        {text: 'Reason Code Description', datafield: 'ReasonCodeDesc'},
+        {text: 'Item', datafield: 'Item'},
+        {text: 'Description', datafield: 'Description'},
+        {text: 'Work Order', datafield: 'WorkOrder'},
+        {text: 'Transaction Date', datafield: 'TransactionDate'},
+        {text: 'Quantity', datafield: 'Quantity'},
+        {text: 'First Name', datafield: 'FirstName'},
+        {text: 'Total', datafield: 'Total'},
+        {text: 'Month', datafield: 'MonthDate'},
+        {text: 'Plant', datafield: 'PlantNumber'}
     ];
 
     var plant1AllSource = {
         datatype: "json",
         datafields: plant1AllDataSource,
-        id: 'RecordID',
-        url: 'scrapGraph.php?plant=plantOne&tab=p1All&Year=' + Year,
-        async: false,
+        localdata: data,
+        async: true,
         pager: function (pagenum, pagesize, oldpagenum) {
             // callback called when a page or page size is changed.
         }
     };
-    var plantOneAllDataAdapter = new $.jqx.dataAdapter(plant1AllSource,
-        { async: false,
-            autoBind: true,
-            loadError: function (xhr, status, error)
-            { alert('Error loading "' + plant1AllSource.url + '" : ' + error); } });
 
-    $("#plant1AllGrid").jqxGrid(
-        {
-            width: gridWidth,
-            height: 685,
-            source: plantOneAllDataAdapter,
-            theme: gridTheme,
-            editable: false,
-            columns: plant1AllColumns,
-            pageable: true,
-            pagermode: 'simple',
-            pageSize: 22
-        });
+    var plantOneGridDataAdapter = new $.jqx.dataAdapter(plant1AllSource);
+
+    $("#GridForEverything").jqxGrid({
+        width: gridWidth,
+        autoHeight: false,
+        height: 605,
+        source: plantOneGridDataAdapter,
+        theme: gridTheme,
+        editable: false,
+        columns: plant1AllColumns,
+        pageable: true,
+        groupable: true,
+        sortable: true,
+        enabletooltips: true,
+        filterable: true,
+        pagermode: 'simple',
+        pageSize: 18
+    });
     // End of Grid
 }

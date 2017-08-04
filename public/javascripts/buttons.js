@@ -17,6 +17,7 @@ $('#AllPlantButton').click(function () {
     $('#AllPlantButton').addClass('active');
     HideTabs();
     $('#plantAll').show();
+    $('#GridForEverything').jqxGrid('clearfilters');
 });
 
 $('#plant1Button').click(function () {
@@ -25,6 +26,8 @@ $('#plant1Button').click(function () {
     $('#plant1Button').addClass('active');
     HideTabs();
     $('#plant1').show();
+    //$('#GridForEverything').jqxGrid('clearfilters');
+    AddFilter('PLANT #1');
 });
 
 $('#plant2Button').click(function () {
@@ -33,6 +36,8 @@ $('#plant2Button').click(function () {
     $('#plant2Button').addClass('active');
     HideTabs();
     $('#plant2').show();
+    //$('#GridForEverything').jqxGrid('clearfilters');
+    AddFilter('PLANT #2');
 });
 
 $('#hqButton').click(function () {
@@ -41,6 +46,8 @@ $('#hqButton').click(function () {
     $('#hqButton').addClass('active');
     HideTabs();
     $('#plant3').show();
+    //$('#GridForEverything').jqxGrid('clearfilters');
+    AddFilter('HQ');
 });
 
 //Start of HideTabs Function
@@ -57,3 +64,16 @@ function NonActive() {
     $('#plant2Button').removeClass('active');
     $('#hqButton').removeClass('active');
 }
+
+function AddFilter (Plant) {
+    var filtergroup = new $.jqx.filter();
+    var filter_or_operator = 1;
+    var filtervalue = Plant;
+    var filtercondition = 'equal';
+    var filter = filtergroup.createfilter('stringfilter', filtervalue, filtercondition);
+    filtergroup.addfilter(filter_or_operator, filter);
+    // add the filters.
+    $("#GridForEverything").jqxGrid('addfilter', 'PlantNumber', filtergroup);
+    // apply the filters.
+    $("#GridForEverything").jqxGrid('applyfilters');
+};

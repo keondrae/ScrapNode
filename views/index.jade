@@ -190,10 +190,8 @@ block content
                 animationType: 'fade',
                 selectionTracker: true,
                 reorder: false
-            }).click(function () {
-                console.log('Plant One Tab Clicked');
-                //$('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
-                //$('.data').jqxChart('refresh');
+            }).on('tabclick', function () {
+                $('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
             });
 
             $('#plant2').jqxTabs({
@@ -203,10 +201,8 @@ block content
                 animationType: 'fade',
                 selectionTracker: true,
                 reorder: false
-            }).click(function () {
-                console.log('Plant Two Tab Clicked');
-                //$('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
-                //$('.data').jqxChart('refresh');
+            }).on('tabclick', function () {
+                $('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
             });
 
             $('#plant3').jqxTabs({
@@ -216,10 +212,8 @@ block content
                 animationType: 'fade',
                 selectionTracker: true,
                 reorder: false
-            }).click(function () {
-                console.log('Plant Three Tab Clicked');
-                //$('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
-                //$('.data').jqxChart('refresh');
+            }).on('tabclick', function () {
+                $('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
             });
 
             $('#plantAll').jqxTabs({
@@ -229,10 +223,8 @@ block content
                 animationType: 'fade',
                 selectionTracker: true,
                 reorder: false
-            }).click(function () {
-                console.log('Plant Four Tab Clicked');
-                //$('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
-                //$('.data').jqxChart('refresh');
+            }).on('tabclick', function () {
+                $('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
             });
 
         }

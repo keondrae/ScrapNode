@@ -17,7 +17,9 @@ $('#AllPlantButton').click(function () {
     $('#AllPlantButton').addClass('active');
     HideTabs();
     $('#plantAll').show();
-    $('#GridForEverything').jqxGrid('clearfilters');
+    $('#plantAll').jqxTabs('focus');
+    $('#GridForEverything').jqxGrid('clearfilters', 'false');
+    $('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
 });
 
 $('#plant1Button').click(function () {
@@ -26,8 +28,9 @@ $('#plant1Button').click(function () {
     $('#plant1Button').addClass('active');
     HideTabs();
     $('#plant1').show();
-    //$('#GridForEverything').jqxGrid('clearfilters');
+    $('#plant1').jqxTabs('focus');
     AddFilter('PLANT #1');
+    $('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
 });
 
 $('#plant2Button').click(function () {
@@ -36,8 +39,9 @@ $('#plant2Button').click(function () {
     $('#plant2Button').addClass('active');
     HideTabs();
     $('#plant2').show();
-    //$('#GridForEverything').jqxGrid('clearfilters');
+    $('#plant2').jqxTabs('focus');
     AddFilter('PLANT #2');
+    $('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
 });
 
 $('#hqButton').click(function () {
@@ -46,8 +50,9 @@ $('#hqButton').click(function () {
     $('#hqButton').addClass('active');
     HideTabs();
     $('#plant3').show();
-    //$('#GridForEverything').jqxGrid('clearfilters');
+    $('#plant3').jqxTabs('focus');
     AddFilter('HQ');
+    $('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
 });
 
 //Start of HideTabs Function
@@ -65,7 +70,7 @@ function NonActive() {
     $('#hqButton').removeClass('active');
 }
 
-function AddFilter (Plant) {
+function AddFilter(Plant) {
     var filtergroup = new $.jqx.filter();
     var filter_or_operator = 1;
     var filtervalue = Plant;

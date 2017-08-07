@@ -10,22 +10,22 @@ script(type='text/javascript').
             cache: false
         });
 
-
-        $.ajax({
-            url: '../javascripts/tabs.js',
-            async: false,
-            cache: false
-        })
-        //End of Layout Calls
-
-
         $.ajax({ // Windows Calls
             url: '../javascripts/windows.js',
             async: false,
             cache: false
         });
 
+        //End of Layout Calls
+
         //Start of Plant Calls
+
+        $.ajax({ // Plant All Call
+            url: '../javascripts/Grid.js',
+            async: false,
+            cache: false
+        });
+
         $.ajax({ // Plant All Call
             url: '../javascripts/plantAll.js',
             async: false,

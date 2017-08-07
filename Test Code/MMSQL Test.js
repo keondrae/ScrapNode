@@ -273,6 +273,7 @@ exports.listAllRecordsInReallyBigDataTable = (req, res) => {
                         ReasonCodeDesc = 'Other';
                         break;
                 }
+
                 DataArray.push({
                     ReasonCodeDesc: ReasonCodeDesc,
                     Item: ItemCode,

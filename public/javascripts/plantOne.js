@@ -2,7 +2,6 @@
  * Created by kmell on 6/22/2017.
  */
 console.log("Plant 1 All Called");
-
 function PlantOneAllDetails(data) {
     console.log("Plant 1 All method Called");
     //Chart
@@ -60,52 +59,6 @@ function PlantOneAllDetails(data) {
     };
     $('#plant1AllChart').jqxChart(AllChartSettings);
 
-    /*
-    //Start of Grid
-    var plant1AllDataSource = [
-        { name: 'RecordID', type: 'string'},
-        { name: 'ItemCode' , type: 'string' },
-        { name: 'ItemCodeDesc' , type: 'string' },
-        { name: 'ProductLine' , type: 'string' }
-
-    ];
-    var plant1AllColumns = [
-        { text: 'RecordID', datafield: 'RecordID'},
-        { text: 'ItemCode', datafield: 'ItemCode'},
-        { text: 'ItemCodeDesc', datafield: 'ItemCodeDesc'},
-        { text: 'ProductLine', datafield: 'ProductLine'}
-    ];
-
-    var plant1AllSource = {
-        datatype: "json",
-        datafields: plant1AllDataSource,
-        id: 'RecordID',
-        url: 'scrapGraph.php?plant=plantOne&tab=p1All&Year=' + Year,
-        async: false,
-        pager: function (pagenum, pagesize, oldpagenum) {
-            // callback called when a page or page size is changed.
-        }
-    };
-    var plantOneAllDataAdapter = new $.jqx.dataAdapter(plant1AllSource,
-        { async: false,
-            autoBind: true,
-            loadError: function (xhr, status, error)
-            { alert('Error loading "' + plant1AllSource.url + '" : ' + error); } });
-
-    $("#plant1AllGrid").jqxGrid(
-        {
-            width: gridWidth,
-            height: 685,
-            source: plantOneAllDataAdapter,
-            theme: gridTheme,
-            editable: false,
-            columns: plant1AllColumns,
-            pageable: true,
-            pagermode: 'simple',
-            pageSize: 22
-        });
-    // End of Grid
-*/
 }
 
 function PlantOneDuctDetails(data) {
@@ -165,7 +118,6 @@ function PlantOneDuctDetails(data) {
     };
     $('#plant1DuctChart').jqxChart(DuctChartSettings);
 
-    //Grid
 }
 
 function PlantOneTubeDetails(data) {
@@ -230,7 +182,7 @@ function PlantOneTubeDetails(data) {
 }
 
 function PlantOneCoversDetails(data) {
-
+    console.log("Plant 1 Covers method Called");
     /* data adapter settings */
     var CoversDataAdapter = new $.jqx.dataAdapter({
         localdata: data,
@@ -284,12 +236,12 @@ function PlantOneCoversDetails(data) {
         ]
     };
     // setup the chart
-    $('#plant1CoversChart').jqxChart(CoversChartSettings);
+    $('#plant1CoversChart').jqxChart(CoversChartSettings)
 
 }
 
 function PlantOneAssemblyDetails(data) {
-
+    console.log("Plant 1 Assembly method Called");
     /* data adapter settings */
     var AssemblyDataAdapter = new $.jqx.dataAdapter({
         localdata: data,
@@ -349,7 +301,7 @@ function PlantOneAssemblyDetails(data) {
 }
 
 function PlantOneOtherDetails(data) {
-
+    console.log("Plant 1 Others method Called");
     /* data adapter settings */
     var OtherDataAdapter = new $.jqx.dataAdapter({
         localdata: data,

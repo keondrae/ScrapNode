@@ -208,14 +208,14 @@ function PlantTwoAll(Year, db, connectionString, res) {
         });
         //End Of Array 04
 
-
+        res.send(JSON.stringify(Array08));
     });
 
 
 
 
 
-    res.send(JSON.stringify(DataArray));
+
 }
 function PlantTwoPlenums(Year, db, connectionString, res) {
     console.log('Plant Two Plenums');

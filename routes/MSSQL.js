@@ -13,6 +13,7 @@ var config = {
 };
 
 router.get('/:year', function(req, res, next) {
+    res.addHeader("Access-Control-Allow-Origin", "*");
 
     var Year = req.params.year;
     sql.connect(config, function (err) {

@@ -101,8 +101,9 @@ body(class='default')
             $.ajax({
                 type: 'GET',
                 url: '/MSSQL/' + Year,
-                async: false,
+                async: true,
                 dataType: 'json',
+                timeout: timeOut,
                 success: function (data1) {
 
                     gridData = data1

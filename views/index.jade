@@ -192,6 +192,7 @@ block content
                 reorder: false
             }).on('tabclick', function () {
                 $('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
+                $('.data').jqxChart('refresh');
             });
 
             $('#plant2').jqxTabs({
@@ -203,6 +204,7 @@ block content
                 reorder: false
             }).on('tabclick', function () {
                 $('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
+                $('.data').jqxChart('refresh');
             });
 
             $('#plant3').jqxTabs({
@@ -214,6 +216,7 @@ block content
                 reorder: false
             }).on('tabclick', function () {
                 $('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
+                $('.data').jqxChart('refresh');
             });
 
             $('#plantAll').jqxTabs({
@@ -225,6 +228,7 @@ block content
                 reorder: false
             }).on('tabclick', function () {
                 $('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
+                $('.data').jqxChart('refresh');
             });
 
         }

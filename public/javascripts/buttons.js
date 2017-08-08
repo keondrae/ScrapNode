@@ -20,6 +20,7 @@ $('#AllPlantButton').click(function () {
     $('#plantAll').jqxTabs('focus');
     $('#GridForEverything').jqxGrid('clearfilters', 'false');
     $('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
+    $('.data').jqxChart('refresh');
 });
 
 $('#plant1Button').click(function () {
@@ -31,6 +32,7 @@ $('#plant1Button').click(function () {
     $('#plant1').jqxTabs('focus');
     AddFilter('PLANT #1');
     $('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
+    $('.data').jqxChart('refresh');
 });
 
 $('#plant2Button').click(function () {
@@ -42,6 +44,7 @@ $('#plant2Button').click(function () {
     $('#plant2').jqxTabs('focus');
     AddFilter('PLANT #2');
     $('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
+    $('.data').jqxChart('refresh');
 });
 
 $('#hqButton').click(function () {
@@ -53,6 +56,7 @@ $('#hqButton').click(function () {
     $('#plant3').jqxTabs('focus');
     AddFilter('HQ');
     $('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
+    $('.data').jqxChart('refresh');
 });
 
 //Start of HideTabs Function

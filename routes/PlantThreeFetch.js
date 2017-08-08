@@ -232,6 +232,7 @@ function PlantThreeP8(Year, db, connectionString, res) {
 
     });
 }
+//Done
 function PlantThreePrimaryOps(Year, db, connectionString, res) {
     console.log('Plant Three Primary Ops');
     var Array02 = [];
@@ -246,10 +247,13 @@ function PlantThreePrimaryOps(Year, db, connectionString, res) {
             return console.log(err);
         }
 
-        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-00-0000' AND  FiscalYear =" + Year;
+        var sql02 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-02-0000' AND  FiscalYear =" + Year;
+        var sql24 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-24-0000' AND  FiscalYear =" + Year;
+        var sql21 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-21-0000' AND  FiscalYear =" + Year;
+        var sql22 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-22-0000' AND  FiscalYear =" + Year;
 
 
-        db.query(sql, function (err, rows, moreResultSets) {
+        db.query(sql02, function (err, rows, moreResultSets) {
 
             if (err) {
                 return console.log(err);
@@ -263,8 +267,7 @@ function PlantThreePrimaryOps(Year, db, connectionString, res) {
                 var BeginningBalance = rows[i].BeginningBalance;
                 var DebitAmount = rows[i].DebitAmount;
                 var CreditAmount = rows[i].CreditAmount;
-                var EB = BeginningBalance + DebitAmount - CreditAmount;
-                var EndingBalance = EB.toString();
+                var EndingBalance = BeginningBalance + DebitAmount - CreditAmount;
                 var Date;
 
                 switch (FiscalPeriod) {
@@ -306,25 +309,220 @@ function PlantThreePrimaryOps(Year, db, connectionString, res) {
                         break;
                 }
 
-                DataArray.push({
-
+                Array02.push({
                     Date: Date,
                     EndingBalance: EndingBalance
                 });
             }
 
-            res.send(JSON.stringify(DataArray));
+            db.query(sql24, function (err, rows, moreResultSets) {
 
+                if (err) {
+                    return console.log(err);
+                }
+
+                for(var i = 0; i < rows.length; i++) {
+                    var FY = parseInt(rows[i].FiscalYear);
+                    var FiscalYear = FY;
+                    var FP = parseInt(rows[i].FiscalPeriod);
+                    var FiscalPeriod = FP;
+                    var BeginningBalance = rows[i].BeginningBalance;
+                    var DebitAmount = rows[i].DebitAmount;
+                    var CreditAmount = rows[i].CreditAmount;
+                    var EndingBalance = BeginningBalance + DebitAmount - CreditAmount;
+                    var Date;
+
+                    switch (FiscalPeriod) {
+                        case 1:
+                            Date = FiscalYear - 1 + '-12-01';
+                            break;
+                        case 2:
+                            Date = FiscalYear + '-01-01';
+                            break;
+                        case 3:
+                            Date = FiscalYear + '-02-01';
+                            break;
+                        case 4:
+                            Date = FiscalYear + '-03-01';
+                            break;
+                        case 5:
+                            Date = FiscalYear + '-04-01';
+                            break;
+                        case 6:
+                            Date = FiscalYear + '-05-01';
+                            break;
+                        case 7:
+                            Date = FiscalYear + '-06-01';
+                            break;
+                        case 8:
+                            Date = FiscalYear + '-07-01';
+                            break;
+                        case 9:
+                            Date = FiscalYear + '-08-01';
+                            break;
+                        case 10:
+                            Date = FiscalYear + '-09-01';
+                            break;
+                        case 11:
+                            Date = FiscalYear + '-10-01';
+                            break;
+                        case 12:
+                            Date = FiscalYear + '-11-01';
+                            break;
+                    }
+
+                    Array24.push({
+                        Date: Date,
+                        EndingBalance: EndingBalance
+                    });
+                }
+
+                db.query(sql21, function (err, rows, moreResultSets) {
+
+                    if (err) {
+                        return console.log(err);
+                    }
+
+                    for(var i = 0; i < rows.length; i++) {
+                        var FY = parseInt(rows[i].FiscalYear);
+                        var FiscalYear = FY;
+                        var FP = parseInt(rows[i].FiscalPeriod);
+                        var FiscalPeriod = FP;
+                        var BeginningBalance = rows[i].BeginningBalance;
+                        var DebitAmount = rows[i].DebitAmount;
+                        var CreditAmount = rows[i].CreditAmount;
+                        var EndingBalance = BeginningBalance + DebitAmount - CreditAmount;
+                        var Date;
+
+                        switch (FiscalPeriod) {
+                            case 1:
+                                Date = FiscalYear - 1 + '-12-01';
+                                break;
+                            case 2:
+                                Date = FiscalYear + '-01-01';
+                                break;
+                            case 3:
+                                Date = FiscalYear + '-02-01';
+                                break;
+                            case 4:
+                                Date = FiscalYear + '-03-01';
+                                break;
+                            case 5:
+                                Date = FiscalYear + '-04-01';
+                                break;
+                            case 6:
+                                Date = FiscalYear + '-05-01';
+                                break;
+                            case 7:
+                                Date = FiscalYear + '-06-01';
+                                break;
+                            case 8:
+                                Date = FiscalYear + '-07-01';
+                                break;
+                            case 9:
+                                Date = FiscalYear + '-08-01';
+                                break;
+                            case 10:
+                                Date = FiscalYear + '-09-01';
+                                break;
+                            case 11:
+                                Date = FiscalYear + '-10-01';
+                                break;
+                            case 12:
+                                Date = FiscalYear + '-11-01';
+                                break;
+                        }
+
+                        Array21.push({
+                            Date: Date,
+                            EndingBalance: EndingBalance
+                        });
+                    }
+
+                    db.query(sql22, function (err, rows, moreResultSets) {
+
+                        if (err) {
+                            return console.log(err);
+                        }
+
+                        for(var i = 0; i < rows.length; i++) {
+                            var FY = parseInt(rows[i].FiscalYear);
+                            var FiscalYear = FY;
+                            var FP = parseInt(rows[i].FiscalPeriod);
+                            var FiscalPeriod = FP;
+                            var BeginningBalance = rows[i].BeginningBalance;
+                            var DebitAmount = rows[i].DebitAmount;
+                            var CreditAmount = rows[i].CreditAmount;
+                            var EndingBalance = BeginningBalance + DebitAmount - CreditAmount;
+                            var Date;
+
+                            switch (FiscalPeriod) {
+                                case 1:
+                                    Date = FiscalYear - 1 + '-12-01';
+                                    break;
+                                case 2:
+                                    Date = FiscalYear + '-01-01';
+                                    break;
+                                case 3:
+                                    Date = FiscalYear + '-02-01';
+                                    break;
+                                case 4:
+                                    Date = FiscalYear + '-03-01';
+                                    break;
+                                case 5:
+                                    Date = FiscalYear + '-04-01';
+                                    break;
+                                case 6:
+                                    Date = FiscalYear + '-05-01';
+                                    break;
+                                case 7:
+                                    Date = FiscalYear + '-06-01';
+                                    break;
+                                case 8:
+                                    Date = FiscalYear + '-07-01';
+                                    break;
+                                case 9:
+                                    Date = FiscalYear + '-08-01';
+                                    break;
+                                case 10:
+                                    Date = FiscalYear + '-09-01';
+                                    break;
+                                case 11:
+                                    Date = FiscalYear + '-10-01';
+                                    break;
+                                case 12:
+                                    Date = FiscalYear + '-11-01';
+                                    break;
+                            }
+
+                            Array22.push({
+                                Date: Date,
+                                EndingBalance: EndingBalance
+                            });
+                        }
+
+                        db.close(function (err) {
+
+                            if (err) {
+                                console.log('Plant Three Primary Ops Error: ' + err);
+                            } else {
+                                console.log("the database connection is now closed");
+                            }
+                        });
+                            CombineArrays(Array02, Array22, TempArrayOne, false);
+                            CombineArrays(TempArrayOne, Array21, TempArrayTwo, false);
+                            CombineArrays(TempArrayTwo, Array24, DataArray, true);
+
+                            res.send(JSON.stringify(DataArray));
+                    });
+                });
+            });
         });
-        db.close(function (err) {
 
-            if(err){
-                console.log('Plant Three Primary Ops Error: ' + err);
-            }else {
-                console.log("the database connection is now closed");
-            }
 
-        });
+
+
+
     });
 }
 //Done

@@ -240,41 +240,6 @@ function PlantTwoAll(Year, db, connectionString, res) {
                         });
                     }
 
-                    //console.log(Array08);
-                    //console.log(Array04);
-                    //console.log(Array05);
-
-                    Array08.forEach(function (a8) {
-                        var match = false;
-                        Array04.forEach(function (a4) {
-                            if(a8.Date === a4.Date){
-                                match = true;
-                                a8.EndingBalance += a4.EndingBalance;
-                                //a8.EndingBalance = a8.EndingBalance.toString();
-                                TempArray.push(a8);
-                                console.log(match);
-                            }
-
-                        });
-                        if(!match) TempArray.push(a8);
-                    });
-                    //console.log(TempArray);
-
-                    TempArray.forEach(function (TA) {
-                        var match = false;
-                        Array05.forEach(function (a5) {
-                            if(TA.Date === a5.Date){
-                                match = true;
-                                TA.EndingBalance += a5.EndingBalance;
-                                TA.EndingBalance = TA.EndingBalance.toString();
-                                DataArray.push(TA);
-                                console.log(match);
-                            }
-
-                        });
-                        if(!match) DataArray.push(TA);
-                    });
-
                     db.close(function (err) {
 
                         if(err){
@@ -282,10 +247,22 @@ function PlantTwoAll(Year, db, connectionString, res) {
                         }else{
                             console.log("the database connection is now closed");
                         }
-
-                        //console.log(TestArray);
-                        res.send(JSON.stringify(DataArray));
                     });
+
+                    if(Array08.length >= Array04.length){
+                        CombineArrays(Array08, Array04, TempArray, false);
+                    }else{
+                        CombineArrays(Array04, Array08, TempArray, false);
+                    }
+
+                    if(TempArray.length >= Array05.length){
+                        CombineArrays(TempArray, Array05, DataArray, true);
+                    }else{
+                        CombineArrays(Array05, TempArray, DataArray, true);
+                    }
+
+                    //console.log(TestArray);
+                    res.send(JSON.stringify(DataArray));
                 });
             });
 
@@ -571,3 +548,23 @@ function PlantTwoDowners(Year, db, connectionString, res) {
     });
 }
 //End of Plant Two Functions
+
+function CombineArrays(BiggerArray, SmallerArray, NewArray, isLast) {
+    BiggerArray.forEach(function (BA) {
+        var match = false;
+        SmallerArray.forEach(function (SA) {
+            if(BA.Date === SA.Date){
+                match = true;
+                BA.EndingBalance += SA.EndingBalance;
+                if(isLast){
+                    BA.EndingBalance = BA.EndingBalance.toString();
+                }
+
+                NewArray.push(BA);
+                //console.log(match);
+            }
+
+        });
+        if(!match) NewArray.push(BA);
+    });
+}

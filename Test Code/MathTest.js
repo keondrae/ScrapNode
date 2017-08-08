@@ -237,7 +237,7 @@ db.open(connectionString, function (err) {
                             TA.EndingBalance += a5.EndingBalance;
                             TA.EndingBalance = TA.EndingBalance.toString();
                             TestArray.push(TA);
-                            console.log(match);
+                            //console.log(match);
                         }
 
                     });

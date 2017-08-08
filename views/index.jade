@@ -90,19 +90,19 @@ block content
                 li= 'Flex Hose / Caps'
                 li= 'Downers'
 
-            div(id='plantTwoAllDetails' class='')
+            div(id='plantTwoAllDetails' class='PlantDiv')
                 div(id='plant2AllChart' class='data chart')= 'All Plant 2 Chart'
                 //div(id='plant2AllCircleChart' class='data')= 'Circle Chart'
 
-            div(id='plantTwoPlenDetails' class='')
+            div(id='plantTwoPlenDetails' class='PlantDiv')
                 div(id='plant2PlenChart' class='data chart')= 'Plenums Chart'
                 //div(id='plant2PlenCircleChart' class='data')= 'Circle Chart'
 
-            div(id='plantTwo2FCDetails' class='')
+            div(id='plantTwo2FCDetails' class='PlantDiv')
                 div(id='plant2FCChart' class='data chart')= 'Flex Hose / Caps Chart'
                 //div(id='plant2FCCircleChart' class='data')= 'Circle Chart'
 
-            div(id='plantTwoDownDetails' class='')
+            div(id='plantTwoDownDetails' class='PlantDiv')
                 div(id='plant2DownChart' class='data chart')= 'Downers Chart'
                 //div(id='plant2DownCircleChart' class='data')= 'Circle Chart'
 
@@ -120,35 +120,35 @@ block content
                 li= 'BSI Windows'
                 li= 'All Windows'
 
-            div(id='plantThreeAllDetails' class='')
+            div(id='plantThreeAllDetails' class='PlantDiv')
                 div(id='plant3AllChart' class='data')= 'All Plant 3 Chart'
                 //div(id='plant3AllCircleChart' class='data')= 'Circle Chart'
 
-            div(id='plantThreeP8Details' class='')
+            div(id='plantThreeP8Details' class='PlantDiv')
                 div(id='plant3P8Chart' class='data')= 'P8 Chart'
                 //div(id='plant3P8CircleChart' class='data')= 'Circle Chart'
 
-            div(id='plantThreePrimaryDetails' class='')
+            div(id='plantThreePrimaryDetails' class='PlantDiv')
                 div(id='plant3PrimaryChart' class='data')= 'Primary Ops chart'
                 //div(id='plant3PrimaryCircleChart' class='data')= 'Circle Chart'
 
-            div(id='plantThreeSleevesDetails' class='')
+            div(id='plantThreeSleevesDetails' class='PlantDiv')
                 div(id='plant3SleevesChart' class='data')= 'Sleeves chart'
                 //div(id='plant3SleevesCircleChart' class='data')= 'Circle Chart'
 
-            div(id='plantThree737WDetails' class='')
+            div(id='plantThree737WDetails' class='PlantDiv')
                 div(id='plant3737WChart' class='data')= '737 Windows chart'
                 //div(id='plant3737WCircleChart' class='data')= 'Circle Chart'
 
-            div(id='plantThree787WDetails' class='')
+            div(id='plantThree787WDetails' class='PlantDiv')
                 div(id='plant3787WChart' class='data')= '787 Windows chart'
                 //div(id='plant3787WCircleChart' class='data')= 'Circle Chart'
 
-            div(id='plantThreeBSIDetails' class='')
+            div(id='plantThreeBSIDetails' class='PlantDiv')
                 div(id='plant3BSIChart' class='data')= 'BSI Windows chart'
                 //div(id='plant3BSICircleChart' class='data')= 'Circle Chart'
 
-            div(id='plantThreeAllWindowsDetails' class='')
+            div(id='plantThreeAllWindowsDetails' class='PlantDiv')
                 div(id='plant3AllWindowsChart' class='data' )= 'All Windows chart'
                 //div(id='plant3AllWindowsCircleChart' class='data')= 'Circle Chart'
         //End of plant three
@@ -175,6 +175,7 @@ block content
         plantTwoDataFetch(Year);
         plantThreeDataFetch(Year);
         HideTabs();
+        $('.data').jqxChart('refresh');
         $('#plantAll').show();
             //$('#AllPlantDetails').show();
         $('.HideOnStart').show();
@@ -273,6 +274,7 @@ block content
             plantTwoDataFetch(Year);
             plantThreeDataFetch(Year);
             //plantFourDataFetch(Year);
+            $('.data').jqxChart('refresh');
         });
 
         function GridFetch(Year) {
@@ -654,9 +656,9 @@ block content
 
         }
 
-        //$('.Info').click(function () {
-        //    $('.data').jqxChart('refresh');
-        //})
+        $('.PlantDiv').click(function () {
+            $('.data').jqxChart('refresh');
+        })
 
 
 

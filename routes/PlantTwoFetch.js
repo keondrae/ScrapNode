@@ -34,6 +34,7 @@ router.get('/:year/:tab', function(req, res, next) {
 module.exports = router;
 
 //Start of Plant Two Functions
+//Done
 function PlantTwoAll(Year, db, connectionString, res) {
     console.log('Plant Two All');
     var TempArray = [];
@@ -273,6 +274,7 @@ function PlantTwoAll(Year, db, connectionString, res) {
     });
 
 }
+//Done
 function PlantTwoPlenums(Year, db, connectionString, res) {
     console.log('Plant Two Plenums');
     db.open(connectionString, function (err) {
@@ -364,6 +366,7 @@ function PlantTwoPlenums(Year, db, connectionString, res) {
     });
 
 }
+//Done
 function PlantTwoFlexHCaps(Year, db, connectionString, res) {
     console.log('Plant Two Flex Hose / Caps');
     db.open(connectionString, function (err) {
@@ -456,6 +459,7 @@ function PlantTwoFlexHCaps(Year, db, connectionString, res) {
     });
 
 }
+//Done
 function PlantTwoDowners(Year, db, connectionString, res) {
     console.log('Downers');
     db.open(connectionString, function (err) {

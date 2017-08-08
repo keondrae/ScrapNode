@@ -133,6 +133,7 @@ function PlantOneAll(Year, db, connectionString, res) {
         });
     });
 }
+//Done
 function PlantOneDuct(Year, db, connectionString, res) {
     console.log('Plant One Duct');
     var Array08 = [];
@@ -301,6 +302,7 @@ function PlantOneDuct(Year, db, connectionString, res) {
 
     });
 }
+//Done
 function PlantOneTubes(Year, db, connectionString, res) {
     console.log('Plant One Tubes');
     db.open(connectionString, function (err) {
@@ -376,20 +378,23 @@ function PlantOneTubes(Year, db, connectionString, res) {
                 });
             }
 
+            db.close(function (err) {
+
+                if(err){
+                    console.log('Plant One Tubes Error: ' + err);
+                }else {
+                    console.log("the database connection is now closed");
+                }
+
+            });
+
             res.send(JSON.stringify(DataArray));
 
         });
-        db.close(function (err) {
 
-            if(err){
-                console.log('Plant One Tubes Error: ' + err);
-            }else {
-                console.log("the database connection is now closed");
-            }
-
-        });
     });
 }
+//Done
 function PlantOneCovers(Year, db, connectionString, res) {
     console.log('Plant One Covers');
     db.open(connectionString, function (err) {
@@ -465,20 +470,23 @@ function PlantOneCovers(Year, db, connectionString, res) {
                 });
             }
 
+            db.close(function (err) {
+
+                if(err){
+                    console.log('Plant One Covers Error: ' + err);
+                }else {
+                    console.log("the database connection is now closed");
+                }
+
+            });
+
             res.send(JSON.stringify(DataArray));
 
         });
-        db.close(function (err) {
 
-            if(err){
-                console.log('Plant One Covers Error: ' + err);
-            }else {
-                console.log("the database connection is now closed");
-            }
-
-        });
     });
 }
+//Done
 function PlantOneAssembly(Year, db, connectionString, res) {
     console.log('Plant One Assembly');
     var Array82 = [];
@@ -735,6 +743,7 @@ function PlantOneAssembly(Year, db, connectionString, res) {
 
     });
 }
+//Done
 function PlantOneOthers(Year, db, connectionString, res) {
     console.log('Plant One Other');
     var Array17 = [];
@@ -908,7 +917,6 @@ function CombineArrays(BiggerArray, SmallerArray, NewArray, isLast) {
                 match = true;
                 BA.EndingBalance += SA.EndingBalance;
                 if(isLast){
-
                     BA.EndingBalance = BA.EndingBalance.toString();
                 }
                 NewArray.push(BA);

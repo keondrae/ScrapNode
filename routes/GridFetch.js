@@ -116,6 +116,7 @@ router.get('/:year', function(req, res, next) {
                         ReasonCodeDesc = 'Other';
                         break;
                 }
+
                 DataArray.push({
                     ReasonCodeDesc: ReasonCodeDesc,
                     Item: ItemCode,
@@ -131,16 +132,17 @@ router.get('/:year', function(req, res, next) {
 
             }
 
+            db.close(function (err) {
+                if(err){
+                    console.log('Grid Error: ' + err);
+                }else{
+                    console.log("the database connection is now closed");
+                }
+
+            });
+
             //console.log(TestArray[1]);
             res.send(JSON.stringify(DataArray));
-
-        });
-        db.close(function (err) {
-            if(err){
-                console.log('Grid Error: ' + err);
-            }else{
-                console.log("the database connection is now closed");
-            }
 
         });
     });

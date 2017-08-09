@@ -12,6 +12,7 @@ function PlantTwoAllDetails(data) {
         datafields: [
             {name: "Date", type: "string"},
             {name: "EndingBalance", type: "number"}
+
         ]
     });
 
@@ -74,7 +75,8 @@ function PlantTwoPlenumsDetails(data) {
         localdata: data,
         datafields: [
             {name: "Date", type: "string"},
-            {name: "EndingBalance", type: "number"}
+            {name: "EndingBalance", type: "number"},
+            {name: 'PlantAllEndingBalance', type: 'number'}
         ]
     });
 
@@ -114,9 +116,8 @@ function PlantTwoPlenumsDetails(data) {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {
-                        dataField: "EndingBalance"
-                    }
+                    {dataField: "EndingBalance", displayText: 'Plenums'},
+                    {dataFiled: 'PlantAllEndingBalance', displayText: 'All Plant Two'}
                 ]
             }
         ]

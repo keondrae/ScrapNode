@@ -3,8 +3,12 @@ var router = express.Router();
 var odbc = require('odbc');
 var connectionString ="Driver={SQL Server};Server=tf-sql-01;Database=MAS_TFI";
 var db = new odbc.Database();
+var DataTempArray = [];
 var DataArray = [];
-
+var PlantAllArray = [];
+var PlenumsArray = [];
+var FlexHCapsArray = [];
+var DownersArray = [];
 router.get('/:year/:tab', function(req, res, next) {
     DataArray = [];
     var Year = req.params.year;
@@ -37,6 +41,7 @@ module.exports = router;
 //Done
 function PlantTwoAll(Year, db, connectionString, res) {
     console.log('Plant Two All');
+    PlantAllArray = [];
     var TempArray = [];
     var Array08 = [];
     var Array04 = [];
@@ -239,6 +244,11 @@ function PlantTwoAll(Year, db, connectionString, res) {
                             Date: Date,
                             EndingBalance: EndingBalance
                         });
+
+                        PlantAllArray.push({
+                            Date: Date,
+                            AllEndingBalance: EndingBalance
+                        });
                     }
 
                     db.close(function (err) {
@@ -343,12 +353,23 @@ function PlantTwoPlenums(Year, db, connectionString, res) {
                         break;
                 }
 
-                DataArray.push({
 
+                DataTempArray.push({
                     Date: Date,
-                    EndingBalance: EndingBalance
+                    EndingBalance: EndingBalance,
                 });
             }
+
+            for(var u = 0; u < PlantAllArray.length; u++){
+
+                DataArray.push({
+                    Date: DataTempArray[u].Date,
+                    EndingBalance: DataTempArray[u].EndingBalance,
+                    AllPlantEndingBalance: PlantAllArray[u].AllEndingBalance
+                })
+
+            }
+
 
             db.close(function (err) {
 
@@ -359,6 +380,7 @@ function PlantTwoPlenums(Year, db, connectionString, res) {
                 }
 
             });
+
             res.send(JSON.stringify(DataArray));
 
         });

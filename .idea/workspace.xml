@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="84f9f0e2-2a39-4b4f-a441-31ecfef358ed" name="Default" comment="">
+    <list default="true" id="84f9f0e2-2a39-4b4f-a441-31ecfef358ed" name="Default" comment="Fixed Grid Crashing when switching years">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/PlantThreeFetch.js" afterPath="$PROJECT_DIR$/routes/PlantThreeFetch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/plantTwo.js" afterPath="$PROJECT_DIR$/public/javascripts/plantTwo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/GridFetch.js" afterPath="$PROJECT_DIR$/routes/GridFetch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/PlantTwoFetch.js" afterPath="$PROJECT_DIR$/routes/PlantTwoFetch.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,35 +29,70 @@
     <favorites_list name="ScrapNode" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PlantTwoFetch.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/routes/PlantTwoFetch.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="45" column="59" lean-forward="false" selection-start-line="45" selection-start-column="59" selection-end-line="45" selection-end-column="59" />
-              <folding>
-                <element signature="e#2177#2225#0" expanded="false" />
-                <element signature="e#2312#2368#0" expanded="false" />
-                <element signature="e#2419#4464#0" expanded="false" />
-                <element signature="e#2912#4316#0" expanded="false" />
-                <element signature="e#4559#4623#0" expanded="false" />
-                <element signature="e#4678#6931#0" expanded="false" />
-                <element signature="e#5211#6763#0" expanded="false" />
-                <element signature="e#7034#7106#0" expanded="false" />
-                <element signature="e#7165#9626#0" expanded="false" />
-                <element signature="e#7738#9438#0" expanded="false" />
-                <element signature="n#!!block;n#PlantTwoPlenums#0" expanded="false" />
-                <element signature="e#11908#13312#0" expanded="false" />
-                <element signature="n#!!block;n#PlantTwoFlexHCaps#0" expanded="false" />
-                <element signature="e#15086#16490#0" expanded="false" />
-                <element signature="n#!!block;n#PlantTwoDowners#0" expanded="false" />
-                <element signature="e#18253#19657#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.66227245">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="PlantTwoFetch.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/routes/PlantTwoFetch.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="442">
+                  <caret line="595" column="1" lean-forward="true" selection-start-line="595" selection-start-column="1" selection-end-line="595" selection-end-column="1" />
+                  <folding>
+                    <element signature="e#392#1005#0" expanded="false" />
+                    <element signature="n#!!block;n#PlantTwoAll#0" expanded="false" />
+                    <element signature="e#2319#2367#0" expanded="false" />
+                    <element signature="e#2454#2510#0" expanded="false" />
+                    <element signature="e#2561#4606#0" expanded="false" />
+                    <element signature="e#3054#4458#0" expanded="false" />
+                    <element signature="e#4701#4765#0" expanded="false" />
+                    <element signature="e#4820#7073#0" expanded="false" />
+                    <element signature="e#5353#6905#0" expanded="false" />
+                    <element signature="e#7176#7248#0" expanded="false" />
+                    <element signature="e#7880#9580#0" expanded="false" />
+                    <element signature="n#!!block;n#PlantTwoPlenums#0" expanded="false" />
+                    <element signature="e#12224#13628#0" expanded="false" />
+                    <element signature="n#!!block;n#PlantTwoFlexHCaps#0" expanded="false" />
+                    <element signature="e#15730#17134#0" expanded="false" />
+                    <element signature="n#!!block;n#PlantTwoDowners#0" expanded="false" />
+                    <element signature="e#18897#20301#0" expanded="false" />
+                    <element signature="n#!!block;n#CombineArrays#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="GridFetch.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/routes/GridFetch.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="88">
+                  <caret line="118" column="0" lean-forward="true" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#2175#3681#0" expanded="false" />
+                    <element signature="e#3699#4752#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="plantTwo.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/public/javascripts/plantTwo.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="680">
+                  <caret line="111" column="31" lean-forward="true" selection-start-line="111" selection-start-column="31" selection-end-line="111" selection-end-column="31" />
+                  <folding>
+                    <element signature="n#!!block;n#PlantTwoAllDetails#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -112,7 +149,6 @@
         <option value="$PROJECT_DIR$/public/stylesheets/jquery-ui.css" />
         <option value="$PROJECT_DIR$/Test Code/index.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/plantTwo.js" />
         <option value="$PROJECT_DIR$/public/javascripts/plantThree.js" />
         <option value="$PROJECT_DIR$/routes/PlantAllGridFetch.js" />
         <option value="$PROJECT_DIR$/Test Code/Query Test.js" />
@@ -122,7 +158,6 @@
         <option value="$PROJECT_DIR$/routes/PlantAllFetch.js" />
         <option value="$PROJECT_DIR$/public/javascripts/GridFetch.js" />
         <option value="$PROJECT_DIR$/public/javascripts/plantAll.js" />
-        <option value="$PROJECT_DIR$/routes/GridFetch.js" />
         <option value="$PROJECT_DIR$/public/javascripts/plantOne.js" />
         <option value="$PROJECT_DIR$/public/javascripts/tabs.js" />
         <option value="$PROJECT_DIR$/public/javascripts/Grid.js" />
@@ -136,9 +171,11 @@
         <option value="$PROJECT_DIR$/views/JSCalls.jade" />
         <option value="$PROJECT_DIR$/Test Code/MathTest.js" />
         <option value="$PROJECT_DIR$/views/index.jade" />
-        <option value="$PROJECT_DIR$/routes/PlantTwoFetch.js" />
         <option value="$PROJECT_DIR$/routes/PlantOneFetch.js" />
         <option value="$PROJECT_DIR$/routes/PlantThreeFetch.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/plantTwo.js" />
+        <option value="$PROJECT_DIR$/routes/PlantTwoFetch.js" />
+        <option value="$PROJECT_DIR$/routes/GridFetch.js" />
       </list>
     </option>
   </component>
@@ -199,6 +236,12 @@
               <item name="ScrapNode" type="b2602c69:ProjectViewProjectNode" />
               <item name="ScrapNode" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ScrapNode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScrapNode" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="javascripts" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="ScrapNode" type="b2602c69:ProjectViewProjectNode" />
@@ -291,7 +334,7 @@
       <workItem from="1501878576531" duration="1570000" />
       <workItem from="1502112486364" duration="13539000" />
       <workItem from="1502138685061" duration="74002000" />
-      <workItem from="1502217369917" duration="8602000" />
+      <workItem from="1502217369917" duration="12566000" />
     </task>
     <task id="LOCAL-00001" summary="C">
       <created>1501868881324</created>
@@ -370,11 +413,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502226172475</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Updates Some Charts">
+      <created>1502226902942</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1502226902942</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="299950000" />
+    <option name="totallyTimeSpent" value="303914000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -389,17 +439,17 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10127932" sideWeight="0.48886415" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15085287" sideWeight="0.48886415" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3429844" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42873052" sideWeight="0.49573562" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17750533" sideWeight="0.5080645" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.014476615" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31069043" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17750533" sideWeight="0.4919355" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.50664455" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30289534" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14142539" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -453,7 +503,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="30" />
+      <option name="time" value="32" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -467,7 +517,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/routes/PlantTwoGridFetch.js" />
     <entry file="file://$PROJECT_DIR$/routes/PlantThreeGridFetch.js" />
     <entry file="file://$PROJECT_DIR$/Test Code/index.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -582,20 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/GridFetch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="60" lean-forward="false" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/Grid.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -786,27 +821,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/plantTwo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="111" column="31" lean-forward="true" selection-start-line="111" selection-start-column="31" selection-end-line="111" selection-end-column="31" />
+          <folding>
+            <element signature="n#!!block;n#PlantTwoAllDetails#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/Grid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/PlantTwoFetch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="45" column="59" lean-forward="false" selection-start-line="45" selection-start-column="59" selection-end-line="45" selection-end-column="59" />
+        <state relative-caret-position="442">
+          <caret line="595" column="1" lean-forward="true" selection-start-line="595" selection-start-column="1" selection-end-line="595" selection-end-column="1" />
           <folding>
-            <element signature="e#2177#2225#0" expanded="false" />
-            <element signature="e#2312#2368#0" expanded="false" />
-            <element signature="e#2419#4464#0" expanded="false" />
-            <element signature="e#2912#4316#0" expanded="false" />
-            <element signature="e#4559#4623#0" expanded="false" />
-            <element signature="e#4678#6931#0" expanded="false" />
-            <element signature="e#5211#6763#0" expanded="false" />
-            <element signature="e#7034#7106#0" expanded="false" />
-            <element signature="e#7165#9626#0" expanded="false" />
-            <element signature="e#7738#9438#0" expanded="false" />
+            <element signature="e#392#1005#0" expanded="false" />
+            <element signature="n#!!block;n#PlantTwoAll#0" expanded="false" />
+            <element signature="e#2319#2367#0" expanded="false" />
+            <element signature="e#2454#2510#0" expanded="false" />
+            <element signature="e#2561#4606#0" expanded="false" />
+            <element signature="e#3054#4458#0" expanded="false" />
+            <element signature="e#4701#4765#0" expanded="false" />
+            <element signature="e#4820#7073#0" expanded="false" />
+            <element signature="e#5353#6905#0" expanded="false" />
+            <element signature="e#7176#7248#0" expanded="false" />
+            <element signature="e#7880#9580#0" expanded="false" />
             <element signature="n#!!block;n#PlantTwoPlenums#0" expanded="false" />
-            <element signature="e#11908#13312#0" expanded="false" />
+            <element signature="e#12224#13628#0" expanded="false" />
             <element signature="n#!!block;n#PlantTwoFlexHCaps#0" expanded="false" />
-            <element signature="e#15086#16490#0" expanded="false" />
+            <element signature="e#15730#17134#0" expanded="false" />
             <element signature="n#!!block;n#PlantTwoDowners#0" expanded="false" />
-            <element signature="e#18253#19657#0" expanded="false" />
+            <element signature="e#18897#20301#0" expanded="false" />
+            <element signature="n#!!block;n#CombineArrays#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/GridFetch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="118" column="0" lean-forward="true" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <folding>
+            <element signature="e#2175#3681#0" expanded="false" />
+            <element signature="e#3699#4752#0" expanded="false" />
           </folding>
         </state>
       </provider>

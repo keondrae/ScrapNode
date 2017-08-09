@@ -126,18 +126,20 @@ function PlantThreeAll(Year, db, connectionString, res) {
                 });
             }
 
+            db.close(function (err) {
+
+                if(err){
+                    console.log('Plant Three All Error: ' + err);
+                }else {
+                    console.log("the database connection is now closed");
+                }
+
+            });
+
             res.send(JSON.stringify(DataArray));
 
         });
-        db.close(function (err) {
 
-            if(err){
-                console.log('Plant Three All Error: ' + err);
-            }else {
-                console.log("the database connection is now closed");
-            }
-
-        });
     });
 }
 //Done

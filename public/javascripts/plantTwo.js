@@ -53,7 +53,7 @@ function PlantTwoAllDetails(data) {
                 click: onChartClick,
                 series: [
                     {
-                        dataField: "AllEndingBalance" , displayType: 'All Plant Two'
+                        dataField: "AllEndingBalance" , displayText: 'All Plant Two'
                     }
                 ]
             }
@@ -127,12 +127,12 @@ function PlantTwoPlenumsDetails(data) {
 
 }
 
-function PlantTwoFlexHoesCapsDetails(data) {
+function PlantTwoFlexHoseCapsDetails(data) {
 
     console.log("Plant 2 Flex Hoes / Caps method Called");
     //Chart
     /* data adapter settings */
-    var FlexHoesCapsDataAdapter = new $.jqx.dataAdapter({
+    var FlexHoseCapsDataAdapter = new $.jqx.dataAdapter({
         localdata: data,
         datafields: [
             {name: "Date", type: "string"},
@@ -142,9 +142,9 @@ function PlantTwoFlexHoesCapsDetails(data) {
     });
 
     /* chart settings */
-    var FlexHoesCapsChartSettings = {
-        source: FlexHoesCapsDataAdapter,
-        title: "Flex Hoes / Caps",
+    var FlexHoseCapsChartSettings = {
+        source: FlexHoseCapsDataAdapter,
+        title: "Flex Hose / Caps",
         description: "",
         showToolTips: true,
         enableAnimations: true,
@@ -178,13 +178,13 @@ function PlantTwoFlexHoesCapsDetails(data) {
                 click: onChartClick,
                 series: [
 
-                    {dataField: "FlexHCaps", displayText: 'Plenums'},
+                    {dataField: "FlexHCaps", displayText: 'Flex Hose / Caps'},
                     {dataField: 'AllPlantTwo', displayText: 'All Plant Two'}
                 ]
             }
         ]
     };
-    $('#plant2FCChart').jqxChart(FlexHoesCapsChartSettings);
+    $('#plant2FCChart').jqxChart(FlexHoseCapsChartSettings);
     //End of Chart
 
 }

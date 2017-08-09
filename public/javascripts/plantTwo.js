@@ -11,7 +11,7 @@ function PlantTwoAllDetails(data) {
         localdata: data,
         datafields: [
             {name: "Date", type: "string"},
-            {name: "EndingBalance", type: "number"}
+            {name: "AllEndingBalance", type: "number"}
 
         ]
     });
@@ -53,7 +53,7 @@ function PlantTwoAllDetails(data) {
                 click: onChartClick,
                 series: [
                     {
-                        dataField: "EndingBalance"
+                        dataField: "AllEndingBalance" , displayType: 'All Plant Two'
                     }
                 ]
             }
@@ -75,15 +75,15 @@ function PlantTwoPlenumsDetails(data) {
         localdata: data,
         datafields: [
             {name: "Date", type: "string"},
-            {name: "EndingBalance", type: "number"},
-            {name: 'PlantAllEndingBalance', type: 'number'}
+            {name: "Plenums", type: "number"},
+            {name: "AllPlantTwo", type: "number"}
         ]
     });
 
     /* chart settings */
     var PlenumsChartSettings = {
         source: PlenumsDataAdapter,
-        title: "Plant 2 Plenums",
+        title: "Plenums",
         description: "",
         showToolTips: true,
         enableAnimations: true,
@@ -116,8 +116,8 @@ function PlantTwoPlenumsDetails(data) {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {dataField: "EndingBalance", displayText: 'Plenums'},
-                    {dataFiled: 'PlantAllEndingBalance', displayText: 'All Plant Two'}
+                    {dataField: "Plenums", displayText: 'Plenums'},
+                    {dataField: 'AllPlantTwo', displayText: 'All Plant Two'}
                 ]
             }
         ]
@@ -136,7 +136,8 @@ function PlantTwoFlexHoesCapsDetails(data) {
         localdata: data,
         datafields: [
             {name: "Date", type: "string"},
-            {name: "EndingBalance", type: "number"}
+            {name: "FlexHCaps", type: "number"},
+            {name: "AllPlantTwo", type: "number"}
         ]
     });
 
@@ -176,9 +177,9 @@ function PlantTwoFlexHoesCapsDetails(data) {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {
-                        dataField: "EndingBalance"
-                    }
+
+                    {dataField: "FlexHCaps", displayText: 'Plenums'},
+                    {dataField: 'AllPlantTwo', displayText: 'All Plant Two'}
                 ]
             }
         ]
@@ -191,13 +192,15 @@ function PlantTwoFlexHoesCapsDetails(data) {
 function PlantTwoDownersDetails(data) {
 
     console.log("Plant 2 Downers method Called");
+    console.log(data);
     //Chart
-    /* data adapter settings */
+    /* data adapter settings*/
     var DownersDataAdapter = new $.jqx.dataAdapter({
         localdata: data,
         datafields: [
             {name: "Date", type: "string"},
-            {name: "EndingBalance", type: "number"}
+            {name: "Downers", type: "number"},
+            {name: "AllPlantTwo", type: "number"}
         ]
     });
 
@@ -236,10 +239,11 @@ function PlantTwoDownersDetails(data) {
             {
                 type: "column",
                 click: onChartClick,
+                columnsGapPercent: 50,
+                seriesGapPercent: 0,
                 series: [
-                    {
-                        dataField: "EndingBalance"
-                    }
+                    {dataField: "Downers",      displayText: 'Downers'},
+                    {dataField: "AllPlantTwo",  displayText: 'All Plant Two'}
                 ]
             }
         ]

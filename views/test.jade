@@ -50,7 +50,7 @@ body(class='default')
                 div(class='Info' id='plant1')
 
                     div(id='plantOneTubeDetails' class='')
-                        div(id='plant1TubeChart' class='data')= 'Tubes Chart'
+                        div(id='plant2DownChart' class='data')= 'Tubes Chart'
                         //div(id='plant1TubeCircleChart' class='data')= 'Circle Chart'
 
                 //End plant one
@@ -58,10 +58,8 @@ body(class='default')
         section(class='gird')
             div(id='GridForEverything' class='data')
 
-    include ./JSCalls
+        //include ./JSCalls
     script.
-
-        //var tubes = !{Tubes};
         var ChartData = null;
         var ChartTwo = null;
         var Year = 2017;
@@ -89,7 +87,7 @@ body(class='default')
             currProj = currProj.substring(6, pos);
             console.log(currProj);
             DateForGrid = currProj;
-            addfilter(DateForGrid);
+           // addfilter(DateForGrid);
         }
 
         console.log(Year)
@@ -100,7 +98,7 @@ body(class='default')
 
             $.ajax({
                 type: 'GET',
-                url: '/MSSQL/' + Year,
+                url: '/GridFetch/' + Year,
                 async: true,
                 dataType: 'json',
                 timeout: timeOut,
@@ -129,13 +127,13 @@ body(class='default')
 
             $.ajax({// Get Tubes
                 type: 'GET',
-                url: '/plantOneFetch/' + Year + '/Tubes',
+                url: '/plantTwoFetch/' + Year + '/Downers',
                 dataType: 'json',
                 async: async,
                 cache: cache,
                 timeout: timeOut,
                 success: function (data) {
-                    PlantOneTubeDetails(data);
+                    PlantTwoDownersDetails(data);
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log('Plant One Tubes Error:')
@@ -145,5 +143,69 @@ body(class='default')
                 }
             });
 
+
+        }
+
+        function PlantTwoDownersDetails(data) {
+
+            console.log("Plant 2 Downers method Called");
+            console.log(data);
+            //Chart
+            /* data adapter settings*/
+            var DownersDataAdapter = new $.jqx.dataAdapter({
+                localdata: data,
+                datafields: [
+                    {name: "Date", type: "string"},
+                    {name: "Downers", type: "number"},
+                    {name: "AllPlantTwo", type: "number"}
+                ]
+            });
+
+            /* chart settings */
+            var DownersChartSettings = {
+                source: DownersDataAdapter,
+                title: "Downers",
+                description: "",
+                showToolTips: true,
+                enableAnimations: true,
+                padding: {
+                    left: 5,
+                    top: 5,
+                    right: 5,
+                    bottom: 5
+                },
+                titlePadding: {
+                    left: 5,
+                    top: 5,
+                    right: 5,
+                    bottom: 5
+                },
+                colorScheme: "scheme05",
+                enableCrosshairs: true,
+                enableAxisTextAnimation: true,
+                xAxis: {
+                    dataField: "Date",
+                    type: "date",
+                    baseUnit: "month",
+                    valuesOnTicks: false
+                },
+                valueAxis: {
+                    valuesOnTicks: true
+                },
+                seriesGroups: [
+                    {
+                        type: "column",
+                        click: onChartClick,
+                        columnsGapPercent: 50,
+                        seriesGapPercent: 0,
+                        series: [
+                            {dataField: "Downers",      displayText: 'Downers'},
+                            {dataField: "AllPlantTwo",  displayText: 'All Plant Two'}
+                        ]
+                    }
+                ]
+            };
+            $('#plant2DownChart').jqxChart(DownersChartSettings);
+            //End of Chart
 
         }

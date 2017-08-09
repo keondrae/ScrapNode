@@ -42,6 +42,7 @@ module.exports = router;
 function PlantTwoAll(Year, db, connectionString, res) {
     console.log('Plant Two All');
     PlantAllArray = [];
+    DataArray = [];
     var TempArray = [];
     var Array08 = [];
     var Array04 = [];
@@ -245,10 +246,7 @@ function PlantTwoAll(Year, db, connectionString, res) {
                             EndingBalance: EndingBalance
                         });
 
-                        PlantAllArray.push({
-                            Date: Date,
-                            AllEndingBalance: EndingBalance
-                        });
+
                     }
 
                     db.close(function (err) {
@@ -267,13 +265,24 @@ function PlantTwoAll(Year, db, connectionString, res) {
                     }
 
                     if(TempArray.length >= Array05.length){
-                        CombineArrays(TempArray, Array05, DataArray, true);
+                        CombineArrays(TempArray, Array05, DataTempArray , true);
                     }else{
-                        CombineArrays(Array05, TempArray, DataArray, true);
+                        CombineArrays(Array05, TempArray, DataTempArray, true);
                     }
 
+                    for(var i = 0; i < DataTempArray.length; i++){
+                        var AllDate = DataTempArray[i].Date;
+                        var AllEndingBalance = DataTempArray[i].EndingBalance;
+
+                        PlantAllArray.push({
+                            Date: AllDate,
+                            AllEndingBalance: AllEndingBalance
+                        });
+                    }
+
+
                     //console.log(TestArray);
-                    res.send(JSON.stringify(DataArray));
+                    res.send(JSON.stringify(PlantAllArray));
                 });
             });
 
@@ -287,6 +296,8 @@ function PlantTwoAll(Year, db, connectionString, res) {
 //Done
 function PlantTwoPlenums(Year, db, connectionString, res) {
     console.log('Plant Two Plenums');
+    PlenumsArray = [];
+    DataArray = [];
     db.open(connectionString, function (err) {
 
         if (err) {
@@ -354,22 +365,11 @@ function PlantTwoPlenums(Year, db, connectionString, res) {
                 }
 
 
-                DataTempArray.push({
+                PlenumsArray.push({
                     Date: Date,
-                    EndingBalance: EndingBalance,
+                    EndingBalance: EndingBalance
                 });
             }
-
-            for(var u = 0; u < PlantAllArray.length; u++){
-
-                DataArray.push({
-                    Date: DataTempArray[u].Date,
-                    EndingBalance: DataTempArray[u].EndingBalance,
-                    AllPlantEndingBalance: PlantAllArray[u].AllEndingBalance
-                })
-
-            }
-
 
             db.close(function (err) {
 
@@ -381,16 +381,35 @@ function PlantTwoPlenums(Year, db, connectionString, res) {
 
             });
 
+
+            for(var i = 0; i < PlenumsArray.length; i++){
+                var DataDate = PlenumsArray[i].Date;
+                var PlenumsBalance = PlenumsArray[i].EndingBalance;
+                var AllPlantTwoBalance = PlantAllArray[i].AllEndingBalance.toString();
+
+                DataArray.push({
+                    Date: DataDate,
+                    Plenums: PlenumsBalance,
+                    AllPlantTwo: AllPlantTwoBalance
+                });
+
+                console.log('All Plant Two: ' + DataArray[i].AllPlantTwo);
+                console.log('Plenums: ' + DataArray[i].Plenums);
+                console.log('Date: ' + DataArray[i].Date);
+            }
+
+
             res.send(JSON.stringify(DataArray));
 
         });
-
     });
 
 }
 //Done
 function PlantTwoFlexHCaps(Year, db, connectionString, res) {
     console.log('Plant Two Flex Hose / Caps');
+    FlexHCapsArray = [];
+    DataArray = [];
     db.open(connectionString, function (err) {
 
         if (err) {
@@ -457,7 +476,7 @@ function PlantTwoFlexHCaps(Year, db, connectionString, res) {
                         break;
                 }
 
-                DataArray.push({
+                FlexHCapsArray.push({
 
                     Date: Date,
                     EndingBalance: EndingBalance
@@ -474,6 +493,22 @@ function PlantTwoFlexHCaps(Year, db, connectionString, res) {
 
             });
 
+            for(var i = 0; i < FlexHCapsArray.length; i++){
+                var DataDate = FlexHCapsArray[i].Date;
+                var FlexHCapsBalance = FlexHCapsArray[i].EndingBalance;
+                var AllPlantTwoBalance = PlantAllArray[i].AllEndingBalance.toString();
+
+                DataArray.push({
+                    Date: DataDate,
+                    FlexHCaps: FlexHCapsBalance,
+                    AllPlantTwo: AllPlantTwoBalance
+                });
+                console.log('All Plant Two: ' + DataArray[i].AllPlantTwo);
+                console.log('FlexHCaps: ' + DataArray[i].FlexHCaps);
+                console.log('Date: ' + DataArray[i].Date);
+            }
+
+
             res.send(JSON.stringify(DataArray));
 
         });
@@ -484,6 +519,9 @@ function PlantTwoFlexHCaps(Year, db, connectionString, res) {
 //Done
 function PlantTwoDowners(Year, db, connectionString, res) {
     console.log('Downers');
+    DownersArray = [];
+    DataArray = [];
+
     db.open(connectionString, function (err) {
 
         if (err) {
@@ -550,8 +588,7 @@ function PlantTwoDowners(Year, db, connectionString, res) {
                         break;
                 }
 
-                DataArray.push({
-
+                DownersArray.push({
                     Date: Date,
                     EndingBalance: EndingBalance
                 });
@@ -564,14 +601,29 @@ function PlantTwoDowners(Year, db, connectionString, res) {
                 }else {
                     console.log("the database connection is now closed");
                 }
-
             });
+
+            for(var i = 0; i < DownersArray.length; i++){
+                var DataDate = DownersArray[i].Date;
+                var DownersBalance = DownersArray[i].EndingBalance;
+                var AllPlantTwoBalance = PlantAllArray[i].AllEndingBalance.toString();
+
+                   DataArray.push({
+                       Date: DataDate,
+                       Downers: DownersBalance,
+                       AllPlantTwo: AllPlantTwoBalance
+                   });
+                    console.log('All Plant Two: ' + DataArray[i].AllPlantTwo);
+                    console.log('Downers: ' + DataArray[i].Downers);
+                    console.log('Date: ' + DataArray[i].Date);
+            }
 
             res.send(JSON.stringify(DataArray));
 
         });
-
     });
+
+
 }
 //End of Plant Two Functions
 

@@ -44,12 +44,12 @@ function PlantTwoAll(Year, db, connectionString, res) {
     PlantAllArray = [];
     DataArray = [];
     var TempArray = [];
-    var Array08 = [];
-    var Array04 = [];
-    var Array05 = [];
-    var sql08 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-08-0000' AND  FiscalYear =" + Year;
-    var sql04 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-04-0000' AND  FiscalYear =" + Year;
-    var sql05 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-05-0000' AND  FiscalYear =" + Year;
+    var Array12 = [];
+    var Array13 = [];
+    var Array14 = [];
+    var sql12 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-12-0000' AND  FiscalYear =" + Year;
+    var sql13 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-13-0000' AND  FiscalYear =" + Year;
+    var sql14 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-14-0000' AND  FiscalYear =" + Year;
 
 
     db.open(connectionString, function (err) {
@@ -58,7 +58,7 @@ function PlantTwoAll(Year, db, connectionString, res) {
             return console.log(err);
         }
 
-        db.query(sql08, function (err, rows, moreResultSets) {
+        db.query(sql12, function (err, rows, moreResultSets) {
 
             if (err) {
                 return console.log(err);
@@ -114,14 +114,14 @@ function PlantTwoAll(Year, db, connectionString, res) {
                         break;
                 }
 
-                Array08.push({
+                Array12.push({
 
                     Date: Date,
                     EndingBalance: EndingBalance
                 });
             }
 
-            db.query(sql04, function (err, rows, moreResultSets) {
+            db.query(sql13, function (err, rows, moreResultSets) {
 
                 if (err) {
                     return console.log(err);
@@ -177,14 +177,14 @@ function PlantTwoAll(Year, db, connectionString, res) {
                             break;
                     }
 
-                    Array04.push({
+                    Array13.push({
 
                         Date: Date,
                         EndingBalance: EndingBalance
                     });
                 }
 
-                db.query(sql05, function (err, rows, moreResultSets) {
+                db.query(sql14, function (err, rows, moreResultSets) {
 
                     if (err) {
                         return console.log(err);
@@ -240,7 +240,7 @@ function PlantTwoAll(Year, db, connectionString, res) {
                                 break;
                         }
 
-                        Array05.push({
+                        Array14.push({
 
                             Date: Date,
                             EndingBalance: EndingBalance
@@ -258,16 +258,16 @@ function PlantTwoAll(Year, db, connectionString, res) {
                         }
                     });
 
-                    if(Array08.length >= Array04.length){
-                        CombineArrays(Array08, Array04, TempArray, false);
+                    if(Array12.length >= Array13.length){
+                        CombineArrays(Array12, Array13, TempArray, false);
                     }else{
-                        CombineArrays(Array04, Array08, TempArray, false);
+                        CombineArrays(Array13, Array12, TempArray, false);
                     }
 
-                    if(TempArray.length >= Array05.length){
-                        CombineArrays(TempArray, Array05, DataTempArray , true);
+                    if(TempArray.length >= Array14.length){
+                        CombineArrays(TempArray, Array14, DataTempArray , true);
                     }else{
-                        CombineArrays(Array05, TempArray, DataTempArray, true);
+                        CombineArrays(Array14, TempArray, DataTempArray, true);
                     }
 
                     for(var i = 0; i < DataTempArray.length; i++){

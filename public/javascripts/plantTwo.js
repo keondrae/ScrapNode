@@ -239,8 +239,6 @@ function PlantTwoDownersDetails(data) {
             {
                 type: "column",
                 click: onChartClick,
-                columnsGapPercent: 50,
-                seriesGapPercent: 0,
                 series: [
                     {dataField: "Downers",      displayText: 'Downers'},
                     {dataField: "AllPlantTwo",  displayText: 'All Plant Two'}

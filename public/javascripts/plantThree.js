@@ -12,7 +12,7 @@ function PlantThreeAllDetails(data) {
         localdata: data,
         datafields: [
             {name: "Date", type: "string"},
-            {name: "EndingBalance", type: "number"}
+            {name: "AllPlantThreeEndingBalance", type: "number"}
         ]
     });
 
@@ -53,7 +53,7 @@ function PlantThreeAllDetails(data) {
                 click: onChartClick,
                 series: [
                     {
-                        dataField: "EndingBalance"
+                        dataField: "AllPlantThreeEndingBalance", displayText: 'All Plant Three'
                     }
                 ]
             }
@@ -74,7 +74,8 @@ function PlantThreeP8Details(data){
         localdata: data,
         datafields: [
             {name: "Date", type: "string"},
-            {name: "EndingBalance", type: "number"}
+            {name: "P8", type: "number"},
+            {name: "AllPlantThree", type: "number"}
         ]
     });
 
@@ -114,9 +115,8 @@ function PlantThreeP8Details(data){
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {
-                        dataField: "EndingBalance"
-                    }
+                    {dataField: 'AllPlantThree', displayText: 'All Plant Two'},
+                    {dataField: "P8", displayText: 'P8'}
                 ]
             }
         ]
@@ -136,7 +136,8 @@ function PlantThreePrimaryOpsDetails(data) {
         localdata: data,
         datafields: [
             {name: "Date", type: "string"},
-            {name: "EndingBalance", type: "number"}
+            {name: "PrimaryOps", type: "number"},
+            {name: "AllPlantThree", type: "number"}
         ]
     });
 
@@ -176,9 +177,8 @@ function PlantThreePrimaryOpsDetails(data) {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {
-                        dataField: "EndingBalance"
-                    }
+                    {dataField: 'AllPlantThree', displayText: 'All Plant Two'},
+                    {dataField: "PrimaryOps", displayText: 'Primary Ops'}
                 ]
             }
         ]
@@ -198,7 +198,8 @@ function PlantThreeSleevesDetails(data) {
         localdata: data,
         datafields: [
             {name: "Date", type: "string"},
-            {name: "EndingBalance", type: "number"}
+            {name: "Sleeves", type: "number"},
+            {name: "AllPlantThree", type: "number"}
         ]
     });
 
@@ -238,9 +239,8 @@ function PlantThreeSleevesDetails(data) {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {
-                        dataField: "EndingBalance"
-                    }
+                    {dataField: 'AllPlantThree', displayText: 'All Plant Two'},
+                    {dataField: "Sleeves", displayText: 'Sleeves'}
                 ]
             }
         ]
@@ -261,7 +261,8 @@ function PlantThree737WindowsDetails(data) {
         localdata: data,
         datafields: [
             {name: "Date", type: "string"},
-            {name: "EndingBalance", type: "number"}
+            {name: "Windows737", type: "number"},
+            {name: "AllPlantThree", type: "number"}
         ]
     });
 
@@ -301,9 +302,8 @@ function PlantThree737WindowsDetails(data) {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {
-                        dataField: "EndingBalance"
-                    }
+                    {dataField: 'AllPlantThree', displayText: 'All Plant Two'},
+                    {dataField: "Windows737", displayText: '737 Windows'}
                 ]
             }
         ]
@@ -323,7 +323,8 @@ function PlantThree787WindowsDetails(data) {
         localdata: data,
         datafields: [
             {name: "Date", type: "string"},
-            {name: "EndingBalance", type: "number"}
+            {name: "Windows787", type: "number"},
+            {name: "AllPlantThree", type: "number"}
         ]
     });
 
@@ -363,9 +364,8 @@ function PlantThree787WindowsDetails(data) {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {
-                        dataField: "EndingBalance"
-                    }
+                    {dataField: 'AllPlantThree', displayText: 'All Plant Two'},
+                    {dataField: "Windows787", displayText: '787 Windows'}
                 ]
             }
         ]
@@ -385,7 +385,8 @@ function PlantThreeBSIWindowsDetails(data) {
         localdata: data,
         datafields: [
             {name: "Date", type: "string"},
-            {name: "EndingBalance", type: "number"}
+            {name: "BSIWindows", type: "number"},
+            {name: "AllPlantThree", type: "number"}
         ]
     });
 
@@ -425,9 +426,8 @@ function PlantThreeBSIWindowsDetails(data) {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {
-                        dataField: "EndingBalance"
-                    }
+                    {dataField: 'AllPlantThree', displayText: 'All Plant Two'},
+                    {dataField: "BSIWindows", displayText: 'BSI Windows'}
                 ]
             }
         ]
@@ -447,7 +447,8 @@ function PlantThreeAllWindowsDetails(data) {
         localdata: data,
         datafields: [
             {name: "Date", type: "string"},
-            {name: "EndingBalance", type: "number"}
+            {name: "AllWindows", type: "number"},
+            {name: "AllPlantThree", type: "number"}
         ]
     });
 
@@ -487,9 +488,8 @@ function PlantThreeAllWindowsDetails(data) {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {
-                        dataField: "EndingBalance"
-                    }
+                    {dataField: 'AllPlantThree', displayText: 'All Plant Two'},
+                    {dataField: "AllWindows", displayText: 'All Windows'}
                 ]
             }
         ]

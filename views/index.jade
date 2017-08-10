@@ -321,24 +321,6 @@ block content
 
         function plantOneDataFetch(Year){
 
-            $.ajax({// Get All
-                type: 'GET',
-                url: '/plantOneFetch/' + Year + '/All',
-                dataType: 'json',
-                async: async,
-                cache: cache,
-                timeout: timeOut,
-                success: function (data) {
-                    PlantOneAllDetails(data);
-                },
-                error: function (xhr, status, errorThrown) {
-                    console.log('Plant One All Error:')
-                    console.log(xhr);
-                    console.log(status);
-                    console.log(errorThrown);
-                }
-            });
-
             $.ajax({// Get Duct
                 type: 'GET',
                 url: '/plantOneFetch/' + Year + '/Duct',
@@ -424,6 +406,24 @@ block content
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log('Plant One Other Error:')
+                    console.log(xhr);
+                    console.log(status);
+                    console.log(errorThrown);
+                }
+            });
+
+            $.ajax({// Get All
+                type: 'GET',
+                url: '/plantOneFetch/' + Year + '/All',
+                dataType: 'json',
+                async: async,
+                cache: cache,
+                timeout: timeOut,
+                success: function (data) {
+                    PlantOneAllDetails(data);
+                },
+                error: function (xhr, status, errorThrown) {
+                    console.log('Plant One All Error:')
                     console.log(xhr);
                     console.log(status);
                     console.log(errorThrown);
@@ -652,7 +652,6 @@ block content
                     console.log(errorThrown);
                 }
             });
-
 
         }
 

@@ -5,7 +5,7 @@ var connectionString ="Driver={SQL Server};Server=tf-sql-01;Database=MAS_TFI";
 var db = new odbc.Database();
 var DataTempArray = [];
 var DataArray = [];
-var PlantAllArray = [];
+var PlantTwoAllArray = [];
 var PlenumsArray = [];
 var FlexHCapsArray = [];
 var DownersArray = [];
@@ -41,7 +41,7 @@ module.exports = router;
 //Done
 function PlantTwoAll(Year, db, connectionString, res) {
     console.log('Plant Two All');
-    PlantAllArray = [];
+    PlantTwoAllArray = [];
     DataArray = [];
     var TempArray = [];
     var Array12 = [];
@@ -274,7 +274,7 @@ function PlantTwoAll(Year, db, connectionString, res) {
                         var AllDate = DataTempArray[i].Date;
                         var AllEndingBalance = DataTempArray[i].EndingBalance;
 
-                        PlantAllArray.push({
+                        PlantTwoAllArray.push({
                             Date: AllDate,
                             AllEndingBalance: AllEndingBalance
                         });
@@ -282,7 +282,7 @@ function PlantTwoAll(Year, db, connectionString, res) {
 
 
                     //console.log(TestArray);
-                    res.send(JSON.stringify(PlantAllArray));
+                    res.send(JSON.stringify(PlantTwoAllArray));
                 });
             });
 
@@ -385,7 +385,7 @@ function PlantTwoPlenums(Year, db, connectionString, res) {
             for(var i = 0; i < PlenumsArray.length; i++){
                 var DataDate = PlenumsArray[i].Date;
                 var PlenumsBalance = PlenumsArray[i].EndingBalance;
-                var AllPlantTwoBalance = PlantAllArray[i].AllEndingBalance.toString();
+                var AllPlantTwoBalance = PlantTwoAllArray[i].AllEndingBalance.toString();
 
                 DataArray.push({
                     Date: DataDate,
@@ -393,9 +393,9 @@ function PlantTwoPlenums(Year, db, connectionString, res) {
                     AllPlantTwo: AllPlantTwoBalance
                 });
 
-                console.log('All Plant Two: ' + DataArray[i].AllPlantTwo);
-                console.log('Plenums: ' + DataArray[i].Plenums);
-                console.log('Date: ' + DataArray[i].Date);
+                //console.log('All Plant Two: ' + DataArray[i].AllPlantTwo);
+                //console.log('Plenums: ' + DataArray[i].Plenums);
+                //console.log('Date: ' + DataArray[i].Date);
             }
 
 
@@ -496,16 +496,16 @@ function PlantTwoFlexHCaps(Year, db, connectionString, res) {
             for(var i = 0; i < FlexHCapsArray.length; i++){
                 var DataDate = FlexHCapsArray[i].Date;
                 var FlexHCapsBalance = FlexHCapsArray[i].EndingBalance;
-                var AllPlantTwoBalance = PlantAllArray[i].AllEndingBalance.toString();
+                var AllPlantTwoBalance = PlantTwoAllArray[i].AllEndingBalance.toString();
 
                 DataArray.push({
                     Date: DataDate,
                     FlexHCaps: FlexHCapsBalance,
                     AllPlantTwo: AllPlantTwoBalance
                 });
-                console.log('All Plant Two: ' + DataArray[i].AllPlantTwo);
-                console.log('FlexHCaps: ' + DataArray[i].FlexHCaps);
-                console.log('Date: ' + DataArray[i].Date);
+                //console.log('All Plant Two: ' + DataArray[i].AllPlantTwo);
+                //console.log('FlexHCaps: ' + DataArray[i].FlexHCaps);
+                //console.log('Date: ' + DataArray[i].Date);
             }
 
 
@@ -606,16 +606,16 @@ function PlantTwoDowners(Year, db, connectionString, res) {
             for(var i = 0; i < DownersArray.length; i++){
                 var DataDate = DownersArray[i].Date;
                 var DownersBalance = DownersArray[i].EndingBalance;
-                var AllPlantTwoBalance = PlantAllArray[i].AllEndingBalance.toString();
+                var AllPlantTwoBalance = PlantTwoAllArray[i].AllEndingBalance.toString();
 
                    DataArray.push({
                        Date: DataDate,
                        Downers: DownersBalance,
                        AllPlantTwo: AllPlantTwoBalance
                    });
-                    console.log('All Plant Two: ' + DataArray[i].AllPlantTwo);
-                    console.log('Downers: ' + DataArray[i].Downers);
-                    console.log('Date: ' + DataArray[i].Date);
+                    //console.log('All Plant Two: ' + DataArray[i].AllPlantTwo);
+                    //console.log('Downers: ' + DataArray[i].Downers);
+                    //console.log('Date: ' + DataArray[i].Date);
             }
 
             res.send(JSON.stringify(DataArray));

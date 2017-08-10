@@ -116,8 +116,9 @@ function PlantTwoPlenumsDetails(data) {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {dataField: "Plenums", displayText: 'Plenums'},
-                    {dataField: 'AllPlantTwo', displayText: 'All Plant Two'}
+                    {dataField: 'AllPlantTwo', displayText: 'All Plant Two'},
+                    {dataField: "Plenums", displayText: 'Plenums'}
+
                 ]
             }
         ]
@@ -177,9 +178,8 @@ function PlantTwoFlexHoseCapsDetails(data) {
                 type: "column",
                 click: onChartClick,
                 series: [
-
-                    {dataField: "FlexHCaps", displayText: 'Flex Hose / Caps'},
-                    {dataField: 'AllPlantTwo', displayText: 'All Plant Two'}
+                    {dataField: 'AllPlantTwo', displayText: 'All Plant Two'},
+                    {dataField: "FlexHCaps", displayText: 'Flex Hose / Caps'}
                 ]
             }
         ]
@@ -192,7 +192,6 @@ function PlantTwoFlexHoseCapsDetails(data) {
 function PlantTwoDownersDetails(data) {
 
     console.log("Plant 2 Downers method Called");
-    console.log(data);
     //Chart
     /* data adapter settings*/
     var DownersDataAdapter = new $.jqx.dataAdapter({
@@ -240,8 +239,8 @@ function PlantTwoDownersDetails(data) {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {dataField: "Downers",      displayText: 'Downers'},
-                    {dataField: "AllPlantTwo",  displayText: 'All Plant Two'}
+                    {dataField: "AllPlantTwo",  displayText: 'All Plant Two'},
+                    {dataField: "Downers",      displayText: 'Downers'}
                 ]
             }
         ]

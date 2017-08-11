@@ -10,7 +10,7 @@ function PlantOneAllDetails(data) {
         localdata: data,
         datafields: [
             {name: "Date", type: "string"},
-            {name: "EndingBalance", type: "number"}
+            {name: "AllPlantOneEndingBalance", type: "number"}
         ]
     });
 
@@ -51,7 +51,7 @@ function PlantOneAllDetails(data) {
                 click: onChartClick,
                 series: [
                     {
-                        dataField: "EndingBalance"
+                        dataField: "AllPlantOneEndingBalance"
                     }
                 ]
             }
@@ -69,14 +69,15 @@ function PlantOneDuctDetails(data) {
         localdata: data,
         datafields: [
             {name: "Date", type: "string"},
-            {name: "EndingBalance", type: "number"}
+            {name: "Ducts", type: "number"},
+            {name: "AllPlantOne", type: "number"}
         ]
     });
 
     /* chart settings */
     var DuctChartSettings = {
         source: DuctDataAdapter,
-        title: "Duct",
+        title: "Duct / Bin Seal",
         description: "",
         showToolTips: true,
         enableAnimations: true,
@@ -109,9 +110,8 @@ function PlantOneDuctDetails(data) {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {
-                        dataField: "EndingBalance"
-                    }
+                    {dataField: 'AllPlantOne', displayText: 'All Plant One'},
+                    {dataField: "Ducts", displayText: 'Duct / Bin Seal'}
                 ]
             }
         ]
@@ -128,7 +128,8 @@ function PlantOneTubeDetails(data) {
         localdata: data,
         datafields: [
             {name: "Date", type: "string"},
-            {name: "EndingBalance", type: "number"}
+            {name: "Tubes", type: "number"},
+            {name: "AllPlantOne", type: "number"}
         ]
     });
 
@@ -168,9 +169,8 @@ function PlantOneTubeDetails(data) {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {
-                        dataField: "EndingBalance"
-                    }
+                    {dataField: 'AllPlantOne', displayText: 'All Plant One'},
+                    {dataField: "Tubes", displayText: 'Tubes'}
                 ]
             }
         ]
@@ -188,7 +188,8 @@ function PlantOneCoversDetails(data) {
         localdata: data,
         datafields: [
             {name: "Date", type: "string"},
-            {name: "EndingBalance", type: "number"}
+            {name: "Covers", type: "number"},
+            {name: "AllPlantOne", type: "number"}
         ]
     });
 
@@ -228,9 +229,8 @@ function PlantOneCoversDetails(data) {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {
-                        dataField: "EndingBalance"
-                    }
+                    {dataField: 'AllPlantOne', displayText: 'All Plant One'},
+                    {dataField: "Covers", displayText: 'Covers'}
                 ]
             }
         ]
@@ -247,7 +247,8 @@ function PlantOneAssemblyDetails(data) {
         localdata: data,
         datafields: [
             {name: "Date", type: "string"},
-            {name: "EndingBalance", type: "number"}
+            {name: "Assembly", type: "number"},
+            {name: "AllPlantOne", type: "number"}
         ]
     });
 
@@ -287,9 +288,8 @@ function PlantOneAssemblyDetails(data) {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {
-                        dataField: "EndingBalance"
-                    }
+                    {dataField: 'AllPlantOne', displayText: 'All Plant One'},
+                    {dataField: "Assembly", displayText: 'Assembly'}
                 ]
             }
         ]
@@ -307,7 +307,8 @@ function PlantOneOtherDetails(data) {
         localdata: data,
         datafields: [
             {name: "Date", type: "string"},
-            {name: "EndingBalance", type: "number"}
+            {name: "Other", type: "number"},
+            {name: "AllPlantOne", type: "number"}
         ]
     });
 
@@ -347,9 +348,8 @@ function PlantOneOtherDetails(data) {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {
-                        dataField: "EndingBalance"
-                    }
+                    {dataField: 'AllPlantOne', displayText: 'All Plant One'},
+                    {dataField: "Other", displayText: 'Other'}
                 ]
             }
         ]

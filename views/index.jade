@@ -50,7 +50,7 @@ block content
         div(class='Info' id='plant1')
             ul
                 li= 'All Plant 1'
-                li= 'Ducts/ Bin Seal'
+                li= 'Ducts / Bin Seal'
                 li= 'Tubes'
                 li= 'Cover'
                 li= 'Assembly'
@@ -321,6 +321,24 @@ block content
 
         function plantOneDataFetch(Year){
 
+            $.ajax({// Get All
+                type: 'GET',
+                url: '/plantOneFetch/' + Year + '/All',
+                dataType: 'json',
+                async: async,
+                cache: cache,
+                timeout: timeOut,
+                success: function (data) {
+                    PlantOneAllDetails(data);
+                },
+                error: function (xhr, status, errorThrown) {
+                    console.log('Plant One All Error:')
+                    console.log(xhr);
+                    console.log(status);
+                    console.log(errorThrown);
+                }
+            });
+
             $.ajax({// Get Duct
                 type: 'GET',
                 url: '/plantOneFetch/' + Year + '/Duct',
@@ -412,23 +430,6 @@ block content
                 }
             });
 
-            $.ajax({// Get All
-                type: 'GET',
-                url: '/plantOneFetch/' + Year + '/All',
-                dataType: 'json',
-                async: async,
-                cache: cache,
-                timeout: timeOut,
-                success: function (data) {
-                    PlantOneAllDetails(data);
-                },
-                error: function (xhr, status, errorThrown) {
-                    console.log('Plant One All Error:')
-                    console.log(xhr);
-                    console.log(status);
-                    console.log(errorThrown);
-                }
-            });
         }
 
         function plantTwoDataFetch() {
@@ -634,25 +635,6 @@ block content
                     console.log(errorThrown);
                 }
             });
-
-            $.ajax({// Get All Windows
-                type: 'GET',
-                url: '/plantThreeFetch/' + Year + '/AllWindows',
-                dataType: 'json',
-                async: async,
-                cache: cache,
-                timeout: timeOut,
-                success: function (data) {
-                    PlantThreeAllWindowsDetails(data);
-                },
-                error: function (xhr, status, errorThrown) {
-                    console.log('Plant Three All Windows Error:')
-                    console.log(xhr);
-                    console.log(status);
-                    console.log(errorThrown);
-                }
-            });
-
         }
 
         $('.PlantDiv').click(function () {

@@ -59,6 +59,7 @@ router.get('/:year/:tab', function(req, res, next) {
 module.exports = router;
 
 //Start of Plant Three Functions
+//Done
 function PlantThreeAll(Year, db, connectionString, res) {
     console.log('Plant Three All');
     var Array02 = [];
@@ -1101,7 +1102,7 @@ function PlantThreeAll(Year, db, connectionString, res) {
                                                                 });
                                                             }
 
-                                                            console.log(PlantThreeAllArray);
+                                                            //console.log(PlantThreeAllArray);
                                                             res.send(JSON.stringify(PlantThreeAllArray));
                                                         });
                                                     });

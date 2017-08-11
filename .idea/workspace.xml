@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84f9f0e2-2a39-4b4f-a441-31ecfef358ed" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test Code/JQueryTest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test Code/PromiseTest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test Code/RequestTest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test Code/nAjaxTest.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/package.json" afterPath="$PROJECT_DIR$/node_modules/request/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/plantAll.js" afterPath="$PROJECT_DIR$/public/javascripts/plantAll.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/PlantAllFetch.js" afterPath="$PROJECT_DIR$/routes/PlantAllFetch.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/PlantTwoFetch.js" afterPath="$PROJECT_DIR$/routes/PlantTwoFetch.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -343,7 +333,7 @@
       <workItem from="1501878576531" duration="1570000" />
       <workItem from="1502112486364" duration="13539000" />
       <workItem from="1502138685061" duration="74002000" />
-      <workItem from="1502217369917" duration="70231000" />
+      <workItem from="1502217369917" duration="70468000" />
     </task>
     <task id="LOCAL-00001" summary="C">
       <created>1501868881324</created>
@@ -492,11 +482,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502458475448</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Added All Plant Graph">
+      <created>1502481311520</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1502481311520</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="361579000" />
+    <option name="totallyTimeSpent" value="361816000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -509,9 +506,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15991472" sideWeight="0.48886415" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15991472" sideWeight="0.48886415" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42761692" sideWeight="0.5053305" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -578,7 +574,8 @@
     <MESSAGE value="Fixed two bar charts on plant 2 and added bars on plan 3." />
     <MESSAGE value="Added bars on plan 1." />
     <MESSAGE value="Fixed Plant three All window not working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Plant three All window not working" />
+    <MESSAGE value="Added All Plant Graph" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added All Plant Graph" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

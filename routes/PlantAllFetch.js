@@ -13,6 +13,9 @@ var PlantThreeArray = [];
 /* GET users listing. */
 router.get('/:year', function(req, res, next) {
     DataArray = [];
+    PlantThreeArray = [];
+    PlantTwoArray = [];
+    PlantOneArray = [];
     var Year = req.params.year;
 
     najax({ // Plant One

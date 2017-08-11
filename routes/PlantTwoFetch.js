@@ -59,7 +59,7 @@ function PlantTwoAll(Year, db, connectionString, res) {
         }
 
         db.query(sql12, function (err, rows, moreResultSets) {
-
+            Array12 = [];
             if (err) {
                 return console.log(err);
             }
@@ -122,7 +122,7 @@ function PlantTwoAll(Year, db, connectionString, res) {
             }
 
             db.query(sql13, function (err, rows, moreResultSets) {
-
+                Array13 = [];
                 if (err) {
                     return console.log(err);
                 }
@@ -185,7 +185,7 @@ function PlantTwoAll(Year, db, connectionString, res) {
                 }
 
                 db.query(sql14, function (err, rows, moreResultSets) {
-
+                    Array14 = [];
                     if (err) {
                         return console.log(err);
                     }

@@ -635,6 +635,24 @@ block content
                     console.log(errorThrown);
                 }
             });
+
+            $.ajax({// Get All Windows
+                type: 'GET',
+                url: '/plantThreeFetch/' + Year + '/AllWindows',
+                dataType: 'json',
+                async: async,
+                cache: cache,
+                timeout: timeOut,
+                success: function (data) {
+                    PlantThreeAllWindowsDetails(data);
+                },
+                error: function (xhr, status, errorThrown) {
+                    console.log('Plant Three All Windows Error:')
+                    console.log(xhr);
+                    console.log(status);
+                    console.log(errorThrown);
+                }
+            });
         }
 
         $('.PlantDiv').click(function () {

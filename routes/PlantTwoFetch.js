@@ -285,13 +285,8 @@ function PlantTwoAll(Year, db, connectionString, res) {
                     res.send(JSON.stringify(PlantTwoAllArray));
                 });
             });
-
-
         });
-
-
     });
-
 }
 //Done
 function PlantTwoPlenums(Year, db, connectionString, res) {

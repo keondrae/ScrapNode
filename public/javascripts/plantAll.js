@@ -12,7 +12,9 @@ function PlantAllDetails(data) {
         localdata: data,
         datafields: [
             {name: "Date", type: "string"},
-            {name: "EndingBalance", type: "number"}
+            {name: "PlantOneBal", type: "number"},
+            {name: "PlantTwoBal", type: "number"},
+            {name: "PlantThreeBal", type: "number"}
         ]
     });
 
@@ -52,9 +54,9 @@ function PlantAllDetails(data) {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {
-                        dataField: "EndingBalance"
-                    }
+                    {dataField: 'PlantOneBal', displayText: 'All Plant One'},
+                    {dataField: 'PlantTwoBal', displayText: 'All Plant Two'},
+                    {dataField: 'PlantThreeBal', displayText: 'All Plant Three'}
                 ]
             }
         ]

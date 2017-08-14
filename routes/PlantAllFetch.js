@@ -115,7 +115,7 @@ router.get('/:year', function(req, res, next) {
 });
 
 module.exports = router;
-
+/*
 function PlantAll(Year, db, connectionString, res) {
 
     console.log('Plant All');
@@ -150,7 +150,7 @@ function PlantAll(Year, db, connectionString, res) {
         console.log(err)
     });
 
-    /*
+
     request("http://localhost:3000/plantOneFetch/2017/All", function (error, response, body) {
 
         console.log('error:', error); // Print the error if one occurred
@@ -200,7 +200,7 @@ function PlantAll(Year, db, connectionString, res) {
                 res.send(JSON.stringify(DataArray));
             });
         });
-    });*/
+    });
 
 
     //CombineArrays(PlantOneArray,PlantTwoArray, TempArray, false);
@@ -208,9 +208,9 @@ function PlantAll(Year, db, connectionString, res) {
 
 
 
-}
+}*/
 
-
+/*
 function CombineArrays(BiggerArray, SmallerArray, NewArray, isLast) {
     BiggerArray.forEach(function (BA) {
         var match = false;
@@ -228,7 +228,7 @@ function CombineArrays(BiggerArray, SmallerArray, NewArray, isLast) {
         });
         if(!match) NewArray.push(BA);
     });
-}
+}*/
 
 /*db.open(connectionString, function (err) {
 

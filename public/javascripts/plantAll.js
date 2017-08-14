@@ -19,7 +19,8 @@ function PlantAllDetails(data) {
     });
 
     /* chart settings */
-    var AllChartSettings = {
+    var AllChartSettings;
+    AllChartSettings = {
         source: AllDataAdapter,
         title: "All Plants",
         description: "",
@@ -52,7 +53,7 @@ function PlantAllDetails(data) {
         seriesGroups: [
             {
                 type: "column",
-                click: onChartClick,
+                click: onChartClick ,
                 series: [
                     {dataField: 'PlantOneBal', displayText: 'All Plant One'},
                     {dataField: 'PlantTwoBal', displayText: 'All Plant Two'},

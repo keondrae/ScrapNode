@@ -204,7 +204,8 @@ function PlantTwoDownersDetails(data) {
     });
 
     /* chart settings */
-    var DownersChartSettings = {
+    var DownersChartSettings;
+    DownersChartSettings = {
         source: DownersDataAdapter,
         title: "Downers",
         description: "",
@@ -239,8 +240,8 @@ function PlantTwoDownersDetails(data) {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {dataField: "AllPlantTwo",  displayText: 'All Plant Two'},
-                    {dataField: "Downers",      displayText: 'Downers'}
+                    {dataField: "AllPlantTwo", displayText: 'All Plant Two'},
+                    {dataField: "Downers", displayText: 'Downers'}
                 ]
             }
         ]

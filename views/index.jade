@@ -264,17 +264,18 @@ block content
             $('#Search').dialog('open');
         }
 
+
         $('#SelectYear').click( function () {
             Year = $('#Years').val();
             console.log('New Year ' + Year);
             $('#Search').dialog('close');
-            GridFetch(Year);
-            plantAllDataFetch(Year);
-            plantOneDataFetch(Year);
-            plantTwoDataFetch(Year);
-            plantThreeDataFetch(Year);
+            //GridFetch(Year);
+            //plantAllDataFetch(Year);
+            //plantOneDataFetch(Year);
+            //plantTwoDataFetch(Year);
+            //plantThreeDataFetch(Year);
             //plantFourDataFetch(Year);
-            $('.data').jqxChart('refresh');
+            //$('.data').jqxChart('refresh');
         });
 
         function GridFetch(Year) {

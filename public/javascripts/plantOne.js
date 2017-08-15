@@ -2,6 +2,11 @@
  * Created by kmell on 6/22/2017.
  */
 console.log("Plant 1 All Called");
+var xValue = -5;
+var yValue = -17;
+var xValueAll = -5;
+var yValueAll = -17;
+
 function PlantOneAllDetails(data) {
     console.log("Plant 1 All method Called");
     //Chart
@@ -43,16 +48,24 @@ function PlantOneAllDetails(data) {
             valuesOnTicks: false
         },
         valueAxis: {
-            valuesOnTicks: true
+            valuesOnTicks: true,
+            title: { text: 'Scrap Amount ($)<br>' },
+            labels: { horizontalAlignment: 'right' }
         },
         seriesGroups: [
             {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {
-                        dataField: "AllPlantOneEndingBalance", displayText: 'All Plant One'
-                    }
+                    {dataField: "AllPlantOneEndingBalance", displayText: 'All Plant One',
+                        labels: {
+                        visible: true,
+                        verticalAlignment: 'top',
+                        offset: { x: xValueAll, y: yValueAll }
+                    },
+                        formatFunction: function (value) {
+                            return '$' +  Math.round(value);
+                        }}
                 ]
             }
         ]
@@ -103,15 +116,35 @@ function PlantOneDuctDetails(data) {
             valuesOnTicks: false
         },
         valueAxis: {
-            valuesOnTicks: true
+            valuesOnTicks: true,
+            title: { text: 'Scrap Amount ($)<br>' },
+            labels: { horizontalAlignment: 'right' }
         },
         seriesGroups: [
             {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {dataField: 'AllPlantOne', displayText: 'All Plant One'},
-                    {dataField: "Ducts", displayText: 'Duct / Bin Seal'}
+                    {dataField: 'AllPlantOne', displayText: 'All Plant One',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
+                    },
+                    {dataField: "Ducts", displayText: 'Duct / Bin Seal',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
+                    }
                 ]
             }
         ]
@@ -162,15 +195,35 @@ function PlantOneTubeDetails(data) {
             valuesOnTicks: false
         },
         valueAxis: {
-            valuesOnTicks: true
+            valuesOnTicks: true,
+            title: { text: 'Scrap Amount ($)<br>' },
+            labels: { horizontalAlignment: 'right' }
         },
         seriesGroups: [
             {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {dataField: 'AllPlantOne', displayText: 'All Plant One'},
-                    {dataField: "Tubes", displayText: 'Tubes'}
+                    {dataField: 'AllPlantOne', displayText: 'All Plant One',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
+                    },
+                    {dataField: "Tubes", displayText: 'Tubes',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
+                    }
                 ]
             }
         ]
@@ -222,15 +275,35 @@ function PlantOneCoversDetails(data) {
             valuesOnTicks: false
         },
         valueAxis: {
-            valuesOnTicks: true
+            valuesOnTicks: true,
+            title: { text: 'Scrap Amount ($)<br>' },
+            labels: { horizontalAlignment: 'right' }
         },
         seriesGroups: [
             {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {dataField: 'AllPlantOne', displayText: 'All Plant One'},
-                    {dataField: "Covers", displayText: 'Covers'}
+                    {dataField: 'AllPlantOne', displayText: 'All Plant One',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
+                    },
+                    {dataField: "Covers", displayText: 'Covers',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
+                    }
                 ]
             }
         ]
@@ -281,15 +354,35 @@ function PlantOneAssemblyDetails(data) {
             valuesOnTicks: false
         },
         valueAxis: {
-            valuesOnTicks: true
+            valuesOnTicks: true,
+            title: { text: 'Scrap Amount ($)<br>' },
+            labels: { horizontalAlignment: 'right' }
         },
         seriesGroups: [
             {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {dataField: 'AllPlantOne', displayText: 'All Plant One'},
-                    {dataField: "Assembly", displayText: 'Assembly'}
+                    {dataField: 'AllPlantOne', displayText: 'All Plant One',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
+                    },
+                    {dataField: "Assembly", displayText: 'Assembly',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
+                    }
                 ]
             }
         ]
@@ -341,15 +434,35 @@ function PlantOneOtherDetails(data) {
             valuesOnTicks: false
         },
         valueAxis: {
-            valuesOnTicks: true
+            valuesOnTicks: true,
+            title: { text: 'Scrap Amount ($)<br>' },
+            labels: { horizontalAlignment: 'right' }
         },
         seriesGroups: [
             {
                 type: "column",
                 click:onChartClick,
                 series: [
-                    {dataField: 'AllPlantOne', displayText: 'All Plant One'},
-                    {dataField: "Other", displayText: 'Other'}
+                    {dataField: 'AllPlantOne', displayText: 'All Plant One',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
+                    },
+                    {dataField: "Other", displayText: 'Other',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
+                    }
                 ]
             }
         ]

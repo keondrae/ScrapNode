@@ -2,6 +2,11 @@
  * Created by kmell on 6/22/2017.
  */
 
+var xValue = -5;
+var yValue = -17;
+var xValueAll = -5;
+var yValueAll = -17;
+
 function PlantThreeAllDetails(data) {
 
     //Start of Chart
@@ -45,16 +50,24 @@ function PlantThreeAllDetails(data) {
             valuesOnTicks: false
         },
         valueAxis: {
-            valuesOnTicks: true
+            valuesOnTicks: true,
+            title: { text: 'Scrap Amount ($)<br>' },
+            labels: { horizontalAlignment: 'right' }
         },
         seriesGroups: [
             {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {
-                        dataField: "AllPlantThreeEndingBalance", displayText: 'All Plant Three'
-                    }
+                    {dataField: "AllPlantThreeEndingBalance", displayText: 'All Plant Three',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValueAll, y: yValueAll }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }}
                 ]
             }
         ]
@@ -108,15 +121,34 @@ function PlantThreeP8Details(data){
             valuesOnTicks: false
         },
         valueAxis: {
-            valuesOnTicks: true
+            valuesOnTicks: true,
+            title: { text: 'Scrap Amount ($)<br>' },
+            labels: { horizontalAlignment: 'right' }
         },
         seriesGroups: [
             {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {dataField: 'AllPlantThree', displayText: 'All Plant Two'},
-                    {dataField: "P8", displayText: 'P8'}
+                    {dataField: 'AllPlantThree', displayText: 'All Plant Two',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }},
+                    {dataField: "P8", displayText: 'P8',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
+                    }
                 ]
             }
         ]
@@ -170,15 +202,34 @@ function PlantThreePrimaryOpsDetails(data) {
             valuesOnTicks: false
         },
         valueAxis: {
-            valuesOnTicks: true
+            valuesOnTicks: true,
+            title: { text: 'Scrap Amount ($)<br>' },
+            labels: { horizontalAlignment: 'right' }
         },
         seriesGroups: [
             {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {dataField: 'AllPlantThree', displayText: 'All Plant Two'},
-                    {dataField: "PrimaryOps", displayText: 'Primary Ops'}
+                    {dataField: 'AllPlantThree', displayText: 'All Plant Two',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }},
+                    {dataField: "PrimaryOps", displayText: 'Primary Ops',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
+                    }
                 ]
             }
         ]
@@ -232,15 +283,35 @@ function PlantThreeSleevesDetails(data) {
             valuesOnTicks: false
         },
         valueAxis: {
-            valuesOnTicks: true
+            valuesOnTicks: true,
+            title: { text: 'Scrap Amount ($)<br>' },
+            labels: { horizontalAlignment: 'right' }
         },
         seriesGroups: [
             {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {dataField: 'AllPlantThree', displayText: 'All Plant Two'},
-                    {dataField: "Sleeves", displayText: 'Sleeves'}
+                    {dataField: 'AllPlantThree', displayText: 'All Plant Two',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
+                    },
+                    {dataField: "Sleeves", displayText: 'Sleeves',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
+                    }
                 ]
             }
         ]
@@ -295,15 +366,35 @@ function PlantThree737WindowsDetails(data) {
             valuesOnTicks: false
         },
         valueAxis: {
-            valuesOnTicks: true
+            valuesOnTicks: true,
+            title: { text: 'Scrap Amount ($)<br>' },
+            labels: { horizontalAlignment: 'right' }
         },
         seriesGroups: [
             {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {dataField: 'AllPlantThree', displayText: 'All Plant Two'},
-                    {dataField: "Windows737", displayText: '737 Windows'}
+                    {dataField: 'AllPlantThree', displayText: 'All Plant Two',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
+                        },
+                    {dataField: "Windows737", displayText: '737 Windows',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
+                    }
                 ]
             }
         ]
@@ -357,15 +448,35 @@ function PlantThree787WindowsDetails(data) {
             valuesOnTicks: false
         },
         valueAxis: {
-            valuesOnTicks: true
+            valuesOnTicks: true,
+            title: { text: 'Scrap Amount ($)<br>' },
+            labels: { horizontalAlignment: 'right' }
         },
         seriesGroups: [
             {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {dataField: 'AllPlantThree', displayText: 'All Plant Two'},
-                    {dataField: "Windows787", displayText: '787 Windows'}
+                    {dataField: 'AllPlantThree', displayText: 'All Plant Two',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
+                    },
+                    {dataField: "Windows787", displayText: '787 Windows',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
+                    }
                 ]
             }
         ]
@@ -419,15 +530,35 @@ function PlantThreeBSIWindowsDetails(data) {
             valuesOnTicks: false
         },
         valueAxis: {
-            valuesOnTicks: true
+            valuesOnTicks: true,
+            title: { text: 'Scrap Amount ($)<br>' },
+            labels: { horizontalAlignment: 'right' }
         },
         seriesGroups: [
             {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {dataField: 'AllPlantThree', displayText: 'All Plant Two'},
-                    {dataField: "BSIWindows", displayText: 'BSI Windows'}
+                    {dataField: 'AllPlantThree', displayText: 'All Plant Two',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
+                    },
+                    {dataField: "BSIWindows", displayText: 'BSI Windows',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
+                    }
                 ]
             }
         ]
@@ -481,15 +612,35 @@ function PlantThreeAllWindowsDetails(data) {
             valuesOnTicks: false
         },
         valueAxis: {
-            valuesOnTicks: true
+            valuesOnTicks: true,
+            title: { text: 'Scrap Amount ($)<br>' },
+            labels: { horizontalAlignment: 'right' }
         },
         seriesGroups: [
             {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {dataField: 'AllPlantThree', displayText: 'All Plant Two'},
-                    {dataField: "AllWindows", displayText: 'All Windows'}
+                    {dataField: 'AllPlantThree', displayText: 'All Plant Two',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
+                    },
+                    {dataField: "AllWindows", displayText: 'All Windows',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
+                    }
                 ]
             }
         ]

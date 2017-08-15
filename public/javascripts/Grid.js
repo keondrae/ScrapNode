@@ -1,5 +1,5 @@
 function Grid(Data) {
-    var gridWidth = 1890;
+    var gridWidth = '100%';
 
     //Start of Grid
     var plant1AllDataSource = [

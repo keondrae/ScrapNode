@@ -18,6 +18,14 @@ function PlantAllDetails(data) {
         ]
     });
 
+    function getTotal(itemIndex) {
+        var plantOne = parseInt(AllDataAdapter.loadedData[itemIndex].PlantOneBal);
+        var plantTwo = parseInt(AllDataAdapter.loadedData[itemIndex].PlantTwoBal);
+        var plantThree = parseInt(AllDataAdapter.loadedData[itemIndex].PlantThreeBal);
+
+        return  plantOne + plantTwo + plantThree;
+    }
+
     /* chart settings */
     var AllChartSettings;
     AllChartSettings = {
@@ -48,16 +56,54 @@ function PlantAllDetails(data) {
             valuesOnTicks: false
         },
         valueAxis: {
-            valuesOnTicks: true
+            valuesOnTicks: true,
+            title: { text: 'Scrap Amount ($)<br>' },
+            labels: { horizontalAlignment: 'right' }
         },
         seriesGroups: [
             {
-                type: "column",
+                type: "stackedcolumn",
                 click: onChartClick ,
                 series: [
-                    {dataField: 'PlantOneBal', displayText: 'All Plant One'},
-                    {dataField: 'PlantTwoBal', displayText: 'All Plant Two'},
-                    {dataField: 'PlantThreeBal', displayText: 'All Plant Three'}
+                    {dataField: 'PlantOneBal', displayText: 'All Plant One',
+                        labels: {
+                        visible: true
+                    },
+                        formatFunction: function (value) {
+                            //$.getScript('/javascripts/numeral.js', function(){
+
+                                //alert("Script loaded but not necessarily executed.");
+                                //var money = numeral(value).format('0,0');
+
+                                return '$' + Math.round(value) ;
+                            //});
+                        }},
+                    {dataField: 'PlantTwoBal', displayText: 'All Plant Two',
+                        labels: {
+                            visible: true
+                        },
+                        formatFunction: function (value) {
+                            return '$' +  Math.round(value);
+                        }
+                    },
+                    {dataField: 'PlantThreeBal', displayText: 'All Plant Three',
+                        labels: {
+                            visible: true
+                        },
+                        formatFunction: function (value, itemIndex) {
+                            return '$' + Math.round(value);
+                            //return getTotal(itemIndex).toFixed(2);
+                        }}
+                    /*{dataField: '', displayText: 'Total',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: -5, y: -17 }
+                        },
+                        formatFunction: function (value, itemIndex) {
+                            return 'Total: ' + getTotal(itemIndex).toFixed(2);
+                        }}*/
+
                 ]
             }
         ]

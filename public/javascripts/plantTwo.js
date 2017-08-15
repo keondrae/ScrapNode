@@ -2,6 +2,11 @@
  * Created by kmell on 6/22/2017.
  */
 
+var xValue = -5;
+var yValue = -17;
+var xValueAll = -5;
+var yValueAll = -17;
+
 function PlantTwoAllDetails(data) {
     //Start of Chart
     console.log("Plant 2 All method Called");
@@ -45,15 +50,24 @@ function PlantTwoAllDetails(data) {
             valuesOnTicks: false
         },
         valueAxis: {
-            valuesOnTicks: true
+            valuesOnTicks: true,
+            title: { text: 'Scrap Amount ($)<br>' },
+            labels: { horizontalAlignment: 'right' }
         },
         seriesGroups: [
             {
                 type: "column",
                 click: onChartClickTest,
                 series: [
-                    {
-                        dataField: "AllEndingBalance" , displayText: 'All Plant Two'
+                    {dataField: "AllEndingBalance" , displayText: 'All Plant Two',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValueAll, y: yValueAll }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
                     }
                 ]
             }
@@ -109,15 +123,33 @@ function PlantTwoPlenumsDetails(data) {
             valuesOnTicks: false
         },
         valueAxis: {
-            valuesOnTicks: true
+            valuesOnTicks: true,
+            title: { text: 'Scrap Amount ($)<br>' },
+            labels: { horizontalAlignment: 'right' }
         },
         seriesGroups: [
             {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {dataField: 'AllPlantTwo', displayText: 'All Plant Two'},
-                    {dataField: "Plenums", displayText: 'Plenums'}
+                    {dataField: 'AllPlantTwo', displayText: 'All Plant Two',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }},
+                    {dataField: "Plenums", displayText: 'Plenums',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }}
 
                 ]
             }
@@ -171,15 +203,33 @@ function PlantTwoFlexHoseCapsDetails(data) {
             valuesOnTicks: false
         },
         valueAxis: {
-            valuesOnTicks: true
+            valuesOnTicks: true,
+            title: { text: 'Scrap Amount ($)<br>' },
+            labels: { horizontalAlignment: 'right' }
         },
         seriesGroups: [
             {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {dataField: 'AllPlantTwo', displayText: 'All Plant Two'},
-                    {dataField: "FlexHCaps", displayText: 'Flex Hose / Caps'}
+                    {dataField: 'AllPlantTwo', displayText: 'All Plant Two',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }},
+                    {dataField: "FlexHCaps", displayText: 'Flex Hose / Caps',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }}
                 ]
             }
         ]
@@ -233,15 +283,33 @@ function PlantTwoDownersDetails(data) {
             valuesOnTicks: false
         },
         valueAxis: {
-            valuesOnTicks: true
+            valuesOnTicks: true,
+            title: { text: 'Scrap Amount ($)<br>' },
+            labels: { horizontalAlignment: 'right' }
         },
         seriesGroups: [
             {
                 type: "column",
                 click: onChartClick,
                 series: [
-                    {dataField: "AllPlantTwo", displayText: 'All Plant Two'},
-                    {dataField: "Downers", displayText: 'Downers'}
+                    {dataField: "AllPlantTwo", displayText: 'All Plant Two',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }},
+                    {dataField: "Downers", displayText: 'Downers',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }}
                 ]
             }
         ]

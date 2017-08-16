@@ -393,6 +393,86 @@ function PlantOneAssemblyDetails(data) {
 
 }
 
+function PlantOneSpaceDetails(data) {
+    console.log("Plant 1 Space method Called");
+    /* data adapter settings */
+    var SpaceDataAdapter = new $.jqx.dataAdapter({
+        localdata: data,
+        datafields: [
+            {name: "Date", type: "string"},
+            {name: "Space", type: "number"},
+            {name: "AllPlantOne", type: "number"}
+        ]
+    });
+
+    /* chart settings */
+    var SpaceChartSettings = {
+        source: SpaceDataAdapter,
+        title: "Space",
+        description: "",
+        showToolTips: true,
+        enableAnimations: true,
+        padding: {
+            left: 5,
+            top: 5,
+            right: 5,
+            bottom: 5
+        },
+        titlePadding: {
+            left: 5,
+            top: 5,
+            right: 5,
+            bottom: 5
+        },
+        colorScheme: "scheme05",
+        enableCrosshairs: true,
+        enableAxisTextAnimation: true,
+        xAxis: {
+            dataField: "Date",
+            type: "date",
+            baseUnit: "month",
+            valuesOnTicks: false
+        },
+        valueAxis: {
+            valuesOnTicks: true,
+            title: { text: 'Scrap Amount ($)<br>' },
+            labels: { horizontalAlignment: 'right' }
+        },
+        seriesGroups: [
+            {
+                type: "column",
+                click: onChartClick,
+                series: [
+                    {dataField: 'AllPlantOne', displayText: 'All Plant One',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
+                    },
+                    {dataField: "Space", displayText: 'Space',
+                        labels: {
+                            visible: true,
+                            verticalAlignment: 'top',
+                            offset: { x: xValue, y: yValue }
+                        },
+                        formatFunction: function (value) {
+                            return '$' + Math.round(value);
+                        }
+                    }
+                ]
+            }
+        ]
+    };
+    // setup the chart
+    $('#plant1SpaceChart').jqxChart(SpaceChartSettings);
+
+
+}
+
 function PlantOneOtherDetails(data) {
     console.log("Plant 1 Others method Called");
     /* data adapter settings */

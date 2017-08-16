@@ -10,6 +10,7 @@ var DuctsArray = [];
 var TubesArray = [];
 var CoversArray = [];
 var AssemblysArray = [];
+var SpaceArray = [];
 var OthersArray = [];
 
 router.get('/:year/:tab', function(req, res, next) {
@@ -44,6 +45,10 @@ router.get('/:year/:tab', function(req, res, next) {
             PlantOneAll(Year, db, connectionString, res);
             //All
             break;
+        case 'Space':
+            PlantOneSpace(Year, db, connectionString, res);
+            //Space
+            break;
     }
 
 });
@@ -67,6 +72,7 @@ function PlantOneAll(Year, db, connectionString, res) {
     var TempArrayTwo = [];
     var TempArrayThree = [];
     var TempArrayFour = [];
+    var TempArrayFive = [];
     AssemblysArray = [];
     DataTempArray = [];
     DataArray = [];
@@ -74,6 +80,7 @@ function PlantOneAll(Year, db, connectionString, res) {
     TubesArray = [];
     CoversArray = [];
     OthersArray = [];
+    SpaceArray = [];
     PlantOneAllArray = [];
     db.open(connectionString, function (err) {
 
@@ -844,7 +851,7 @@ function PlantOneAll(Year, db, connectionString, res) {
                                                     });
                                                 }
 
-                                                db.close(function (err) {
+                                                /*db.close(function (err) {
 
                                                     if(err){
                                                         console.log('Plant One Others Error: ' + err);
@@ -852,7 +859,7 @@ function PlantOneAll(Year, db, connectionString, res) {
                                                         console.log("the database connection is now closed");
                                                     }
 
-                                                });
+                                                });*/
 
                                                 if(Array17.length >= Array19.length){
                                                     CombineArrays(Array17, Array19, OthersArray, false);
@@ -860,42 +867,111 @@ function PlantOneAll(Year, db, connectionString, res) {
                                                     CombineArrays(Array19, Array17, OthersArray, false);
                                                 }
 
-                                                //console.log(DuctsArray);
-                                                //console.log(TubesArray);
-                                                //console.log(CoversArray);
-                                                //console.log(AssemblysArray);
-                                                //console.log(OthersArray);
-                                                //console.log(Array16.length);
+                                                var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-30-0000' AND  FiscalYear =" + Year;
+                                                db.query(sql, function (err, rows, moreResultSets) {
 
+                                                    if (err) {
+                                                        return console.log(err);
+                                                    }
 
+                                                    for(var i = 0; i < rows.length; i++) {
+                                                        var FY = parseInt(rows[i].FiscalYear);
+                                                        var FiscalYear = FY;
+                                                        var FP = parseInt(rows[i].FiscalPeriod);
+                                                        var FiscalPeriod = FP;
+                                                        var BeginningBalance = rows[i].BeginningBalance;
+                                                        var DebitAmount = rows[i].DebitAmount;
+                                                        var CreditAmount = rows[i].CreditAmount;
+                                                        var EndingBalance = BeginningBalance + DebitAmount - CreditAmount;
+                                                        //var EndingBalance = EB.toString();
+                                                        var Date;
 
-                                                 CombineArrays(DuctsArray, TubesArray, TempArrayOne, false);
-                                                 //console.log('--------------------------------------');
-                                                 //console.log(TempArrayOne);
-                                                 CombineArrays(TempArrayOne, CoversArray, TempArrayTwo, false);
-                                                 //console.log('--------------------------------------');
-                                                 //console.log(TempArrayTwo);
-                                                 CombineArrays(TempArrayTwo, AssemblysArray, TempArrayThree, false);
-                                                 //console.log('--------------------------------------');
-                                                 //console.log(TempArrayThree);
-                                                 CombineArrays(TempArrayThree, OthersArray, TempArrayFour, false);
-                                                 //console.log('--------------------------------------');
-                                                 //console.log(TempArrayFour);
-                                                 CombineArrays(TempArrayFour, Array16, DataTempArray, false);
-                                                 //console.log('--------------------------------------');
-                                                 //console.log(DataTempArray);
+                                                        switch (FiscalPeriod) {
+                                                            case 1:
+                                                                Date = FiscalYear - 1 + '-12-01';
+                                                                break;
+                                                            case 2:
+                                                                Date = FiscalYear + '-01-01';
+                                                                break;
+                                                            case 3:
+                                                                Date = FiscalYear + '-02-01';
+                                                                break;
+                                                            case 4:
+                                                                Date = FiscalYear + '-03-01';
+                                                                break;
+                                                            case 5:
+                                                                Date = FiscalYear + '-04-01';
+                                                                break;
+                                                            case 6:
+                                                                Date = FiscalYear + '-05-01';
+                                                                break;
+                                                            case 7:
+                                                                Date = FiscalYear + '-06-01';
+                                                                break;
+                                                            case 8:
+                                                                Date = FiscalYear + '-07-01';
+                                                                break;
+                                                            case 9:
+                                                                Date = FiscalYear + '-08-01';
+                                                                break;
+                                                            case 10:
+                                                                Date = FiscalYear + '-09-01';
+                                                                break;
+                                                            case 11:
+                                                                Date = FiscalYear + '-10-01';
+                                                                break;
+                                                            case 12:
+                                                                Date = FiscalYear + '-11-01';
+                                                                break;
+                                                        }
 
-                                                for(var i = 0; i < DataTempArray.length; i++){
-                                                    var AllDate = DataTempArray[i].Date;
-                                                    var AllEndingBalance = DataTempArray[i].EndingBalance;
+                                                        SpaceArray.push({
 
-                                                    PlantOneAllArray.push({
-                                                        Date: AllDate,
-                                                        AllPlantOneEndingBalance: AllEndingBalance
+                                                            Date: Date,
+                                                            EndingBalance: EndingBalance
+                                                        });
+                                                    }
+
+                                                    db.close(function (err) {
+
+                                                        if(err){
+                                                            console.log('Plant One All Error: ' + err);
+                                                        }else {
+                                                            console.log("the database connection is now closed");
+                                                        }
+
                                                     });
-                                                }
 
-                                                res.send(JSON.stringify(PlantOneAllArray));
+                                                    CombineArrays(DuctsArray, TubesArray, TempArrayOne, false);
+                                                    //console.log('--------------------------------------');
+                                                    //console.log(TempArrayOne);
+                                                    CombineArrays(TempArrayOne, CoversArray, TempArrayTwo, false);
+                                                    //console.log('--------------------------------------');
+                                                    //console.log(TempArrayTwo);
+                                                    CombineArrays(TempArrayTwo, AssemblysArray, TempArrayThree, false);
+                                                    //console.log('--------------------------------------');
+                                                    CombineArrays(TempArrayThree, SpaceArray, TempArrayFour, false);
+                                                    //console.log(TempArrayThree);
+                                                    CombineArrays(TempArrayFour, OthersArray, TempArrayFive, false);
+                                                    //console.log('--------------------------------------');
+                                                    //console.log(TempArrayFour);
+                                                    CombineArrays(TempArrayFive, Array16, DataTempArray, false);
+                                                    //console.log('--------------------------------------');
+                                                    //console.log(DataTempArray);
+
+                                                    for(var i = 0; i < DataTempArray.length; i++){
+                                                        var AllDate = DataTempArray[i].Date;
+                                                        var AllEndingBalance = DataTempArray[i].EndingBalance;
+
+                                                        PlantOneAllArray.push({
+                                                            Date: AllDate,
+                                                            AllPlantOneEndingBalance: AllEndingBalance
+                                                        });
+                                                    }
+
+                                                    res.send(JSON.stringify(PlantOneAllArray));
+
+                                                });
                                             });
                                         });
                                     });
@@ -1569,6 +1645,114 @@ function PlantOneAssembly(Year, db, connectionString, res) {
             });
         });
     });
+}
+//Done
+function PlantOneSpace(Year, db, connectionString, res) {
+    console.log('Plant One Space');
+    SpaceArray = [];
+    db.open(connectionString, function (err) {
+
+        if (err) {
+            return console.log(err);
+        }
+
+        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-30-0000' AND  FiscalYear =" + Year;
+
+
+        db.query(sql, function (err, rows, moreResultSets) {
+
+            if (err) {
+                return console.log(err);
+            }
+
+            for(var i = 0; i < rows.length; i++) {
+                var FY = parseInt(rows[i].FiscalYear);
+                var FiscalYear = FY;
+                var FP = parseInt(rows[i].FiscalPeriod);
+                var FiscalPeriod = FP;
+                var BeginningBalance = rows[i].BeginningBalance;
+                var DebitAmount = rows[i].DebitAmount;
+                var CreditAmount = rows[i].CreditAmount;
+                var EndingBalance = BeginningBalance + DebitAmount - CreditAmount;
+                //var EndingBalance = EB.toString();
+                var Date;
+
+                switch (FiscalPeriod) {
+                    case 1:
+                        Date = FiscalYear - 1 + '-12-01';
+                        break;
+                    case 2:
+                        Date = FiscalYear + '-01-01';
+                        break;
+                    case 3:
+                        Date = FiscalYear + '-02-01';
+                        break;
+                    case 4:
+                        Date = FiscalYear + '-03-01';
+                        break;
+                    case 5:
+                        Date = FiscalYear + '-04-01';
+                        break;
+                    case 6:
+                        Date = FiscalYear + '-05-01';
+                        break;
+                    case 7:
+                        Date = FiscalYear + '-06-01';
+                        break;
+                    case 8:
+                        Date = FiscalYear + '-07-01';
+                        break;
+                    case 9:
+                        Date = FiscalYear + '-08-01';
+                        break;
+                    case 10:
+                        Date = FiscalYear + '-09-01';
+                        break;
+                    case 11:
+                        Date = FiscalYear + '-10-01';
+                        break;
+                    case 12:
+                        Date = FiscalYear + '-11-01';
+                        break;
+                }
+
+                SpaceArray.push({
+
+                    Date: Date,
+                    EndingBalance: EndingBalance
+                });
+            }
+
+            db.close(function (err) {
+
+                if(err){
+                    console.log('Plant One Space Error: ' + err);
+                }else {
+                    console.log("the database connection is now closed");
+                }
+
+            });
+
+
+            for(var i = 0; i < SpaceArray.length; i++){
+                var DataDate = SpaceArray[i].Date;
+                var TubesBalance = SpaceArray[i].EndingBalance;
+                var AllPlantOneBalance = PlantOneAllArray[i].AllPlantOneEndingBalance.toString();
+
+                DataArray.push({
+                    Date: DataDate,
+                    Space: TubesBalance,
+                    AllPlantOne: AllPlantOneBalance
+                });
+
+            }
+
+            res.send(JSON.stringify(DataArray));
+
+        });
+
+    });
+
 }
 //Done
 function PlantOneOthers(Year, db, connectionString, res) {

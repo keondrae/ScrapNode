@@ -54,6 +54,7 @@ block content
                 li= 'Tubes'
                 li= 'Cover'
                 li= 'Assembly'
+                li= 'Space'
                 li= 'Other'
 
             div(id='plantOneAllDetails' class='PlantDiv')
@@ -75,6 +76,10 @@ block content
             div(id='plantOneAssemblyDetails' class='PlantDiv')
                 div(id='plant1AssemblyChart' class='data')= 'Assembly Chart'
                 //div(id='plant1AssemblyCircleChart' class='data')= 'Circle Chart'
+
+            div(id='plantOneSpaceDetails' class='PlantDiv')
+                div(id='plant1SpaceChart' class='data')= 'Space Chart'
+                //div(id='plant1SpaceCircleChart' class='data')= 'Circle Chart'
 
             div(id='plantOneOtherDetails' class='PlantDiv')
                 div(id='plant1OtherChart' class='data')= 'Other Chart'
@@ -452,6 +457,24 @@ block content
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log('Plant One Assembly Error:')
+                    console.log(xhr);
+                    console.log(status);
+                    console.log(errorThrown);
+                }
+            });
+
+            $.ajax({// Get Space
+                type: 'GET',
+                url: '/plantOneFetch/' + Year + '/Space',
+                dataType: 'json',
+                async: async,
+                cache: cache,
+                timeout: timeOut,
+                success: function (data) {
+                    PlantOneSpaceDetails(data);
+                },
+                error: function (xhr, status, errorThrown) {
+                    console.log('Plant One Space Error:')
                     console.log(xhr);
                     console.log(status);
                     console.log(errorThrown);

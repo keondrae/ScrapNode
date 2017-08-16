@@ -26,8 +26,8 @@ header #head{
 h1{
   color: White;
 }
-header h1{
-  width: 320px;
+#title{
+  width: 250px;
   line-height: 100%;
   font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
   font-size: 28px;
@@ -38,12 +38,13 @@ header h1{
 }
 header #version{
   position: relative;
-  top: 0px; left: 45px;
-  font-size: 12px;
+  top: 0px; left: 55px;
+  font-size: 16px;
   color: mediumspringgreen;
 }
 header #DashboardLogo{
-  float:left;
+  float: left;
+
 }
 header #Logo{
   float: right;

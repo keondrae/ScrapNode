@@ -19,11 +19,13 @@ router.get('/:year', function(req, res, next) {
         var sql = "SELECT SY_User.FirstName AS 'FirstName', CI_Item.ItemCodeDesc, CI_ITEM.ItemCode,\n" +
             "  TransactionDate, FiscalCalYear, FiscalCalPeriod,\n" +
             "  TransactionQty, ExtendedCost, UDF_SCRAP_REASON_CODE,\n" +
-            "  UDF_WORK_TICKET_NUMBER, UDF_FACTORY_CODE\n" +
+            "  UDF_WORK_TICKET_NUMBER, UDF_FACTORY_CODE, AccountKey,\n" +
+            "  RawAccount, MainAccountCode, RawAccount, AccountType\n" +
             "FROM IM_ItemTransactionHistory\n" +
             "INNER JOIN CI_ITEM ON IM_ItemTransactionHistory.ItemCode = CI_ITEM.ItemCode\n" +
             "INNER JOIN SY_User ON IM_ItemTransactionHistory.UserUpdatedKey = SY_User.UserKey\n" +
-            "WHERE FiscalCalYear = "+ Year;
+            "INNER JOIN GL_Account ON IM_ItemTransactionHistory.UDF_GL_ACCOUNT_KEY = GL_Account.AccountKey\n" +
+            "WHERE MainAccountCode = 5010";
 
         db.query(sql, function (err, rows, moreResultSets) {
 

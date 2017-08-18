@@ -28,6 +28,8 @@ function PlantAllDetails(data) {
         return  plantOne + plantTwo + plantThree;
     }
 
+
+
     /* chart settings */
     var AllChartSettings;
     AllChartSettings = {
@@ -84,10 +86,12 @@ function PlantAllDetails(data) {
             {
                 type: "stackedcolumn",
                 click: onChartClick ,
+
                 series: [
                     {dataField: 'PlantOneBal', displayText: 'All Plant One',
                         labels: {
                         visible: true
+
                     },
                         formatFunction: function (value) {
                             //$.getScript('/javascripts/numeral.js', function(){
@@ -97,14 +101,17 @@ function PlantAllDetails(data) {
 
                                 return '$' + Math.round(value) ;
                             //});
-                        }},
+                        },
+                        color: '#1ca3e3'
+                    },
                     {dataField: 'PlantTwoBal', displayText: 'All Plant Two',
                         labels: {
                             visible: true
                         },
                         formatFunction: function (value) {
                             return '$' +  Math.round(value);
-                        }
+                        },
+                        color: '#2ba043'
                     },
                     {dataField: 'PlantThreeBal', displayText: 'All Plant Three',
                         labels: {
@@ -113,7 +120,9 @@ function PlantAllDetails(data) {
                         formatFunction: function (value, itemIndex) {
                             return '$' + Math.round(value);
                             //return getTotal(itemIndex).toFixed(2);
-                        }}
+                        },
+                        color: '#8ebc00'
+                    }
                     /*{dataField: '', displayText: 'Total',
                         labels: {
                             visible: true,
@@ -130,6 +139,5 @@ function PlantAllDetails(data) {
     };
     $('#AllPlantChart').jqxChart(AllChartSettings);
     //End of Chart
-
 
 }

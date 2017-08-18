@@ -87,7 +87,8 @@ function PlantTwoAllDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
+                        },
+                        color: '#2ba043'
                     }
                 ]
             }
@@ -178,7 +179,9 @@ function PlantTwoPlenumsDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }},
+                        },
+                        color: '#2ba043'
+                    },
                     {dataField: "Plenums", displayText: 'Plenums',
                         labels: {
                             visible: true,
@@ -187,8 +190,9 @@ function PlantTwoPlenumsDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }}
-
+                        },
+                        color: '#287cdf'
+                    }
                 ]
             }
         ]
@@ -276,7 +280,9 @@ function PlantTwoFlexHoseCapsDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }},
+                        },
+                        color: '#2ba043'
+                    },
                     {dataField: "FlexHCaps", displayText: 'Flex Hose / Caps',
                         labels: {
                             visible: true,
@@ -285,7 +291,9 @@ function PlantTwoFlexHoseCapsDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }}
+                        },
+                        color: '#287cdf'
+                    }
                 ]
             }
         ]
@@ -374,7 +382,9 @@ function PlantTwoDownersDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }},
+                        },
+                        color: '#2ba043'
+                    },
                     {dataField: "Downers", displayText: 'Downers',
                         labels: {
                             visible: true,
@@ -383,7 +393,9 @@ function PlantTwoDownersDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }}
+                        },
+                        color: '#287cdf'
+                    }
                 ]
             }
         ]

@@ -85,7 +85,9 @@ function PlantOneAllDetails(data) {
                     },
                         formatFunction: function (value) {
                             return '$' +  Math.round(value);
-                        }}
+                        },
+                        color: '#1ca3e3'
+                    }
                 ]
             }
         ]
@@ -171,7 +173,8 @@ function PlantOneDuctDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
+                        },
+                        color: '#1ca3e3'
                     },
                     {dataField: "Ducts", displayText: 'Duct / Bin Seal',
                         labels: {
@@ -181,7 +184,8 @@ function PlantOneDuctDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
+                        },
+                        color: '#287cdf'
                     }
                 ]
             }
@@ -268,7 +272,8 @@ function PlantOneTubeDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
+                        },
+                        color: '#1ca3e3'
                     },
                     {dataField: "Tubes", displayText: 'Tubes',
                         labels: {
@@ -278,7 +283,8 @@ function PlantOneTubeDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
+                        },
+                        color: '#287cdf'
                     }
                 ]
             }
@@ -366,7 +372,8 @@ function PlantOneCoversDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
+                        },
+                        color: '#1ca3e3'
                     },
                     {dataField: "Covers", displayText: 'Covers',
                         labels: {
@@ -376,7 +383,8 @@ function PlantOneCoversDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
+                        },
+                        color: '#287cdf'
                     }
                 ]
             }
@@ -463,7 +471,8 @@ function PlantOneAssemblyDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
+                        },
+                        color: '#1ca3e3'
                     },
                     {dataField: "Assembly", displayText: 'Assembly',
                         labels: {
@@ -473,7 +482,8 @@ function PlantOneAssemblyDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
+                        },
+                        color: '#287cdf'
                     }
                 ]
             }
@@ -561,7 +571,8 @@ function PlantOneSpaceDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
+                        },
+                        color: '#1ca3e3'
                     },
                     {dataField: "Space", displayText: 'Space',
                         labels: {
@@ -571,7 +582,8 @@ function PlantOneSpaceDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
+                        },
+                        color: '#287cdf'
                     }
                 ]
             }
@@ -659,7 +671,8 @@ function PlantOneOtherDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
+                        },
+                        color: '#1ca3e3'
                     },
                     {dataField: "Other", displayText: 'Other',
                         labels: {
@@ -669,7 +682,8 @@ function PlantOneOtherDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
+                        },
+                        color: '#287cdf'
                     }
                 ]
             }

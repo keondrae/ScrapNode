@@ -87,7 +87,9 @@ function PlantThreeAllDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }}
+                        },
+                        color: '#8ebc00'
+                    }
                 ]
             }
         ]
@@ -176,7 +178,9 @@ function PlantThreeP8Details(data){
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }},
+                        },
+                        color: '#8ebc00'
+                    },
                     {dataField: "P8", displayText: 'P8',
                         labels: {
                             visible: true,
@@ -185,7 +189,8 @@ function PlantThreeP8Details(data){
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
+                        },
+                        color: '#287cdf'
                     }
                 ]
             }
@@ -275,7 +280,9 @@ function PlantThreePrimaryOpsDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }},
+                        },
+                        color: '#8ebc00'
+                    },
                     {dataField: "PrimaryOps", displayText: 'Primary Ops',
                         labels: {
                             visible: true,
@@ -284,7 +291,8 @@ function PlantThreePrimaryOpsDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
+                        },
+                        color: '#287cdf'
                     }
                 ]
             }
@@ -374,7 +382,8 @@ function PlantThreeSleevesDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
+                        },
+                        color: '#8ebc00'
                     },
                     {dataField: "Sleeves", displayText: 'Sleeves',
                         labels: {
@@ -384,7 +393,8 @@ function PlantThreeSleevesDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
+                        },
+                        color: '#287cdf'
                     }
                 ]
             }
@@ -475,8 +485,9 @@ function PlantThree737WindowsDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
                         },
+                        color: '#8ebc00'
+                    },
                     {dataField: "Windows737", displayText: '737 Windows',
                         labels: {
                             visible: true,
@@ -485,7 +496,8 @@ function PlantThree737WindowsDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
+                        },
+                        color: '#287cdf'
                     }
                 ]
             }
@@ -575,7 +587,8 @@ function PlantThree787WindowsDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
+                        },
+                        color: '#8ebc00'
                     },
                     {dataField: "Windows787", displayText: '787 Windows',
                         labels: {
@@ -585,7 +598,8 @@ function PlantThree787WindowsDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
+                        },
+                        color: '#287cdf'
                     }
                 ]
             }
@@ -675,7 +689,8 @@ function PlantThreeBSIWindowsDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
+                        },
+                        color: '#8ebc00'
                     },
                     {dataField: "BSIWindows", displayText: 'BSI Windows',
                         labels: {
@@ -685,7 +700,8 @@ function PlantThreeBSIWindowsDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
+                        },
+                        color: '#287cdf'
                     }
                 ]
             }
@@ -775,7 +791,8 @@ function PlantThreeAllWindowsDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
+                        },
+                        color: '#8ebc00'
                     },
                     {dataField: "AllWindows", displayText: 'All Windows',
                         labels: {
@@ -785,7 +802,8 @@ function PlantThreeAllWindowsDetails(data) {
                         },
                         formatFunction: function (value) {
                             return '$' + Math.round(value);
-                        }
+                        },
+                        color: '#287cdf'
                     }
                 ]
             }

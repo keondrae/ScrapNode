@@ -78,7 +78,7 @@ function PlantThreeAll(Year, db, connectionString, res) {
     var TempArrayFive = [];
     var TempArraySix = [];
     PlantThreeAllArray = [];
-
+    DataArray = [];
     db.open(connectionString, function (err) {
 
         if (err) {
@@ -86,7 +86,7 @@ function PlantThreeAll(Year, db, connectionString, res) {
         }
 
         //Plant Three All
-        var sql03 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-00-0000' AND  FiscalYear =" + Year;
+        var sql03 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-00-0000' AND  FiscalYear >= 2015";
         db.query(sql03, function (err, rows, moreResultSets) {
 
             if (err) {
@@ -186,7 +186,7 @@ function PlantThreeAll(Year, db, connectionString, res) {
             */
 
             //Plant Three P8
-            var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-11-0000' AND  FiscalYear =" + Year;
+            var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-11-0000' AND  FiscalYear >= 2015";
             db.query(sql, function (err, rows, moreResultSets) {
                 P8Array = [];
                 if (err) {
@@ -281,10 +281,10 @@ function PlantThreeAll(Year, db, connectionString, res) {
                 //console.log(P8Array.length + PlantThreeAllArray.length);*/
 
                 //Plant Three Primary Ops
-                var sql02 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-02-0000' AND  FiscalYear =" + Year;
-                var sql24 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-24-0000' AND  FiscalYear =" + Year;
-                var sql21 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-21-0000' AND  FiscalYear =" + Year;
-                var sql22 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-22-0000' AND  FiscalYear =" + Year;
+                var sql02 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-02-0000' AND  FiscalYear >= 2015";
+                var sql24 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-24-0000' AND  FiscalYear >= 2015";
+                var sql21 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-21-0000' AND  FiscalYear >= 2015";
+                var sql22 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-22-0000' AND  FiscalYear >= 2015";
                 db.query(sql02, function (err, rows, moreResultSets) {
                     DataTempArray =[];
                     PriamryOpsArray = [];
@@ -557,7 +557,7 @@ function PlantThreeAll(Year, db, connectionString, res) {
                                 }
 
                                 //Plant Three Sleeves
-                                var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-06-0000' AND  FiscalYear =" + Year;
+                                var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-06-0000' AND  FiscalYear >= 2015";
                                 db.query(sql, function (err, rows, moreResultSets) {
                                     SleevesArray = [];
                                     if (err) {
@@ -632,7 +632,7 @@ function PlantThreeAll(Year, db, connectionString, res) {
 
                                     //res.send(JSON.stringify(SleevesArray));*/
                                     //Plant Three Windows 737
-                                    var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-07-0000' AND  FiscalYear =" + Year;
+                                    var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-07-0000' AND  FiscalYear >= 2015";
                                     db.query(sql, function (err, rows, moreResultSets) {
                                         Windows737Array = [];
                                         if (err) {
@@ -707,7 +707,7 @@ function PlantThreeAll(Year, db, connectionString, res) {
 
                                         //res.send(JSON.stringify(Windows737Array));*/
                                         //Plant Three Windows 787
-                                        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-09-0000' AND  FiscalYear =" + Year;
+                                        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-09-0000' AND  FiscalYear >= 2015";
                                         db.query(sql, function (err, rows, moreResultSets) {
                                             Windows787Array = [];
                                             if (err) {
@@ -782,7 +782,7 @@ function PlantThreeAll(Year, db, connectionString, res) {
 
                                             //res.send(JSON.stringify(Windows787Array));*/
                                             //Plant Three BSI Windows
-                                            var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-18-0000' AND  FiscalYear =" + Year;
+                                            var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-18-0000' AND  FiscalYear >= 2015";
                                             db.query(sql, function (err, rows, moreResultSets) {
                                                 BSIWindowsArray = [];
                                                 if (err) {
@@ -857,9 +857,9 @@ function PlantThreeAll(Year, db, connectionString, res) {
 
                                                 //res.send(JSON.stringify(BSIWindowsArray));*/
                                                 //Plant Three All Windows
-                                                var sql07 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-07-0000' AND  FiscalYear =" + Year;
-                                                var sql09 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-09-0000' AND  FiscalYear =" + Year;
-                                                var sql18 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-18-0000' AND  FiscalYear =" + Year;
+                                                var sql07 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-07-0000' AND  FiscalYear >= 2015";
+                                                var sql09 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-09-0000' AND  FiscalYear >= 2015";
+                                                var sql18 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-18-0000' AND  FiscalYear >= 2015";
                                                 db.query(sql07, function (err, rows, moreResultSets) {
                                                     DataTempArray = [];
                                                     AllWindowsArray = [];
@@ -1082,12 +1082,22 @@ function PlantThreeAll(Year, db, connectionString, res) {
                                                             TempArrayFive = [];
                                                             TempArraySix = [];
 
-                                                            CombineArrays(P8Array,PriamryOpsArray, TempArrayOne, false);
+                                                            //console.log(P8Array.length);
+                                                            //console.log(PriamryOpsArray.length);
+                                                            //console.log(SleevesArray.length);
+                                                            //console.log(Windows737Array.length);
+                                                            //console.log(Windows787Array.length);
+                                                            //console.log(BSIWindowsArray.length);
+                                                            //console.log(AllWindowsArray.length);
+                                                            //console.log(Array03.length);
+
+
+                                                            CombineArrays(AllWindowsArray,PriamryOpsArray, TempArrayOne, false);
                                                             CombineArrays(TempArrayOne, SleevesArray, TempArrayTwo, false);
                                                             CombineArrays(TempArrayTwo, Windows737Array, TempArrayThree, false);
                                                             CombineArrays(TempArrayThree, Windows787Array, TempArrayFour, false);
                                                             CombineArrays(TempArrayFour, BSIWindowsArray, TempArrayFive, false);
-                                                            CombineArrays(TempArrayFive, AllWindowsArray, TempArraySix, false);
+                                                            CombineArrays(TempArrayFive, P8Array, TempArraySix, false);
                                                             CombineArrays(TempArraySix, Array03, DataTempArray, true);
 
                                                             //console.log(DataTempArray);
@@ -1102,7 +1112,7 @@ function PlantThreeAll(Year, db, connectionString, res) {
                                                                 });
                                                             }
 
-                                                            //console.log(PlantThreeAllArray);
+                                                            console.log(PlantThreeAllArray.length);
                                                             res.send(JSON.stringify(PlantThreeAllArray));
                                                         });
                                                     });
@@ -1130,7 +1140,7 @@ function PlantThreeP8(Year, db, connectionString, res) {
             return console.log(err);
         }
 
-        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-11-0000' AND  FiscalYear =" + Year;
+        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-11-0000' AND  FiscalYear >= 2015";
 
 
         db.query(sql, function (err, rows, moreResultSets) {
@@ -1206,6 +1216,8 @@ function PlantThreeP8(Year, db, connectionString, res) {
 
             });
 
+            console.log('All: ' + PlantThreeAllArray.length);
+            console.log('P8: ' + P8Array.length);
 
             for(var i = 0; i < P8Array.length; i++){
                 var DataDate = P8Array[i].Date;
@@ -1237,18 +1249,20 @@ function PlantThreePrimaryOps(Year, db, connectionString, res) {
     var Array22 = [];
     var TempArrayOne = [];
     var TempArrayTwo = [];
+    var TempDataArray = [];
     PriamryOpsArray = [];
     DataTempArray =[];
+    DataArray = [];
     db.open(connectionString, function (err) {
 
         if (err) {
             return console.log(err);
         }
 
-        var sql02 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-02-0000' AND  FiscalYear =" + Year;
-        var sql24 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-24-0000' AND  FiscalYear =" + Year;
-        var sql21 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-21-0000' AND  FiscalYear =" + Year;
-        var sql22 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-22-0000' AND  FiscalYear =" + Year;
+        var sql02 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-02-0000' AND  FiscalYear >= 2015";
+        var sql24 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-24-0000' AND  FiscalYear >= 2015";
+        var sql21 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-21-0000' AND  FiscalYear >= 2015";
+        var sql22 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-22-0000' AND  FiscalYear >= 2015";
 
 
         db.query(sql02, function (err, rows, moreResultSets) {
@@ -1511,6 +1525,8 @@ function PlantThreePrimaryOps(Year, db, connectionString, res) {
                             CombineArrays(TempArrayOne, Array21, TempArrayTwo, false);
                             CombineArrays(TempArrayTwo, Array24, DataTempArray, false);
 
+                            //console.log(PlantThreeAllArray);
+
                         for(var i = 0; i < DataTempArray.length; i++){
                             var PODate = DataTempArray[i].Date;
                             var POEndingBalance = DataTempArray[i].EndingBalance;
@@ -1521,21 +1537,34 @@ function PlantThreePrimaryOps(Year, db, connectionString, res) {
                             });
                         }
 
-                        for(var i = 0; i < PriamryOpsArray.length; i++){
-                            var DataDate = PriamryOpsArray[i].Date;
-                            var PrimaryOpsBalance = PriamryOpsArray[i].EndingBalance;
-                            var AllPlantThreeBalance = PlantThreeAllArray[i].AllPlantThreeEndingBalance.toString();
+                        console.log('Primary Ops: ' + PriamryOpsArray.length);
 
-                            DataArray.push({
-                                Date: DataDate,
-                                PrimaryOps: PrimaryOpsBalance,
-                                AllPlantThree: AllPlantThreeBalance
-                            });
+                        try{
 
-                        }
+                            for(var i = 0; i < PriamryOpsArray.length; i++){
+                                var DataDate = PriamryOpsArray[i].Date;
+                                var PrimaryOpsBalance = PriamryOpsArray[i].EndingBalance;
+                                var AllPlantThreeBalance = PlantThreeAllArray[i].AllPlantThreeEndingBalance.toString();
+                                //console.log(i);
 
+
+
+                                DataArray.push({
+                                    Date: DataDate,
+                                    PrimaryOps: PrimaryOpsBalance,
+                                    AllPlantThree: AllPlantThreeBalance
+                                });
+
+                            }
+
+                            //console.log(DataArray);
 
                             res.send(JSON.stringify(DataArray));
+                        }catch (e){
+                            console.log('Primary Ops Error');
+                            console.log(e);
+                        }
+
                     });
                 });
             });
@@ -1550,6 +1579,7 @@ function PlantThreePrimaryOps(Year, db, connectionString, res) {
 //Done
 function PlantThreeSleeves(Year, db, connectionString, res) {
     SleevesArray = [];
+    DataArray = [];
     console.log('Plant Three Sleeves');
     db.open(connectionString, function (err) {
 
@@ -1557,7 +1587,7 @@ function PlantThreeSleeves(Year, db, connectionString, res) {
             return console.log(err);
         }
 
-        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-06-0000' AND  FiscalYear =" + Year;
+        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-06-0000' AND  FiscalYear >= 2015";
 
 
         db.query(sql, function (err, rows, moreResultSets) {
@@ -1623,6 +1653,8 @@ function PlantThreeSleeves(Year, db, connectionString, res) {
                 });
             }
 
+            console.log('Sleeves: ' + SleevesArray.length);
+            
             db.close(function (err) {
 
                 if(err){
@@ -1633,20 +1665,29 @@ function PlantThreeSleeves(Year, db, connectionString, res) {
 
             });
 
-            for(var i = 0; i < SleevesArray.length; i++){
-                var DataDate = SleevesArray[i].Date;
-                var SleevesBalance = SleevesArray[i].EndingBalance;
-                var AllPlantThreeBalance = PlantThreeAllArray[i].AllPlantThreeEndingBalance.toString();
+            //console.log(PlantThreeAllArray);
+            //console.log(SleevesArray);
 
-                DataArray.push({
-                    Date: DataDate,
-                    Sleeves: SleevesBalance,
-                    AllPlantThree: AllPlantThreeBalance
-                });
+            try{
+
+                for(var i = 0; i < SleevesArray.length; i++){
+                    var DataDate = SleevesArray[i].Date;
+                    var SleevesBalance = SleevesArray[i].EndingBalance;
+                    var AllPlantThreeBalance = PlantThreeAllArray[i].AllPlantThreeEndingBalance;
+
+                    DataArray.push({
+                        Date: DataDate,
+                        Sleeves: SleevesBalance,
+                        AllPlantThree: AllPlantThreeBalance
+                    });
+
+                }
+
+            }catch (e){
+                console.log('Sleeves Error');
+                console.log(e)
 
             }
-
-
             res.send(JSON.stringify(DataArray));
 
         });
@@ -1663,7 +1704,7 @@ function PlantThreeWindows737(Year, db, connectionString, res) {
             return console.log(err);
         }
 
-        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-07-0000' AND  FiscalYear =" + Year;
+        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-07-0000' AND  FiscalYear >= 2015";
 
 
         db.query(sql, function (err, rows, moreResultSets) {
@@ -1739,25 +1780,33 @@ function PlantThreeWindows737(Year, db, connectionString, res) {
 
             });
 
-            for(var i = 0; i < Windows737Array.length; i++){
-                var DataDate = Windows737Array[i].Date;
-                var Windows737Balance = Windows737Array[i].EndingBalance;
-                var AllPlantThreeBalance = PlantThreeAllArray[i].AllPlantThreeEndingBalance.toString();
+            console.log('Window 737: ' + Windows737Array.length);
+            
+            try{
 
-                DataArray.push({
-                    Date: DataDate,
-                    Windows737: Windows737Balance,
-                    AllPlantThree: AllPlantThreeBalance
-                });
+                for(var i = 0; i < Windows737Array.length; i++){
+                    var DataDate = Windows737Array[i].Date;
+                    var Windows737Balance = Windows737Array[i].EndingBalance;
+                    var AllPlantThreeBalance = PlantThreeAllArray[i].AllPlantThreeEndingBalance.toString();
+
+                    DataArray.push({
+                        Date: DataDate,
+                        Windows737: Windows737Balance,
+                        AllPlantThree: AllPlantThreeBalance
+                    });
+
+                }
+
+                res.send(JSON.stringify(DataArray));
+
+
+            }catch(e){
+                console.log('737 Windows');
+                console.log(e);
 
             }
 
-            res.send(JSON.stringify(DataArray));
-
         });
-
-
-
     });
 
 }
@@ -1771,7 +1820,7 @@ function PlantThreeWindows787(Year, db, connectionString, res) {
             return console.log(err);
         }
 
-        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-09-0000' AND  FiscalYear =" + Year;
+        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-09-0000' AND  FiscalYear >= 2015";
 
 
         db.query(sql, function (err, rows, moreResultSets) {
@@ -1847,20 +1896,29 @@ function PlantThreeWindows787(Year, db, connectionString, res) {
 
             });
 
-            for(var i = 0; i < Windows787Array.length; i++){
-                var DataDate = Windows787Array[i].Date;
-                var Windows787Balance = Windows787Array[i].EndingBalance;
-                var AllPlantThreeBalance = PlantThreeAllArray[i].AllPlantThreeEndingBalance.toString();
+            console.log('Windows 787: ' + Windows787Array.length);
+            
+            try{
+                for(var i = 0; i < Windows787Array.length; i++){
+                    var DataDate = Windows787Array[i].Date;
+                    var Windows787Balance = Windows787Array[i].EndingBalance;
+                    var AllPlantThreeBalance = PlantThreeAllArray[i].AllPlantThreeEndingBalance.toString();
 
-                DataArray.push({
-                    Date: DataDate,
-                    Windows787: Windows787Balance,
-                    AllPlantThree: AllPlantThreeBalance
-                });
+                    DataArray.push({
+                        Date: DataDate,
+                        Windows787: Windows787Balance,
+                        AllPlantThree: AllPlantThreeBalance
+                    });
 
+                }
+
+                res.send(JSON.stringify(DataArray));
+
+
+            }catch(e){
+                console.log('787 Windows');
+                console.log(e);
             }
-
-            res.send(JSON.stringify(DataArray));
 
         });
 
@@ -1876,7 +1934,7 @@ function PlantThreeBSIWindows(Year, db, connectionString, res) {
             return console.log(err);
         }
 
-        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-18-0000' AND  FiscalYear =" + Year;
+        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-18-0000' AND  FiscalYear >= 2015";
 
 
         db.query(sql, function (err, rows, moreResultSets) {
@@ -1952,21 +2010,31 @@ function PlantThreeBSIWindows(Year, db, connectionString, res) {
 
             });
 
-            for(var i = 0; i < BSIWindowsArray.length; i++){
-                var DataDate = BSIWindowsArray[i].Date;
-                var BSIWindowsBalance = BSIWindowsArray[i].EndingBalance;
-                var AllPlantThreeBalance = PlantThreeAllArray[i].AllPlantThreeEndingBalance.toString();
+            console.log('BSI Window: ' + BSIWindowsArray.length);
+            
+            try{
 
-                DataArray.push({
-                    Date: DataDate,
-                    BSIWindows: BSIWindowsBalance,
-                    AllPlantThree: AllPlantThreeBalance
-                });
+                for(var i = 0; i < BSIWindowsArray.length; i++){
+                    var DataDate = BSIWindowsArray[i].Date;
+                    var BSIWindowsBalance = BSIWindowsArray[i].EndingBalance;
+                    var AllPlantThreeBalance = PlantThreeAllArray[i].AllPlantThreeEndingBalance.toString();
 
+                    DataArray.push({
+                        Date: DataDate,
+                        BSIWindows: BSIWindowsBalance,
+                        AllPlantThree: AllPlantThreeBalance
+                    });
+
+                }
+
+
+                res.send(JSON.stringify(DataArray));
+
+            }catch (e){
+                console.log('BSI Windows Error');
+                console.log(e);
             }
 
-
-            res.send(JSON.stringify(DataArray));
 
         });
 
@@ -1987,9 +2055,9 @@ function PlantThreeAllWindows(Year, db, connectionString, res) {
             return console.log(err);
         }
 
-        var sql07 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-07-0000' AND  FiscalYear =" + Year;
-        var sql09 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-09-0000' AND  FiscalYear =" + Year;
-        var sql18 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-18-0000' AND  FiscalYear =" + Year;
+        var sql07 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-07-0000' AND  FiscalYear >= 2015";
+        var sql09 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-09-0000' AND  FiscalYear >= 2015";
+        var sql18 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-18-0000' AND  FiscalYear >= 2015";
 
 
         db.query(sql07, function (err, rows, moreResultSets) {
@@ -2204,23 +2272,30 @@ function PlantThreeAllWindows(Year, db, connectionString, res) {
                         });
                     }
 
-                    //console.log(PlantThreeAllArray);
+                    console.log('All Windows: ' + AllWindowsArray.length);
+
+                    try{
+                        for(var i = 0; i < AllWindowsArray.length; i++){
+                            var DataDate = AllWindowsArray[i].Date;
+                            var AllWindowsBalance = AllWindowsArray[i].EndingBalance;
+                            var AllPlantThreeBalance = PlantThreeAllArray[i].AllPlantThreeEndingBalance.toString();
+
+                            DataArray.push({
+                                Date: DataDate,
+                                AllWindows: AllWindowsBalance,
+                                AllPlantThree: AllPlantThreeBalance
+                            });
+
+                        }
 
 
-                    for(var i = 0; i < AllWindowsArray.length; i++){
-                        var DataDate = AllWindowsArray[i].Date;
-                        var AllWindowsBalance = AllWindowsArray[i].EndingBalance;
-                        var AllPlantThreeBalance = PlantThreeAllArray[i].AllPlantThreeEndingBalance.toString();
+                        res.send(JSON.stringify(DataArray));
 
-                        DataArray.push({
-                            Date: DataDate,
-                            AllWindows: AllWindowsBalance,
-                            AllPlantThree: AllPlantThreeBalance
-                        });
+                    }catch(e){
+                        console.log('All Windows Error');
+                        console.log(e);
 
                     }
-
-                    res.send(JSON.stringify(DataArray));
                 });
             });
         });

@@ -7,20 +7,21 @@ var router = express.Router();
 var odbc = require('odbc');
 var connectionString ="Driver={SQL Server};Server=tf-sql-01;Database=MAS_TFI";
 var db = new odbc.Database();
-//var TempArray = [];
-var  DateArray = [];
-var  ValueArray = [];
+var  DataArray = [];
 
 /* GET home page. */
-router.get('/test', function(req, res, next) {
-
+router.get('/:year', function(req, res, next) {
+    console.log('Test');
+    DataArray = [];
+    var Year = req.params.year;
     db.open(connectionString, function (err) {
 
         if (err) {
             return console.log(err);
         }
 
-        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, FiscalYear, FiscalPeriod FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-05-0000' AND  FiscalYear > 2015";
+        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-07-0000' AND  FiscalYear >= 2015";
+
 
         db.query(sql, function (err, rows, moreResultSets) {
 
@@ -29,7 +30,8 @@ router.get('/test', function(req, res, next) {
             }
 
             for(var i = 0; i < rows.length; i++) {
-                var FiscalYear = rows[i].FiscalYear;
+                var FY = parseInt(rows[i].FiscalYear);
+                var FiscalYear = FY;
                 var FP = parseInt(rows[i].FiscalPeriod);
                 var FiscalPeriod = FP;
                 var BeginningBalance = rows[i].BeginningBalance;
@@ -41,7 +43,7 @@ router.get('/test', function(req, res, next) {
 
                 switch (FiscalPeriod) {
                     case 1:
-                        Date = FiscalYear + '-12-01';
+                        Date = FiscalYear - 1 + '-12-01';
                         break;
                     case 2:
                         Date = FiscalYear + '-01-01';
@@ -78,25 +80,26 @@ router.get('/test', function(req, res, next) {
                         break;
                 }
 
-                DateArray.push(Date);
-                ValueArray.push(EndingBalance);
-
-                // TempArray.push({
-                //    Date: Date,
-                //     EndingBalance: EndingBalance
-                // });
+                DataArray.push({
+                    Date: Date,
+                    EndingBalance: EndingBalance
+                });
             }
 
+            db.close(function (err) {
 
-            res.render('index', {title: 'Scrap Dashboard', TubesDate: JSON.stringify(DateArray), TubesValue: JSON.stringify(ValueArray)});
+                if(err){
+                    console.log('Plant Two Downers Error: ' + err);
+                }else {
+                    console.log("the database connection is now closed");
+                }
+            });
 
+            res.send(JSON.stringify(DataArray));
 
-            //var results = rows.toString().replace('{rows}', JSON.stringify(TestArray));
-            //console.log(rows.toString().replace('{rows}', JSON.stringify(TestArray)));
-            //res.write(results);
-            //res.end();
         });
     });
+
 
 });
 

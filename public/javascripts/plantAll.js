@@ -1,6 +1,8 @@
 /**
  * Created by kmell on 6/30/2017.
  */
+var MinDate = new Date(2016, 7, 1);
+var MaxDate = new Date(2017, 7, 1);
 
 function PlantAllDetails(data) {
 
@@ -37,7 +39,7 @@ function PlantAllDetails(data) {
         padding: {
             left: 5,
             top: 5,
-            right: 5,
+            right: 10,
             bottom: 5
         },
         titlePadding: {
@@ -53,7 +55,25 @@ function PlantAllDetails(data) {
             dataField: "Date",
             type: "date",
             baseUnit: "month",
-            valuesOnTicks: false
+            valuesOnTicks: false,
+            minValue: MinDate,
+            maxValue: MaxDate,
+            unitInterval: 1,
+            rangeSelector: {
+                size: 100,
+                padding: {left: 0, right: 10,top: 0, bottom: 0},
+                minValue: new Date(2014, 12, 1),
+                backgroundColor: 'white',
+                dataField: 'Date',
+                baseUnit: 'month',
+                gridLines: {visible: true},
+                unitInterval: 1,
+                serieType: 'area',
+                minorTicksInterval: 1,
+                labels: {
+                    angle: -30
+                }
+            }
         },
         valueAxis: {
             valuesOnTicks: true,

@@ -51,14 +51,13 @@ body(class='default')
                 div(class='Info' id='plant1')
 
                     div(id='plantOneTubeDetails' class='')
-                        div(id='plant2DownChart' class='data')= 'Tubes Chart'
+                        div(id='plant2DownChart' class='data')= 'Test Chart'
                         //div(id='plant1TubeCircleChart' class='data')= 'Circle Chart'
 
                 //End plant one
 
         section(class='gird')
             div(id='GridForEverything' class='data')
-            div(id='jqxLoader')
 
         //include ./JSCalls
     script.
@@ -78,7 +77,6 @@ body(class='default')
 
         plantOneDataFetch(Year);
         GridRerun(Year);
-        $("#jqxLoader").jqxLoader({width: 100, height: 60, imagePosition: 'top', autoOpen: true});
 
         function onChartClick(e) {
             var id;
@@ -147,9 +145,10 @@ body(class='default')
         console.log(Year)
         console.log("Test Page Called");
 
+
         function GridRerun(Year) {
 
-            /*
+
             $.ajax({
                 type: 'GET',
                 url: '/GridFetch/' + Year,
@@ -159,9 +158,9 @@ body(class='default')
                 success: function (data1) {
 
                     gridData = data1
-                    Grid(gridData);
-                    console.log(gridData[80342]);
-                    console.log(gridData[175292]);
+                    //Grid(gridData);
+                    console.log(data1[80342]);
+                    //console.log(gridData[175292]);
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log(xhr);
@@ -169,7 +168,7 @@ body(class='default')
                     console.log(errorThrown);
                 }
             });
-            */
+
 
 
 
@@ -205,23 +204,14 @@ body(class='default')
             var plant1AllSource = {
                 datatype: "json",
                 datafields: plant1AllDataSource,
-                localdata: Data,
+                localdata: gridData,
                 async: true,
                 pager: function (pagenum, pagesize, oldpagenum) {
                     // callback called when a page or page size is changed.
                 }
             };
 
-            var plantOneGridDataAdapter = new $.jqx.dataAdapter(plant1AllSource, {
-                loadServerData: function (serverdata, source, callback) {
-
-                },
-                loadComplete: function () {
-                    $('#jqxLoader').jqxLoader('close');
-                },
-                loadError: function (xhr, status, error) {
-                }
-            });
+            var plantOneGridDataAdapter = new $.jqx.dataAdapter(plant1AllSource);
 
             //var plantOneGridDataAdapter = new $.jqx.dataAdapter(plant1AllSource);
 
@@ -249,16 +239,17 @@ body(class='default')
 
             $.ajax({// Get Tubes
                 type: 'GET',
-                url: '/plantTwoFetch/' + Year + '/Downers',
+                url: '/plantThreeFetch/' + Year + '/Sleeves',
                 dataType: 'json',
                 async: async,
                 cache: cache,
                 timeout: timeOut,
                 success: function (data) {
-                    PlantTwoDownersDetails(data);
+                    console.log(data);
+                    PlantTwoDownersDetailsTest(data);
                 },
                 error: function (xhr, status, errorThrown) {
-                    console.log('Plant One Tubes Error:')
+                    console.log('Plant Test Error:')
                     console.log(xhr);
                     console.log(status);
                     console.log(errorThrown);
@@ -268,9 +259,9 @@ body(class='default')
 
         }
 
-        function PlantTwoDownersDetails(data) {
+        function PlantTwoDownersDetailsTest(data) {
 
-            console.log("Plant 2 Downers method Called");
+            console.log("Test method Called");
             console.log(data);
             //Chart
             /* data adapter settings*/
@@ -278,8 +269,7 @@ body(class='default')
                 localdata: data,
                 datafields: [
                     {name: "Date", type: "string"},
-                    {name: "Downers", type: "number"},
-                    {name: "AllPlantTwo", type: "number"}
+                    {name: "Sleeves", type: "number"}
                 ]
             });
 
@@ -309,10 +299,30 @@ body(class='default')
                     dataField: "Date",
                     type: "date",
                     baseUnit: "month",
-                    valuesOnTicks: false
+                    valuesOnTicks: false,
+                    minValue: new Date(2016, 7, 1),
+                    maxValue: new Date(2017, 7, 1),
+                    unitInterval: 1,
+                    rangeSelector: {
+                        size: 100,
+                        padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                        minValue: new Date(2014, 12, 1),
+                        backgroundColor: 'white',
+                        dataField: 'Date',
+                        baseUnit: 'month',
+                        gridLines: {visible: true},
+                        unitInterval: 1,
+                        serieType: 'area',
+                        minorTicksInterval: 1,
+                        labels: {
+                            angle: -30
+                        }
+                    }
                 },
                 valueAxis: {
-                    valuesOnTicks: true
+                    valuesOnTicks: true,
+                    title: {text: 'Scrap Amount ($)<br>'},
+                    labels: {horizontalAlignment: 'right'}
                 },
                 seriesGroups: [
                     {
@@ -321,8 +331,16 @@ body(class='default')
                         columnsGapPercent: 50,
                         seriesGapPercent: 0,
                         series: [
-                            {dataField: "Downers",      displayText: 'Downers'},
-                            {dataField: "AllPlantTwo",  displayText: 'All Plant Two'}
+                            {dataField: "Sleeves",      displayText: 'EndingBalance',
+                                labels: {
+                                    visible: true,
+                                    verticalAlignment: 'top',
+                                    offset: {x: -5, y: -17}
+                                },
+                                formatFunction: function (value) {
+                                    return '$' + Math.round(value);
+                                }
+                            }
                         ]
                     }
                 ]

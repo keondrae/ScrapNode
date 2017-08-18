@@ -6,6 +6,8 @@ var xValue = -5;
 var yValue = -17;
 var xValueAll = -5;
 var yValueAll = -17;
+var MinDate = new Date(2016, 7, 1);
+var MaxDate = new Date(2017, 7, 1);
 
 function PlantOneAllDetails(data) {
     console.log("Plant 1 All method Called");
@@ -45,7 +47,25 @@ function PlantOneAllDetails(data) {
             dataField: "Date",
             type: "date",
             baseUnit: "month",
-            valuesOnTicks: false
+            valuesOnTicks: false,
+            minValue: MinDate,
+            maxValue: MaxDate,
+            unitInterval: 1,
+            rangeSelector: {
+                size: 100,
+                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                minValue: new Date(2014, 12, 1),
+                backgroundColor: 'white',
+                dataField: 'Date',
+                baseUnit: 'month',
+                gridLines: {visible: true},
+                unitInterval: 1,
+                serieType: 'area',
+                minorTicksInterval: 1,
+                labels: {
+                    angle: -30
+                }
+            }
         },
         valueAxis: {
             valuesOnTicks: true,
@@ -113,7 +133,25 @@ function PlantOneDuctDetails(data) {
             dataField: "Date",
             type: "date",
             baseUnit: "month",
-            valuesOnTicks: false
+            valuesOnTicks: false,
+            minValue: MinDate,
+            maxValue: MaxDate,
+            unitInterval: 1,
+            rangeSelector: {
+                size: 100,
+                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                minValue: new Date(2014, 12, 1),
+                backgroundColor: 'white',
+                dataField: 'Date',
+                baseUnit: 'month',
+                gridLines: {visible: true},
+                unitInterval: 1,
+                serieType: 'area',
+                minorTicksInterval: 1,
+                labels: {
+                    angle: -30
+                }
+            }
         },
         valueAxis: {
             valuesOnTicks: true,
@@ -192,7 +230,25 @@ function PlantOneTubeDetails(data) {
             dataField: "Date",
             type: "date",
             baseUnit: "month",
-            valuesOnTicks: false
+            valuesOnTicks: false,
+            minValue: MinDate,
+            maxValue: MaxDate,
+            unitInterval: 1,
+            rangeSelector: {
+                size: 100,
+                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                minValue: new Date(2014, 12, 1),
+                backgroundColor: 'white',
+                dataField: 'Date',
+                baseUnit: 'month',
+                gridLines: {visible: true},
+                unitInterval: 1,
+                serieType: 'area',
+                minorTicksInterval: 1,
+                labels: {
+                    angle: -30
+                }
+            }
         },
         valueAxis: {
             valuesOnTicks: true,
@@ -272,7 +328,25 @@ function PlantOneCoversDetails(data) {
             dataField: "Date",
             type: "date",
             baseUnit: "month",
-            valuesOnTicks: false
+            valuesOnTicks: false,
+            minValue: MinDate,
+            maxValue: MaxDate,
+            unitInterval: 1,
+            rangeSelector: {
+                size: 100,
+                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                minValue: new Date(2014, 12, 1),
+                backgroundColor: 'white',
+                dataField: 'Date',
+                baseUnit: 'month',
+                gridLines: {visible: true},
+                unitInterval: 1,
+                serieType: 'area',
+                minorTicksInterval: 1,
+                labels: {
+                    angle: -30
+                }
+            }
         },
         valueAxis: {
             valuesOnTicks: true,
@@ -351,7 +425,25 @@ function PlantOneAssemblyDetails(data) {
             dataField: "Date",
             type: "date",
             baseUnit: "month",
-            valuesOnTicks: false
+            valuesOnTicks: false,
+            minValue: MinDate,
+            maxValue: MaxDate,
+            unitInterval: 1,
+            rangeSelector: {
+                size: 100,
+                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                minValue: new Date(2014, 12, 1),
+                backgroundColor: 'white',
+                dataField: 'Date',
+                baseUnit: 'month',
+                gridLines: {visible: true},
+                unitInterval: 1,
+                serieType: 'area',
+                minorTicksInterval: 1,
+                labels: {
+                    angle: -30
+                }
+            }
         },
         valueAxis: {
             valuesOnTicks: true,
@@ -431,7 +523,25 @@ function PlantOneSpaceDetails(data) {
             dataField: "Date",
             type: "date",
             baseUnit: "month",
-            valuesOnTicks: false
+            valuesOnTicks: false,
+            minValue: MinDate,
+            maxValue: MaxDate,
+            unitInterval: 1,
+            rangeSelector: {
+                size: 100,
+                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                minValue: new Date(2014, 12, 1),
+                backgroundColor: 'white',
+                dataField: 'Date',
+                baseUnit: 'month',
+                gridLines: {visible: true},
+                unitInterval: 1,
+                serieType: 'area',
+                minorTicksInterval: 1,
+                labels: {
+                    angle: -30
+                }
+            }
         },
         valueAxis: {
             valuesOnTicks: true,
@@ -511,7 +621,25 @@ function PlantOneOtherDetails(data) {
             dataField: "Date",
             type: "date",
             baseUnit: "month",
-            valuesOnTicks: false
+            valuesOnTicks: false,
+            minValue: MinDate,
+            maxValue: MaxDate,
+            unitInterval: 1,
+            rangeSelector: {
+                size: 100,
+                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                minValue: new Date(2014, 12, 1),
+                backgroundColor: 'white',
+                dataField: 'Date',
+                baseUnit: 'month',
+                gridLines: {visible: true},
+                unitInterval: 1,
+                serieType: 'area',
+                minorTicksInterval: 1,
+                labels: {
+                    angle: -30
+                }
+            }
         },
         valueAxis: {
             valuesOnTicks: true,

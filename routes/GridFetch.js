@@ -20,12 +20,12 @@ router.get('/:year', function(req, res, next) {
             "  TransactionDate, FiscalCalYear, FiscalCalPeriod,\n" +
             "  TransactionQty, ExtendedCost, UDF_SCRAP_REASON_CODE,\n" +
             "  UDF_WORK_TICKET_NUMBER, UDF_FACTORY_CODE, AccountKey,\n" +
-            "  RawAccount, MainAccountCode, RawAccount, AccountType\n" +
+            "  MainAccountCode, RawAccount, AccountType\n" +
             "FROM IM_ItemTransactionHistory\n" +
             "INNER JOIN CI_ITEM ON IM_ItemTransactionHistory.ItemCode = CI_ITEM.ItemCode\n" +
             "INNER JOIN SY_User ON IM_ItemTransactionHistory.UserUpdatedKey = SY_User.UserKey\n" +
             "INNER JOIN GL_Account ON IM_ItemTransactionHistory.UDF_GL_ACCOUNT_KEY = GL_Account.AccountKey\n" +
-            "WHERE MainAccountCode = 5010";
+            "WHERE MainAccountCode = 5010 AND FiscalCalYear >= 2015";
 
         db.query(sql, function (err, rows, moreResultSets) {
 
@@ -52,6 +52,7 @@ router.get('/:year', function(req, res, next) {
                 var MonthDate;
                 var ReasonCodeDesc;
                 var PlantNumber = rows[i].UDF_FACTORY_CODE;
+                var RawAccount = rows[i].RawAccount;
 
                 switch (FiscalCalPeriod) {
                     case 1:
@@ -129,7 +130,8 @@ router.get('/:year', function(req, res, next) {
                     Quantity: TransactionQty,
                     FirstName: FirstName,
                     Total: ExtendedCost,
-                    PlantNumber: PlantNumber
+                    PlantNumber: PlantNumber,
+                    AccountNumber: RawAccount
                 })
 
             }

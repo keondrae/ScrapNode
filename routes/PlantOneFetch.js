@@ -16,9 +16,9 @@ var OthersArray = [];
 router.get('/:year/:tab', function(req, res, next) {
 
     DataArray = [];
-    var Year = req.params.year;
+    //var Year = req.params.year;
     var Tab = req.params.tab;
-
+    var Year = 2015;
     switch (Tab){
 
         case 'Duct':
@@ -88,7 +88,7 @@ function PlantOneAll(Year, db, connectionString, res) {
             return console.log(err);
         }
 
-        var sql16 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-16-0000' AND  FiscalYear =" + Year;
+        var sql16 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-16-0000' AND  FiscalYear >= 2015";
         db.query(sql16, function (err, rows, moreResultSets) {
 
             if (err) {
@@ -184,8 +184,8 @@ function PlantOneAll(Year, db, connectionString, res) {
             res.send(JSON.stringify(PlantAllArray));*/
 
             //Ducts
-            var sql08 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-08-0000' AND  FiscalYear =" + Year;
-            var sql15 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-15-0000' AND  FiscalYear =" + Year;
+            var sql08 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-08-0000' AND  FiscalYear >= 2015";
+            var sql15 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-15-0000' AND  FiscalYear >= 2015";
             db.query(sql08, function (err, rows, moreResultSets) {
 
                 if (err) {
@@ -331,7 +331,7 @@ function PlantOneAll(Year, db, connectionString, res) {
                     }
 
                     //Tubes
-                    var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-05-0000' AND  FiscalYear =" + Year;
+                    var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-05-0000' AND  FiscalYear >= 2015";
                     db.query(sql, function (err, rows, moreResultSets) {
 
                         if (err) {
@@ -409,7 +409,7 @@ function PlantOneAll(Year, db, connectionString, res) {
                         res.send(JSON.stringify(TubesArray));*/
 
                         //Covers
-                        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-04-0000' AND  FiscalYear =" + Year;
+                        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-04-0000' AND  FiscalYear >= 2015";
                         db.query(sql, function (err, rows, moreResultSets) {
 
                             if (err) {
@@ -488,9 +488,9 @@ function PlantOneAll(Year, db, connectionString, res) {
                             */
 
                             //Assembly
-                            var sql82 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-82-0000' AND  FiscalYear =" + Year;
-                            var sql20 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-20-0000' AND  FiscalYear =" + Year;
-                            var sql01 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-01-0000' AND  FiscalYear =" + Year;
+                            var sql82 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-82-0000' AND  FiscalYear >= 2015";
+                            var sql20 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-20-0000' AND  FiscalYear >= 2015";
+                            var sql01 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-01-0000' AND  FiscalYear >= 2015";
                             db.query(sql82, function (err, rows, moreResultSets) {
 
                                 if (err) {
@@ -722,8 +722,8 @@ function PlantOneAll(Year, db, connectionString, res) {
 
 
                                         //Others
-                                        var sql17 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-17-0000' AND  FiscalYear =" + Year;
-                                        var sql19 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-19-0000' AND  FiscalYear =" + Year;
+                                        var sql17 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-17-0000' AND  FiscalYear >= 2015";
+                                        var sql19 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-19-0000' AND  FiscalYear >= 2015";
                                         db.query(sql17, function (err, rows, moreResultSets) {
 
                                             if (err) {
@@ -867,7 +867,8 @@ function PlantOneAll(Year, db, connectionString, res) {
                                                     CombineArrays(Array19, Array17, OthersArray, false);
                                                 }
 
-                                                var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-30-0000' AND  FiscalYear =" + Year;
+                                                //Space
+                                                var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-30-0000' AND  FiscalYear >= 2015";
                                                 db.query(sql, function (err, rows, moreResultSets) {
 
                                                     if (err) {
@@ -942,6 +943,7 @@ function PlantOneAll(Year, db, connectionString, res) {
 
                                                     });
 
+
                                                     CombineArrays(DuctsArray, TubesArray, TempArrayOne, false);
                                                     //console.log('--------------------------------------');
                                                     //console.log(TempArrayOne);
@@ -950,7 +952,9 @@ function PlantOneAll(Year, db, connectionString, res) {
                                                     //console.log(TempArrayTwo);
                                                     CombineArrays(TempArrayTwo, AssemblysArray, TempArrayThree, false);
                                                     //console.log('--------------------------------------');
+                                                    //console.log(TempArrayThree);
                                                     CombineArrays(TempArrayThree, SpaceArray, TempArrayFour, false);
+                                                    //console.log('--------------------------------------');
                                                     //console.log(TempArrayThree);
                                                     CombineArrays(TempArrayFour, OthersArray, TempArrayFive, false);
                                                     //console.log('--------------------------------------');
@@ -990,6 +994,7 @@ function PlantOneDuct(Year, db, connectionString, res) {
     var Array08 = [];
     var Array15 = [];
     DuctsArray = [];
+    DataArray = [];
 
     db.open(connectionString, function (err) {
 
@@ -997,8 +1002,8 @@ function PlantOneDuct(Year, db, connectionString, res) {
             return console.log(err);
         }
 
-        var sql08 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-08-0000' AND  FiscalYear =" + Year;
-        var sql15 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-15-0000' AND  FiscalYear =" + Year;
+        var sql08 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-08-0000' AND  FiscalYear >= 2015";
+        var sql15 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-15-0000' AND  FiscalYear >= 2015";
 
 
         db.query(sql08, function (err, rows, moreResultSets) {
@@ -1143,6 +1148,7 @@ function PlantOneDuct(Year, db, connectionString, res) {
                     CombineArrays(Array15, Array08, DuctsArray, true);
                 }
 
+
                 for(var i = 0; i < DuctsArray.length; i++){
                     var DataDate = DuctsArray[i].Date;
                     var DuctsBalance = DuctsArray[i].EndingBalance;
@@ -1168,13 +1174,14 @@ function PlantOneDuct(Year, db, connectionString, res) {
 function PlantOneTubes(Year, db, connectionString, res) {
     console.log('Plant One Tubes');
     TubesArray = [];
+    DataArray = [];
     db.open(connectionString, function (err) {
 
         if (err) {
             return console.log(err);
         }
 
-        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-05-0000' AND  FiscalYear =" + Year;
+        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-05-0000' AND  FiscalYear >= 2015";
 
 
         db.query(sql, function (err, rows, moreResultSets) {
@@ -1275,13 +1282,14 @@ function PlantOneTubes(Year, db, connectionString, res) {
 function PlantOneCovers(Year, db, connectionString, res) {
     console.log('Plant One Covers');
     CoversArray = [];
+    DataArray = [];
     db.open(connectionString, function (err) {
 
         if (err) {
             return console.log(err);
         }
 
-        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-04-0000' AND  FiscalYear =" + Year;
+        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-04-0000' AND  FiscalYear >= 2015";
 
 
         db.query(sql, function (err, rows, moreResultSets) {
@@ -1358,7 +1366,6 @@ function PlantOneCovers(Year, db, connectionString, res) {
 
             });
 
-
             for(var i = 0; i < CoversArray.length; i++){
                 var DataDate = CoversArray[i].Date;
                 var CoversBalance = CoversArray[i].EndingBalance;
@@ -1386,15 +1393,16 @@ function PlantOneAssembly(Year, db, connectionString, res) {
     var Array01 = [];
     var TempArray = [];
     AssemblysArray = [];
+    DataArray = [];
     db.open(connectionString, function (err) {
 
         if (err) {
             return console.log(err);
         }
 
-        var sql82 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-82-0000' AND  FiscalYear =" + Year;
-        var sql20 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-20-0000' AND  FiscalYear =" + Year;
-        var sql01 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-01-0000' AND  FiscalYear =" + Year;
+        var sql82 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-82-0000' AND  FiscalYear >= 2015";
+        var sql20 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-20-0000' AND  FiscalYear >= 2015";
+        var sql01 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-01-0000' AND  FiscalYear >= 2015";
 
 
         db.query(sql82, function (err, rows, moreResultSets) {
@@ -1626,6 +1634,7 @@ function PlantOneAssembly(Year, db, connectionString, res) {
                     CombineArrays(Array01,Array20, TempArray, false);
                     CombineArrays(TempArray, Array82, AssemblysArray, true);
 
+
                     for(var i = 0; i < AssemblysArray.length; i++){
                         var DataDate = AssemblysArray[i].Date;
                         var AssemblyBalance = AssemblysArray[i].EndingBalance;
@@ -1639,6 +1648,7 @@ function PlantOneAssembly(Year, db, connectionString, res) {
 
                     }
 
+
                     res.send(JSON.stringify(DataArray));
                 });
 
@@ -1650,13 +1660,14 @@ function PlantOneAssembly(Year, db, connectionString, res) {
 function PlantOneSpace(Year, db, connectionString, res) {
     console.log('Plant One Space');
     SpaceArray = [];
+    DataArray = [];
     db.open(connectionString, function (err) {
 
         if (err) {
             return console.log(err);
         }
 
-        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-30-0000' AND  FiscalYear =" + Year;
+        var sql = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-30-0000' AND  FiscalYear >= 2015";
 
 
         db.query(sql, function (err, rows, moreResultSets) {
@@ -1736,12 +1747,12 @@ function PlantOneSpace(Year, db, connectionString, res) {
 
             for(var i = 0; i < SpaceArray.length; i++){
                 var DataDate = SpaceArray[i].Date;
-                var TubesBalance = SpaceArray[i].EndingBalance;
+                var SpaceBalance = SpaceArray[i].EndingBalance;
                 var AllPlantOneBalance = PlantOneAllArray[i].AllPlantOneEndingBalance.toString();
 
                 DataArray.push({
                     Date: DataDate,
-                    Space: TubesBalance,
+                    Space: SpaceBalance,
                     AllPlantOne: AllPlantOneBalance
                 });
 
@@ -1760,14 +1771,15 @@ function PlantOneOthers(Year, db, connectionString, res) {
     var Array17 = [];
     var Array19 = [];
     OthersArray = [];
+    DataArray = [];
     db.open(connectionString, function (err) {
 
         if (err) {
             return console.log(err);
         }
 
-        var sql17 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-17-0000' AND  FiscalYear =" + Year;
-        var sql19 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-19-0000' AND  FiscalYear =" + Year;
+        var sql17 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-17-0000' AND  FiscalYear >= 2015";
+        var sql19 = "SELECT BeginningBalance, DebitAmount, CreditAmount, GL_PeriodPostingHistory.AccountKey, FiscalYear, FiscalPeriod, AccountType  FROM GL_PeriodPostingHistory INNER JOIN GL_Account ON GL_PeriodPostingHistory.AccountKey = GL_Account.AccountKey Where GL_Account.Account ='5010-19-0000' AND  FiscalYear >= 2015";
 
 
         db.query(sql17, function (err, rows, moreResultSets) {
@@ -1913,6 +1925,7 @@ function PlantOneOthers(Year, db, connectionString, res) {
                     CombineArrays(Array19, Array17, OthersArray, true);
                 }
 
+
                 for(var i = 0; i < OthersArray.length; i++){
                     var DataDate = OthersArray[i].Date;
                     var OtherBalance = OthersArray[i].EndingBalance;
@@ -1925,6 +1938,7 @@ function PlantOneOthers(Year, db, connectionString, res) {
                     });
 
                 }
+
 
                 res.send(JSON.stringify(DataArray));
             });

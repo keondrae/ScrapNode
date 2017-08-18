@@ -12,7 +12,8 @@ function Grid(Data) {
         {name: 'Quantity', type: 'number'},
         {name: 'FirstName', type: 'string'},
         {name: 'Total', type: 'number'},
-        {name: 'PlantNumber', type: 'number'}
+        {name: 'PlantNumber', type: 'number'},
+        {name: 'AccountNumber', type: 'string'}
 
     ];
     var plant1AllColumns = [
@@ -25,7 +26,8 @@ function Grid(Data) {
         {text: 'First Name', datafield: 'FirstName'},
         {text: 'Total', datafield: 'Total'},
         {text: 'Month', datafield: 'MonthDate'},
-        {text: 'Plant', datafield: 'PlantNumber'}
+        {text: 'Plant', datafield: 'PlantNumber'},
+        {text: 'Account Number', datafield: 'AccountNumber'}
     ];
 
     var plant1AllSource = {

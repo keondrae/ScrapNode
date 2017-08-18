@@ -17,27 +17,24 @@ function Grid(Data) {
 
     ];
     var plant1AllColumns = [
-        {text: 'Reason Code Description', datafield: 'ReasonCodeDesc'},
-        {text: 'Item', datafield: 'Item'},
-        {text: 'Description', datafield: 'Description'},
-        {text: 'Work Order', datafield: 'WorkOrder'},
-        {text: 'Transaction Date', datafield: 'TransactionDate'},
-        {text: 'Quantity', datafield: 'Quantity'},
-        {text: 'First Name', datafield: 'FirstName'},
-        {text: 'Total', datafield: 'Total'},
-        {text: 'Month', datafield: 'MonthDate'},
-        {text: 'Plant', datafield: 'PlantNumber'},
-        {text: 'Account Number', datafield: 'AccountNumber'}
+        {text: 'Reason Code Description', datafield: 'ReasonCodeDesc', width: '18%' , cellsalign: 'center', align: 'center'},
+        {text: 'Item', datafield: 'Item', width: '7%' , cellsalign: 'center', align: 'center'},
+        {text: 'Description', datafield: 'Description', width: '16%' , cellsalign: 'center', align: 'center'},
+        {text: 'Work Order', datafield: 'WorkOrder', width: '10%' , cellsalign: 'center', align: 'center'},
+        {text: 'Date', datafield: 'TransactionDate', width: '7%' , cellsalign: 'center', align: 'center'},
+        {text: 'QTY', datafield: 'Quantity', width: '3%', cellsalign: 'center', align: 'center'},
+        {text: 'First Name', datafield: 'FirstName', width: '7%' , cellsalign: 'center', align: 'center'},
+        {text: 'Total', datafield: 'Total', width: '6%' , cellsalign: 'center', align: 'center', cellsformat: 'c2'},
+        {text: 'Month', datafield: 'MonthDate', width: '7%' , cellsalign: 'center', align: 'center'},
+        {text: 'Plant', datafield: 'PlantNumber', width: '10%' , cellsalign: 'center', align: 'center'},
+        {text: 'Account Number', datafield: 'AccountNumber', width: '9%' , cellsalign: 'center', align: 'center'}
     ];
 
     var plant1AllSource = {
         datatype: "json",
         datafields: plant1AllDataSource,
         localdata: Data,
-        async: true,
-        pager: function (pagenum, pagesize, oldpagenum) {
-            // callback called when a page or page size is changed.
-        }
+        async: true
     };
 
     var plantOneGridDataAdapter = new $.jqx.dataAdapter(plant1AllSource);
@@ -49,13 +46,11 @@ function Grid(Data) {
         source: plantOneGridDataAdapter,
         editable: false,
         columns: plant1AllColumns,
-        pageable: true,
+        pageable: false,
         groupable: true,
         sortable: true,
         enabletooltips: true,
-        filterable: true,
-        pagermode: 'simple',
-        pageSize: 18
+        filterable: true
     });
     // End of Grid
 }

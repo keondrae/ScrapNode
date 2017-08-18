@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84f9f0e2-2a39-4b4f-a441-31ecfef358ed" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test Code/DateTest.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/buttons.js" afterPath="$PROJECT_DIR$/public/javascripts/buttons.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/plantAll.js" afterPath="$PROJECT_DIR$/public/javascripts/plantAll.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/plantOne.js" afterPath="$PROJECT_DIR$/public/javascripts/plantOne.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/plantThree.js" afterPath="$PROJECT_DIR$/public/javascripts/plantThree.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/plantTwo.js" afterPath="$PROJECT_DIR$/public/javascripts/plantTwo.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/test.jade" afterPath="$PROJECT_DIR$/views/test.jade" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,7 +65,190 @@
     <favorites_list name="ScrapNode" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="index.jade" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/views/index.jade">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-874">
+                  <caret line="252" column="38" lean-forward="true" selection-start-line="252" selection-start-column="38" selection-end-line="252" selection-end-column="38" />
+                  <folding>
+                    <element signature="n#header#0;n#block#0;n#!!top" expanded="false" />
+                    <element signature="n#div#2;n#main#0;n#block#0;n#!!top" expanded="false" />
+                    <element signature="n#div#3;n#main#0;n#block#0;n#!!top" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="PlantOneFetch.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/routes/PlantOneFetch.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="526">
+                  <caret line="1154" column="0" lean-forward="false" selection-start-line="1154" selection-start-column="0" selection-end-line="1154" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#2671#2727#0" expanded="false" />
+                    <element signature="e#2778#4822#0" expanded="false" />
+                    <element signature="e#3271#4675#0" expanded="false" />
+                    <element signature="e#4835#6041#0" expanded="false" />
+                    <element signature="e#6820#6884#0" expanded="false" />
+                    <element signature="e#6939#9192#0" expanded="false" />
+                    <element signature="e#7472#9024#0" expanded="false" />
+                    <element signature="e#9295#9367#0" expanded="false" />
+                    <element signature="e#9426#11887#0" expanded="false" />
+                    <element signature="e#11909#12252#0" expanded="false" />
+                    <element signature="e#12987#13067#0" expanded="false" />
+                    <element signature="e#13130#15802#0" expanded="false" />
+                    <element signature="e#13743#15591#0" expanded="false" />
+                    <element signature="e#15828#16242#0" expanded="false" />
+                    <element signature="e#16734#16822#0" expanded="false" />
+                    <element signature="e#16889#19770#0" expanded="false" />
+                    <element signature="e#17542#19538#0" expanded="false" />
+                    <element signature="e#19800#20277#0" expanded="false" />
+                    <element signature="e#21487#21583#0" expanded="false" />
+                    <element signature="e#21654#24739#0" expanded="false" />
+                    <element signature="e#22347#24491#0" expanded="false" />
+                    <element signature="e#24874#24978#0" expanded="false" />
+                    <element signature="e#25053#28346#0" expanded="false" />
+                    <element signature="e#25786#28078#0" expanded="false" />
+                    <element signature="e#28489#28601#0" expanded="false" />
+                    <element signature="e#28680#32181#0" expanded="false" />
+                    <element signature="e#29453#31893#0" expanded="false" />
+                    <element signature="e#32223#34224#0" expanded="false" />
+                    <element signature="e#35334#35454#0" expanded="false" />
+                    <element signature="e#35537#39246#0" expanded="false" />
+                    <element signature="e#36350#38938#0" expanded="false" />
+                    <element signature="e#39406#39534#0" expanded="false" />
+                    <element signature="e#39621#43538#0" expanded="false" />
+                    <element signature="e#40474#43210#0" expanded="false" />
+                    <element signature="e#43588#44059#0" expanded="false" />
+                    <element signature="e#46261#49145#0" expanded="false" />
+                    <element signature="e#53268#53316#0" expanded="false" />
+                    <element signature="e#54061#54117#0" expanded="false" />
+                    <element signature="e#54168#56213#0" expanded="false" />
+                    <element signature="e#54661#56065#0" expanded="false" />
+                    <element signature="e#56308#56372#0" expanded="false" />
+                    <element signature="e#56960#58512#0" expanded="false" />
+                    <element signature="e#61135#62539#0" expanded="false" />
+                    <element signature="n#!!block;n#PlantOneCovers#0" expanded="false" />
+                    <element signature="e#64822#66226#0" expanded="false" />
+                    <element signature="n#!!block;n#PlantOneAssembly#0" expanded="false" />
+                    <element signature="e#67499#67547#0" expanded="false" />
+                    <element signature="e#68620#68676#0" expanded="false" />
+                    <element signature="e#68727#70772#0" expanded="false" />
+                    <element signature="e#69220#70624#0" expanded="false" />
+                    <element signature="e#70867#70931#0" expanded="false" />
+                    <element signature="e#70986#73239#0" expanded="false" />
+                    <element signature="e#71519#73071#0" expanded="false" />
+                    <element signature="e#73342#73414#0" expanded="false" />
+                    <element signature="e#73473#75934#0" expanded="false" />
+                    <element signature="e#74046#75746#0" expanded="false" />
+                    <element signature="e#75980#76255#0" expanded="false" />
+                    <element signature="e#76278#77456#0" expanded="false" />
+                    <element signature="n#!!block;n#PlantOneSpace#0" expanded="false" />
+                    <element signature="e#79614#81018#0" expanded="false" />
+                    <element signature="n#!!block;n#PlantOneOthers#0" expanded="false" />
+                    <element signature="e#83024#83080#0" expanded="false" />
+                    <element signature="e#83131#85176#0" expanded="false" />
+                    <element signature="e#83624#85028#0" expanded="false" />
+                    <element signature="e#85272#85336#0" expanded="false" />
+                    <element signature="e#85391#87644#0" expanded="false" />
+                    <element signature="e#85924#87476#0" expanded="false" />
+                    <element signature="n#!!block;n#CombineArrays#0" expanded="false" />
+                    <element signature="e#89380#89731#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="PlantOneFetch.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/routes/PlantOneFetch.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="526">
+                  <caret line="1154" column="0" lean-forward="false" selection-start-line="1154" selection-start-column="0" selection-end-line="1154" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#2671#2727#0" expanded="false" />
+                    <element signature="e#2778#4822#0" expanded="false" />
+                    <element signature="e#3271#4675#0" expanded="false" />
+                    <element signature="e#4835#6041#0" expanded="false" />
+                    <element signature="e#6820#6884#0" expanded="false" />
+                    <element signature="e#6939#9192#0" expanded="false" />
+                    <element signature="e#7472#9024#0" expanded="false" />
+                    <element signature="e#9295#9367#0" expanded="false" />
+                    <element signature="e#9426#11887#0" expanded="false" />
+                    <element signature="e#11909#12252#0" expanded="false" />
+                    <element signature="e#12987#13067#0" expanded="false" />
+                    <element signature="e#13130#15802#0" expanded="false" />
+                    <element signature="e#13743#15591#0" expanded="false" />
+                    <element signature="e#15828#16242#0" expanded="false" />
+                    <element signature="e#16734#16822#0" expanded="false" />
+                    <element signature="e#16889#19770#0" expanded="false" />
+                    <element signature="e#17542#19538#0" expanded="false" />
+                    <element signature="e#19800#20277#0" expanded="false" />
+                    <element signature="e#21487#21583#0" expanded="false" />
+                    <element signature="e#21654#24739#0" expanded="false" />
+                    <element signature="e#22347#24491#0" expanded="false" />
+                    <element signature="e#24874#24978#0" expanded="false" />
+                    <element signature="e#25053#28346#0" expanded="false" />
+                    <element signature="e#25786#28078#0" expanded="false" />
+                    <element signature="e#28489#28601#0" expanded="false" />
+                    <element signature="e#28680#32181#0" expanded="false" />
+                    <element signature="e#29453#31893#0" expanded="false" />
+                    <element signature="e#32223#34224#0" expanded="false" />
+                    <element signature="e#35334#35454#0" expanded="false" />
+                    <element signature="e#35537#39246#0" expanded="false" />
+                    <element signature="e#36350#38938#0" expanded="false" />
+                    <element signature="e#39406#39534#0" expanded="false" />
+                    <element signature="e#39621#43538#0" expanded="false" />
+                    <element signature="e#40474#43210#0" expanded="false" />
+                    <element signature="e#43588#44059#0" expanded="false" />
+                    <element signature="e#46261#49145#0" expanded="false" />
+                    <element signature="e#53268#53316#0" expanded="false" />
+                    <element signature="e#54061#54117#0" expanded="false" />
+                    <element signature="e#54168#56213#0" expanded="false" />
+                    <element signature="e#54661#56065#0" expanded="false" />
+                    <element signature="e#56308#56372#0" expanded="false" />
+                    <element signature="e#56960#58512#0" expanded="false" />
+                    <element signature="e#61135#62539#0" expanded="false" />
+                    <element signature="n#!!block;n#PlantOneCovers#0" expanded="false" />
+                    <element signature="e#64822#66226#0" expanded="false" />
+                    <element signature="n#!!block;n#PlantOneAssembly#0" expanded="false" />
+                    <element signature="e#67499#67547#0" expanded="false" />
+                    <element signature="e#68620#68676#0" expanded="false" />
+                    <element signature="e#68727#70772#0" expanded="false" />
+                    <element signature="e#69220#70624#0" expanded="false" />
+                    <element signature="e#70867#70931#0" expanded="false" />
+                    <element signature="e#70986#73239#0" expanded="false" />
+                    <element signature="e#71519#73071#0" expanded="false" />
+                    <element signature="e#73342#73414#0" expanded="false" />
+                    <element signature="e#73473#75934#0" expanded="false" />
+                    <element signature="e#74046#75746#0" expanded="false" />
+                    <element signature="e#75980#76255#0" expanded="false" />
+                    <element signature="e#76278#77456#0" expanded="false" />
+                    <element signature="n#!!block;n#PlantOneSpace#0" expanded="false" />
+                    <element signature="e#79614#81018#0" expanded="false" />
+                    <element signature="n#!!block;n#PlantOneOthers#0" expanded="false" />
+                    <element signature="e#83024#83080#0" expanded="false" />
+                    <element signature="e#83131#85176#0" expanded="false" />
+                    <element signature="e#83624#85028#0" expanded="false" />
+                    <element signature="e#85272#85336#0" expanded="false" />
+                    <element signature="e#85391#87644#0" expanded="false" />
+                    <element signature="e#85924#87476#0" expanded="false" />
+                    <element signature="n#!!block;n#CombineArrays#0" expanded="false" />
+                    <element signature="e#89380#89731#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -110,7 +296,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/views/PlantThree.jade" />
         <option value="$PROJECT_DIR$/views/PlantFour.jade" />
         <option value="$PROJECT_DIR$/views/Header.pug" />
         <option value="$PROJECT_DIR$/views/Header.jade" />
@@ -135,7 +320,6 @@
         <option value="$PROJECT_DIR$/Test Code/MMSQL Test.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/routes/MSSQL.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/buttons.js" />
         <option value="$PROJECT_DIR$/views/JSCalls.jade" />
         <option value="$PROJECT_DIR$/Test Code/MathTest.js" />
         <option value="$PROJECT_DIR$/Test Code/RequestTest.js" />
@@ -152,15 +336,17 @@
         <option value="$PROJECT_DIR$/routes/PlantTwoFetch.js" />
         <option value="$PROJECT_DIR$/routes/PlantOneFetch.js" />
         <option value="$PROJECT_DIR$/routes/test.js" />
-        <option value="$PROJECT_DIR$/views/test.jade" />
         <option value="$PROJECT_DIR$/routes/PlantThreeFetch.js" />
         <option value="$PROJECT_DIR$/public/javascripts/Grid.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
-        <option value="$PROJECT_DIR$/views/index.jade" />
-        <option value="$PROJECT_DIR$/public/javascripts/plantOne.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/plantTwo.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/plantThree.js" />
+        <option value="$PROJECT_DIR$/views/test.jade" />
+        <option value="$PROJECT_DIR$/Test Code/DateTest.js" />
         <option value="$PROJECT_DIR$/public/javascripts/plantAll.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/plantThree.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/plantTwo.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/plantOne.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/buttons.js" />
+        <option value="$PROJECT_DIR$/views/index.jade" />
       </list>
     </option>
   </component>
@@ -223,6 +409,11 @@
             <path>
               <item name="ScrapNode" type="b2602c69:ProjectViewProjectNode" />
               <item name="ScrapNode" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ScrapNode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScrapNode" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
@@ -272,8 +463,8 @@
     </option>
   </component>
   <component name="RunManager" selected="Node.js.bin\www">
+    <configuration name="DateTest.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="DateTest.js" working-dir="$PROJECT_DIR$/Test Code" />
     <configuration name="JQueryTest.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="JQueryTest.js" working-dir="$PROJECT_DIR$/Test Code" />
-    <configuration name="MathTest.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="MathTest.js" working-dir="$PROJECT_DIR$/Test Code" />
     <configuration name="PromiseTest.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="PromiseTest.js" working-dir="$PROJECT_DIR$/Test Code" />
     <configuration name="RequestTest.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="RequestTest.js" working-dir="$PROJECT_DIR$/Test Code" />
     <configuration default="true" type="ReactNative" factoryName="React Native">
@@ -302,19 +493,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.bin\www JavaScript" />
       <item index="1" class="java.lang.String" itemvalue="Node.js.bin\www" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.MathTest.js" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.RequestTest.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.PromiseTest.js" />
-      <item index="5" class="java.lang.String" itemvalue="Node.js.JQueryTest.js" />
-      <item index="6" class="java.lang.String" itemvalue="Node.js.nAjaxTest.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.RequestTest.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.PromiseTest.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.JQueryTest.js" />
+      <item index="5" class="java.lang.String" itemvalue="Node.js.nAjaxTest.js" />
+      <item index="6" class="java.lang.String" itemvalue="Node.js.DateTest.js" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.nAjaxTest.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.JQueryTest.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.PromiseTest.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.RequestTest.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.MathTest.js" />
+        <item index="0" class="java.lang.String" itemvalue="Node.js.DateTest.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.nAjaxTest.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.JQueryTest.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.PromiseTest.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.RequestTest.js" />
       </list>
     </recent_temporary>
   </component>
@@ -343,7 +534,7 @@
       <workItem from="1502715490629" duration="30638000" />
       <workItem from="1502889665209" duration="1998000" />
       <workItem from="1502917059963" duration="8411000" />
-      <workItem from="1502981328312" duration="25517000" />
+      <workItem from="1502981328312" duration="35036000" />
     </task>
     <task id="LOCAL-00001" summary="C">
       <created>1501868881324</created>
@@ -597,11 +788,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503069169440</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Adjusted Chart Colors">
+      <created>1503079577351</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1503079577351</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="450099000" />
+    <option name="totallyTimeSpent" value="459618000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -614,25 +812,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12739871" sideWeight="0.48886415" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12686567" sideWeight="0.48886415" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14142539" sideWeight="0.51226014" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1433902" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13808464" sideWeight="0.49573562" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12694877" sideWeight="0.49573562" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17750533" sideWeight="0.5080645" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14142539" sideWeight="0.48773986" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07126949" sideWeight="0.48773986" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17750533" sideWeight="0.4919355" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879817" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.50664455" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879817" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.50664455" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4933185" sideWeight="0.4946695" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15033408" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15033408" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -671,7 +870,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="T" />
     <MESSAGE value="Added More Node_Modules" />
     <MESSAGE value="Fixed Connection issues" />
     <MESSAGE value="Added Some test code to try on Fds" />
@@ -696,11 +894,12 @@
     <MESSAGE value="Added Range" />
     <MESSAGE value="Added Padding on the right of the chart" />
     <MESSAGE value="Adjusted Grid" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjusted Grid" />
+    <MESSAGE value="Adjusted Chart Colors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted Chart Colors" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="154" />
+      <option name="time" value="156" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -714,14 +913,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/routes/PlantOneGridFetch.js" />
-    <entry file="file://$PROJECT_DIR$/node_modules/jade/block-code.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/jade/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -763,13 +954,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/buttons.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="45" column="53" lean-forward="false" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/MSSQL.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -781,13 +965,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="247" column="0" lean-forward="true" selection-start-line="247" selection-start-column="0" selection-end-line="247" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/tabs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -899,13 +1076,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/PlantAllFetch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="46" column="24" lean-forward="true" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/jquery-1.11.1.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -931,13 +1101,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="35" column="41" lean-forward="true" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1250">
@@ -954,16 +1117,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/test.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="330" column="46" lean-forward="true" selection-start-line="330" selection-start-column="46" selection-end-line="330" selection-end-column="46" />
-          <folding>
-            <element signature="n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/odbc/lib/odbc.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -972,11 +1125,282 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="167" column="0" lean-forward="true" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test Code/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2926">
+          <caret line="99" column="59" lean-forward="false" selection-start-line="99" selection-start-column="59" selection-end-line="99" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test Code/test.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test Code/nAjaxTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-518">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/test.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding>
+            <element signature="n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/PlantTwoFetch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="591" column="17" lean-forward="true" selection-start-line="591" selection-start-column="17" selection-end-line="591" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!block;n#PlantTwoAll#0" expanded="false" />
+            <element signature="e#2342#2390#0" expanded="false" />
+            <element signature="e#2502#2558#0" expanded="false" />
+            <element signature="e#2609#4654#0" expanded="false" />
+            <element signature="e#3102#4506#0" expanded="false" />
+            <element signature="e#4778#4842#0" expanded="false" />
+            <element signature="e#4897#7150#0" expanded="false" />
+            <element signature="e#5430#6982#0" expanded="false" />
+            <element signature="e#7286#7358#0" expanded="false" />
+            <element signature="e#7417#9880#0" expanded="false" />
+            <element signature="e#7990#9690#0" expanded="false" />
+            <element signature="n#!!block;n#PlantTwoPlenums#0" expanded="false" />
+            <element signature="e#14224#14450#0" expanded="false" />
+            <element signature="n#!!block;n#PlantTwoFlexHCaps#0" expanded="false" />
+            <element signature="e#16327#17731#0" expanded="false" />
+            <element signature="e#20027#21431#0" expanded="false" />
+            <element signature="n#!!block;n#CombineArrays#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test Code/DateTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/plantAll.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="e#42#121#0" expanded="false" />
+            <element signature="e#546#564#0" expanded="false" />
+            <element signature="n#!!block;n#getTotal#0;n#!!block;n#PlantAllDetails#0" expanded="false" />
+            <element signature="e#4761#5190#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/plantThree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="e#119#198#0" expanded="false" />
+            <element signature="e#623#641#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThreeAllDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThreeP8Details#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThreePrimaryOpsDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThreeSleevesDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThree737WindowsDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThree787WindowsDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThreeBSIWindowsDetails#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/plantTwo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="41" column="27" lean-forward="true" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+          <folding>
+            <element signature="e#119#198#0" expanded="false" />
+            <element signature="e#623#641#0" expanded="false" />
+            <element signature="n#!!block;n#PlantTwoAllDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantTwoPlenumsDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantTwoFlexHoseCapsDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantTwoDownersDetails#0" expanded="false" />
+            <element signature="n#!!block;n#onChartClickTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/plantOne.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="e#153#232#0" expanded="false" />
+            <element signature="e#657#675#0" expanded="false" />
+            <element signature="n#!!block;n#PlantOneAllDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantOneDuctDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantOneTubeDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantOneCoversDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantOneAssemblyDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantOneSpaceDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantOneOtherDetails#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/tabs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/windows.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/PlantThreeFetch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="1645" column="30" lean-forward="true" selection-start-line="1645" selection-start-column="30" selection-end-line="1645" selection-end-column="30" />
+          <folding>
+            <element signature="e#498#1659#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThreeAll#0" expanded="false" />
+            <element signature="e#2303#2351#0" expanded="false" />
+            <element signature="e#2768#66249#0" expanded="false" />
+            <element signature="e#3392#4796#0" expanded="false" />
+            <element signature="e#4957#6279#0" expanded="false" />
+            <element signature="e#6760#6824#0" expanded="false" />
+            <element signature="e#6879#9132#0" expanded="false" />
+            <element signature="e#7412#8964#0" expanded="false" />
+            <element signature="e#9149#10468#0" expanded="false" />
+            <element signature="e#12037#12109#0" expanded="false" />
+            <element signature="e#12168#14628#0" expanded="false" />
+            <element signature="e#12741#14441#0" expanded="false" />
+            <element signature="e#14739#14819#0" expanded="false" />
+            <element signature="e#14882#17550#0" expanded="false" />
+            <element signature="e#15495#17343#0" expanded="false" />
+            <element signature="e#17824#20700#0" expanded="false" />
+            <element signature="e#20994#24078#0" expanded="false" />
+            <element signature="e#24112#24496#0" expanded="false" />
+            <element signature="e#25857#25961#0" expanded="false" />
+            <element signature="e#26036#29334#0" expanded="false" />
+            <element signature="e#29371#29852#0" expanded="false" />
+            <element signature="e#30469#30581#0" expanded="false" />
+            <element signature="e#30660#34169#0" expanded="false" />
+            <element signature="e#34209#34726#0" expanded="false" />
+            <element signature="e#35363#35483#0" expanded="false" />
+            <element signature="e#35566#39283#0" expanded="false" />
+            <element signature="e#36379#38967#0" expanded="false" />
+            <element signature="e#39328#39872#0" expanded="false" />
+            <element signature="e#40529#40657#0" expanded="false" />
+            <element signature="e#40744#44669#0" expanded="false" />
+            <element signature="e#44718#45290#0" expanded="false" />
+            <element signature="e#46779#46915#0" expanded="false" />
+            <element signature="e#47006#51132#0" expanded="false" />
+            <element signature="e#47900#50784#0" expanded="false" />
+            <element signature="e#51307#51451#0" expanded="false" />
+            <element signature="e#51546#55879#0" expanded="false" />
+            <element signature="e#52479#55511#0" expanded="false" />
+            <element signature="e#56062#56214#0" expanded="false" />
+            <element signature="e#56314#60855#0" expanded="false" />
+            <element signature="e#57287#60467#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThreeP8#0" expanded="false" />
+            <element signature="e#67506#68910#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThreePrimaryOps#0" expanded="false" />
+            <element signature="e#71840#71896#0" expanded="false" />
+            <element signature="e#71947#73991#0" expanded="false" />
+            <element signature="e#72440#73844#0" expanded="false" />
+            <element signature="e#74086#74150#0" expanded="false" />
+            <element signature="e#74738#76290#0" expanded="false" />
+            <element signature="e#76560#76632#0" expanded="false" />
+            <element signature="e#76691#79151#0" expanded="false" />
+            <element signature="e#79262#79342#0" expanded="false" />
+            <element signature="e#79405#82073#0" expanded="false" />
+            <element signature="e#85075#85131#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThreeWindows737#0" expanded="false" />
+            <element signature="e#89658#91062#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThreeWindows787#0" expanded="false" />
+            <element signature="e#93598#95002#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThreeBSIWindows#0" expanded="false" />
+            <element signature="e#97537#98941#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThreeAllWindows#0" expanded="false" />
+            <element signature="e#101764#103810#0" expanded="false" />
+            <element signature="e#102258#103662#0" expanded="false" />
+            <element signature="e#104024#106277#0" expanded="false" />
+            <element signature="e#104557#106109#0" expanded="false" />
+            <element signature="e#106512#108973#0" expanded="false" />
+            <element signature="e#107085#108785#0" expanded="false" />
+            <element signature="e#109019#109299#0" expanded="false" />
+            <element signature="n#!!block;n#CombineArrays#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/Grid.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        <state relative-caret-position="493">
+          <caret line="29" column="58" lean-forward="false" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="58" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="35" column="41" lean-forward="true" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/PlantAllFetch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="46" column="24" lean-forward="true" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/buttons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="106" column="27" lean-forward="false" selection-start-line="106" selection-start-column="27" selection-end-line="106" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-874">
+          <caret line="252" column="38" lean-forward="true" selection-start-line="252" selection-start-column="38" selection-end-line="252" selection-end-column="38" />
+          <folding>
+            <element signature="n#header#0;n#block#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#main#0;n#block#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#main#0;n#block#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1054,213 +1478,6 @@
             <element signature="e#85924#87476#0" expanded="false" />
             <element signature="n#!!block;n#CombineArrays#0" expanded="false" />
             <element signature="e#89380#89731#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/PlantTwoFetch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="591" column="17" lean-forward="true" selection-start-line="591" selection-start-column="17" selection-end-line="591" selection-end-column="17" />
-          <folding>
-            <element signature="n#!!block;n#PlantTwoAll#0" expanded="false" />
-            <element signature="e#2342#2390#0" expanded="false" />
-            <element signature="e#2502#2558#0" expanded="false" />
-            <element signature="e#2609#4654#0" expanded="false" />
-            <element signature="e#3102#4506#0" expanded="false" />
-            <element signature="e#4778#4842#0" expanded="false" />
-            <element signature="e#4897#7150#0" expanded="false" />
-            <element signature="e#5430#6982#0" expanded="false" />
-            <element signature="e#7286#7358#0" expanded="false" />
-            <element signature="e#7417#9880#0" expanded="false" />
-            <element signature="e#7990#9690#0" expanded="false" />
-            <element signature="n#!!block;n#PlantTwoPlenums#0" expanded="false" />
-            <element signature="e#14224#14450#0" expanded="false" />
-            <element signature="n#!!block;n#PlantTwoFlexHCaps#0" expanded="false" />
-            <element signature="e#16327#17731#0" expanded="false" />
-            <element signature="e#20027#21431#0" expanded="false" />
-            <element signature="n#!!block;n#CombineArrays#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/PlantThreeFetch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="1243" column="63" lean-forward="false" selection-start-line="1243" selection-start-column="63" selection-end-line="1243" selection-end-column="63" />
-          <folding>
-            <element signature="e#498#1659#0" expanded="false" />
-            <element signature="n#!!block;n#PlantThreeAll#0" expanded="false" />
-            <element signature="e#2303#2351#0" expanded="false" />
-            <element signature="e#2768#66249#0" expanded="false" />
-            <element signature="e#3392#4796#0" expanded="false" />
-            <element signature="e#4957#6279#0" expanded="false" />
-            <element signature="e#6760#6824#0" expanded="false" />
-            <element signature="e#6879#9132#0" expanded="false" />
-            <element signature="e#7412#8964#0" expanded="false" />
-            <element signature="e#9149#10468#0" expanded="false" />
-            <element signature="e#12037#12109#0" expanded="false" />
-            <element signature="e#12168#14628#0" expanded="false" />
-            <element signature="e#12741#14441#0" expanded="false" />
-            <element signature="e#14739#14819#0" expanded="false" />
-            <element signature="e#14882#17550#0" expanded="false" />
-            <element signature="e#15495#17343#0" expanded="false" />
-            <element signature="e#17824#20700#0" expanded="false" />
-            <element signature="e#20994#24078#0" expanded="false" />
-            <element signature="e#24112#24496#0" expanded="false" />
-            <element signature="e#25857#25961#0" expanded="false" />
-            <element signature="e#26036#29334#0" expanded="false" />
-            <element signature="e#29371#29852#0" expanded="false" />
-            <element signature="e#30469#30581#0" expanded="false" />
-            <element signature="e#30660#34169#0" expanded="false" />
-            <element signature="e#34209#34726#0" expanded="false" />
-            <element signature="e#35363#35483#0" expanded="false" />
-            <element signature="e#35566#39283#0" expanded="false" />
-            <element signature="e#36379#38967#0" expanded="false" />
-            <element signature="e#39328#39872#0" expanded="false" />
-            <element signature="e#40529#40657#0" expanded="false" />
-            <element signature="e#40744#44669#0" expanded="false" />
-            <element signature="e#44718#45290#0" expanded="false" />
-            <element signature="e#46779#46915#0" expanded="false" />
-            <element signature="e#47006#51132#0" expanded="false" />
-            <element signature="e#47900#50784#0" expanded="false" />
-            <element signature="e#51307#51451#0" expanded="false" />
-            <element signature="e#51546#55879#0" expanded="false" />
-            <element signature="e#52479#55511#0" expanded="false" />
-            <element signature="e#56062#56214#0" expanded="false" />
-            <element signature="e#56314#60855#0" expanded="false" />
-            <element signature="e#57287#60467#0" expanded="false" />
-            <element signature="n#!!block;n#PlantThreeP8#0" expanded="false" />
-            <element signature="e#67506#68910#0" expanded="false" />
-            <element signature="n#!!block;n#PlantThreePrimaryOps#0" expanded="false" />
-            <element signature="e#71840#71896#0" expanded="false" />
-            <element signature="e#71947#73991#0" expanded="false" />
-            <element signature="e#72440#73844#0" expanded="false" />
-            <element signature="e#74086#74150#0" expanded="false" />
-            <element signature="e#74738#76290#0" expanded="false" />
-            <element signature="e#76560#76632#0" expanded="false" />
-            <element signature="e#76691#79151#0" expanded="false" />
-            <element signature="e#79262#79342#0" expanded="false" />
-            <element signature="e#79405#82073#0" expanded="false" />
-            <element signature="n#!!block;n#PlantThreeSleeves#0" expanded="false" />
-            <element signature="e#85075#85131#0" expanded="false" />
-            <element signature="e#85675#87079#0" expanded="false" />
-            <element signature="n#!!block;n#PlantThreeWindows737#0" expanded="false" />
-            <element signature="e#89658#91062#0" expanded="false" />
-            <element signature="n#!!block;n#PlantThreeWindows787#0" expanded="false" />
-            <element signature="e#93598#95002#0" expanded="false" />
-            <element signature="n#!!block;n#PlantThreeBSIWindows#0" expanded="false" />
-            <element signature="e#97537#98941#0" expanded="false" />
-            <element signature="n#!!block;n#PlantThreeAllWindows#0" expanded="false" />
-            <element signature="e#101764#103810#0" expanded="false" />
-            <element signature="e#102258#103662#0" expanded="false" />
-            <element signature="e#104024#106277#0" expanded="false" />
-            <element signature="e#104557#106109#0" expanded="false" />
-            <element signature="e#106512#108973#0" expanded="false" />
-            <element signature="e#107085#108785#0" expanded="false" />
-            <element signature="e#109019#109299#0" expanded="false" />
-            <element signature="n#!!block;n#CombineArrays#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="167" column="0" lean-forward="true" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/plantOne.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="597" column="36" lean-forward="false" selection-start-line="597" selection-start-column="36" selection-end-line="597" selection-end-column="36" />
-          <folding>
-            <element signature="n#!!block;n#PlantOneAllDetails#0" expanded="false" />
-            <element signature="n#!!block;n#PlantOneDuctDetails#0" expanded="false" />
-            <element signature="n#!!block;n#PlantOneTubeDetails#0" expanded="false" />
-            <element signature="n#!!block;n#PlantOneCoversDetails#0" expanded="false" />
-            <element signature="n#!!block;n#PlantOneAssemblyDetails#0" expanded="false" />
-            <element signature="n#!!block;n#PlantOneSpaceDetails#0" expanded="false" />
-            <element signature="n#!!block;n#PlantOneOtherDetails#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/plantTwo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="305" column="38" lean-forward="false" selection-start-line="305" selection-start-column="38" selection-end-line="305" selection-end-column="38" />
-          <folding>
-            <element signature="n#!!block;n#PlantTwoAllDetails#0" expanded="false" />
-            <element signature="n#!!block;n#PlantTwoPlenumsDetails#0" expanded="false" />
-            <element signature="n#!!block;n#PlantTwoFlexHoseCapsDetails#0" expanded="false" />
-            <element signature="n#!!block;n#PlantTwoDownersDetails#0" expanded="false" />
-            <element signature="n#!!block;n#onChartClickTest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/plantThree.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="797" column="33" lean-forward="true" selection-start-line="797" selection-start-column="33" selection-end-line="797" selection-end-column="33" />
-          <folding>
-            <element signature="n#!!block;n#PlantThreeAllDetails#0" expanded="false" />
-            <element signature="n#!!block;n#PlantThreeP8Details#0" expanded="false" />
-            <element signature="n#!!block;n#PlantThreePrimaryOpsDetails#0" expanded="false" />
-            <element signature="n#!!block;n#PlantThreeSleevesDetails#0" expanded="false" />
-            <element signature="n#!!block;n#PlantThree737WindowsDetails#0" expanded="false" />
-            <element signature="n#!!block;n#PlantThree787WindowsDetails#0" expanded="false" />
-            <element signature="n#!!block;n#PlantThreeBSIWindowsDetails#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1445">
-          <caret line="49" column="37" lean-forward="true" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
-          <folding>
-            <element signature="n#header#0;n#block#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#main#0;n#block#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#main#0;n#block#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test Code/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2926">
-          <caret line="99" column="59" lean-forward="false" selection-start-line="99" selection-start-column="59" selection-end-line="99" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test Code/test.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test Code/nAjaxTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-518">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/plantAll.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="118" column="8" lean-forward="false" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="8" />
-          <folding>
-            <element signature="n#!!block;n#getTotal#0;n#!!block;n#PlantAllDetails#0" expanded="false" />
-            <element signature="e#4111#4540#0" expanded="false" />
           </folding>
         </state>
       </provider>

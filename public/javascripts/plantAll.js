@@ -1,8 +1,44 @@
 /**
  * Created by kmell on 6/30/2017.
  */
-var MinDate = new Date(2016, 7, 1);
-var MaxDate = new Date(2017, 7, 1);
+/*
+//Test Vars
+var dd = 9;
+var mm = 11 + 1; //January is 0!
+var yyyy = 2020;
+*/
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth() + 1; //January is 0!
+var yyyy = today.getFullYear();
+var prvYear = yyyy - 1;
+var prvTwoYr = yyyy - 2;
+var currentDate;
+var lastYear;
+var twoYearsAgo;
+
+if(dd < 10){
+    dd = '0' + dd
+}
+
+if(mm < 10){
+    mm = '0' + mm
+}
+currentDate = mm + '/' + '01' + '/' + yyyy;
+lastYear = mm + '/' + '01' + '/' + prvYear;
+twoYearsAgo = '01/01' + '/' + prvTwoYr;
+
+
+//console.log(dd);
+//console.log(mm);
+//console.log(yyyy);
+//console.log(currentDate);
+//console.log(lastYear);
+//console.log(twoYearsAgo);
+
+var MinDate = currentDate;
+var MaxDate = lastYear;
+var MinValueRange = twoYearsAgo;
 
 function PlantAllDetails(data) {
 
@@ -64,7 +100,7 @@ function PlantAllDetails(data) {
             rangeSelector: {
                 size: 100,
                 padding: {left: 0, right: 30 ,top: 0, bottom: 0},
-                minValue: new Date(2014, 12, 1),
+                minValue: MinValueRange ,
                 backgroundColor: 'white',
                 dataField: 'Date',
                 baseUnit: 'month',

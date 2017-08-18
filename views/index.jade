@@ -172,6 +172,49 @@ block content
         var Year;
         var tabWidth = '100%';
         var tabHeight = 600;
+        var today = new Date();
+        var mm = today.getMonth() + 1; //January is 0!
+        var yyyy = today.getFullYear();
+        var TodayDate;
+
+        switch(mm){
+            case 1:
+                TodayDate = '1' + '-' + 'Jan' + '-' + yyyy;
+                break;
+            case 2:
+                TodayDate = '1' + '-' + 'Feb' + '-' + yyyy;
+                break;
+            case 3:
+                TodayDate = '1' + '-' + 'Mar' + '-' + yyyy;
+                break;
+            case 4:
+                TodayDate = '1' + '-' + 'Apr' + '-' + yyyy;
+                break;
+            case 5:
+                TodayDate = '1' + '-' + 'May' + '-' + yyyy;
+                break;
+            case 6:
+                TodayDate = '1' + '-' + 'Jun' + '-' + yyyy;
+                break;
+            case 7:
+                TodayDate = '1' + '-' + 'Jul' + '-' + yyyy;
+                break;
+            case 8:
+                TodayDate = '1' + '-' + 'Aug' + '-' + yyyy;
+                break;
+            case 9:
+                TodayDate = '1' + '-' + 'Sep' + '-' + yyyy;
+                break;
+            case 10:
+                TodayDate = '1' + '-' + 'Oct' + '-' + yyyy;
+                break;
+            case 11:
+                TodayDate = '1' + '-' + 'Nov' + '-' + yyyy;
+                break;
+            case 12:
+                TodayDate = '1' + '-' + 'Dec' + '-' + yyyy;
+                break;
+        }
 
         Year = $('#Years').val();
         console.log('Year: ' + Year);
@@ -196,9 +239,38 @@ block content
                 animationType: 'fade',
                 selectionTracker: true,
                 reorder: false
-            }).on('tabclick', function () {
-                $('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
+            }).on('tabclick', function (event) {
+                //$('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
                 $('.data').jqxChart('refresh');
+                var id = event.args.item;
+                addfilter(TodayDate);
+                console.log(TodayDate)
+                var title = $('#plant1').jqxTabs('getTitleAt', id);
+                console.log(title)
+                switch(title){
+
+                    case 'All Plant 1':
+                        console.log();
+                        break;
+                    case 'Ducts / Bin Seal':
+                        console.log();
+                        break;
+                    case 'Tubes':
+                        console.log();
+                        break;
+                    case 'Cover':
+                        console.log();
+                        break;
+                    case 'Assembly':
+                        console.log();
+                        break;
+                    case 'Space':
+                        console.log();
+                        break;
+                    case 'Other':
+                        console.log();
+                        break;
+                }
             });
 
             $('#plant2').jqxTabs({
@@ -209,8 +281,27 @@ block content
                 selectionTracker: true,
                 reorder: false
             }).on('tabclick', function () {
-                $('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
+                //$('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
                 $('.data').jqxChart('refresh');
+                addfilter(TodayDate);
+                console.log(TodayDate)
+                var title = $('#plant1').jqxTabs('getTitleAt', id);
+                console.log(title)
+                switch (title) {
+
+                    case 'All Plant 2':
+                        console.log();
+                        break;
+                    case 'Plenums':
+                        console.log();
+                        break;
+                    case 'Flex Hose / Caps':
+                        console.log();
+                        break;
+                    case 'Downers':
+                        console.log();
+                        break;
+                }
             });
 
             $('#plant3').jqxTabs({
@@ -221,8 +312,39 @@ block content
                 selectionTracker: true,
                 reorder: false
             }).on('tabclick', function () {
-                $('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
+                //$('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
                 $('.data').jqxChart('refresh');
+                addfilter(TodayDate);
+                console.log(TodayDate)
+                var title = $('#plant1').jqxTabs('getTitleAt', id);
+                console.log(title)
+                switch (title) {
+
+                    case 'All Plant 3':
+                        console.log();
+                        break;
+                    case 'P8':
+                        console.log();
+                        break;
+                    case 'Primary Ops':
+                        console.log();
+                        break;
+                    case 'Sleeves':
+                        console.log();
+                        break;
+                    case '737 Windows':
+                        console.log();
+                        break;
+                    case '787 Windows':
+                        console.log();
+                        break;
+                    case 'BSI Windows':
+                        console.log();
+                        break;
+                    case 'All Windows':
+                        console.log();
+                        break;
+                }
             });
 
             $('#plantAll').jqxTabs({
@@ -235,6 +357,7 @@ block content
             }).on('tabclick', function () {
                 $('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
                 $('.data').jqxChart('refresh');
+                addfilter(TodayDate);
             });
 
             $('#GridLoader').jqxLoader({
@@ -247,53 +370,21 @@ block content
         }
 
         function onChartClick(e) {
-            var id;
-            var thisDate;
-            var thisYear = Year;
-            var PrevYear = parseInt(thisYear) - 1;
-            $('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
-            id = e.elementIndex;
-            console.log(id);
-            switch (id) {
-                case 0:
-                    thisDate = '1-Dec-' + PrevYear;
-                    break;
-                case 1:
-                    thisDate = '1-Jan-' + thisYear;
-                    break;
-                case 2:
-                    thisDate = '1-Feb-' + thisYear;
-                    break;
-                case 3:
-                    thisDate = '1-Mar-' + thisYear;
-                    break;
-                case 4:
-                    thisDate = '1-Apr-' + thisYear;
-                    break;
-                case 5:
-                    thisDate = '1-May-' + thisYear;
-                    break;
-                case 6:
-                    thisDate = '1-Jun-' + thisYear;
-                    break;
-                case 7:
-                    thisDate = '1-Jul-' + thisYear;
-                    break;
-                case 8:
-                    thisDate = '1-Aug-' + thisYear;
-                    break;
-                case 9:
-                    thisDate = '1-Sep-' + thisYear;
-                    break;
-                case 10:
-                    thisDate = '1-Oct-' + thisYear;
-                    break;
-                case 11:
-                    thisDate = '1-Nov-' + thisYear;
-                    break;
-            }
-            console.log(thisDate);
-            addfilter(thisDate);
+            var currProj;
+            currProj = $('.jqx-chart-tooltip-text').text();
+            console.log(currProj);
+            var pos = currProj.indexOf("$")
+            console.log(pos);
+            currProj = currProj.substring(16, pos)
+
+            //console.log(eventData);
+            //console.log(el);
+            console.log(currProj);
+            console.log(pos);
+            //addfilter(thisDate);
+            currProj = '';
+            $('.jqx-chart-tooltip-text').text('');
+            console.log(currProj);
         }
 
         function addfilter (Date) {
@@ -305,6 +396,19 @@ block content
             filtergroup.addfilter(filter_or_operator, filter);
             // add the filters.
             $("#GridForEverything").jqxGrid('addfilter', 'MonthDate', filtergroup);
+            // apply the filters.
+            $("#GridForEverything").jqxGrid('applyfilters');
+        }
+
+        function AddFilterTab(AccountNumber) {
+            var filtergroup = new $.jqx.filter();
+            var filter_or_operator = 1;
+            var filtervalue = Date;
+            var filtercondition = 'equal';
+            var filter = filtergroup.createfilter('stringfilter', filtervalue, filtercondition);
+            filtergroup.addfilter(filter_or_operator, filter);
+            // add the filters.
+            $("#GridForEverything").jqxGrid('addfilter', 'AccountNumber', filtergroup);
             // apply the filters.
             $("#GridForEverything").jqxGrid('applyfilters');
         }
@@ -339,6 +443,7 @@ block content
                     gridData = data1
                     Grid(gridData)
                     $('#GridLoader').jqxLoader('close');
+                    addfilter(TodayDate);
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log(xhr);

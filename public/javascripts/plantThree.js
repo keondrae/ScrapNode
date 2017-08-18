@@ -33,7 +33,7 @@ function PlantThreeAllDetails(data) {
         padding: {
             left: 5,
             top: 5,
-            right: 5,
+            right: 30,
             bottom: 5
         },
         titlePadding: {
@@ -55,7 +55,7 @@ function PlantThreeAllDetails(data) {
             unitInterval: 1,
             rangeSelector: {
                 size: 100,
-                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                padding: {left: 0, right: 30, top: 0, bottom: 0},
                 minValue: new Date(2014, 12, 1),
                 backgroundColor: 'white',
                 dataField: 'Date',
@@ -122,7 +122,7 @@ function PlantThreeP8Details(data){
         padding: {
             left: 5,
             top: 5,
-            right: 5,
+            right: 30,
             bottom: 5
         },
         titlePadding: {
@@ -144,7 +144,7 @@ function PlantThreeP8Details(data){
             unitInterval: 1,
             rangeSelector: {
                 size: 100,
-                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                padding: {left: 0, right: 30, top: 0, bottom: 0},
                 minValue: new Date(2014, 12, 1),
                 backgroundColor: 'white',
                 dataField: 'Date',
@@ -221,7 +221,7 @@ function PlantThreePrimaryOpsDetails(data) {
         padding: {
             left: 5,
             top: 5,
-            right: 5,
+            right: 30,
             bottom: 5
         },
         titlePadding: {
@@ -243,7 +243,7 @@ function PlantThreePrimaryOpsDetails(data) {
             unitInterval: 1,
             rangeSelector: {
                 size: 100,
-                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                padding: {left: 0, right: 30 ,top: 0, bottom: 0},
                 minValue: new Date(2014, 12, 1),
                 backgroundColor: 'white',
                 dataField: 'Date',
@@ -320,7 +320,7 @@ function PlantThreeSleevesDetails(data) {
         padding: {
             left: 5,
             top: 5,
-            right: 5,
+            right: 30,
             bottom: 5
         },
         titlePadding: {
@@ -342,7 +342,7 @@ function PlantThreeSleevesDetails(data) {
             unitInterval: 1,
             rangeSelector: {
                 size: 100,
-                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                padding: {left: 0, right: 30, top: 0, bottom: 0},
                 minValue: new Date(2014, 12, 1),
                 backgroundColor: 'white',
                 dataField: 'Date',
@@ -421,7 +421,7 @@ function PlantThree737WindowsDetails(data) {
         padding: {
             left: 5,
             top: 5,
-            right: 5,
+            right: 30,
             bottom: 5
         },
         titlePadding: {
@@ -443,7 +443,7 @@ function PlantThree737WindowsDetails(data) {
             unitInterval: 1,
             rangeSelector: {
                 size: 100,
-                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                padding: {left: 0, right: 30, top: 0, bottom: 0},
                 minValue: new Date(2014, 12, 1),
                 backgroundColor: 'white',
                 dataField: 'Date',
@@ -521,7 +521,7 @@ function PlantThree787WindowsDetails(data) {
         padding: {
             left: 5,
             top: 5,
-            right: 5,
+            right: 30,
             bottom: 5
         },
         titlePadding: {
@@ -543,7 +543,7 @@ function PlantThree787WindowsDetails(data) {
             unitInterval: 1,
             rangeSelector: {
                 size: 100,
-                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                padding: {left: 0, right: 30, top: 0, bottom: 0},
                 minValue: new Date(2014, 12, 1),
                 backgroundColor: 'white',
                 dataField: 'Date',
@@ -621,7 +621,7 @@ function PlantThreeBSIWindowsDetails(data) {
         padding: {
             left: 5,
             top: 5,
-            right: 5,
+            right: 30,
             bottom: 5
         },
         titlePadding: {
@@ -643,7 +643,7 @@ function PlantThreeBSIWindowsDetails(data) {
             unitInterval: 1,
             rangeSelector: {
                 size: 100,
-                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                padding: {left: 0, right: 30, top: 0, bottom: 0},
                 minValue: new Date(2014, 12, 1),
                 backgroundColor: 'white',
                 dataField: 'Date',
@@ -721,7 +721,7 @@ function PlantThreeAllWindowsDetails(data) {
         padding: {
             left: 5,
             top: 5,
-            right: 5,
+            right: 30,
             bottom: 5
         },
         titlePadding: {
@@ -743,7 +743,7 @@ function PlantThreeAllWindowsDetails(data) {
             unitInterval: 1,
             rangeSelector: {
                 size: 100,
-                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                padding: {left: 0, right: 30, top: 0, bottom: 0},
                 minValue: new Date(2014, 12, 1),
                 backgroundColor: 'white',
                 dataField: 'Date',

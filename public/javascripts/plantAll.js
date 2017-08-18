@@ -39,7 +39,7 @@ function PlantAllDetails(data) {
         padding: {
             left: 5,
             top: 5,
-            right: 10,
+            right: 30,
             bottom: 5
         },
         titlePadding: {
@@ -61,7 +61,7 @@ function PlantAllDetails(data) {
             unitInterval: 1,
             rangeSelector: {
                 size: 100,
-                padding: {left: 0, right: 10,top: 0, bottom: 0},
+                padding: {left: 0, right: 30 ,top: 0, bottom: 0},
                 minValue: new Date(2014, 12, 1),
                 backgroundColor: 'white',
                 dataField: 'Date',

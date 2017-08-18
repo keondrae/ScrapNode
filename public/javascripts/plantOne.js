@@ -31,7 +31,7 @@ function PlantOneAllDetails(data) {
         padding: {
             left: 5,
             top: 5,
-            right: 5,
+            right: 30,
             bottom: 5
         },
         titlePadding: {
@@ -53,7 +53,7 @@ function PlantOneAllDetails(data) {
             unitInterval: 1,
             rangeSelector: {
                 size: 100,
-                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                padding: {left: 0, right: 30, top: 0, bottom: 0},
                 minValue: new Date(2014, 12, 1),
                 backgroundColor: 'white',
                 dataField: 'Date',
@@ -117,7 +117,7 @@ function PlantOneDuctDetails(data) {
         padding: {
             left: 5,
             top: 5,
-            right: 5,
+            right: 30,
             bottom: 5
         },
         titlePadding: {
@@ -139,7 +139,7 @@ function PlantOneDuctDetails(data) {
             unitInterval: 1,
             rangeSelector: {
                 size: 100,
-                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                padding: {left: 0, right: 30, top: 0, bottom: 0},
                 minValue: new Date(2014, 12, 1),
                 backgroundColor: 'white',
                 dataField: 'Date',
@@ -214,7 +214,7 @@ function PlantOneTubeDetails(data) {
         padding: {
             left: 5,
             top: 5,
-            right: 5,
+            right: 30,
             bottom: 5
         },
         titlePadding: {
@@ -236,7 +236,7 @@ function PlantOneTubeDetails(data) {
             unitInterval: 1,
             rangeSelector: {
                 size: 100,
-                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                padding: {left: 0, right: 30, top: 0, bottom: 0},
                 minValue: new Date(2014, 12, 1),
                 backgroundColor: 'white',
                 dataField: 'Date',
@@ -312,7 +312,7 @@ function PlantOneCoversDetails(data) {
         padding: {
             left: 5,
             top: 5,
-            right: 5,
+            right: 30,
             bottom: 5
         },
         titlePadding: {
@@ -334,7 +334,7 @@ function PlantOneCoversDetails(data) {
             unitInterval: 1,
             rangeSelector: {
                 size: 100,
-                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                padding: {left: 0, right: 30, top: 0, bottom: 0},
                 minValue: new Date(2014, 12, 1),
                 backgroundColor: 'white',
                 dataField: 'Date',
@@ -409,7 +409,7 @@ function PlantOneAssemblyDetails(data) {
         padding: {
             left: 5,
             top: 5,
-            right: 5,
+            right: 30,
             bottom: 5
         },
         titlePadding: {
@@ -431,7 +431,7 @@ function PlantOneAssemblyDetails(data) {
             unitInterval: 1,
             rangeSelector: {
                 size: 100,
-                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                padding: {left: 0, right: 30, top: 0, bottom: 0},
                 minValue: new Date(2014, 12, 1),
                 backgroundColor: 'white',
                 dataField: 'Date',
@@ -507,7 +507,7 @@ function PlantOneSpaceDetails(data) {
         padding: {
             left: 5,
             top: 5,
-            right: 5,
+            right: 30,
             bottom: 5
         },
         titlePadding: {
@@ -529,7 +529,7 @@ function PlantOneSpaceDetails(data) {
             unitInterval: 1,
             rangeSelector: {
                 size: 100,
-                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                padding: {left: 0, right: 30, top: 0, bottom: 0},
                 minValue: new Date(2014, 12, 1),
                 backgroundColor: 'white',
                 dataField: 'Date',

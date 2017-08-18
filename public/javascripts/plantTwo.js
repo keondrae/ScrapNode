@@ -33,7 +33,7 @@ function PlantTwoAllDetails(data) {
         padding: {
             left: 5,
             top: 5,
-            right: 5,
+            right: 30,
             bottom: 5
         },
         titlePadding: {
@@ -55,7 +55,7 @@ function PlantTwoAllDetails(data) {
             unitInterval: 1,
             rangeSelector: {
                 size: 100,
-                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                padding: {left: 0, right: 30, top: 0, bottom: 0},
                 minValue: new Date(2014, 12, 1),
                 backgroundColor: 'white',
                 dataField: 'Date',
@@ -124,7 +124,7 @@ function PlantTwoPlenumsDetails(data) {
         padding: {
             left: 5,
             top: 5,
-            right: 5,
+            right: 30,
             bottom: 5
         },
         titlePadding: {
@@ -146,7 +146,7 @@ function PlantTwoPlenumsDetails(data) {
             unitInterval: 1,
             rangeSelector: {
                 size: 100,
-                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                padding: {left: 0, right: 30, top: 0, bottom: 0},
                 minValue: new Date(2014, 12, 1),
                 backgroundColor: 'white',
                 dataField: 'Date',
@@ -222,7 +222,7 @@ function PlantTwoFlexHoseCapsDetails(data) {
         padding: {
             left: 5,
             top: 5,
-            right: 5,
+            right: 30,
             bottom: 5
         },
         titlePadding: {
@@ -244,7 +244,7 @@ function PlantTwoFlexHoseCapsDetails(data) {
             unitInterval: 1,
             rangeSelector: {
                 size: 100,
-                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                padding: {left: 0, right: 30, top: 0, bottom: 0},
                 minValue: new Date(2014, 12, 1),
                 backgroundColor: 'white',
                 dataField: 'Date',
@@ -320,7 +320,7 @@ function PlantTwoDownersDetails(data) {
         padding: {
             left: 5,
             top: 5,
-            right: 5,
+            right: 30,
             bottom: 5
         },
         titlePadding: {
@@ -342,7 +342,7 @@ function PlantTwoDownersDetails(data) {
             unitInterval: 1,
             rangeSelector: {
                 size: 100,
-                padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},
+                padding: {left: 0, right: 30, top: 0, bottom: 0},
                 minValue: new Date(2014, 12, 1),
                 backgroundColor: 'white',
                 dataField: 'Date',

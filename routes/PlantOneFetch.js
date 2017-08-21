@@ -1158,20 +1158,47 @@ function PlantOneDuct(Year, db, connectionString, res) {
                 }
 
 
-                for(var i = 0; i < DuctsArray.length; i++){
-                    var DataDate = DuctsArray[i].Date;
-                    var DuctsBalance = DuctsArray[i].EndingBalance;
-                    var AllPlantOneBalance = PlantOneAllArray[i].AllPlantOneEndingBalance.toString();
+                try{
 
-                    DataArray.push({
-                        Date: DataDate,
-                        Ducts: DuctsBalance,
-                        AllPlantOne: AllPlantOneBalance
-                    });
+                    for(var i = 0; i < PlantOneAllArray.length; i++){
+
+                        var PlantOneDate = PlantOneAllArray[i].Date;
+                        var AllPlantOneBalance = PlantOneAllArray[i].AllPlantOneEndingBalance;
+
+                        for(var j = 0; j < DuctsArray.length; j++){
+                            var DuctsBalance = DuctsArray[j].EndingBalance;
+                            var match = false;
+                            if(PlantOneAllArray[i].Date === DuctsArray[j].Date){
+
+                                match = true;
+                                DataArray.push({
+                                    Date: PlantOneDate,
+                                    Ducts: DuctsBalance,
+                                    AllPlantOne: AllPlantOneBalance
+                                });
+                                break;
+
+                            }
+                        }
+                        if(!match){
+                            DataArray.push({
+                                Date: PlantOneDate,
+                                Ducts: '0',
+                                AllPlantOne: AllPlantOneBalance
+                            });
+
+                        }
+                    }
+                    res.send(JSON.stringify(DataArray));
+
+                }catch (e){
+
+                    console.log('Plant One Ducts Error: ');
+                    console.log(e);
 
                 }
 
-                res.send(JSON.stringify(DataArray));
+
             });
 
 
@@ -1267,21 +1294,45 @@ function PlantOneTubes(Year, db, connectionString, res) {
 
             });
 
+            try{
 
-            for(var i = 0; i < TubesArray.length; i++){
-                var DataDate = TubesArray[i].Date;
-                var TubesBalance = TubesArray[i].EndingBalance;
-                var AllPlantOneBalance = PlantOneAllArray[i].AllPlantOneEndingBalance.toString();
+                for(var i = 0; i < PlantOneAllArray.length; i++){
 
-                DataArray.push({
-                    Date: DataDate,
-                    Tubes: TubesBalance,
-                    AllPlantOne: AllPlantOneBalance
-                });
+                    var PlantOneDate = PlantOneAllArray[i].Date;
+                    var AllPlantOneBalance = PlantOneAllArray[i].AllPlantOneEndingBalance;
+
+                    for(var j = 0; j < TubesArray.length; j++){
+                        var TubesBalance = TubesArray[j].EndingBalance;
+                        var match = false;
+                        if(PlantOneAllArray[i].Date === TubesArray[j].Date){
+
+                            match = true;
+                            DataArray.push({
+                                Date: PlantOneDate,
+                                Tubes: TubesBalance,
+                                AllPlantOne: AllPlantOneBalance
+                            });
+                            break;
+
+                        }
+                    }
+                    if(!match){
+                        DataArray.push({
+                            Date: PlantOneDate,
+                            Tubes: '0',
+                            AllPlantOne: AllPlantOneBalance
+                        });
+
+                    }
+                }
+                res.send(JSON.stringify(DataArray));
+
+            }catch (e){
+
+                console.log('Plant One Tubes Error: ');
+                console.log(e);
 
             }
-
-            res.send(JSON.stringify(DataArray));
 
         });
 
@@ -1375,21 +1426,45 @@ function PlantOneCovers(Year, db, connectionString, res) {
 
             });
 
-            for(var i = 0; i < CoversArray.length; i++){
-                var DataDate = CoversArray[i].Date;
-                var CoversBalance = CoversArray[i].EndingBalance;
-                var AllPlantOneBalance = PlantOneAllArray[i].AllPlantOneEndingBalance.toString();
+            try{
 
-                DataArray.push({
-                    Date: DataDate,
-                    Covers: CoversBalance,
-                    AllPlantOne: AllPlantOneBalance
-                });
+                for(var i = 0; i < PlantOneAllArray.length; i++){
+
+                    var PlantOneDate = PlantOneAllArray[i].Date;
+                    var AllPlantOneBalance = PlantOneAllArray[i].AllPlantOneEndingBalance;
+
+                    for(var j = 0; j < CoversArray.length; j++){
+                        var CoversBalance = CoversArray[j].EndingBalance;
+                        var match = false;
+                        if(PlantOneAllArray[i].Date === CoversArray[j].Date){
+
+                            match = true;
+                            DataArray.push({
+                                Date: PlantOneDate,
+                                Covers: CoversBalance,
+                                AllPlantOne: AllPlantOneBalance
+                            });
+                            break;
+
+                        }
+                    }
+                    if(!match){
+                        DataArray.push({
+                            Date: PlantOneDate,
+                            Covers: '0',
+                            AllPlantOne: AllPlantOneBalance
+                        });
+
+                    }
+                }
+                res.send(JSON.stringify(DataArray));
+
+            }catch (e){
+
+                console.log('Plant One Covers Error: ');
+                console.log(e);
 
             }
-
-            res.send(JSON.stringify(DataArray));
-
         });
 
     });
@@ -1612,7 +1687,7 @@ function PlantOneAssembly(Year, db, connectionString, res) {
                         }
 
                     });
-                    /*
+                    /* Ummm....
                     if(Array82.length >= Array20.length && Array82.length >= Array01.length){
 
                         if(Array20.length >= Array01.length){
@@ -1643,24 +1718,46 @@ function PlantOneAssembly(Year, db, connectionString, res) {
                     CombineArrays(Array01,Array20, TempArray, false);
                     CombineArrays(TempArray, Array82, AssemblysArray, true);
 
+                    try{
 
-                    for(var i = 0; i < AssemblysArray.length; i++){
-                        var DataDate = AssemblysArray[i].Date;
-                        var AssemblyBalance = AssemblysArray[i].EndingBalance;
-                        var AllPlantOneBalance = PlantOneAllArray[i].AllPlantOneEndingBalance.toString();
+                        for(var i = 0; i < PlantOneAllArray.length; i++){
 
-                        DataArray.push({
-                            Date: DataDate,
-                            Assembly: AssemblyBalance,
-                            AllPlantOne: AllPlantOneBalance
-                        });
+                            var PlantOneDate = PlantOneAllArray[i].Date;
+                            var AllPlantOneBalance = PlantOneAllArray[i].AllPlantOneEndingBalance;
+
+                            for(var j = 0; j < AssemblysArray.length; j++){
+                                var AssemblyBalance = AssemblysArray[j].EndingBalance;
+                                var match = false;
+                                if(PlantOneAllArray[i].Date === AssemblysArray[j].Date){
+
+                                    match = true;
+                                    DataArray.push({
+                                        Date: PlantOneDate,
+                                        Assembly: AssemblyBalance,
+                                        AllPlantOne: AllPlantOneBalance
+                                    });
+                                    break;
+
+                                }
+                            }
+                            if(!match){
+                                DataArray.push({
+                                    Date: PlantOneDate,
+                                    Assembly: '0',
+                                    AllPlantOne: AllPlantOneBalance
+                                });
+
+                            }
+                        }
+                        res.send(JSON.stringify(DataArray));
+
+                    }catch (e){
+
+                        console.log('Plant One Assembly Error: ');
+                        console.log(e);
 
                     }
-
-
-                    res.send(JSON.stringify(DataArray));
                 });
-
             });
         });
     });
@@ -1757,38 +1854,49 @@ function PlantOneSpace(Year, db, connectionString, res) {
             //console.log('----------------------');
             //console.log(PlantOneAllArray);
             //console.log('----------------------');
-            for(var i = 0; i < PlantOneAllArray.length; i++){
+            try{
 
-                var PlantOneDate = PlantOneAllArray[i].Date;
-                var AllPlantOneBalance = PlantOneAllArray[i].AllPlantOneEndingBalance;
 
-                for(var j = 0; j < SpaceArray.length; j++){
-                    var SpaceBalance = SpaceArray[j].EndingBalance;
-                    var match = false;
-                    if(PlantOneAllArray[i].Date === SpaceArray[j].Date){
+                for(var i = 0; i < PlantOneAllArray.length; i++){
 
-                        match = true;
+                    var PlantOneDate = PlantOneAllArray[i].Date;
+                    var AllPlantOneBalance = PlantOneAllArray[i].AllPlantOneEndingBalance;
+
+                    for(var j = 0; j < SpaceArray.length; j++){
+                        var SpaceBalance = SpaceArray[j].EndingBalance;
+                        var match = false;
+                        if(PlantOneAllArray[i].Date === SpaceArray[j].Date){
+
+                            match = true;
+                            DataArray.push({
+                                Date: PlantOneDate,
+                                Space: SpaceBalance,
+                                AllPlantOne: AllPlantOneBalance
+                            });
+                            break;
+
+                        }
+                    }
+                    if(!match){
                         DataArray.push({
                             Date: PlantOneDate,
-                            Space: SpaceBalance,
+                            Space: '0',
                             AllPlantOne: AllPlantOneBalance
                         });
-                        break;
 
                     }
                 }
-                if(!match){
-                    DataArray.push({
-                        Date: PlantOneDate,
-                        Space: '0',
-                        AllPlantOne: AllPlantOneBalance
-                    });
 
-                }
+                res.send(JSON.stringify(DataArray));
+            }catch (e){
+
+                console.log('Plant One Space Error: ');
+                console.log(e);
             }
+
             //console.log(DataArray.length);
             //console.log(DataArray);
-            res.send(JSON.stringify(DataArray));
+
 
         });
 
@@ -1955,22 +2063,45 @@ function PlantOneOthers(Year, db, connectionString, res) {
                     CombineArrays(Array19, Array17, OthersArray, true);
                 }
 
+                try{
 
-                for(var i = 0; i < OthersArray.length; i++){
-                    var DataDate = OthersArray[i].Date;
-                    var OtherBalance = OthersArray[i].EndingBalance;
-                    var AllPlantOneBalance = PlantOneAllArray[i].AllPlantOneEndingBalance.toString();
 
-                    DataArray.push({
-                        Date: DataDate,
-                        Other: OtherBalance,
-                        AllPlantOne: AllPlantOneBalance
-                    });
+                    for(var i = 0; i < PlantOneAllArray.length; i++){
 
+                        var PlantOneDate = PlantOneAllArray[i].Date;
+                        var AllPlantOneBalance = PlantOneAllArray[i].AllPlantOneEndingBalance;
+
+                        for(var j = 0; j < OthersArray.length; j++){
+                            var OtherBalance = OthersArray[j].EndingBalance;
+                            var match = false;
+                            if(PlantOneAllArray[i].Date === OthersArray[j].Date){
+
+                                match = true;
+                                DataArray.push({
+                                    Date: PlantOneDate,
+                                    Other: OtherBalance,
+                                    AllPlantOne: AllPlantOneBalance
+                                });
+                                break;
+
+                            }
+                        }
+                        if(!match){
+                            DataArray.push({
+                                Date: PlantOneDate,
+                                Other: '0',
+                                AllPlantOne: AllPlantOneBalance
+                            });
+
+                        }
+                    }
+
+                    res.send(JSON.stringify(DataArray));
+                }catch (e){
+
+                    console.log('Plant One Other Error: ');
+                    console.log(e);
                 }
-
-
-                res.send(JSON.stringify(DataArray));
             });
         });
 

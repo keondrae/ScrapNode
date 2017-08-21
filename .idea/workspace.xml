@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="84f9f0e2-2a39-4b4f-a441-31ecfef358ed" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/PlantOneFetch.js" afterPath="$PROJECT_DIR$/routes/PlantOneFetch.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/PlantThreeFetch.js" afterPath="$PROJECT_DIR$/routes/PlantThreeFetch.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/extenders/layout.jade" afterPath="$PROJECT_DIR$/views/extenders/layout.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/PlantTwoFetch.js" afterPath="$PROJECT_DIR$/routes/PlantTwoFetch.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,12 +60,12 @@
     <favorites_list name="ScrapNode" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file leaf-file-name="PlantThreeFetch.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/PlantThreeFetch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="1132" column="55" lean-forward="false" selection-start-line="1132" selection-start-column="55" selection-end-line="1132" selection-end-column="55" />
+            <state relative-caret-position="382">
+              <caret line="2149" column="63" lean-forward="false" selection-start-line="2149" selection-start-column="63" selection-end-line="2149" selection-end-column="63" />
               <folding>
                 <element signature="e#498#1659#0" expanded="false" />
                 <element signature="n#!!block;n#PlantThreeAll#0" expanded="false" />
@@ -112,32 +110,32 @@
                 <element signature="n#!!block;n#PlantThreeP8#0" expanded="false" />
                 <element signature="e#67528#68932#0" expanded="false" />
                 <element signature="n#!!block;n#PlantThreePrimaryOps#0" expanded="false" />
-                <element signature="e#72491#72547#0" expanded="false" />
-                <element signature="e#72598#74642#0" expanded="false" />
-                <element signature="e#73091#74495#0" expanded="false" />
-                <element signature="e#74737#74801#0" expanded="false" />
-                <element signature="e#75389#76941#0" expanded="false" />
-                <element signature="e#77211#77283#0" expanded="false" />
-                <element signature="e#77342#79802#0" expanded="false" />
-                <element signature="e#79913#79993#0" expanded="false" />
-                <element signature="e#80056#82724#0" expanded="false" />
+                <element signature="e#72731#72787#0" expanded="false" />
+                <element signature="e#72838#74882#0" expanded="false" />
+                <element signature="e#73331#74735#0" expanded="false" />
+                <element signature="e#74977#75041#0" expanded="false" />
+                <element signature="e#75629#77181#0" expanded="false" />
+                <element signature="e#77451#77523#0" expanded="false" />
+                <element signature="e#77582#80042#0" expanded="false" />
+                <element signature="e#80153#80233#0" expanded="false" />
+                <element signature="e#80296#82964#0" expanded="false" />
                 <element signature="n#!!block;n#PlantThreeSleeves#0" expanded="false" />
-                <element signature="e#85728#85784#0" expanded="false" />
-                <element signature="e#86328#87732#0" expanded="false" />
+                <element signature="e#86700#86756#0" expanded="false" />
+                <element signature="e#87300#88704#0" expanded="false" />
                 <element signature="n#!!block;n#PlantThreeWindows737#0" expanded="false" />
-                <element signature="e#90313#91717#0" expanded="false" />
+                <element signature="e#91970#93374#0" expanded="false" />
                 <element signature="n#!!block;n#PlantThreeWindows787#0" expanded="false" />
-                <element signature="e#94255#95659#0" expanded="false" />
+                <element signature="e#96587#97991#0" expanded="false" />
                 <element signature="n#!!block;n#PlantThreeBSIWindows#0" expanded="false" />
-                <element signature="e#98196#99600#0" expanded="false" />
+                <element signature="e#101205#102609#0" expanded="false" />
                 <element signature="n#!!block;n#PlantThreeAllWindows#0" expanded="false" />
-                <element signature="e#102425#104471#0" expanded="false" />
-                <element signature="e#102919#104323#0" expanded="false" />
-                <element signature="e#104685#106938#0" expanded="false" />
-                <element signature="e#105218#106770#0" expanded="false" />
-                <element signature="e#107173#109634#0" expanded="false" />
-                <element signature="e#107746#109446#0" expanded="false" />
-                <element signature="e#109680#109960#0" expanded="false" />
+                <element signature="e#106105#108151#0" expanded="false" />
+                <element signature="e#106599#108003#0" expanded="false" />
+                <element signature="e#108365#110618#0" expanded="false" />
+                <element signature="e#108898#110450#0" expanded="false" />
+                <element signature="e#110853#113314#0" expanded="false" />
+                <element signature="e#111426#113126#0" expanded="false" />
+                <element signature="e#113360#113640#0" expanded="false" />
                 <element signature="n#!!block;n#CombineArrays#0" expanded="false" />
               </folding>
             </state>
@@ -227,7 +225,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/54d29c17-6a8e-43f6-ac87-0215906f7cd2/console_2.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/54d29c17-6a8e-43f6-ac87-0215906f7cd2/console_1.sql" />
         <option value="$PROJECT_DIR$/routes/GridFetch.js" />
-        <option value="$PROJECT_DIR$/routes/PlantTwoFetch.js" />
         <option value="$PROJECT_DIR$/routes/test.js" />
         <option value="$PROJECT_DIR$/public/javascripts/Grid.js" />
         <option value="$PROJECT_DIR$/views/test.jade" />
@@ -242,6 +239,7 @@
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/54d29c17-6a8e-43f6-ac87-0215906f7cd2/console_3.sql" />
         <option value="$PROJECT_DIR$/routes/PlantOneFetch.js" />
+        <option value="$PROJECT_DIR$/routes/PlantTwoFetch.js" />
         <option value="$PROJECT_DIR$/routes/PlantThreeFetch.js" />
       </list>
     </option>
@@ -451,7 +449,7 @@
       <workItem from="1502889665209" duration="1998000" />
       <workItem from="1502917059963" duration="8411000" />
       <workItem from="1502981328312" duration="35568000" />
-      <workItem from="1503321544101" duration="9051000" />
+      <workItem from="1503321544101" duration="12521000" />
     </task>
     <task id="LOCAL-00001" summary="C">
       <created>1501868881324</created>
@@ -719,11 +717,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503090075554</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Fixed P8 On plant 3, Fixed Space on Plant one, Made chart text bigger">
+      <created>1503335221608</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1503335221608</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="469201000" />
+    <option name="totallyTimeSpent" value="472671000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -742,10 +747,10 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13059701" sideWeight="0.48886415" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14142539" sideWeight="0.51226014" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1433902" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1433902" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12694877" sideWeight="0.49573562" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17750533" sideWeight="0.5080645" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3507795" sideWeight="0.48773986" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3507795" sideWeight="0.48773986" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17750533" sideWeight="0.4919355" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879817" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.50664455" order="3" side_tool="true" content_ui="tabs" />
@@ -1105,43 +1110,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/PlantAllFetch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="46" column="24" lean-forward="true" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/buttons.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-30">
           <caret line="106" column="27" lean-forward="false" selection-start-line="106" selection-start-column="27" selection-end-line="106" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/PlantTwoFetch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="360" column="0" lean-forward="true" selection-start-line="360" selection-start-column="0" selection-end-line="360" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#PlantTwoAll#0" expanded="false" />
-            <element signature="e#2342#2390#0" expanded="false" />
-            <element signature="e#2502#2558#0" expanded="false" />
-            <element signature="e#2609#4654#0" expanded="false" />
-            <element signature="e#3102#4506#0" expanded="false" />
-            <element signature="e#4778#4842#0" expanded="false" />
-            <element signature="e#4897#7150#0" expanded="false" />
-            <element signature="e#5430#6982#0" expanded="false" />
-            <element signature="e#7286#7358#0" expanded="false" />
-            <element signature="e#7417#9880#0" expanded="false" />
-            <element signature="e#7990#9690#0" expanded="false" />
-            <element signature="e#14224#14450#0" expanded="false" />
-            <element signature="n#!!block;n#PlantTwoFlexHCaps#0" expanded="false" />
-            <element signature="e#16327#17731#0" expanded="false" />
-            <element signature="n#!!block;n#PlantTwoDowners#0" expanded="false" />
-            <element signature="e#20027#21431#0" expanded="false" />
-            <element signature="n#!!block;n#CombineArrays#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1189,10 +1161,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/plantThree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-948">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="e#119#198#0" expanded="false" />
+            <element signature="e#623#641#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThreeAllDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThreePrimaryOpsDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThreeSleevesDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThree737WindowsDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThree787WindowsDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThreeBSIWindowsDetails#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/PlantAllFetch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="46" column="24" lean-forward="true" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/PlantOneFetch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="1777" column="21" lean-forward="false" selection-start-line="1777" selection-start-column="21" selection-end-line="1777" selection-end-column="21" />
+        <state relative-caret-position="251">
+          <caret line="1468" column="0" lean-forward="true" selection-start-line="1468" selection-start-column="0" selection-end-line="1468" selection-end-column="0" />
           <folding>
             <element signature="e#457#1443#0" expanded="false" />
             <element signature="n#!!block;n#PlantOneAll#0" expanded="false" />
@@ -1217,37 +1214,64 @@
             <element signature="e#28489#28601#0" expanded="false" />
             <element signature="e#28680#32181#0" expanded="false" />
             <element signature="e#32223#34224#0" expanded="false" />
-            <element signature="n#!!block;n#PlantOneTubes#0" expanded="false" />
-            <element signature="n#!!block;n#PlantOneCovers#0" expanded="false" />
+            <element signature="e#35334#35454#0" expanded="false" />
+            <element signature="e#35537#39246#0" expanded="false" />
+            <element signature="e#39406#39534#0" expanded="false" />
+            <element signature="e#39621#43538#0" expanded="false" />
+            <element signature="e#43588#44059#0" expanded="false" />
+            <element signature="e#44145#44301#0" expanded="false" />
+            <element signature="e#44305#44461#0" expanded="false" />
+            <element signature="e#45048#45184#0" expanded="false" />
+            <element signature="e#45275#49496#0" expanded="false" />
+            <element signature="e#49574#50036#0" expanded="false" />
+            <element signature="e#49640#49803#0" expanded="false" />
+            <element signature="e#49808#49981#0" expanded="false" />
+            <element signature="e#54866#56911#0" expanded="false" />
+            <element signature="e#55359#56763#0" expanded="false" />
+            <element signature="e#57006#57070#0" expanded="false" />
+            <element signature="e#57125#59378#0" expanded="false" />
             <element signature="n#!!block;n#PlantOneAssembly#0" expanded="false" />
-            <element signature="e#69918#71322#0" expanded="false" />
+            <element signature="e#72474#73878#0" expanded="false" />
             <element signature="n#!!block;n#PlantOneOthers#0" expanded="false" />
-            <element signature="e#90929#91280#0" expanded="false" />
+            <element signature="n#!!block;n#CombineArrays#0" expanded="false" />
+            <element signature="e#95624#95975#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/plantThree.js">
+    <entry file="file://$PROJECT_DIR$/routes/PlantTwoFetch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-948">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="382">
+          <caret line="556" column="58" lean-forward="false" selection-start-line="556" selection-start-column="58" selection-end-line="556" selection-end-column="58" />
           <folding>
-            <element signature="e#119#198#0" expanded="false" />
-            <element signature="e#623#641#0" expanded="false" />
-            <element signature="n#!!block;n#PlantThreeAllDetails#0" expanded="false" />
-            <element signature="n#!!block;n#PlantThreePrimaryOpsDetails#0" expanded="false" />
-            <element signature="n#!!block;n#PlantThreeSleevesDetails#0" expanded="false" />
-            <element signature="n#!!block;n#PlantThree737WindowsDetails#0" expanded="false" />
-            <element signature="n#!!block;n#PlantThree787WindowsDetails#0" expanded="false" />
-            <element signature="n#!!block;n#PlantThreeBSIWindowsDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantTwoAll#0" expanded="false" />
+            <element signature="e#2342#2390#0" expanded="false" />
+            <element signature="e#2502#2558#0" expanded="false" />
+            <element signature="e#2609#4654#0" expanded="false" />
+            <element signature="e#3102#4506#0" expanded="false" />
+            <element signature="e#4778#4842#0" expanded="false" />
+            <element signature="e#4897#7150#0" expanded="false" />
+            <element signature="e#5430#6982#0" expanded="false" />
+            <element signature="e#7286#7358#0" expanded="false" />
+            <element signature="e#7417#9880#0" expanded="false" />
+            <element signature="e#7990#9690#0" expanded="false" />
+            <element signature="n#!!block;n#PlantTwoPlenums#0" expanded="false" />
+            <element signature="e#12096#14186#0" expanded="false" />
+            <element signature="e#14224#14450#0" expanded="false" />
+            <element signature="n#!!block;n#PlantTwoFlexHCaps#0" expanded="false" />
+            <element signature="e#16624#18716#0" expanded="false" />
+            <element signature="e#17157#18561#0" expanded="false" />
+            <element signature="n#!!block;n#PlantTwoDowners#0" expanded="false" />
+            <element signature="e#21689#23093#0" expanded="false" />
+            <element signature="n#!!block;n#CombineArrays#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/PlantThreeFetch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="1132" column="55" lean-forward="false" selection-start-line="1132" selection-start-column="55" selection-end-line="1132" selection-end-column="55" />
+        <state relative-caret-position="382">
+          <caret line="2149" column="63" lean-forward="false" selection-start-line="2149" selection-start-column="63" selection-end-line="2149" selection-end-column="63" />
           <folding>
             <element signature="e#498#1659#0" expanded="false" />
             <element signature="n#!!block;n#PlantThreeAll#0" expanded="false" />
@@ -1292,32 +1316,32 @@
             <element signature="n#!!block;n#PlantThreeP8#0" expanded="false" />
             <element signature="e#67528#68932#0" expanded="false" />
             <element signature="n#!!block;n#PlantThreePrimaryOps#0" expanded="false" />
-            <element signature="e#72491#72547#0" expanded="false" />
-            <element signature="e#72598#74642#0" expanded="false" />
-            <element signature="e#73091#74495#0" expanded="false" />
-            <element signature="e#74737#74801#0" expanded="false" />
-            <element signature="e#75389#76941#0" expanded="false" />
-            <element signature="e#77211#77283#0" expanded="false" />
-            <element signature="e#77342#79802#0" expanded="false" />
-            <element signature="e#79913#79993#0" expanded="false" />
-            <element signature="e#80056#82724#0" expanded="false" />
+            <element signature="e#72731#72787#0" expanded="false" />
+            <element signature="e#72838#74882#0" expanded="false" />
+            <element signature="e#73331#74735#0" expanded="false" />
+            <element signature="e#74977#75041#0" expanded="false" />
+            <element signature="e#75629#77181#0" expanded="false" />
+            <element signature="e#77451#77523#0" expanded="false" />
+            <element signature="e#77582#80042#0" expanded="false" />
+            <element signature="e#80153#80233#0" expanded="false" />
+            <element signature="e#80296#82964#0" expanded="false" />
             <element signature="n#!!block;n#PlantThreeSleeves#0" expanded="false" />
-            <element signature="e#85728#85784#0" expanded="false" />
-            <element signature="e#86328#87732#0" expanded="false" />
+            <element signature="e#86700#86756#0" expanded="false" />
+            <element signature="e#87300#88704#0" expanded="false" />
             <element signature="n#!!block;n#PlantThreeWindows737#0" expanded="false" />
-            <element signature="e#90313#91717#0" expanded="false" />
+            <element signature="e#91970#93374#0" expanded="false" />
             <element signature="n#!!block;n#PlantThreeWindows787#0" expanded="false" />
-            <element signature="e#94255#95659#0" expanded="false" />
+            <element signature="e#96587#97991#0" expanded="false" />
             <element signature="n#!!block;n#PlantThreeBSIWindows#0" expanded="false" />
-            <element signature="e#98196#99600#0" expanded="false" />
+            <element signature="e#101205#102609#0" expanded="false" />
             <element signature="n#!!block;n#PlantThreeAllWindows#0" expanded="false" />
-            <element signature="e#102425#104471#0" expanded="false" />
-            <element signature="e#102919#104323#0" expanded="false" />
-            <element signature="e#104685#106938#0" expanded="false" />
-            <element signature="e#105218#106770#0" expanded="false" />
-            <element signature="e#107173#109634#0" expanded="false" />
-            <element signature="e#107746#109446#0" expanded="false" />
-            <element signature="e#109680#109960#0" expanded="false" />
+            <element signature="e#106105#108151#0" expanded="false" />
+            <element signature="e#106599#108003#0" expanded="false" />
+            <element signature="e#108365#110618#0" expanded="false" />
+            <element signature="e#108898#110450#0" expanded="false" />
+            <element signature="e#110853#113314#0" expanded="false" />
+            <element signature="e#111426#113126#0" expanded="false" />
+            <element signature="e#113360#113640#0" expanded="false" />
             <element signature="n#!!block;n#CombineArrays#0" expanded="false" />
           </folding>
         </state>

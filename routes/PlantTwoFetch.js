@@ -377,20 +377,45 @@ function PlantTwoPlenums(Year, db, connectionString, res) {
             });
 
 
-            for(var i = 0; i < PlenumsArray.length; i++){
-                var DataDate = PlenumsArray[i].Date;
-                var PlenumsBalance = PlenumsArray[i].EndingBalance;
-                var AllPlantTwoBalance = PlantTwoAllArray[i].AllEndingBalance.toString();
+            try{
 
-                DataArray.push({
-                    Date: DataDate,
-                    Plenums: PlenumsBalance,
-                    AllPlantTwo: AllPlantTwoBalance
-                });
+
+                for(var i = 0; i < PlantTwoAllArray.length; i++){
+
+                    var PlantTwoDate = PlantTwoAllArray[i].Date;
+                    var AllPlantTwoBalance = PlantTwoAllArray[i].AllEndingBalance;
+
+                    for(var j = 0; j < PlenumsArray.length; j++){
+                        var PlenumsBalance = PlenumsArray[j].EndingBalance;
+                        var match = false;
+                        if(PlantTwoAllArray[i].Date === PlenumsArray[j].Date){
+
+                            match = true;
+                            DataArray.push({
+                                Date: PlantTwoDate,
+                                Plenums: PlenumsBalance,
+                                AllPlantTwo: AllPlantTwoBalance
+                            });
+                            break;
+
+                        }
+                    }
+                    if(!match){
+                        DataArray.push({
+                            Date: PlantTwoDate,
+                            Plenums: '0',
+                            AllPlantTwo: AllPlantTwoBalance
+                        });
+
+                    }
+                }
+
+                res.send(JSON.stringify(DataArray));
+            }catch (e){
+
+                console.log('Plant Two Plenums Error: ');
+                console.log(e);
             }
-
-
-            res.send(JSON.stringify(DataArray));
 
         });
     });
@@ -484,22 +509,45 @@ function PlantTwoFlexHCaps(Year, db, connectionString, res) {
 
             });
 
+            try{
 
-            for(var i = 0; i < FlexHCapsArray.length; i++){
-                var DataDate = FlexHCapsArray[i].Date;
-                var FlexHCapsBalance = FlexHCapsArray[i].EndingBalance;
-                var AllPlantTwoBalance = PlantTwoAllArray[i].AllEndingBalance.toString();
 
-                DataArray.push({
-                    Date: DataDate,
-                    FlexHCaps: FlexHCapsBalance,
-                    AllPlantTwo: AllPlantTwoBalance
-                });
+                for(var i = 0; i < PlantTwoAllArray.length; i++){
+
+                    var PlantTwoDate = PlantTwoAllArray[i].Date;
+                    var AllPlantTwoBalance = PlantTwoAllArray[i].AllEndingBalance;
+
+                    for(var j = 0; j < FlexHCapsArray.length; j++){
+                        var FlexHCapsBalance = FlexHCapsArray[j].EndingBalance;
+                        var match = false;
+                        if(PlantTwoAllArray[i].Date === FlexHCapsArray[j].Date){
+
+                            match = true;
+                            DataArray.push({
+                                Date: PlantTwoDate,
+                                FlexHCaps: FlexHCapsBalance,
+                                AllPlantTwo: AllPlantTwoBalance
+                            });
+                            break;
+
+                        }
+                    }
+                    if(!match){
+                        DataArray.push({
+                            Date: PlantTwoDate,
+                            FlexHCaps: '0',
+                            AllPlantTwo: AllPlantTwoBalance
+                        });
+
+                    }
+                }
+
+                res.send(JSON.stringify(DataArray));
+            }catch (e){
+
+                console.log('Plant Two FlexHCaps Error: ');
+                console.log(e);
             }
-
-
-            res.send(JSON.stringify(DataArray));
-
         });
 
     });
@@ -593,20 +641,45 @@ function PlantTwoDowners(Year, db, connectionString, res) {
             });
 
 
-            for(var i = 0; i < DownersArray.length; i++){
-                var DataDate = DownersArray[i].Date;
-                var DownersBalance = DownersArray[i].EndingBalance;
-                var AllPlantTwoBalance = PlantTwoAllArray[i].AllEndingBalance.toString();
+            try{
 
-                   DataArray.push({
-                       Date: DataDate,
-                       Downers: DownersBalance,
-                       AllPlantTwo: AllPlantTwoBalance
-                   });
+
+                for(var i = 0; i < PlantTwoAllArray.length; i++){
+
+                    var PlantTwoDate = PlantTwoAllArray[i].Date;
+                    var AllPlantTwoBalance = PlantTwoAllArray[i].AllEndingBalance;
+
+                    for(var j = 0; j < DownersArray.length; j++){
+                        var DownersBalance = DownersArray[j].EndingBalance;
+                        var match = false;
+                        if(PlantTwoAllArray[i].Date === DownersArray[j].Date){
+
+                            match = true;
+                            DataArray.push({
+                                Date: PlantTwoDate,
+                                Downers: DownersBalance,
+                                AllPlantTwo: AllPlantTwoBalance
+                            });
+                            break;
+
+                        }
+                    }
+                    if(!match){
+                        DataArray.push({
+                            Date: PlantTwoDate,
+                            Downers: '0',
+                            AllPlantTwo: AllPlantTwoBalance
+                        });
+
+                    }
+                }
+
+                res.send(JSON.stringify(DataArray));
+            }catch (e){
+
+                console.log('Plant Two Downers Error: ');
+                console.log(e);
             }
-
-
-            res.send(JSON.stringify(DataArray));
 
         });
     });

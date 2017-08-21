@@ -2,7 +2,6 @@
  * Created by kmell on 6/28/2017.
  */
 
-var WindowTheme = 'dark';
 
 $('#Search').dialog({
     resizable: false,
@@ -15,3 +14,13 @@ $('#Search').dialog({
 $('#Years').selectmenu();
 
 $('#SelectYear').button();
+
+$('#ChangeLog').dialog({
+    resizable: false,
+    autoOpen: false,
+    modal: true,
+    width: 400,
+    height: 'auto'
+});
+
+$('#ChangeLogClose').button();

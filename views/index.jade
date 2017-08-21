@@ -20,9 +20,9 @@ block content
             button(id='hqButton'       class='button')= 'Plant 3'
 
         div(id='small_images')
-            img(src='images/note64x64.png' onclick='findReportNoteWindow()' height='32' width='32')
+            //img(src='images/note64x64.png' onclick='' height='32' width='32')
             img(src='images/zoom64x64.png' onclick='SelectYear()' rel='model:open' height='32' width='32')
-            img(src='images/help64x64.png' onclick='helpWindow()' height='32' width='32')
+            img(src='images/help64x64.png' onclick='ChangeLog()' height='32' width='32')
     //End of Header
 
     //Start of Windows
@@ -34,6 +34,12 @@ block content
             option(value='2014')= '2014'
         button(id='SelectYear' class='HideOnStart')= 'Select'
 
+    div(id='ChangeLog' title='Change Log' class='HideOnStart')
+        //p(class='CLTest')= '1.0 Official: Official Release! - :D YAY!!'
+        p(class='CLTest')= '0.3 Alpha: UI Change, and blasted more bugs into space! '
+        p(class='CLTest')= '0.2 Alpha: Speed and performance Increase, Bug fixes - Went from a BMW M2 to a Bugatti Chiron *VROOOMMMM*!!'
+        p(class='CLTest')= '0.1 Alpha: Internal Release! - WhooT!!'
+        button(id='ChangeLogClose' class='HideOnStart')= 'Thank you'
     //End of Windows
     //Start of Main
     main
@@ -476,6 +482,13 @@ block content
             $('#Search').dialog('open');
         }
 
+        function ChangeLog() {
+            $('#ChangeLog').dialog('open');
+        }
+
+        $('#ChangeLogClose').click(function () {
+            $('#ChangeLog').dialog('close');
+        })
 
         $('#SelectYear').click( function () {
             Year = $('#Years').val();

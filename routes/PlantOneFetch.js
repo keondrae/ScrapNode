@@ -943,6 +943,13 @@ function PlantOneAll(Year, db, connectionString, res) {
 
                                                     });
 
+                                                    //console.log(DuctsArray.length);
+                                                    //console.log(TubesArray.length);
+                                                    //console.log(CoversArray.length);
+                                                    //console.log(AssemblysArray.length);
+                                                    //console.log(OthersArray.length);
+                                                    //console.log(Array16.length);
+                                                    //console.log(SpaceArray.length);
 
                                                     CombineArrays(DuctsArray, TubesArray, TempArrayOne, false);
                                                     //console.log('--------------------------------------');
@@ -953,13 +960,13 @@ function PlantOneAll(Year, db, connectionString, res) {
                                                     CombineArrays(TempArrayTwo, AssemblysArray, TempArrayThree, false);
                                                     //console.log('--------------------------------------');
                                                     //console.log(TempArrayThree);
-                                                    CombineArrays(TempArrayThree, SpaceArray, TempArrayFour, false);
+                                                    CombineArrays(TempArrayThree, OthersArray, TempArrayFour, false);
                                                     //console.log('--------------------------------------');
                                                     //console.log(TempArrayThree);
-                                                    CombineArrays(TempArrayFour, OthersArray, TempArrayFive, false);
+                                                    CombineArrays(TempArrayFour, Array16, TempArrayFive, false);
                                                     //console.log('--------------------------------------');
                                                     //console.log(TempArrayFour);
-                                                    CombineArrays(TempArrayFive, Array16, DataTempArray, false);
+                                                    CombineArrays(TempArrayFive, SpaceArray, DataTempArray, false);
                                                     //console.log('--------------------------------------');
                                                     //console.log(DataTempArray);
 
@@ -972,6 +979,8 @@ function PlantOneAll(Year, db, connectionString, res) {
                                                             AllPlantOneEndingBalance: AllEndingBalance
                                                         });
                                                     }
+
+                                                    //console.log(PlantOneAllArray.length);
 
                                                     res.send(JSON.stringify(PlantOneAllArray));
 
@@ -1744,20 +1753,41 @@ function PlantOneSpace(Year, db, connectionString, res) {
 
             });
 
+            //console.log(SpaceArray);
+            //console.log('----------------------');
+            //console.log(PlantOneAllArray);
+            //console.log('----------------------');
+            for(var i = 0; i < PlantOneAllArray.length; i++){
 
-            for(var i = 0; i < SpaceArray.length; i++){
-                var DataDate = SpaceArray[i].Date;
-                var SpaceBalance = SpaceArray[i].EndingBalance;
-                var AllPlantOneBalance = PlantOneAllArray[i].AllPlantOneEndingBalance.toString();
+                var PlantOneDate = PlantOneAllArray[i].Date;
+                var AllPlantOneBalance = PlantOneAllArray[i].AllPlantOneEndingBalance;
 
-                DataArray.push({
-                    Date: DataDate,
-                    Space: SpaceBalance,
-                    AllPlantOne: AllPlantOneBalance
-                });
+                for(var j = 0; j < SpaceArray.length; j++){
+                    var SpaceBalance = SpaceArray[j].EndingBalance;
+                    var match = false;
+                    if(PlantOneAllArray[i].Date === SpaceArray[j].Date){
 
+                        match = true;
+                        DataArray.push({
+                            Date: PlantOneDate,
+                            Space: SpaceBalance,
+                            AllPlantOne: AllPlantOneBalance
+                        });
+                        break;
+
+                    }
+                }
+                if(!match){
+                    DataArray.push({
+                        Date: PlantOneDate,
+                        Space: '0',
+                        AllPlantOne: AllPlantOneBalance
+                    });
+
+                }
             }
-
+            //console.log(DataArray.length);
+            //console.log(DataArray);
             res.send(JSON.stringify(DataArray));
 
         });

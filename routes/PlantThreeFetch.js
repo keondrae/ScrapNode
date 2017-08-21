@@ -1112,7 +1112,7 @@ function PlantThreeAll(Year, db, connectionString, res) {
                                                                 });
                                                             }
 
-                                                            console.log(PlantThreeAllArray.length);
+                                                            //console.log(PlantThreeAllArray.length);
                                                             res.send(JSON.stringify(PlantThreeAllArray));
                                                         });
                                                     });
@@ -1133,6 +1133,7 @@ function PlantThreeAll(Year, db, connectionString, res) {
 function PlantThreeP8(Year, db, connectionString, res) {
     console.log('Plant Three P8');
     P8Array = [];
+    DataArray = [];
 
     db.open(connectionString, function (err) {
 
@@ -1219,20 +1220,38 @@ function PlantThreeP8(Year, db, connectionString, res) {
             console.log('All: ' + PlantThreeAllArray.length);
             console.log('P8: ' + P8Array.length);
 
-            for(var i = 0; i < P8Array.length; i++){
-                var DataDate = P8Array[i].Date;
-                var P8Balance = P8Array[i].EndingBalance;
-                var AllPlantThreeBalance = PlantThreeAllArray[i].AllPlantThreeEndingBalance.toString();
+            for(var i = 0; i < PlantThreeAllArray.length; i++){
 
-                DataArray.push({
-                    Date: DataDate,
-                    P8: P8Balance,
-                    AllPlantThree: AllPlantThreeBalance
-                });
+                var PlantThreeDate = PlantThreeAllArray[i].Date;
+                var AllPlantThreeBalance = PlantThreeAllArray[i].AllPlantThreeEndingBalance;
 
+                for(var j = 0; j < P8Array.length; j++){
+                    var P8Balance = P8Array[j].EndingBalance;
+                    var match = false;
+                    if(PlantThreeAllArray[i].Date === P8Array[j].Date){
+
+                        match = true;
+                        DataArray.push({
+                            Date: PlantThreeDate,
+                            P8: P8Balance,
+                            AllPlantThree: AllPlantThreeBalance
+                        });
+                        break;
+
+                    }
+
+                }
+                if(!match){
+                    DataArray.push({
+                        Date: PlantThreeDate,
+                        P8: '0',
+                        AllPlantThree: AllPlantThreeBalance
+                    });
+
+                }
             }
 
-
+            console.log(DataArray);
             res.send(JSON.stringify(DataArray));
 
         });
@@ -1537,7 +1556,7 @@ function PlantThreePrimaryOps(Year, db, connectionString, res) {
                             });
                         }
 
-                        console.log('Primary Ops: ' + PriamryOpsArray.length);
+                        //console.log('Primary Ops: ' + PriamryOpsArray.length);
 
                         try{
 
@@ -1653,7 +1672,7 @@ function PlantThreeSleeves(Year, db, connectionString, res) {
                 });
             }
 
-            console.log('Sleeves: ' + SleevesArray.length);
+            //console.log('Sleeves: ' + SleevesArray.length);
             
             db.close(function (err) {
 
@@ -1780,7 +1799,7 @@ function PlantThreeWindows737(Year, db, connectionString, res) {
 
             });
 
-            console.log('Window 737: ' + Windows737Array.length);
+            //console.log('Window 737: ' + Windows737Array.length);
             
             try{
 
@@ -1896,7 +1915,7 @@ function PlantThreeWindows787(Year, db, connectionString, res) {
 
             });
 
-            console.log('Windows 787: ' + Windows787Array.length);
+            //console.log('Windows 787: ' + Windows787Array.length);
             
             try{
                 for(var i = 0; i < Windows787Array.length; i++){
@@ -2010,7 +2029,7 @@ function PlantThreeBSIWindows(Year, db, connectionString, res) {
 
             });
 
-            console.log('BSI Window: ' + BSIWindowsArray.length);
+            //console.log('BSI Window: ' + BSIWindowsArray.length);
             
             try{
 
@@ -2272,7 +2291,7 @@ function PlantThreeAllWindows(Year, db, connectionString, res) {
                         });
                     }
 
-                    console.log('All Windows: ' + AllWindowsArray.length);
+                    //console.log('All Windows: ' + AllWindowsArray.length);
 
                     try{
                         for(var i = 0; i < AllWindowsArray.length; i++){

@@ -244,31 +244,31 @@ block content
                 $('.data').jqxChart('refresh');
                 var id = event.args.item;
                 addfilter(TodayDate);
-                console.log(TodayDate)
+                console.log(TodayDate);
                 var title = $('#plant1').jqxTabs('getTitleAt', id);
                 console.log(title)
                 switch(title){
 
                     case 'All Plant 1':
-                        console.log();
+                        $('#GridForEverything').jqxGrid('removefilter', 'AccountNumber');
                         break;
                     case 'Ducts / Bin Seal':
-                        console.log();
+                        AddFilterTabTwo('5010080000', '5010150000');
                         break;
                     case 'Tubes':
-                        console.log();
+                        AddFilterTab('5010050000');
                         break;
                     case 'Cover':
-                        console.log();
+                        AddFilterTab('5010040000');
                         break;
                     case 'Assembly':
-                        console.log();
+                        AddFilterTabThree('5010820000', '5010200000', '5010010000');
                         break;
                     case 'Space':
-                        console.log();
+                        AddFilterTab('5010300000');
                         break;
                     case 'Other':
-                        console.log();
+                        AddFilterTabTwo('5010170000', '5010190000');
                         break;
                 }
             });
@@ -280,26 +280,27 @@ block content
                 animationType: 'fade',
                 selectionTracker: true,
                 reorder: false
-            }).on('tabclick', function () {
+            }).on('tabclick', function (event) {
                 //$('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
                 $('.data').jqxChart('refresh');
                 addfilter(TodayDate);
-                console.log(TodayDate)
-                var title = $('#plant1').jqxTabs('getTitleAt', id);
+                console.log(TodayDate);
+                var id = event.args.item;
+                var title = $('#plant2').jqxTabs('getTitleAt', id);
                 console.log(title)
                 switch (title) {
 
                     case 'All Plant 2':
-                        console.log();
+                        $('#GridForEverything').jqxGrid('removefilter', 'AccountNumber');
                         break;
                     case 'Plenums':
-                        console.log();
+                        AddFilterTab('5010120000');
                         break;
                     case 'Flex Hose / Caps':
-                        console.log();
+                        AddFilterTab('5010130000');
                         break;
                     case 'Downers':
-                        console.log();
+                        AddFilterTab('5010140000');
                         break;
                 }
             });
@@ -311,38 +312,39 @@ block content
                 animationType: 'fade',
                 selectionTracker: true,
                 reorder: false
-            }).on('tabclick', function () {
+            }).on('tabclick', function (event) {
                 //$('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
                 $('.data').jqxChart('refresh');
                 addfilter(TodayDate);
-                console.log(TodayDate)
-                var title = $('#plant1').jqxTabs('getTitleAt', id);
+                console.log(TodayDate);
+                var id = event.args.item;
+                var title = $('#plant3').jqxTabs('getTitleAt', id);
                 console.log(title)
                 switch (title) {
 
                     case 'All Plant 3':
-                        console.log();
+                        $('#GridForEverything').jqxGrid('removefilter', 'AccountNumber');
                         break;
                     case 'P8':
-                        console.log();
+                       AddFilterTab('5010110000');
                         break;
                     case 'Primary Ops':
-                        console.log();
+                        AddFilterTabFour('5010020000','5010240000', '5010210000', '5010220000');
                         break;
                     case 'Sleeves':
-                        console.log();
+                        AddFilterTab('5010060000');
                         break;
                     case '737 Windows':
-                        console.log();
+                        AddFilterTab('5010070000');
                         break;
                     case '787 Windows':
-                        console.log();
+                        AddFilterTab('5010090000');
                         break;
                     case 'BSI Windows':
-                        console.log();
+                        AddFilterTab('5010180000');
                         break;
                     case 'All Windows':
-                        console.log();
+                        AddFilterTabThree('5010070000', '5010090000', '5010180000');
                         break;
                 }
             });
@@ -403,10 +405,67 @@ block content
         function AddFilterTab(AccountNumber) {
             var filtergroup = new $.jqx.filter();
             var filter_or_operator = 1;
-            var filtervalue = Date;
+            var filtervalue = AccountNumber;
             var filtercondition = 'equal';
             var filter = filtergroup.createfilter('stringfilter', filtervalue, filtercondition);
             filtergroup.addfilter(filter_or_operator, filter);
+            // add the filters.
+            $("#GridForEverything").jqxGrid('addfilter', 'AccountNumber', filtergroup);
+            // apply the filters.
+            $("#GridForEverything").jqxGrid('applyfilters');
+        }
+
+        function AddFilterTabTwo(AccountNumberOne, AccountNumberTwo) {
+            var filtergroup = new $.jqx.filter();
+            var filter_or_operator = 1;
+            var filtervalueOne = AccountNumberOne;
+            var filtervalueTwo = AccountNumberTwo;
+            var filtercondition = 'equal';
+            var filter1 = filtergroup.createfilter('stringfilter', filtervalueOne, filtercondition);
+            var filter2 = filtergroup.createfilter('stringfilter', filtervalueTwo, filtercondition);
+            filtergroup.addfilter(filter_or_operator, filter1);
+            filtergroup.addfilter(filter_or_operator, filter2);
+            // add the filters.
+            $("#GridForEverything").jqxGrid('addfilter', 'AccountNumber', filtergroup);
+            // apply the filters.
+            $("#GridForEverything").jqxGrid('applyfilters');
+        }
+
+        function AddFilterTabThree(AccountNumberOne, AccountNumberTwo, AccountNumberThree) {
+            var filtergroup = new $.jqx.filter();
+            var filter_or_operator = 1;
+            var filtervalueOne = AccountNumberOne;
+            var filtervalueTwo = AccountNumberTwo;
+            var filtervalueThree = AccountNumberThree;
+            var filtercondition = 'equal';
+            var filter1 = filtergroup.createfilter('stringfilter', filtervalueOne, filtercondition);
+            var filter2 = filtergroup.createfilter('stringfilter', filtervalueTwo, filtercondition);
+            var filter3 = filtergroup.createfilter('stringfilter', filtervalueThree, filtercondition);
+            filtergroup.addfilter(filter_or_operator, filter1);
+            filtergroup.addfilter(filter_or_operator, filter2);
+            filtergroup.addfilter(filter_or_operator, filter3);
+            // add the filters.
+            $("#GridForEverything").jqxGrid('addfilter', 'AccountNumber', filtergroup);
+            // apply the filters.
+            $("#GridForEverything").jqxGrid('applyfilters');
+        }
+
+        function AddFilterTabFour(AccountNumberOne, AccountNumberTwo, AccountNumberThree, AccountNumberFour) {
+            var filtergroup = new $.jqx.filter();
+            var filter_or_operator = 1;
+            var filtervalueOne = AccountNumberOne;
+            var filtervalueTwo = AccountNumberTwo;
+            var filtervalueThree = AccountNumberThree;
+            var filtervalueFour = AccountNumberFour;
+            var filtercondition = 'equal';
+            var filter1 = filtergroup.createfilter('stringfilter', filtervalueOne, filtercondition);
+            var filter2 = filtergroup.createfilter('stringfilter', filtervalueTwo, filtercondition);
+            var filter3 = filtergroup.createfilter('stringfilter', filtervalueThree, filtercondition);
+            var filter4 = filtergroup.createfilter('stringfilter', filtervalueFour, filtercondition);
+            filtergroup.addfilter(filter_or_operator, filter1);
+            filtergroup.addfilter(filter_or_operator, filter2);
+            filtergroup.addfilter(filter_or_operator, filter3);
+            filtergroup.addfilter(filter_or_operator, filter4);
             // add the filters.
             $("#GridForEverything").jqxGrid('addfilter', 'AccountNumber', filtergroup);
             // apply the filters.

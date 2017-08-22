@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84f9f0e2-2a39-4b4f-a441-31ecfef358ed" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/leaf.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/TopSecret.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/jquery.snowfall.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ScrapNode.iml" afterPath="$PROJECT_DIR$/.idea/ScrapNode.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/windows.js" afterPath="$PROJECT_DIR$/public/javascripts/windows.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/plantAll.js" afterPath="$PROJECT_DIR$/public/javascripts/plantAll.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/JSCalls.jade" afterPath="$PROJECT_DIR$/views/JSCalls.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/extenders/layout.jade" afterPath="$PROJECT_DIR$/views/extenders/layout.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,21 +45,6 @@
         <item name="MAS_TFI" type="e3449647:DbNodeDescriptor" />
         <item name="dbo" type="e3449647:DbNodeDescriptor" />
       </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="MAS_TFI@tf-sql-01" type="e3449647:DbNodeDescriptor" />
-        <item name="MAS_TFI" type="e3449647:DbNodeDescriptor" />
-        <item name="dbo" type="e3449647:DbNodeDescriptor" />
-        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="MAS_TFI@tf-sql-01" type="e3449647:DbNodeDescriptor" />
-        <item name="MAS_TFI" type="e3449647:DbNodeDescriptor" />
-        <item name="dbo" type="e3449647:DbNodeDescriptor" />
-        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
-        <item name="GL_Account" type="e3449647:DbNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
@@ -59,7 +52,53 @@
     <favorites_list name="ScrapNode" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="index.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/index.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="34" lean-forward="false" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+              <folding>
+                <element signature="n#div#2;n#main#0;n#block#0;n#!!top" expanded="false" />
+                <element signature="n#div#3;n#main#0;n#block#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/extenders/layout.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="833">
+              <caret line="49" column="6" lean-forward="false" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TopSecret.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/TopSecret.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="18" column="2" lean-forward="false" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+              <folding>
+                <element signature="n#!!block;n#win#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="463">
+              <caret line="178" column="21" lean-forward="true" selection-start-line="178" selection-start-column="21" selection-end-line="178" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -107,8 +146,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/views/Header.pug" />
-        <option value="$PROJECT_DIR$/views/Header.jade" />
         <option value="$PROJECT_DIR$/views/extenders/Header.jade" />
         <option value="$PROJECT_DIR$/views/extenders/JSCalls.jade" />
         <option value="$PROJECT_DIR$/public/javascripts/callJQXLib.js" />
@@ -129,7 +166,6 @@
         <option value="$PROJECT_DIR$/Test Code/MMSQL Test.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/routes/MSSQL.js" />
-        <option value="$PROJECT_DIR$/views/JSCalls.jade" />
         <option value="$PROJECT_DIR$/Test Code/MathTest.js" />
         <option value="$PROJECT_DIR$/Test Code/RequestTest.js" />
         <option value="$PROJECT_DIR$/Test Code/PromiseTest.js" />
@@ -145,19 +181,22 @@
         <option value="$PROJECT_DIR$/public/javascripts/Grid.js" />
         <option value="$PROJECT_DIR$/views/test.jade" />
         <option value="$PROJECT_DIR$/Test Code/DateTest.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/plantAll.js" />
         <option value="$PROJECT_DIR$/public/javascripts/plantThree.js" />
         <option value="$PROJECT_DIR$/public/javascripts/plantTwo.js" />
         <option value="$PROJECT_DIR$/public/javascripts/plantOne.js" />
         <option value="$PROJECT_DIR$/public/javascripts/buttons.js" />
-        <option value="$PROJECT_DIR$/views/extenders/layout.jade" />
-        <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/54d29c17-6a8e-43f6-ac87-0215906f7cd2/console_3.sql" />
         <option value="$PROJECT_DIR$/routes/PlantOneFetch.js" />
         <option value="$PROJECT_DIR$/routes/PlantTwoFetch.js" />
         <option value="$PROJECT_DIR$/routes/PlantThreeFetch.js" />
         <option value="$PROJECT_DIR$/public/javascripts/windows.js" />
+        <option value="$PROJECT_DIR$/views/JSCalls.jade" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
+        <option value="$PROJECT_DIR$/public/javascripts/jquery.snowfall.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/plantAll.js" />
+        <option value="$PROJECT_DIR$/views/extenders/layout.jade" />
         <option value="$PROJECT_DIR$/views/index.jade" />
+        <option value="$PROJECT_DIR$/public/javascripts/TopSecret.js" />
       </list>
     </option>
   </component>
@@ -227,18 +266,18 @@
             <path>
               <item name="ScrapNode" type="b2602c69:ProjectViewProjectNode" />
               <item name="ScrapNode" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="stylesheets" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ScrapNode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ScrapNode" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="ScrapNode" type="b2602c69:ProjectViewProjectNode" />
               <item name="ScrapNode" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ScrapNode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScrapNode" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="extenders" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -258,21 +297,22 @@
     <property name="nodejs.protractor.protractor_package" value="" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="DDL Data Source&#10;SQL Server (Microsoft)" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="jsx.switch.disabled" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\ScrapNode\public\javascripts" />
-      <recent name="C:\wamp64\www\ScrapNode\routes" />
-      <recent name="C:\wamp64\www\ScrapNode\public\images" />
-      <recent name="C:\wamp64\www\ScrapNode\public\stylesheets" />
-      <recent name="C:\wamp64\www\ScrapNode\views" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\ScrapNode\public\javascripts" />
       <recent name="C:\wamp64\www\ScrapNode\routes" />
       <recent name="C:\wamp64\www\ScrapNode\views" />
       <recent name="C:\wamp64\www\ScrapNode\views\extenders" />
       <recent name="C:\wamp64\www\ScrapNode\public\html" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ScrapNode\public\javascripts" />
+      <recent name="C:\wamp64\www\ScrapNode\public\javascripts\jqwidgets" />
+      <recent name="C:\wamp64\www\ScrapNode\routes" />
+      <recent name="C:\wamp64\www\ScrapNode\public\images" />
+      <recent name="C:\wamp64\www\ScrapNode\public\stylesheets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -291,7 +331,7 @@
     <configuration name="DateTest.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="DateTest.js" working-dir="$PROJECT_DIR$/Test Code" />
     <configuration name="JQueryTest.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="JQueryTest.js" working-dir="$PROJECT_DIR$/Test Code" />
     <configuration name="PromiseTest.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="PromiseTest.js" working-dir="$PROJECT_DIR$/Test Code" />
-    <configuration name="RequestTest.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="RequestTest.js" working-dir="$PROJECT_DIR$/Test Code" />
+    <configuration name="TopSecret.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="TopSecret.js" working-dir="$PROJECT_DIR$/public/javascripts" />
     <configuration default="true" type="ReactNative" factoryName="React Native">
       <node-interpreter value="project" />
       <react-native value="" />
@@ -318,19 +358,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.bin\www JavaScript" />
       <item index="1" class="java.lang.String" itemvalue="Node.js.bin\www" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.RequestTest.js" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.PromiseTest.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.JQueryTest.js" />
-      <item index="5" class="java.lang.String" itemvalue="Node.js.nAjaxTest.js" />
-      <item index="6" class="java.lang.String" itemvalue="Node.js.DateTest.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.PromiseTest.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.JQueryTest.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.nAjaxTest.js" />
+      <item index="5" class="java.lang.String" itemvalue="Node.js.DateTest.js" />
+      <item index="6" class="java.lang.String" itemvalue="Node.js.TopSecret.js" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.DateTest.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.nAjaxTest.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.JQueryTest.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.PromiseTest.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.RequestTest.js" />
+        <item index="0" class="java.lang.String" itemvalue="Node.js.TopSecret.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.DateTest.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.nAjaxTest.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.JQueryTest.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.PromiseTest.js" />
       </list>
     </recent_temporary>
   </component>
@@ -360,7 +400,7 @@
       <workItem from="1502889665209" duration="1998000" />
       <workItem from="1502917059963" duration="8411000" />
       <workItem from="1502981328312" duration="35568000" />
-      <workItem from="1503321544101" duration="14259000" />
+      <workItem from="1503321544101" duration="32896000" />
     </task>
     <task id="LOCAL-00001" summary="C">
       <created>1501868881324</created>
@@ -642,11 +682,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503338727590</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Added Change Log">
+      <created>1503340454306</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1503340454306</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="474409000" />
+    <option name="totallyTimeSpent" value="493046000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -659,19 +706,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2895323" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13059701" sideWeight="0.48886415" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14142539" sideWeight="0.51226014" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1433902" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12694877" sideWeight="0.49573562" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2817372" sideWeight="0.5143923" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10501066" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31514478" sideWeight="0.49573562" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17750533" sideWeight="0.5080645" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1726058" sideWeight="0.48773986" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.73162585" sideWeight="0.48560768" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17750533" sideWeight="0.4919355" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879817" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.50664455" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13474387" sideWeight="0.4946695" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27282852" sideWeight="0.4946695" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -716,8 +764,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Updates Some Charts" />
-    <MESSAGE value="Fixed Grid Crashing When Switching To Year 2015" />
     <MESSAGE value="Fixed" />
     <MESSAGE value="Added two bar charts on plant 2." />
     <MESSAGE value="Fixed two bar charts on plant 2." />
@@ -741,11 +787,13 @@
     <MESSAGE value="Made Dynamic Date Range, Added Newest Month as the date filter" />
     <MESSAGE value="Fixed P8 On plant 3, Fixed Space on Plant one, Made chart text bigger" />
     <MESSAGE value="Added Error catching to the fetch calls." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Error catching to the fetch calls." />
+    <MESSAGE value="Added Change Log" />
+    <MESSAGE value="-" />
+    <option name="LAST_COMMIT_MESSAGE" value="-" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="164" />
+      <option name="time" value="170" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -759,23 +807,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/mssql/lib/base.js" />
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/styles/jqx.dark.css" />
-    <entry file="file://$PROJECT_DIR$/node_modules/odbc/lib/simple-queue.js" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/6.11.0/core-modules/module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test Code/MMSQL Test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -801,13 +832,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="247" column="0" lean-forward="true" selection-start-line="247" selection-start-column="0" selection-end-line="247" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/JSCalls.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -941,6 +965,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2926">
           <caret line="99" column="59" lean-forward="false" selection-start-line="99" selection-start-column="59" selection-end-line="99" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -948,6 +973,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -972,13 +998,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/plantAll.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -986,6 +1006,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
           <caret line="41" column="27" lean-forward="true" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+          <folding>
+            <element signature="e#119#198#0" expanded="false" />
+            <element signature="e#623#641#0" expanded="false" />
+            <element signature="n#!!block;n#PlantTwoAllDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantTwoPlenumsDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantTwoFlexHoseCapsDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantTwoDownersDetails#0" expanded="false" />
+            <element signature="n#!!block;n#onChartClickTest#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -993,6 +1022,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="e#153#232#0" expanded="false" />
+            <element signature="e#657#675#0" expanded="false" />
+            <element signature="n#!!block;n#PlantOneAllDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantOneDuctDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantOneTubeDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantOneCoversDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantOneAssemblyDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantOneSpaceDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantOneOtherDetails#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1054,14 +1094,6 @@
             <element signature="n#!!block;n#PlantThree787WindowsDetails#0" expanded="false" />
             <element signature="n#!!block;n#PlantThreeBSIWindowsDetails#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/PlantAllFetch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="46" column="24" lean-forward="true" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1234,22 +1266,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/extenders/layout.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="9" column="57" lean-forward="false" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1109">
-          <caret line="157" column="20" lean-forward="true" selection-start-line="157" selection-start-column="20" selection-end-line="157" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/windows.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1258,14 +1274,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/PlantAllFetch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="46" column="24" lean-forward="true" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/jsLibraryMappings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/jqwidgets/christmaslights.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/jqwidgets/snowstorm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10578">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/JSCalls.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="36" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/jquery.snowfall.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="178" column="21" lean-forward="true" selection-start-line="178" selection-start-column="21" selection-end-line="178" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/plantAll.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="157" column="0" lean-forward="true" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+          <folding>
+            <element signature="e#42#121#0" expanded="false" />
+            <element signature="e#546#564#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/extenders/layout.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="6" lean-forward="false" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/index.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="34" column="42" lean-forward="false" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+        <state relative-caret-position="68">
+          <caret line="4" column="34" lean-forward="false" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
           <folding>
-            <element signature="n#header#0;n#block#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#main#0;n#block#0;n#!!top" expanded="false" />
             <element signature="n#div#3;n#main#0;n#block#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/TopSecret.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="18" column="2" lean-forward="false" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+          <folding>
+            <element signature="n#!!block;n#win#0" expanded="false" />
           </folding>
         </state>
       </provider>

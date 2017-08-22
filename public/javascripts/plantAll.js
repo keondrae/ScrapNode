@@ -56,15 +56,6 @@ function PlantAllDetails(data) {
         ]
     });
 
-    function getTotal(itemIndex) {
-        var plantOne = parseInt(AllDataAdapter.loadedData[itemIndex].PlantOneBal);
-        var plantTwo = parseInt(AllDataAdapter.loadedData[itemIndex].PlantTwoBal);
-        var plantThree = parseInt(AllDataAdapter.loadedData[itemIndex].PlantThreeBal);
-
-        return  plantOne + plantTwo + plantThree;
-    }
-
-
 
     /* chart settings */
     var AllChartSettings;
@@ -108,9 +99,7 @@ function PlantAllDetails(data) {
                 unitInterval: 1,
                 serieType: 'area',
                 minorTicksInterval: 1,
-                labels: {
-                    angle: -30
-                }
+                labels: {angle: -30}
             }
         },
         valueAxis: {
@@ -159,16 +148,6 @@ function PlantAllDetails(data) {
                         },
                         color: '#8ebc00'
                     }
-                    /*{dataField: '', displayText: 'Total',
-                        labels: {
-                            visible: true,
-                            verticalAlignment: 'top',
-                            offset: { x: -5, y: -17 }
-                        },
-                        formatFunction: function (value, itemIndex) {
-                            return 'Total: ' + getTotal(itemIndex).toFixed(2);
-                        }}*/
-
                 ]
             }
         ]
@@ -176,4 +155,35 @@ function PlantAllDetails(data) {
     $('#AllPlantChart').jqxChart(AllChartSettings);
     //End of Chart
 
+
+    //http://www.jqwidgets.com/community/topic/adding-totals-to-a-stacked-bar-chart/
+    var instance = $('#AllPlantChart').jqxChart('getInstance');
+    var renderer = instance.renderer;
+    for (var i = 0; i < data.length; i++) {
+        var pos = instance.getItemCoord(0 /* serieGroupIndex */, 2 /* serieIndex */, i /* itemIndex */);
+        var text = getTotal(i, AllDataAdapter);
+
+        //console.log(text + "####" + i)
+        var textSize = renderer.measureText(text, 0, { 'class': 'jqx-chart-label-text' });
+        renderer.text(
+            text, // text
+            pos.x + (pos.width - textSize.width) / 2, // x
+            pos.y - 20, // y
+
+            textSize.width,
+            textSize.height,
+            0, // rotation angle
+            {'class': 'jqx-chart-label-text' } // parameters
+
+        );
+    }
+
+}
+
+function getTotal(itemIndex, AllDataAdapter) {
+    var plantOne = parseInt(AllDataAdapter.loadedData[itemIndex].PlantOneBal);
+    var plantTwo = parseInt(AllDataAdapter.loadedData[itemIndex].PlantTwoBal);
+    var plantThree = parseInt(AllDataAdapter.loadedData[itemIndex].PlantThreeBal);
+    var total = plantOne + plantTwo + plantThree;
+    return total;
 }

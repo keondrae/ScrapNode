@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84f9f0e2-2a39-4b4f-a441-31ecfef358ed" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascripts/sliders.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/plantAll.js" afterPath="$PROJECT_DIR$/public/javascripts/plantAll.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/plantOne.js" afterPath="$PROJECT_DIR$/public/javascripts/plantOne.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/plantThree.js" afterPath="$PROJECT_DIR$/public/javascripts/plantThree.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/plantTwo.js" afterPath="$PROJECT_DIR$/public/javascripts/plantTwo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/windows.js" afterPath="$PROJECT_DIR$/public/javascripts/windows.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/JSCalls.jade" afterPath="$PROJECT_DIR$/views/JSCalls.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/PlantTwoFetch.js" afterPath="$PROJECT_DIR$/routes/PlantTwoFetch.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -132,7 +124,6 @@
         <option value="$PROJECT_DIR$/Test Code/idCheckTest.js" />
         <option value="$PROJECT_DIR$/views/extenders/layout.jade" />
         <option value="$PROJECT_DIR$/routes/GridFetch.js" />
-        <option value="$PROJECT_DIR$/routes/PlantTwoFetch.js" />
         <option value="$PROJECT_DIR$/routes/PlantAllFetch.js" />
         <option value="$PROJECT_DIR$/routes/PlantOneFetch.js" />
         <option value="$PROJECT_DIR$/routes/PlantThreeFetch.js" />
@@ -150,6 +141,7 @@
         <option value="$PROJECT_DIR$/public/javascripts/plantOne.js" />
         <option value="$PROJECT_DIR$/public/javascripts/plantThree.js" />
         <option value="$PROJECT_DIR$/views/index.jade" />
+        <option value="$PROJECT_DIR$/routes/PlantTwoFetch.js" />
       </list>
     </option>
   </component>
@@ -214,13 +206,12 @@
               <item name="ScrapNode" type="b2602c69:ProjectViewProjectNode" />
               <item name="ScrapNode" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="javascripts" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="stylesheets" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="ScrapNode" type="b2602c69:ProjectViewProjectNode" />
               <item name="ScrapNode" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="stylesheets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -343,7 +334,7 @@
       <workItem from="1502889665209" duration="1998000" />
       <workItem from="1502917059963" duration="8411000" />
       <workItem from="1502981328312" duration="35568000" />
-      <workItem from="1503321544101" duration="58945000" />
+      <workItem from="1503321544101" duration="59202000" />
     </task>
     <task id="LOCAL-00001" summary="C">
       <created>1501868881324</created>
@@ -653,11 +644,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503513170028</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Added a date range adj">
+      <created>1503514096456</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1503514096456</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="519095000" />
+    <option name="totallyTimeSpent" value="519352000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1084,35 +1082,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/PlantTwoFetch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-          <folding>
-            <element signature="n#!!block;n#PlantTwoAll#0" expanded="false" />
-            <element signature="e#2274#2322#0" expanded="false" />
-            <element signature="e#2434#2490#0" expanded="false" />
-            <element signature="e#2541#4586#0" expanded="false" />
-            <element signature="e#3034#4438#0" expanded="false" />
-            <element signature="e#4710#4774#0" expanded="false" />
-            <element signature="e#4829#7082#0" expanded="false" />
-            <element signature="e#5362#6914#0" expanded="false" />
-            <element signature="e#7218#7290#0" expanded="false" />
-            <element signature="e#7349#9812#0" expanded="false" />
-            <element signature="e#7922#9622#0" expanded="false" />
-            <element signature="n#!!block;n#PlantTwoPlenums#0" expanded="false" />
-            <element signature="e#12022#14112#0" expanded="false" />
-            <element signature="e#14150#14376#0" expanded="false" />
-            <element signature="n#!!block;n#PlantTwoFlexHCaps#0" expanded="false" />
-            <element signature="e#16544#18636#0" expanded="false" />
-            <element signature="e#17077#18481#0" expanded="false" />
-            <element signature="n#!!block;n#PlantTwoDowners#0" expanded="false" />
-            <element signature="e#21603#23007#0" expanded="false" />
-            <element signature="n#!!block;n#CombineArrays#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/PlantThreeFetch.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -1332,6 +1301,31 @@
         <state relative-caret-position="-323">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/PlantTwoFetch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1152">
+          <caret line="554" column="7" lean-forward="true" selection-start-line="554" selection-start-column="7" selection-end-line="554" selection-end-column="7" />
+          <folding>
+            <element signature="e#2298#2346#0" expanded="false" />
+            <element signature="e#2458#2514#0" expanded="false" />
+            <element signature="e#2565#4610#0" expanded="false" />
+            <element signature="e#3058#4462#0" expanded="false" />
+            <element signature="e#4734#4798#0" expanded="false" />
+            <element signature="e#4853#7106#0" expanded="false" />
+            <element signature="e#5386#6938#0" expanded="false" />
+            <element signature="e#7242#7314#0" expanded="false" />
+            <element signature="e#7373#9836#0" expanded="false" />
+            <element signature="e#7946#9646#0" expanded="false" />
+            <element signature="e#12070#14160#0" expanded="false" />
+            <element signature="e#14198#14424#0" expanded="false" />
+            <element signature="e#16616#18708#0" expanded="false" />
+            <element signature="e#17149#18553#0" expanded="false" />
+            <element signature="e#21698#23102#0" expanded="false" />
+            <element signature="n#!!block;n#CombineArrays#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -42,6 +42,7 @@ function PlantTwoAll(db, connectionString, res) {
     console.log('Plant Two All');
     PlantTwoAllArray = [];
     DataArray = [];
+    DataTempArray = [];
     var TempArray = [];
     var Array12 = [];
     var Array13 = [];
@@ -292,6 +293,7 @@ function PlantTwoPlenums(db, connectionString, res) {
     console.log('Plant Two Plenums');
     PlenumsArray = [];
     DataArray = [];
+    DataTempArray = [];
     db.open(connectionString, function (err) {
 
         if (err) {
@@ -425,6 +427,7 @@ function PlantTwoFlexHCaps(db, connectionString, res) {
     console.log('Plant Two Flex Hose / Caps');
     FlexHCapsArray = [];
     DataArray = [];
+    DataTempArray = [];
     db.open(connectionString, function (err) {
 
         if (err) {
@@ -557,7 +560,7 @@ function PlantTwoDowners(db, connectionString, res) {
     console.log('Downers');
     DownersArray = [];
     DataArray = [];
-
+    DataTempArray = [];
     db.open(connectionString, function (err) {
 
         if (err) {

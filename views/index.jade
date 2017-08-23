@@ -2,7 +2,7 @@ extends extenders/layout
 
 block content
 
-    header(class='Info' id='Sec' )
+    header(class='Info' id='Sec')
         div(id='head')
             div(id='pageTitle')
                 h1(id='title')= title
@@ -21,12 +21,13 @@ block content
 
         div(id='small_images')
             //img(src='images/note64x64.png' onclick='' height='32' width='32')
-            img(src='images/zoom64x64.png' onclick='SelectYear()' rel='model:open' height='32' width='32')
+            img(src='images/zoom64x64.png' onclick='SelectYear()' height='32' width='32')
             img(src='images/help64x64.png' onclick='ChangeLog()' height='32' width='32')
     //End of Header
 
     //Start of Windows
-    div(id='Search' title='Please Select a Year' class='HideOnStart')
+    div(id='Search' title='Years' class='HideOnStart')
+        p()= 'Please select how many years you want to go back.'
         select(id="Years")
             option(value='2017')= '2017'
             option(value='2016')= '2016'
@@ -181,7 +182,7 @@ block content
         var mm = today.getMonth() + 1; //January is 0!
         var yyyy = today.getFullYear();
         var TodayDate;
-
+        var numberOfYearsAgo;
         switch(mm){
             case 1:
                 TodayDate = '1' + '-' + 'Jan' + '-' + yyyy;
@@ -223,11 +224,11 @@ block content
 
         Year = $('#Years').val();
         console.log('Year: ' + Year);
-        GridFetch(Year);
-        plantAllDataFetch(Year);
-        plantOneDataFetch(Year);
-        plantTwoDataFetch(Year);
-        plantThreeDataFetch(Year);
+        GridFetch();
+        plantAllDataFetch();
+        plantOneDataFetch();
+        plantTwoDataFetch();
+        plantThreeDataFetch();
         HideTabs();
         $('.data').jqxChart('refresh');
         $('#plantAll').show();
@@ -377,24 +378,106 @@ block content
         }
 
         function onChartClick(e) {
-            var currProj;
-            currProj = $('.jqx-chart-tooltip-text').text();
-            console.log(currProj);
-            var pos = currProj.indexOf("$")
-            console.log(pos);
-            currProj = currProj.substring(16, pos)
-            //console.log(eventData);
-            //console.log(el);
-            console.log(currProj);
-            console.log(pos);
-            //addfilter(thisDate);
-            currProj = '';
-            $('.jqx-chart-tooltip-text').text('');
-            console.log(currProj);
+            var id = e.elementIndex;
+            console.log(id);
+            var thisYear;
+            var thisDate;
+            //*sigh* 20 years will fly by
+            if (id >= 0 && id <= 12) {
+                thisYear = 2015;
+            }else if(id >= 13 && id <= 24){
+                thisYear = 2016;
+            }else if(id >= 25 && id <= 36){
+                thisYear = 2017;
+            }else if(id >= 37 && id <= 48){
+                thisYear = 2018;
+            }else if(id >= 49 && id <= 60){
+                thisYear = 2019;
+            }else if(id >= 61 && id <= 72){
+                thisYear = 2020;
+            }else if(id >= 73 && id <= 84){
+                thisYear = 2021;
+            }else if(id >= 85 && id <= 96){
+                thisYear = 2022;
+            }else if(id >= 97 && id <= 108){
+                thisYear = 2023;
+            }else if(id >= 109 && id <= 120){
+                thisYear = 2024;
+            }else if(id >= 121 && id <= 132){
+                thisYear = 2025;
+            }else if(id >= 133 && id <= 144){
+                thisYear = 2026;
+            }else if(id >= 145 && id <= 156){
+                thisYear = 2027;
+            }else if(id >= 157 && id <= 168){
+                thisYear = 2028;
+            }else if(id >= 169 && id <= 180){
+                thisYear = 2029;
+            }else if(id >= 181 && id <= 192){
+                thisYear = 2030;
+            }else if(id >= 193 && id <= 204){
+                thisYear = 2031;
+            }else if(id >= 205 && id <= 216){
+                thisYear = 2032;
+            }else if(id >= 217 && id <= 228){
+                thisYear = 2033;
+            }else if(id >= 229 && id <= 240){
+                thisYear = 2034;
+            }else if(id >= 241 && id <= 252){
+                thisYear = 2035;
+            }
+            var newId = id % 12;
+            var PrevYear = parseInt(thisYear) - 1;
 
-            var instance = $('#AllPlantChart').jqxChart('getInstance');
-            var renderer = instance.renderer;
-            console.log(renderer)
+            console.log(newId);
+            switch (newId) {
+
+                case 0:
+                    thisDate = '1-Dec-' + PrevYear;
+                    winLimided();
+                    break;
+                case 1:
+                    thisDate = '1-Jan-' + thisYear;
+                    winLimided();
+                    break;
+                case 2:
+                    thisDate = '1-Feb-' + thisYear;
+                    winLimided();
+                    break;
+                case 3:
+                    thisDate = '1-Mar-' + thisYear;
+                    break;
+                case 4:
+                    thisDate = '1-Apr-' + thisYear;
+                    break;
+                case 5:
+                    thisDate = '1-May-' + thisYear;
+                    break;
+                case 6:
+                    thisDate = '1-Jun-' + thisYear;
+                    break;
+                case 7:
+                    thisDate = '1-Jul-' + thisYear;
+                    break;
+                case 8:
+                    thisDate = '1-Aug-' + thisYear;
+                    break;
+                case 9:
+                    thisDate = '1-Sep-' + thisYear;
+                    fallLimited();
+                    break;
+                case 10:
+                    thisDate = '1-Oct-' + thisYear;
+                    fallLimited();
+                    break;
+                case 11:
+                    thisDate = '1-Nov-' + thisYear;
+                    fallLimited();
+                    break;
+            }
+
+            console.log(thisDate);
+            addfilter(thisDate);
         }
 
         function addfilter (Date) {
@@ -505,11 +588,11 @@ block content
             //$('.data').jqxChart('refresh');
         });
 
-        function GridFetch(Year) {
+        function GridFetch() {
 
             $.ajax({//Get All Grid
                 type: 'GET',
-                url: '/GridFetch/' + Year,
+                url: '/GridFetch',
                 async: true,
                 cache: cache,
                 dataType: 'json',
@@ -527,11 +610,10 @@ block content
             });
         }
 
-
-        function plantAllDataFetch (Year) {
+        function plantAllDataFetch () {
             $.ajax({// Get All Chart
                 type: 'GET',
-                url: '/plantAllFetch/' + Year,
+                url: '/plantAllFetch',
                 dataType: 'json',
                 async: async,
                 cache: cache,
@@ -549,11 +631,11 @@ block content
 
         }
 
-        function plantOneDataFetch(Year){
+        function plantOneDataFetch(){
 
             $.ajax({// Get All
                 type: 'GET',
-                url: '/plantOneFetch/' + Year + '/All',
+                url: '/plantOneFetch/All',
                 dataType: 'json',
                 async: async,
                 cache: cache,
@@ -571,7 +653,7 @@ block content
 
             $.ajax({// Get Duct
                 type: 'GET',
-                url: '/plantOneFetch/' + Year + '/Duct',
+                url: '/plantOneFetch/Duct',
                 dataType: 'json',
                 async: async,
                 cache: cache,
@@ -589,7 +671,7 @@ block content
 
             $.ajax({// Get Tubes
                 type: 'GET',
-                url: '/plantOneFetch/' + Year + '/Tubes',
+                url: '/plantOneFetch/Tubes',
                 dataType: 'json',
                 async: async,
                 cache: cache,
@@ -608,7 +690,7 @@ block content
 
             $.ajax({// Get Covers
                 type: 'GET',
-                url: '/plantOneFetch/' + Year + '/Covers',
+                url: '/plantOneFetch/Covers',
                 dataType: 'json',
                 async: async,
                 cache: cache,
@@ -626,7 +708,7 @@ block content
 
             $.ajax({// Get Assembly
                 type: 'GET',
-                url: '/plantOneFetch/' + Year + '/Assembly',
+                url: '/plantOneFetch/Assembly',
                 dataType: 'json',
                 async: async,
                 cache: cache,
@@ -644,7 +726,7 @@ block content
 
             $.ajax({// Get Space
                 type: 'GET',
-                url: '/plantOneFetch/' + Year + '/Space',
+                url: '/plantOneFetch/Space',
                 dataType: 'json',
                 async: async,
                 cache: cache,
@@ -662,7 +744,7 @@ block content
 
             $.ajax({// Get Other
                 type: 'GET',
-                url: '/plantOneFetch/' + Year + '/Other',
+                url: '/plantOneFetch/Other',
                 dataType: 'json',
                 async: async,
                 cache: cache,
@@ -684,7 +766,7 @@ block content
 
             $.ajax({// Get All
                 type: 'GET',
-                url: '/plantTwoFetch/' + Year + '/All',
+                url: '/plantTwoFetch/All',
                 dataType: 'json',
                 async: async,
                 cache: cache,
@@ -702,7 +784,7 @@ block content
 
             $.ajax({// Get Plenums
                 type: 'GET',
-                url: '/plantTwoFetch/' + Year + '/Plenums',
+                url: '/plantTwoFetch/Plenums',
                 dataType: 'json',
                 async: async,
                 cache: cache,
@@ -720,7 +802,7 @@ block content
 
             $.ajax({// Get Flex Hose Caps
                 type: 'GET',
-                url: '/plantTwoFetch/' + Year + '/FlexHCaps',
+                url: '/plantTwoFetch/FlexHCaps',
                 dataType: 'json',
                 async: async,
                 cache: cache,
@@ -738,7 +820,7 @@ block content
 
             $.ajax({// Get Downers
                 type: 'GET',
-                url: '/plantTwoFetch/' + Year + '/Downers',
+                url: '/plantTwoFetch/Downers',
                 dataType: 'json',
                 async: async,
                 cache: cache,
@@ -760,7 +842,7 @@ block content
 
             $.ajax({// Get All
                 type: 'GET',
-                url: '/plantThreeFetch/' + Year + '/All',
+                url: '/plantThreeFetch/All',
                 dataType: 'json',
                 async: async,
                 cache: cache,
@@ -778,7 +860,7 @@ block content
 
             $.ajax({// Get P8
                 type: 'GET',
-                url: '/plantThreeFetch/' + Year + '/P8',
+                url: '/plantThreeFetch/P8',
                 dataType: 'json',
                 async: async,
                 cache: cache,
@@ -796,7 +878,7 @@ block content
 
             $.ajax({// Get Primary Ops
                 type: 'GET',
-                url: '/plantThreeFetch/' + Year + '/PrimaryOps',
+                url: '/plantThreeFetch/PrimaryOps',
                 dataType: 'json',
                 async: async,
                 cache: cache,
@@ -814,7 +896,7 @@ block content
 
             $.ajax({// Get Sleeves
                 type: 'GET',
-                url: '/plantThreeFetch/' + Year + '/Sleeves',
+                url: '/plantThreeFetch/Sleeves',
                 dataType: 'json',
                 async: async,
                 cache: cache,
@@ -832,7 +914,7 @@ block content
 
             $.ajax({// Get 737 Windows
                 type: 'GET',
-                url: '/plantThreeFetch/' + Year + '/Windows737',
+                url: '/plantThreeFetch/Windows737',
                 dataType: 'json',
                 async: async,
                 cache: cache,
@@ -850,7 +932,7 @@ block content
 
             $.ajax({// Get 787 Windows
                 type: 'GET',
-                url: '/plantThreeFetch/' + Year + '/Windows787',
+                url: '/plantThreeFetch/Windows787',
                 dataType: 'json',
                 async: async,
                 cache: cache,
@@ -868,7 +950,7 @@ block content
 
             $.ajax({// Get BSI Windows
                 type: 'GET',
-                url: '/plantThreeFetch/' + Year + '/BSIWindows',
+                url: '/plantThreeFetch/BSIWindows',
                 dataType: 'json',
                 async: async,
                 cache: cache,
@@ -886,7 +968,7 @@ block content
 
             $.ajax({// Get All Windows
                 type: 'GET',
-                url: '/plantThreeFetch/' + Year + '/AllWindows',
+                url: '/plantThreeFetch/AllWindows',
                 dataType: 'json',
                 async: async,
                 cache: cache,

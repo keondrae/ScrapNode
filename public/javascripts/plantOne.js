@@ -44,11 +44,12 @@ twoYearsAgo = '01/01' + '/' + prvTwoYr;
 var MinDate = lastYear ;
 var MaxDate = currentDate;
 var MinValueRange = twoYearsAgo;
+
 function PlantOneAllDetails(data) {
     console.log("Plant 1 All method Called");
     //Chart
     /* data adapter settings */
-    var AllDataAdapter = new $.jqx.dataAdapter({
+    var AllPlantOneDataAdapter = new $.jqx.dataAdapter({
         localdata: data,
         datafields: [
             {name: "Date", type: "string"},
@@ -57,8 +58,8 @@ function PlantOneAllDetails(data) {
     });
 
     /* chart settings */
-    var AllChartSettings = {
-        source: AllDataAdapter,
+    var AllPlantOneChartSettings = {
+        source: AllPlantOneDataAdapter,
         title: "Plant 1 All",
         description: "",
         showToolTips: true,
@@ -127,7 +128,7 @@ function PlantOneAllDetails(data) {
             }
         ]
     };
-    $('#plant1AllChart').jqxChart(AllChartSettings);
+    $('#plant1AllChart').jqxChart(AllPlantOneChartSettings);
 
 }
 

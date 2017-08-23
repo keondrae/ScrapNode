@@ -14,43 +14,42 @@ var Windows787Array = [];
 var BSIWindowsArray = [];
 var AllWindowsArray = [];
 
-router.get('/:year/:tab', function(req, res, next) {
+router.get('/:tab', function(req, res, next) {
     DataArray = [];
-    var Year = req.params.year;
     var Tab = req.params.tab;
 
     switch (Tab){
 
         case 'All':
-            PlantThreeAll(Year, db, connectionString, res);
+            PlantThreeAll(db, connectionString, res);
             //All
             break;
         case 'P8':
-            PlantThreeP8(Year, db, connectionString, res);
+            PlantThreeP8(db, connectionString, res);
             //P8
             break;
         case 'PrimaryOps':
-            PlantThreePrimaryOps(Year, db, connectionString, res);
+            PlantThreePrimaryOps(db, connectionString, res);
             //PrimaryOps
             break;
         case 'Sleeves':
-            PlantThreeSleeves(Year, db, connectionString, res);
+            PlantThreeSleeves(db, connectionString, res);
             //Sleeves
             break;
         case 'Windows737':
-            PlantThreeWindows737(Year, db, connectionString, res);
+            PlantThreeWindows737(db, connectionString, res);
             //Windows737
             break;
         case 'Windows787':
-            PlantThreeWindows787(Year, db, connectionString, res);
+            PlantThreeWindows787(db, connectionString, res);
             //Windows787
             break;
         case 'BSIWindows':
-            PlantThreeBSIWindows(Year, db, connectionString, res);
+            PlantThreeBSIWindows(db, connectionString, res);
             //BSIWindows
             break;
         case 'AllWindows':
-            PlantThreeAllWindows(Year, db, connectionString, res);
+            PlantThreeAllWindows(db, connectionString, res);
             //AllWindows
             break;
     }
@@ -60,7 +59,7 @@ module.exports = router;
 
 //Start of Plant Three Functions
 //Done
-function PlantThreeAll(Year, db, connectionString, res) {
+function PlantThreeAll(db, connectionString, res) {
     console.log('Plant Three All');
     var Array02 = [];
     var Array24 = [];
@@ -1130,7 +1129,7 @@ function PlantThreeAll(Year, db, connectionString, res) {
     });
 }
 //Done
-function PlantThreeP8(Year, db, connectionString, res) {
+function PlantThreeP8(db, connectionString, res) {
     console.log('Plant Three P8');
     P8Array = [];
     DataArray = [];
@@ -1267,7 +1266,7 @@ function PlantThreeP8(Year, db, connectionString, res) {
 
 }
 //Done
-function PlantThreePrimaryOps(Year, db, connectionString, res) {
+function PlantThreePrimaryOps(db, connectionString, res) {
     console.log('Plant Three Primary Ops');
     var Array02 = [];
     var Array24 = [];
@@ -1615,7 +1614,7 @@ function PlantThreePrimaryOps(Year, db, connectionString, res) {
     });
 }
 //Done
-function PlantThreeSleeves(Year, db, connectionString, res) {
+function PlantThreeSleeves(db, connectionString, res) {
     SleevesArray = [];
     DataArray = [];
     console.log('Plant Three Sleeves');
@@ -1752,7 +1751,7 @@ function PlantThreeSleeves(Year, db, connectionString, res) {
     });
 }
 //Done
-function PlantThreeWindows737(Year, db, connectionString, res) {
+function PlantThreeWindows737(db, connectionString, res) {
     Windows737Array = [];
     console.log('Plant Three Windows 737');
     db.open(connectionString, function (err) {
@@ -1883,7 +1882,7 @@ function PlantThreeWindows737(Year, db, connectionString, res) {
 
 }
 //Done
-function PlantThreeWindows787(Year, db, connectionString, res) {
+function PlantThreeWindows787(db, connectionString, res) {
     Windows787Array = [];
     console.log('Plant Three Windows 787');
     db.open(connectionString, function (err) {
@@ -2014,7 +2013,7 @@ function PlantThreeWindows787(Year, db, connectionString, res) {
     });
 }
 //Done
-function PlantThreeBSIWindows(Year, db, connectionString, res) {
+function PlantThreeBSIWindows(db, connectionString, res) {
     console.log('Plant Three BSI Windows');
     BSIWindowsArray = [];
     db.open(connectionString, function (err) {
@@ -2147,7 +2146,7 @@ function PlantThreeBSIWindows(Year, db, connectionString, res) {
     });
 }
 //Done
-function PlantThreeAllWindows(Year, db, connectionString, res) {
+function PlantThreeAllWindows(db, connectionString, res) {
     console.log('Plant Three All Windows');
     var Array07 = [];
     var Array09 = [];

@@ -13,7 +13,7 @@ var AssemblysArray = [];
 var SpaceArray = [];
 var OthersArray = [];
 
-router.get('/:year/:tab', function(req, res, next) {
+router.get('/:tab', function(req, res, next) {
 
     DataArray = [];
     //var Year = req.params.year;
@@ -22,31 +22,31 @@ router.get('/:year/:tab', function(req, res, next) {
     switch (Tab){
 
         case 'Duct':
-            PlantOneDuct(Year, db, connectionString, res);
+            PlantOneDuct(db, connectionString, res);
             //Duct
             break;
         case 'Tubes':
-            PlantOneTubes(Year, db, connectionString, res);
+            PlantOneTubes(db, connectionString, res);
             //Tubes
             break;
         case 'Covers':
-            PlantOneCovers(Year, db, connectionString, res);
+            PlantOneCovers(db, connectionString, res);
             //Covers
             break;
         case 'Assembly':
-            PlantOneAssembly(Year, db, connectionString, res);
+            PlantOneAssembly(db, connectionString, res);
             //Assembly
             break;
         case 'Other':
-            PlantOneOthers(Year, db, connectionString, res);
+            PlantOneOthers(db, connectionString, res);
             //Other
             break;
         case 'All':
-            PlantOneAll(Year, db, connectionString, res);
+            PlantOneAll(db, connectionString, res);
             //All
             break;
         case 'Space':
-            PlantOneSpace(Year, db, connectionString, res);
+            PlantOneSpace(db, connectionString, res);
             //Space
             break;
     }
@@ -57,7 +57,7 @@ module.exports = router;
 
 //Start of Plant One Functions
 //Done
-function PlantOneAll(Year, db, connectionString, res) {
+function PlantOneAll(db, connectionString, res) {
     console.log('Plant One All');
     var Array16 = [];
     var Array08 = [];
@@ -998,7 +998,7 @@ function PlantOneAll(Year, db, connectionString, res) {
     });
 }
 //Done
-function PlantOneDuct(Year, db, connectionString, res) {
+function PlantOneDuct(db, connectionString, res) {
     console.log('Plant One Duct');
     var Array08 = [];
     var Array15 = [];
@@ -1207,7 +1207,7 @@ function PlantOneDuct(Year, db, connectionString, res) {
     });
 }
 //Done
-function PlantOneTubes(Year, db, connectionString, res) {
+function PlantOneTubes(db, connectionString, res) {
     console.log('Plant One Tubes');
     TubesArray = [];
     DataArray = [];
@@ -1339,7 +1339,7 @@ function PlantOneTubes(Year, db, connectionString, res) {
     });
 }
 //Done
-function PlantOneCovers(Year, db, connectionString, res) {
+function PlantOneCovers(db, connectionString, res) {
     console.log('Plant One Covers');
     CoversArray = [];
     DataArray = [];
@@ -1470,7 +1470,7 @@ function PlantOneCovers(Year, db, connectionString, res) {
     });
 }
 //Done
-function PlantOneAssembly(Year, db, connectionString, res) {
+function PlantOneAssembly(db, connectionString, res) {
     console.log('Plant One Assembly');
     var Array82 = [];
     var Array20 = [];
@@ -1763,7 +1763,7 @@ function PlantOneAssembly(Year, db, connectionString, res) {
     });
 }
 //Done
-function PlantOneSpace(Year, db, connectionString, res) {
+function PlantOneSpace(db, connectionString, res) {
     console.log('Plant One Space');
     SpaceArray = [];
     DataArray = [];
@@ -1904,7 +1904,7 @@ function PlantOneSpace(Year, db, connectionString, res) {
 
 }
 //Done
-function PlantOneOthers(Year, db, connectionString, res) {
+function PlantOneOthers(db, connectionString, res) {
     console.log('Plant One Other');
     var Array17 = [];
     var Array19 = [];

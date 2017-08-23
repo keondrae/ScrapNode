@@ -11,15 +11,14 @@ var PlantTwoArray = [];
 var PlantThreeArray = [];
 
 /* GET users listing. */
-router.get('/:year', function(req, res, next) {
+router.get('/', function(req, res, next) {
     DataArray = [];
     PlantThreeArray = [];
     PlantTwoArray = [];
     PlantOneArray = [];
-    var Year = req.params.year;
 
     najax({ // Plant One
-        url:'http://localhost:3000/plantOneFetch/' + Year + '/All',
+        url:'http://localhost:3000/plantOneFetch/All',
         type:'GET',
         dataType: 'json',
         async: false,
@@ -40,7 +39,7 @@ router.get('/:year', function(req, res, next) {
 
         }
         najax({ //Plant Two
-            url:'http://localhost:3000/plantTwoFetch/' + Year + '/All',
+            url:'http://localhost:3000/plantTwoFetch/All',
             type:'GET',
             dataType: 'json',
             async: true,
@@ -61,7 +60,7 @@ router.get('/:year', function(req, res, next) {
             }
 
             najax({
-                url:'http://localhost:3000/plantThreeFetch/' + Year + '/All',
+                url:'http://localhost:3000/plantThreeFetch/All',
                 type:'GET',
                 dataType: 'json',
                 async: false,

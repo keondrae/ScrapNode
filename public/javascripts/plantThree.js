@@ -52,7 +52,7 @@ function PlantThreeAllDetails(data) {
     console.log("Plant 3 All method Called");
     //Chart
     /* data adapter settings */
-    var AllDataAdapter = new $.jqx.dataAdapter({
+    var AllPlantThreeDataAdapter = new $.jqx.dataAdapter({
         localdata: data,
         datafields: [
             {name: "Date", type: "string"},
@@ -61,8 +61,8 @@ function PlantThreeAllDetails(data) {
     });
 
     /* chart settings */
-    var AllChartSettings = {
-        source: AllDataAdapter,
+    var AllPlantThreeChartSettings = {
+        source: AllPlantThreeDataAdapter,
         title: "Plant 3 All",
         description: "",
         showToolTips: true,
@@ -131,7 +131,7 @@ function PlantThreeAllDetails(data) {
             }
         ]
     };
-    $('#plant3AllChart').jqxChart(AllChartSettings);
+    $('#plant3AllChart').jqxChart(AllPlantThreeChartSettings);
     //End of Chart
 
 }

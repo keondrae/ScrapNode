@@ -56,6 +56,7 @@ $('#searchButton').click(function () {
 });
 
 $('#AllPlantButton').click(function () {
+    $('#GridForEverything').jqxGrid('removefilter', 'AccountNumber');
     console.log(this.id + ' :Clicked');
     NonActive();
     $('#AllPlantButton').addClass('active');
@@ -69,6 +70,7 @@ $('#AllPlantButton').click(function () {
 });
 
 $('#plant1Button').click(function () {
+    $('#GridForEverything').jqxGrid('removefilter', 'AccountNumber');
     console.log(this.id + ' :Clicked');
     NonActive();
     $('#plant1Button').addClass('active');
@@ -82,6 +84,7 @@ $('#plant1Button').click(function () {
 });
 
 $('#plant2Button').click(function () {
+    $('#GridForEverything').jqxGrid('removefilter', 'AccountNumber');
     console.log(this.id + ' :Clicked');
     NonActive();
     $('#plant2Button').addClass('active');
@@ -95,6 +98,7 @@ $('#plant2Button').click(function () {
 });
 
 $('#hqButton').click(function () {
+    $('#GridForEverything').jqxGrid('removefilter', 'AccountNumber');
     console.log(this.id + ' :Clicked');
     NonActive();
     $('#hqButton').addClass('active');

@@ -7,20 +7,19 @@
   },
   "dependencies": {
     "body-parser": "1.17.1",
-    "chart.js": "2.6.0",
     "cookie-parser": "1.4.3",
     "debug": "2.6.3",
     "express": "4.15.2",
     "jade": "1.11.0",
-    "moment": "2.18.1",
+    "moment": "2.18.1", //Used to format time
     "morgan": "1.8.1",
-    "msnodesqlv8": "0.3.1",
-    "mssql": "3.3.0",
-    "odbc": "latest",
+    "msnodesqlv8": "0.3.1", //Used as a driver for mssql connection *Uses Windows login*
+    "mssql": "3.3.0", //Used to connect via mssql connection
+    "odbc": "latest", //Used to connect via ODBC connection
     "requirejs": "2.3.3",
     "serve-favicon": "2.4.2",
     "request": "2.81.0",
     "jquery": "3.2.1",
-    "najax": "1.0.3"
+    "najax": "1.0.3" //Used In the PlantAllFetch.js file to call the Plant One, Two, and Three All Functions
   }
 }

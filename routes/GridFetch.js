@@ -6,10 +6,9 @@ var connectionString ="Driver={SQL Server};Server=tf-sql-01;Database=MAS_TFI";
 var db = new odbc.Database();
 var DataArray = [];
 
-router.get('/:year', function(req, res, next) {
+router.get('/', function(req, res, next) {
      DataArray = [];
 
-    var Year = req.params.year;
     db.open(connectionString, function (err) {
 
         if (err) {
@@ -25,7 +24,7 @@ router.get('/:year', function(req, res, next) {
             "INNER JOIN CI_ITEM ON IM_ItemTransactionHistory.ItemCode = CI_ITEM.ItemCode\n" +
             "INNER JOIN SY_User ON IM_ItemTransactionHistory.UserUpdatedKey = SY_User.UserKey\n" +
             "INNER JOIN GL_Account ON IM_ItemTransactionHistory.UDF_GL_ACCOUNT_KEY = GL_Account.AccountKey\n" +
-            "WHERE MainAccountCode = 5010 AND FiscalCalYear >= 2015";
+            "WHERE MainAccountCode = 5010 AND FiscalCalYear >= 2014";
 
         db.query(sql, function (err, rows, moreResultSets) {
 

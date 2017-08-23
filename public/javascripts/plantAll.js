@@ -12,10 +12,12 @@ var dd = today.getDate();
 var mm = today.getMonth() + 1; //January is 0!
 var yyyy = today.getFullYear();
 var prvYear = yyyy - 1;
-var prvTwoYr = yyyy - 2;
+var prvYrs;
 var currentDate;
 var lastYear;
-var twoYearsAgo;
+var YearsAgo;
+var numberOfYearsAgo;
+var intv;
 
 if(dd < 10){
     dd = '0' + dd
@@ -24,9 +26,14 @@ if(dd < 10){
 if(mm < 10){
     mm = '0' + mm
 }
+
+numberOfYearsAgo = 2;
+intv = numberOfYearsAgo - 1;
+prvYrs = yyyy - numberOfYearsAgo;
+
 currentDate = mm + '/' + '01' + '/' + yyyy;
 lastYear = mm + '/' + '01' + '/' + prvYear;
-twoYearsAgo = '01/01' + '/' + prvTwoYr;
+YearsAgo = '01/01' + '/' + prvYrs;
 
 
 //console.log(dd);
@@ -38,7 +45,7 @@ twoYearsAgo = '01/01' + '/' + prvTwoYr;
 
 var MinDate = currentDate;
 var MaxDate = lastYear;
-var MinValueRange = twoYearsAgo;
+var MinValueRange = YearsAgo;
 
 function PlantAllDetails(data) {
 
@@ -87,7 +94,7 @@ function PlantAllDetails(data) {
             valuesOnTicks: false,
             minValue: MinDate,
             maxValue: MaxDate,
-            unitInterval: 1,
+            unitInterval: intv,
             rangeSelector: {
                 size: 100,
                 padding: {left: 0, right: 30 ,top: 0, bottom: 0},
@@ -185,5 +192,5 @@ function getTotal(itemIndex, AllDataAdapter) {
     var plantTwo = parseInt(AllDataAdapter.loadedData[itemIndex].PlantTwoBal);
     var plantThree = parseInt(AllDataAdapter.loadedData[itemIndex].PlantThreeBal);
     var total = plantOne + plantTwo + plantThree;
-    return total;
+    return '$'+ total;
 }

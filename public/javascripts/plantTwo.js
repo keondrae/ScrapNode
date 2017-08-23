@@ -50,7 +50,7 @@ function PlantTwoAllDetails(data) {
     console.log("Plant 2 All method Called");
     //Chart
     /* data adapter settings */
-    var AllDataAdapter = new $.jqx.dataAdapter({
+    var AllPlantTwoDataAdapter = new $.jqx.dataAdapter({
         localdata: data,
         datafields: [
             {name: "Date", type: "string"},
@@ -60,8 +60,8 @@ function PlantTwoAllDetails(data) {
     });
 
     /* chart settings */
-    var AllChartSettings = {
-        source: AllDataAdapter,
+    var AllPlantTwoChartSettings = {
+        source: AllPlantTwoDataAdapter,
         title: "Plant 2 All",
         description: "",
         showToolTips: true,
@@ -130,7 +130,7 @@ function PlantTwoAllDetails(data) {
             }
         ]
     };
-    $('#plant2AllChart').jqxChart(AllChartSettings);
+    $('#plant2AllChart').jqxChart(AllPlantTwoChartSettings);
     //End of Chart
 
 

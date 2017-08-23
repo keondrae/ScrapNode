@@ -9,27 +9,26 @@ var PlantTwoAllArray = [];
 var PlenumsArray = [];
 var FlexHCapsArray = [];
 var DownersArray = [];
-router.get('/:year/:tab', function(req, res, next) {
+router.get('/:tab', function(req, res, next) {
     DataArray = [];
-    var Year = req.params.year;
     var Tab = req.params.tab;
 
     switch (Tab){
 
         case 'All':
-            PlantTwoAll(Year, db, connectionString, res);
+            PlantTwoAll(db, connectionString, res);
             //All
             break;
         case 'Plenums':
-            PlantTwoPlenums(Year, db, connectionString, res);
+            PlantTwoPlenums(db, connectionString, res);
             //Plenums
             break;
         case 'FlexHCaps':
-            PlantTwoFlexHCaps(Year, db, connectionString, res);
+            PlantTwoFlexHCaps(db, connectionString, res);
             //FlexHCaps
             break;
         case 'Downers':
-            PlantTwoDowners(Year, db, connectionString, res);
+            PlantTwoDowners(db, connectionString, res);
             //Downers
             break;
     }
@@ -39,7 +38,7 @@ module.exports = router;
 
 //Start of Plant Two Functions
 //Done
-function PlantTwoAll(Year, db, connectionString, res) {
+function PlantTwoAll(db, connectionString, res) {
     console.log('Plant Two All');
     PlantTwoAllArray = [];
     DataArray = [];
@@ -289,7 +288,7 @@ function PlantTwoAll(Year, db, connectionString, res) {
     });
 }
 //Done
-function PlantTwoPlenums(Year, db, connectionString, res) {
+function PlantTwoPlenums(db, connectionString, res) {
     console.log('Plant Two Plenums');
     PlenumsArray = [];
     DataArray = [];
@@ -422,7 +421,7 @@ function PlantTwoPlenums(Year, db, connectionString, res) {
 
 }
 //Done
-function PlantTwoFlexHCaps(Year, db, connectionString, res) {
+function PlantTwoFlexHCaps(db, connectionString, res) {
     console.log('Plant Two Flex Hose / Caps');
     FlexHCapsArray = [];
     DataArray = [];
@@ -554,7 +553,7 @@ function PlantTwoFlexHCaps(Year, db, connectionString, res) {
 
 }
 //Done
-function PlantTwoDowners(Year, db, connectionString, res) {
+function PlantTwoDowners(db, connectionString, res) {
     console.log('Downers');
     DownersArray = [];
     DataArray = [];

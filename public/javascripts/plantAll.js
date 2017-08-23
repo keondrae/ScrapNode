@@ -1,53 +1,10 @@
 /**
  * Created by kmell on 6/30/2017.
  */
-/*
-//Test Vars
-var dd = 9;
-var mm = 11 + 1; //January is 0!
-var yyyy = 2020;
-*/
-var today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth() + 1; //January is 0!
-var yyyy = today.getFullYear();
-var prvYear = yyyy - 1;
-var prvYrs;
-var currentDate;
-var lastYear;
-var YearsAgo;
-var numberOfYearsAgo;
-var intv;
-
-if(dd < 10){
-    dd = '0' + dd
-}
-
-if(mm < 10){
-    mm = '0' + mm
-}
-
-numberOfYearsAgo = 2;
-intv = numberOfYearsAgo - 1;
-prvYrs = yyyy - numberOfYearsAgo;
-
-currentDate = mm + '/' + '01' + '/' + yyyy;
-lastYear = mm + '/' + '01' + '/' + prvYear;
-YearsAgo = '01/01' + '/' + prvYrs;
 
 
-//console.log(dd);
-//console.log(mm);
-//console.log(yyyy);
-//console.log(currentDate);
-//console.log(lastYear);
-//console.log(twoYearsAgo);
 
-var MinDate = currentDate;
-var MaxDate = lastYear;
-var MinValueRange = YearsAgo;
-
-function PlantAllDetails(data) {
+function PlantAllDetails(data, unitInterval, MinValueRange, MinDate, MaxDate) {
 
     //Start of Chart
     console.log("Plant All method Called");
@@ -94,7 +51,7 @@ function PlantAllDetails(data) {
             valuesOnTicks: false,
             minValue: MinDate,
             maxValue: MaxDate,
-            unitInterval: intv,
+            unitInterval: unitInterval,
             rangeSelector: {
                 size: 100,
                 padding: {left: 0, right: 30 ,top: 0, bottom: 0},

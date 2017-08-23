@@ -7,8 +7,8 @@ $('#Search').dialog({
     resizable: false,
     autoOpen: false,
     modal: true,
-    width: 400,
-    height: 150
+    width: 410,
+    height: 'auto'
 });
 
 $('#Years').selectmenu();
@@ -19,7 +19,7 @@ $('#ChangeLog').dialog({
     resizable: false,
     autoOpen: false,
     modal: true,
-    width: 400,
+    width: 410,
     height: 'auto'
 });
 

@@ -6,46 +6,8 @@ var xValue = -5;
 var yValue = -17;
 var xValueAll = -5;
 var yValueAll = -17;
-/*
-//Test Vars
-var dd = 9;
-var mm = 11 + 1; //January is 0!
-var yyyy = 2020;
-*/
-var today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth() + 1; //January is 0!
-var yyyy = today.getFullYear();
-var prvYear = yyyy - 1;
-var prvTwoYr = yyyy - 2;
-var currentDate;
-var lastYear;
-var twoYearsAgo;
 
-if(dd < 10){
-    dd = '0' + dd
-}
-
-if(mm < 10){
-    mm = '0' + mm
-}
-currentDate = mm + '/' + '01' + '/' + yyyy;
-lastYear = mm + '/' + '01' + '/' + prvYear;
-twoYearsAgo = '01/01' + '/' + prvTwoYr;
-
-
-//console.log(dd);
-//console.log(mm);
-//console.log(yyyy);
-//console.log(currentDate);
-//console.log(lastYear);
-//console.log(twoYearsAgo);
-
-var MinDate = lastYear ;
-var MaxDate = currentDate;
-var MinValueRange = twoYearsAgo;
-
-function PlantOneAllDetails(data) {
+function PlantOneAllDetails(data, unitInterval, MinValueRange, MinDate, MaxDate) {
     console.log("Plant 1 All method Called");
     //Chart
     /* data adapter settings */
@@ -86,7 +48,7 @@ function PlantOneAllDetails(data) {
             valuesOnTicks: false,
             minValue: MinDate,
             maxValue: MaxDate,
-            unitInterval: 1,
+            unitInterval: unitInterval,
             rangeSelector: {
                 size: 100,
                 padding: {left: 0, right: 30, top: 0, bottom: 0},
@@ -132,7 +94,7 @@ function PlantOneAllDetails(data) {
 
 }
 
-function PlantOneDuctDetails(data) {
+function PlantOneDuctDetails(data, unitInterval, MinValueRange, MinDate, MaxDate) {
     console.log("Plant 1 Duct method Called");
     //Chart
     /* data adapter settings */
@@ -174,7 +136,7 @@ function PlantOneDuctDetails(data) {
             valuesOnTicks: false,
             minValue: MinDate,
             maxValue: MaxDate,
-            unitInterval: 1,
+            unitInterval: unitInterval,
             rangeSelector: {
                 size: 100,
                 padding: {left: 0, right: 30, top: 0, bottom: 0},
@@ -231,7 +193,7 @@ function PlantOneDuctDetails(data) {
 
 }
 
-function PlantOneTubeDetails(data) {
+function PlantOneTubeDetails(data, unitInterval, MinValueRange, MinDate, MaxDate) {
     console.log("Plant 1 Tube method Called");
 
     /* data adapter settings */
@@ -273,7 +235,7 @@ function PlantOneTubeDetails(data) {
             valuesOnTicks: false,
             minValue: MinDate,
             maxValue: MaxDate,
-            unitInterval: 1,
+            unitInterval: unitInterval,
             rangeSelector: {
                 size: 100,
                 padding: {left: 0, right: 30, top: 0, bottom: 0},
@@ -332,7 +294,7 @@ function PlantOneTubeDetails(data) {
 
 }
 
-function PlantOneCoversDetails(data) {
+function PlantOneCoversDetails(data, unitInterval, MinValueRange, MinDate, MaxDate) {
     console.log("Plant 1 Covers method Called");
     /* data adapter settings */
     var CoversDataAdapter = new $.jqx.dataAdapter({
@@ -373,7 +335,7 @@ function PlantOneCoversDetails(data) {
             valuesOnTicks: false,
             minValue: MinDate,
             maxValue: MaxDate,
-            unitInterval: 1,
+            unitInterval: unitInterval,
             rangeSelector: {
                 size: 100,
                 padding: {left: 0, right: 30, top: 0, bottom: 0},
@@ -431,7 +393,7 @@ function PlantOneCoversDetails(data) {
 
 }
 
-function PlantOneAssemblyDetails(data) {
+function PlantOneAssemblyDetails(data, unitInterval, MinValueRange, MinDate, MaxDate) {
     console.log("Plant 1 Assembly method Called");
     /* data adapter settings */
     var AssemblyDataAdapter = new $.jqx.dataAdapter({
@@ -472,7 +434,7 @@ function PlantOneAssemblyDetails(data) {
             valuesOnTicks: false,
             minValue: MinDate,
             maxValue: MaxDate,
-            unitInterval: 1,
+            unitInterval: unitInterval,
             rangeSelector: {
                 size: 100,
                 padding: {left: 0, right: 30, top: 0, bottom: 0},
@@ -531,7 +493,7 @@ function PlantOneAssemblyDetails(data) {
 
 }
 
-function PlantOneSpaceDetails(data) {
+function PlantOneSpaceDetails(data, unitInterval, MinValueRange, MinDate, MaxDate) {
     console.log("Plant 1 Space method Called");
     /* data adapter settings */
     var SpaceDataAdapter = new $.jqx.dataAdapter({
@@ -572,7 +534,7 @@ function PlantOneSpaceDetails(data) {
             valuesOnTicks: false,
             minValue: MinDate,
             maxValue: MaxDate,
-            unitInterval: 1,
+            unitInterval: unitInterval,
             rangeSelector: {
                 size: 100,
                 padding: {left: 0, right: 30, top: 0, bottom: 0},
@@ -631,7 +593,7 @@ function PlantOneSpaceDetails(data) {
 
 }
 
-function PlantOneOtherDetails(data) {
+function PlantOneOtherDetails(data, unitInterval, MinValueRange, MinDate, MaxDate) {
     console.log("Plant 1 Others method Called");
     /* data adapter settings */
     var OtherDataAdapter = new $.jqx.dataAdapter({
@@ -672,7 +634,7 @@ function PlantOneOtherDetails(data) {
             valuesOnTicks: false,
             minValue: MinDate,
             maxValue: MaxDate,
-            unitInterval: 1,
+            unitInterval: unitInterval,
             rangeSelector: {
                 size: 100,
                 padding: {/*left: 0, right: 0,*/top: 0, bottom: 0},

@@ -59,8 +59,13 @@ script(type='text/javascript').
         //End of Plant calls
 
         //Start of other Calls
-        $.ajax({ // Plant Three Call
+        $.ajax({ // - Call
             url: '../javascripts/TopSecret.js',
+            async: false,
+            cache: false
+        });
+        $.ajax({ // Slider Call
+            url: '../javascripts/sliders.js',
             async: false,
             cache: false
         });

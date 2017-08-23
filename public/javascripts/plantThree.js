@@ -6,47 +6,10 @@ var xValue = -5;
 var yValue = -17;
 var xValueAll = -5;
 var yValueAll = -17;
-/*
-//Test Vars
-var dd = 9;
-var mm = 11 + 1; //January is 0!
-var yyyy = 2020;
-*/
-var today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth() + 1; //January is 0!
-var yyyy = today.getFullYear();
-var prvYear = yyyy - 1;
-var prvTwoYr = yyyy - 2;
-var currentDate;
-var lastYear;
-var twoYearsAgo;
-
-if(dd < 10){
-    dd = '0' + dd
-}
-
-if(mm < 10){
-    mm = '0' + mm
-}
-currentDate = mm + '/' + '01' + '/' + yyyy;
-lastYear = mm + '/' + '01' + '/' + prvYear;
-twoYearsAgo = '01/01' + '/' + prvTwoYr;
 
 
-//console.log(dd);
-//console.log(mm);
-//console.log(yyyy);
-//console.log(currentDate);
-//console.log(lastYear);
-//console.log(twoYearsAgo);
 
-var MinDate = lastYear;
-var MaxDate = currentDate;
-var MinValueRange = twoYearsAgo;
-
-
-function PlantThreeAllDetails(data) {
+function PlantThreeAllDetails(data, unitInterval, MinValueRange, MinDate, MaxDate) {
 
     //Start of Chart
     console.log("Plant 3 All method Called");
@@ -89,7 +52,7 @@ function PlantThreeAllDetails(data) {
             valuesOnTicks: false,
             minValue: MinDate,
             maxValue: MaxDate,
-            unitInterval: 1,
+            unitInterval: unitInterval,
             rangeSelector: {
                 size: 100,
                 padding: {left: 0, right: 30, top: 0, bottom: 0},
@@ -136,7 +99,7 @@ function PlantThreeAllDetails(data) {
 
 }
 
-function PlantThreeP8Details(data){
+function PlantThreeP8Details(data, unitInterval, MinValueRange, MinDate, MaxDate){
 
     //Start of Chart
     console.log("Plant 3 P8 method Called");
@@ -180,7 +143,7 @@ function PlantThreeP8Details(data){
             valuesOnTicks: false,
             minValue: MinDate,
             maxValue: MaxDate,
-            unitInterval: 1,
+            unitInterval: unitInterval,
             rangeSelector: {
                 size: 100,
                 padding: {left: 0, right: 30, top: 0, bottom: 0},
@@ -238,7 +201,7 @@ function PlantThreeP8Details(data){
 
 }
 
-function PlantThreePrimaryOpsDetails(data) {
+function PlantThreePrimaryOpsDetails(data, unitInterval, MinValueRange, MinDate, MaxDate) {
 
     //Start of Chart
     console.log("Plant 3 Primary Ops method Called");
@@ -282,7 +245,7 @@ function PlantThreePrimaryOpsDetails(data) {
             valuesOnTicks: false,
             minValue: MinDate,
             maxValue: MaxDate,
-            unitInterval: 1,
+            unitInterval: unitInterval,
             rangeSelector: {
                 size: 100,
                 padding: {left: 0, right: 30 ,top: 0, bottom: 0},
@@ -340,7 +303,7 @@ function PlantThreePrimaryOpsDetails(data) {
 
 }
 
-function PlantThreeSleevesDetails(data) {
+function PlantThreeSleevesDetails(data, unitInterval, MinValueRange, MinDate, MaxDate) {
 
     //Start of Chart
     console.log("Plant 2 Sleeves method Called");
@@ -384,7 +347,7 @@ function PlantThreeSleevesDetails(data) {
             valuesOnTicks: false,
             minValue: MinDate,
             maxValue: MaxDate,
-            unitInterval: 1,
+            unitInterval: unitInterval,
             rangeSelector: {
                 size: 100,
                 padding: {left: 0, right: 30, top: 0, bottom: 0},
@@ -443,7 +406,7 @@ function PlantThreeSleevesDetails(data) {
 
 }
 
-function PlantThree737WindowsDetails(data) {
+function PlantThree737WindowsDetails(data, unitInterval, MinValueRange, MinDate, MaxDate) {
 
     //Start of Chart
     console.log("Plant 3 737 Windows method Called");
@@ -487,7 +450,7 @@ function PlantThree737WindowsDetails(data) {
             valuesOnTicks: false,
             minValue: MinDate,
             maxValue: MaxDate,
-            unitInterval: 1,
+            unitInterval: unitInterval,
             rangeSelector: {
                 size: 100,
                 padding: {left: 0, right: 30, top: 0, bottom: 0},
@@ -545,7 +508,7 @@ function PlantThree737WindowsDetails(data) {
 
 }
 
-function PlantThree787WindowsDetails(data) {
+function PlantThree787WindowsDetails(data, unitInterval, MinValueRange, MinDate, MaxDate) {
 
     //Start of Chart
     console.log("Plant 3 787 Windows method Called");
@@ -598,7 +561,7 @@ function PlantThree787WindowsDetails(data) {
                 dataField: 'Date',
                 baseUnit: 'month',
                 gridLines: {visible: true},
-                unitInterval: 1,
+                unitInterval: unitInterval,
                 serieType: 'area',
                 minorTicksInterval: 1,
                 labels: {
@@ -647,7 +610,7 @@ function PlantThree787WindowsDetails(data) {
 
 }
 
-function PlantThreeBSIWindowsDetails(data) {
+function PlantThreeBSIWindowsDetails(data, unitInterval, MinValueRange, MinDate, MaxDate) {
 
     //Start of Chart
     console.log("Plant 3 BSI Windows method Called");
@@ -691,7 +654,7 @@ function PlantThreeBSIWindowsDetails(data) {
             valuesOnTicks: false,
             minValue: MinDate,
             maxValue: MaxDate,
-            unitInterval: 1,
+            unitInterval: unitInterval,
             rangeSelector: {
                 size: 100,
                 padding: {left: 0, right: 30, top: 0, bottom: 0},
@@ -749,7 +712,7 @@ function PlantThreeBSIWindowsDetails(data) {
 
 }
 
-function PlantThreeAllWindowsDetails(data) {
+function PlantThreeAllWindowsDetails(data, unitInterval, MinValueRange, MinDate, MaxDate) {
 
     //Start of Chart
     console.log("Plant 3 All Windows method Called");
@@ -802,7 +765,7 @@ function PlantThreeAllWindowsDetails(data) {
                 dataField: 'Date',
                 baseUnit: 'month',
                 gridLines: {visible: true},
-                unitInterval: 1,
+                unitInterval: unitInterval,
                 serieType: 'area',
                 minorTicksInterval: 1,
                 labels: {

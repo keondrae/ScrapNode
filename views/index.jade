@@ -26,13 +26,10 @@ block content
     //End of Header
 
     //Start of Windows
-    div(id='Search' title='Years' class='HideOnStart')
-        p()= 'Please select how many years you want to go back.'
-        select(id="Years")
-            option(value='2017')= '2017'
-            option(value='2016')= '2016'
-            option(value='2015')= '2015'
-            option(value='2014')= '2014'
+    div(id='Search' title='Years Change' class='HideOnStart')
+        p(id='SearchTitle')= 'Please select how many years you want to go back.'
+        div(id='NumSel')
+            div(id="custom-handle" class="ui-slider-handle")
         button(id='SelectYear' class='HideOnStart')= 'Select'
 
     div(id='ChangeLog' title='Change Log' class='HideOnStart')
@@ -182,7 +179,17 @@ block content
         var mm = today.getMonth() + 1; //January is 0!
         var yyyy = today.getFullYear();
         var TodayDate;
+        var currentDate;
+        var prvYear = yyyy - 1;
+        var prvYrs;
         var numberOfYearsAgo;
+        var unitInterval;
+        var lastYear;
+        var YearsAgo;
+        var MinDate;
+        var MaxDate;
+        var MinValueRange;
+
         switch(mm){
             case 1:
                 TodayDate = '1' + '-' + 'Jan' + '-' + yyyy;
@@ -222,13 +229,34 @@ block content
                 break;
         }
 
-        Year = $('#Years').val();
-        console.log('Year: ' + Year);
+        if (mm < 10) {
+            mm = '0' + mm
+        }
+
+        numberOfYearsAgo = $('#NumSel').slider( 'value');
+        unitInterval = numberOfYearsAgo - 1;
+        prvYrs = yyyy - numberOfYearsAgo;
+
+        currentDate = mm + '/' + '01' + '/' + yyyy;
+        lastYear = mm + '/' + '01' + '/' + prvYear;
+        YearsAgo = '01/01' + '/' + prvYrs;
+
+        MaxDate = currentDate;
+        MinDate = lastYear;
+        MinValueRange = YearsAgo;
+
+        console.log('Years Ago ' + numberOfYearsAgo);
+        console.log(currentDate);
+        console.log(lastYear);
+        console.log(MinDate);
+        console.log(MaxDate);
+        console.log(MinValueRange);
+        console.log(unitInterval);
         GridFetch();
-        plantAllDataFetch();
-        plantOneDataFetch();
-        plantTwoDataFetch();
-        plantThreeDataFetch();
+        plantAllDataFetch(unitInterval, MinValueRange, MinDate, MaxDate);
+        plantOneDataFetch(unitInterval, MinValueRange, MinDate, MaxDate);
+        plantTwoDataFetch(unitInterval, MinValueRange, MinDate, MaxDate);
+        plantThreeDataFetch(unitInterval, MinValueRange, MinDate, MaxDate);
         HideTabs();
         $('.data').jqxChart('refresh');
         $('#plantAll').show();
@@ -576,16 +604,24 @@ block content
         })
 
         $('#SelectYear').click( function () {
-            Year = $('#Years').val();
-            console.log('New Year ' + Year);
+            numberOfYearsAgo = $('#NumSel').slider( 'value');
             $('#Search').dialog('close');
-            //GridFetch(Year);
-            //plantAllDataFetch(Year);
-            //plantOneDataFetch(Year);
-            //plantTwoDataFetch(Year);
-            //plantThreeDataFetch(Year);
+            unitInterval = numberOfYearsAgo - 1;
+            prvYrs = yyyy - numberOfYearsAgo;
+
+            currentDate = mm + '/' + '01' + '/' + yyyy;
+            lastYear = mm + '/' + '01' + '/' + prvYear;
+            YearsAgo = '01/01' + '/' + prvYrs;
+
+            MaxDate = currentDate;
+            MinDate = lastYear;
+            MinValueRange = YearsAgo;
+            plantAllDataFetch(unitInterval, MinValueRange, MinDate, MaxDate);
+            plantOneDataFetch(unitInterval, MinValueRange, MinDate, MaxDate);
+            plantTwoDataFetch(unitInterval, MinValueRange, MinDate, MaxDate);
+            plantThreeDataFetch(unitInterval, MinValueRange, MinDate, MaxDate);
             //plantFourDataFetch(Year);
-            //$('.data').jqxChart('refresh');
+            $('.data').jqxChart('refresh');
         });
 
         function GridFetch() {
@@ -610,7 +646,7 @@ block content
             });
         }
 
-        function plantAllDataFetch () {
+        function plantAllDataFetch (unitInterval, MinValueRange, MinDate, MaxDate) {
             $.ajax({// Get All Chart
                 type: 'GET',
                 url: '/plantAllFetch',
@@ -619,7 +655,7 @@ block content
                 cache: cache,
                 timeout: timeOut,
                 success: function (data) {
-                    PlantAllDetails(data);
+                    PlantAllDetails(data, unitInterval, MinValueRange, MinDate, MaxDate);
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log('Plant All Error:')
@@ -631,7 +667,7 @@ block content
 
         }
 
-        function plantOneDataFetch(){
+        function plantOneDataFetch(unitInterval, MinValueRange, MinDate, MaxDate){
 
             $.ajax({// Get All
                 type: 'GET',
@@ -641,7 +677,7 @@ block content
                 cache: cache,
                 timeout: timeOut,
                 success: function (data) {
-                    PlantOneAllDetails(data);
+                    PlantOneAllDetails(data, unitInterval, MinValueRange, MinDate, MaxDate);
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log('Plant One All Error:')
@@ -659,7 +695,7 @@ block content
                 cache: cache,
                 timeout: timeOut,
                 success: function (data) {
-                    PlantOneDuctDetails(data);
+                    PlantOneDuctDetails(data, unitInterval, MinValueRange, MinDate, MaxDate);
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log('Plant One Duct Error:')
@@ -677,7 +713,7 @@ block content
                 cache: cache,
                 timeout: timeOut,
                 success: function (data) {
-                    PlantOneTubeDetails(data);
+                    PlantOneTubeDetails(data, unitInterval, MinValueRange, MinDate, MaxDate);
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log('Plant One Tubes Error:')
@@ -696,7 +732,7 @@ block content
                 cache: cache,
                 timeout: timeOut,
                 success: function (data) {
-                    PlantOneCoversDetails(data);
+                    PlantOneCoversDetails(data, unitInterval, MinValueRange, MinDate, MaxDate);
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log('Plant One Covers Error:')
@@ -714,7 +750,7 @@ block content
                 cache: cache,
                 timeout: timeOut,
                 success: function (data) {
-                    PlantOneAssemblyDetails(data);
+                    PlantOneAssemblyDetails(data, unitInterval, MinValueRange, MinDate, MaxDate);
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log('Plant One Assembly Error:')
@@ -732,7 +768,7 @@ block content
                 cache: cache,
                 timeout: timeOut,
                 success: function (data) {
-                    PlantOneSpaceDetails(data);
+                    PlantOneSpaceDetails(data, unitInterval, MinValueRange, MinDate, MaxDate);
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log('Plant One Space Error:')
@@ -750,7 +786,7 @@ block content
                 cache: cache,
                 timeout: timeOut,
                 success: function (data) {
-                    PlantOneOtherDetails(data);
+                    PlantOneOtherDetails(data, unitInterval, MinValueRange, MinDate, MaxDate);
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log('Plant One Other Error:')
@@ -762,7 +798,7 @@ block content
 
         }
 
-        function plantTwoDataFetch() {
+        function plantTwoDataFetch(unitInterval, MinValueRange, MinDate, MaxDate) {
 
             $.ajax({// Get All
                 type: 'GET',
@@ -772,7 +808,7 @@ block content
                 cache: cache,
                 timeout: timeOut,
                 success: function (data) {
-                    PlantTwoAllDetails(data);
+                    PlantTwoAllDetails(data, unitInterval, MinValueRange, MinDate, MaxDate);
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log('Plant Two All Error:')
@@ -790,7 +826,7 @@ block content
                 cache: cache,
                 timeout: timeOut,
                 success: function (data) {
-                    PlantTwoPlenumsDetails(data);
+                    PlantTwoPlenumsDetails(data, unitInterval, MinValueRange, MinDate, MaxDate);
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log('Plant Two Plenums Error:')
@@ -808,7 +844,7 @@ block content
                 cache: cache,
                 timeout: timeOut,
                 success: function (data) {
-                    PlantTwoFlexHoseCapsDetails(data);
+                    PlantTwoFlexHoseCapsDetails(data, unitInterval, MinValueRange, MinDate, MaxDate);
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log('Plant Two Flex Hose Caps Error:')
@@ -826,7 +862,7 @@ block content
                 cache: cache,
                 timeout: timeOut,
                 success: function (data) {
-                    PlantTwoDownersDetails(data);
+                    PlantTwoDownersDetails(data, unitInterval, MinValueRange, MinDate, MaxDate);
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log('Plant Two Downers Error:')
@@ -838,7 +874,7 @@ block content
 
         }
 
-        function plantThreeDataFetch() {
+        function plantThreeDataFetch(unitInterval, MinValueRange, MinDate, MaxDate) {
 
             $.ajax({// Get All
                 type: 'GET',
@@ -848,7 +884,7 @@ block content
                 cache: cache,
                 timeout: timeOut,
                 success: function (data) {
-                    PlantThreeAllDetails(data);
+                    PlantThreeAllDetails(data, unitInterval, MinValueRange, MinDate, MaxDate);
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log('Plant Three All Error:')
@@ -866,7 +902,7 @@ block content
                 cache: cache,
                 timeout: timeOut,
                 success: function (data) {
-                    PlantThreeP8Details(data);
+                    PlantThreeP8Details(data, unitInterval, MinValueRange, MinDate, MaxDate);
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log('Plant Three P8 Error:')
@@ -884,7 +920,7 @@ block content
                 cache: cache,
                 timeout: timeOut,
                 success: function (data) {
-                    PlantThreePrimaryOpsDetails(data);
+                    PlantThreePrimaryOpsDetails(data, unitInterval, MinValueRange, MinDate, MaxDate);
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log('Plant Three Primary Ops Error:')
@@ -902,7 +938,7 @@ block content
                 cache: cache,
                 timeout: timeOut,
                 success: function (data) {
-                    PlantThreeSleevesDetails(data);
+                    PlantThreeSleevesDetails(data, unitInterval, MinValueRange, MinDate, MaxDate);
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log('Plant Three Sleeves Error:')
@@ -920,7 +956,7 @@ block content
                 cache: cache,
                 timeout: timeOut,
                 success: function (data) {
-                    PlantThree737WindowsDetails(data);
+                    PlantThree737WindowsDetails(data, unitInterval, MinValueRange, MinDate, MaxDate);
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log('Plant Three 737 Windows Error:')
@@ -938,7 +974,7 @@ block content
                 cache: cache,
                 timeout: timeOut,
                 success: function (data) {
-                    PlantThree787WindowsDetails(data);
+                    PlantThree787WindowsDetails(data, unitInterval, MinValueRange, MinDate, MaxDate);
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log('Plant Three 787 Windows Error:')
@@ -956,7 +992,7 @@ block content
                 cache: cache,
                 timeout: timeOut,
                 success: function (data) {
-                    PlantThreeBSIWindowsDetails(data);
+                    PlantThreeBSIWindowsDetails(data, unitInterval, MinValueRange, MinDate, MaxDate);
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log('Plant Three BSI Windows Error:')
@@ -974,7 +1010,7 @@ block content
                 cache: cache,
                 timeout: timeOut,
                 success: function (data) {
-                    PlantThreeAllWindowsDetails(data);
+                    PlantThreeAllWindowsDetails(data, unitInterval, MinValueRange, MinDate, MaxDate);
                 },
                 error: function (xhr, status, errorThrown) {
                     console.log('Plant Three All Windows Error:')

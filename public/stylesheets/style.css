@@ -170,14 +170,10 @@ main{
 .jqx-chart-axis-text,
 .jqx-chart-label-text,
 .jqx-chart-tooltip-text,
-.jqx-chart-legend-text
-{
+.jqx-chart-legend-text {
   font-size: 12px;
 
 }
-/**
-/////////////////////
- */
 
 .dot{
   width:35px;
@@ -197,4 +193,26 @@ main{
 
 #Sec{
   overflow: hidden;
+}
+
+#custom-handle {
+  width: 3em;
+  height: 1.6em;
+  top: 50%;
+  margin-top: -.8em;
+  text-align: center;
+  line-height: 1.6em;
+}
+
+#NumSel{
+  width: 350px;
+  margin-bottom: 15px;
+}
+
+#SearchTitle{
+  margin-left: 30px;
+}
+
+#SelectYear{
+  margin-left: 160px;
 }

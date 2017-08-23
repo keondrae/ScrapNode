@@ -18,7 +18,6 @@ router.get('/:tab', function(req, res, next) {
     DataArray = [];
     //var Year = req.params.year;
     var Tab = req.params.tab;
-    var Year = 2015;
     switch (Tab){
 
         case 'Duct':

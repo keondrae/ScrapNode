@@ -7,7 +7,7 @@ block content
             div(id='pageTitle')
                 h1(id='title')= title
                     br
-                    span(id='version')='0.3 Alpha'
+                    span(id='version')='1.0 Official'
                 img(id='DashboardLogo' alt='Dashboard Logo' height='70px' width='70px' src='images/scrapdblogo.png')
 
             div(id='Logo')
@@ -25,7 +25,7 @@ block content
             img(src='images/help64x64.png' onclick='ChangeLog()' height='32' width='32')
     //End of Header
 
-    //Start of Windows
+    //Start of Popup Windows
     div(id='Search' title='Years Change' class='HideOnStart')
         p(id='SearchTitle')= 'Please select how many years you want to go back.'
         div(id='NumSel')
@@ -33,7 +33,7 @@ block content
         button(id='SelectYear' class='HideOnStart')= 'Select'
 
     div(id='ChangeLog' title='Change Log' class='HideOnStart')
-        //p(class='CLTest')= '1.0 Official: Official Release! - :D YAY!!'
+        p(class='CLTest')= '1.0 Official: Official Release! - :D YAY!!'
         p(class='CLTest')= '0.3 Alpha: UI Change, and blasted more bugs into space! '
         p(class='CLTest')= '0.2 Alpha: Speed and performance Increase, Bug fixes - Went from a BMW M2 to a Bugatti Chiron *VROOOMMMM*!!'
         p(class='CLTest')= '0.1 Alpha: Internal Release! - WhooT!!'
@@ -245,13 +245,13 @@ block content
         MinDate = lastYear;
         MinValueRange = YearsAgo;
 
-        console.log('Years Ago ' + numberOfYearsAgo);
-        console.log(currentDate);
-        console.log(lastYear);
-        console.log(MinDate);
-        console.log(MaxDate);
-        console.log(MinValueRange);
-        console.log(unitInterval);
+        //console.log('Years Ago ' + numberOfYearsAgo);
+        //console.log(currentDate);
+        //console.log(lastYear);
+        //console.log(MinDate);
+        //console.log(MaxDate);
+        //console.log(MinValueRange);
+        //console.log(unitInterval);
         GridFetch();
         plantAllDataFetch(unitInterval, MinValueRange, MinDate, MaxDate);
         plantOneDataFetch(unitInterval, MinValueRange, MinDate, MaxDate);
@@ -455,7 +455,7 @@ block content
                 thisYear = 2035;
             }
             var newId = id % 12;
-            var PrevYear = parseInt(thisYear) - 1;
+            var PrevYear = parseInt(thisYear);
 
             console.log(newId);
             switch (newId) {

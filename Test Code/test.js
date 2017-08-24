@@ -1,15 +1,15 @@
 /**
  * Created by kmell on 7/13/2017.
  */
-//var odbc = require('odbc');
-//var connectionString ="Driver={SQL Server};Server=tf-sql-01;Database=MAS_TFI";
-//var db = new odbc.Database();
-//var items;
-//console.log("Connection Called")
+var odbc = require('odbc');
+var connectionString ="Driver={SQL Server};Server=tf-sql-01;Database=MAS_TFI";
+var db = new odbc.Database();
+var items;
+console.log("Connection Called")
 
 var TestArray = [];
 
-/*
+
 items = function () {
 
     db.open(connectionString, function (err) {
@@ -29,7 +29,7 @@ items = function () {
                 return console.log(err);
             }
 
-            /*
+
             for(var i = 0; i < rows.length; i++) {
                 var FiscalYear = rows[i].FiscalYear;
                 var FP = parseInt(rows[i].FiscalPeriod);
@@ -97,4 +97,4 @@ items = function () {
         });
     });
 };
-module.exports = items(); */
+module.exports = items();

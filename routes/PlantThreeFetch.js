@@ -1216,8 +1216,8 @@ function PlantThreeP8(db, connectionString, res) {
 
             });
 
-            console.log('All: ' + PlantThreeAllArray.length);
-            console.log('P8: ' + P8Array.length);
+            //console.log('All: ' + PlantThreeAllArray.length);
+            //console.log('P8: ' + P8Array.length);
 
             try{
                 for(var i = 0; i < PlantThreeAllArray.length; i++){

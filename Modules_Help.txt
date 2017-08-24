@@ -1,0 +1,55 @@
+najax - jQuery Style ajax calls for node JS, Used in PlantAllFetch.js File (https://github.com/najaxjs/najax)
+moment - Used to format time (https://momentjs.com/)
+mssql - Microsoft SQL Server client for Node.js (https://github.com/patriksimek/node-mssql)
+msnodesqlv8 - Microsoft Driver for Node.js SQL Server (https://www.versioneye.com/nodejs/msnodesqlv8/0.1.16)
+odbc - Used to connect to an ODBC database (https://github.com/wankdanker/node-odbc)
+jquery - Made it possible to jquery syntax in node JS (https://www.npmjs.com/package/jQuery)
+
+Helpful links!
+https://stackoverflow.com/questions/13017024/libraries-for-connecting-node-js-to-odbc-on-windows
+https://www.w3schools.com/nodejs/ref_modules.asp
+https://github.com/nodejs/node-gyp/issues/695
+https://www.w3schools.com/nodejs/nodejs_mysql_select.asp
+https://github.com/nodejs/node-gyp/issues/679
+https://github.com/nodejs/node-gyp
+https://stackoverflow.com/questions/21562038/node-gyp-build-error-windows-x64
+https://github.com/wankdanker/node-odbc
+https://github.com/typeorm/typeorm/issues/387
+https://www.npmjs.com/package/mssql#connect-callback
+http://techcbt.com/Post/341/Node-js-basic-programming-tutorials-videos/how-to-connect-to-microsoft-sql-server-using-node-js
+https://stackoverflow.com/questions/10309540/connect-to-sql-server-database-from-node-js/31989348#31989348
+https://stackoverflow.com/questions/41477386/sql-server-connection-to-node-js
+http://www.jqwidgets.com/jquery-widgets-documentation/documentation/package-managers/npm-tutorial.htm
+https://www.sitepoint.com/jade-tutorial-for-beginners/
+https://stackoverflow.com/questions/13417275/use-block-in-include-node-js-jade
+http://www.maurer.me/articles/2011111201/nodejs-odbc-mssql-connection/
+https://michaelheap.com/global-variables-in-nodejs/
+http://requirejs.org/docs/node.html
+https://stackoverflow.com/questions/5726729/how-to-parse-json-using-node-js?rq=1
+https://stackoverflow.com/questions/32092676/using-chart-js-inside-node-js
+https://shapeshed.com/creating-a-basic-site-with-node-and-express/
+https://www.codementor.io/codeforgeek/build-website-from-scratch-using-expressjs-and-bootstrap-du107sby7
+https://druckit.wordpress.com/2014/05/28/node-js-101-querying-a-database-and-outputting-a-dynamic-html-table-with-express-and-jade/
+https://stackoverflow.com/questions/33542124/node-js-error-write-after-end
+https://stackoverflow.com/questions/11147468/node-js-json-stringify-causing-quot-in-output-cant-parse-with-jquery
+https://stackoverflow.com/questions/24397379/script-path-for-expressjs-in-node-modules
+https://code.tutsplus.com/tutorials/build-a-complete-mvc-website-with-expressjs--net-34168
+https://gist.github.com/diorahman/1520485
+https://scotch.io/tutorials/use-expressjs-to-get-url-and-post-parameters
+https://stackoverflow.com/questions/41736413/multiple-optional-route-parameters-in-express
+https://stackoverflow.com/questions/34354975/refresh-section-of-a-page-using-ejs-and-express
+https://stackoverflow.com/questions/25132028/can-i-use-npm-request-multiple-times-in-one-route-and-have-the-results-display-o
+https://stackoverflow.com/questions/19696240/proper-way-to-return-json-using-node-or-express
+https://stackoverflow.com/questions/30888992/how-to-load-jade-file-in-node-js-after-making-ajax-call
+https://stackoverflow.com/questions/37598697/ajax-request-to-read-json-object-from-node-js-express-server
+https://stackoverflow.com/questions/31885425/receive-data-in-ajax-call-back-from-server-without-reloading-and-update-current
+https://stackoverflow.com/questions/25134232/how-to-properly-render-partial-views-and-load-javascript-files-in-ajax-using-ex?rq=1
+https://stackoverflow.com/questions/377644/jquery-ajax-error-handling-show-custom-exception-messages
+http://www.tutorialsteacher.com/nodejs/access-sql-server-in-nodejs
+http://www.technicalkeeda.com/nodejs-tutorials/nodejs-mysql-multiple-statement-queries
+http://therealdanvega.com/blog/2015/04/16/windows-kill-process-by-port-number
+https://zenscript.wordpress.com/2013/11/16/javascript-array-finding-largest/
+https://jsonlint.com/
+https://stackoverflow.com/questions/29476477/simple-json-data-not-being-displayed-in-jqgrid
+https://opensourcehacker.com/2011/11/11/cancelling-html5-drag-and-drop-events-in-web-browsers/
+https://www.quora.com/How-do-I-convert-JSON-file-to-Javascript-Array

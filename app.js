@@ -11,6 +11,7 @@ var plantAllFetch = require('./routes/PlantAllFetch');
 var plantOneFetch = require('./routes/PlantOneFetch');
 var plantTwoFetch = require('./routes/PlantTwoFetch');
 var plantThreeFetch = require('./routes/PlantThreeFetch');
+//var PlantFourFetch = require('./routes/PlantFourFetch');
 var MSSQL = require('./routes/MSSQL');
 var GridFetch = require('./routes/GridFetch');
 
@@ -36,6 +37,7 @@ app.use('/plantAllFetch', plantAllFetch);
 app.use('/plantOneFetch', plantOneFetch);
 app.use('/plantTwoFetch', plantTwoFetch);
 app.use('/plantThreeFetch', plantThreeFetch);
+//app.use('/plantFourFetch', PlantFourFetch);
 app.use('/MSSQL', MSSQL);
 
 // catch 404 and forward to error handler

@@ -46,15 +46,6 @@ switch(mm){
         break;
 }
 
-
-$('#searchButton').click(function () {
-    console.log('Search Button Clicked!');
-    $('#search').show();
-    var newYear = $('#YearDropDown').jqxDropDownList('val');
-    console.log('Year: ' + newYear);
-    //showPage(newYear);
-});
-
 $('#AllPlantButton').click(function () {
     $('#GridForEverything').jqxGrid('removefilter', 'AccountNumber');
     console.log(this.id + ' :Clicked');
@@ -111,11 +102,27 @@ $('#hqButton').click(function () {
     AddFilterDate(TodayDate);
 });
 
+/*
+$('#plant4Button').click(function () {
+    $('#GridForEverything').jqxGrid('removefilter', 'AccountNumber');
+    console.log(this.id + ' :Clicked');
+    NonActive();
+    $('#plant4Button').addClass('active');
+    HideTabs();
+    $('#plant4').show();
+    $('#plant4').jqxTabs('focus');
+    AddFilterPlant('PLANT #4');
+    $('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
+    $('.data').jqxChart('refresh');
+    AddFilterDate(TodayDate);
+});
+*/
 //Start of HideTabs Function
 function HideTabs() {
     $('#plant1').hide();
     $('#plant2').hide();
     $('#plant3').hide();
+    //$('#plant4').hide();
     $('#plantAll').hide();
 } //End of HideTabs Function
 
@@ -124,6 +131,7 @@ function NonActive() {
     $('#plant1Button').removeClass('active');
     $('#plant2Button').removeClass('active');
     $('#hqButton').removeClass('active');
+    //$('#plant4Button').removeClass('active');
 }
 
 function AddFilterPlant(Plant) {

@@ -2126,15 +2126,3 @@ function CombineArrays(BiggerArray, SmallerArray, NewArray, isLast) {
         if(!match) NewArray.push(BA);
     });
 }
-
-/*
-            for(var i = 0; i < DataTempArray.length; i++){
-                var AllDate = DataTempArray[i].Date;
-                var AllEndingBalance = DataTempArray[i].EndingBalance;
-
-                PlantAllArray.push({
-                    Date: AllDate,
-                    AllEndingBalance: AllEndingBalance
-                });
-            }
- */

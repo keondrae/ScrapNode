@@ -1,10 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var odbc = require('odbc');
 var najax = require('najax');
-var request = require('request');
-var connectionString ="Driver={SQL Server};Server=tf-sql-01;Database=MAS_TFI";
-var db = new odbc.Database();
 var DataArray = [];
 var PlantOneArray = [];
 var PlantTwoArray = [];

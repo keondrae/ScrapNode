@@ -18,7 +18,7 @@ block content
             button(id='plant1Button'   class='button')= 'Plant 1'
             button(id='plant2Button'   class='button')= 'Plant 2'
             button(id='hqButton'       class='button')= 'Plant 3'
-
+            //button(id='plant4Button'   class='button')= 'Plant 4'
         div(id='small_images')
             //img(src='images/note64x64.png' onclick='' height='32' width='32')
             img(src='images/zoom64x64.png' onclick='SelectYear()' height='32' width='32')
@@ -162,6 +162,15 @@ block content
                 //div(id='plant3AllWindowsCircleChart' class='data')= 'Circle Chart'
         //End of plant three
 
+        //Start of plant four
+        //div(class='Info' id='plant4')
+            ul
+                li= 'All Plant 4'
+            div(id='AllPlantFourDetails' class='PlantDiv')
+                div(id='AllPlantFourChart' class='data')= 'All Plant Four Chart'
+                //div(id='AllPlantFourCircleChart' class='data')= 'All Plant Four Circle Chart'
+        //End of plant four
+
         section(class='gird ')
             div(id='GridForEverything' class='data')
                 div(id='GridLoader')
@@ -172,7 +181,6 @@ block content
         var timeOut = 5000;
         var async = false;
         var cache = true;
-        var Year;
         var tabWidth = '100%';
         var tabHeight = 600;
         var today = new Date();
@@ -246,21 +254,15 @@ block content
         MinValueRange = YearsAgo;
 
         //console.log('Years Ago ' + numberOfYearsAgo);
-        //console.log(currentDate);
-        //console.log(lastYear);
-        //console.log(MinDate);
-        //console.log(MaxDate);
-        //console.log(MinValueRange);
-        //console.log(unitInterval);
         GridFetch();
         plantAllDataFetch(unitInterval, MinValueRange, MinDate, MaxDate);
         plantOneDataFetch(unitInterval, MinValueRange, MinDate, MaxDate);
         plantTwoDataFetch(unitInterval, MinValueRange, MinDate, MaxDate);
         plantThreeDataFetch(unitInterval, MinValueRange, MinDate, MaxDate);
+        //plantFourDataFetch(unitInterval, MinValueRange, MinDate, MaxDate);
         HideTabs();
         $('.data').jqxChart('refresh');
         $('#plantAll').show();
-            //$('#AllPlantDetails').show();
         $('.HideOnStart').show();
 
 
@@ -274,7 +276,6 @@ block content
                 selectionTracker: true,
                 reorder: false
             }).on('tabclick', function (event) {
-                //$('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
                 $('.data').jqxChart('refresh');
                 var id = event.args.item;
                 addfilter(TodayDate);
@@ -285,23 +286,30 @@ block content
 
                     case 'All Plant 1':
                         $('#GridForEverything').jqxGrid('removefilter', 'AccountNumber');
+                        $('.data').jqxChart('refresh');
                         break;
                     case 'Ducts / Bin Seal':
+                        $('.data').jqxChart('refresh');
                         AddFilterTabTwo('5010080000', '5010150000');
                         break;
                     case 'Tubes':
+                        $('.data').jqxChart('refresh');
                         AddFilterTab('5010050000');
                         break;
                     case 'Cover':
+                        $('.data').jqxChart('refresh');
                         AddFilterTab('5010040000');
                         break;
                     case 'Assembly':
+                        $('.data').jqxChart('refresh');
                         AddFilterTabThree('5010820000', '5010200000', '5010010000');
                         break;
                     case 'Space':
+                        $('.data').jqxChart('refresh');
                         AddFilterTab('5010300000');
                         break;
                     case 'Other':
+                        $('.data').jqxChart('refresh');
                         AddFilterTabTwo('5010170000', '5010190000');
                         break;
                 }
@@ -315,7 +323,6 @@ block content
                 selectionTracker: true,
                 reorder: false
             }).on('tabclick', function (event) {
-                //$('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
                 $('.data').jqxChart('refresh');
                 addfilter(TodayDate);
                 console.log(TodayDate);
@@ -326,14 +333,18 @@ block content
 
                     case 'All Plant 2':
                         $('#GridForEverything').jqxGrid('removefilter', 'AccountNumber');
+                        $('.data').jqxChart('refresh');
                         break;
                     case 'Plenums':
+                        $('.data').jqxChart('refresh');
                         AddFilterTab('5010120000');
                         break;
                     case 'Flex Hose / Caps':
+                        $('.data').jqxChart('refresh');
                         AddFilterTab('5010130000');
                         break;
                     case 'Downers':
+                        $('.data').jqxChart('refresh');
                         AddFilterTab('5010140000');
                         break;
                 }
@@ -347,7 +358,6 @@ block content
                 selectionTracker: true,
                 reorder: false
             }).on('tabclick', function (event) {
-                //$('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
                 $('.data').jqxChart('refresh');
                 addfilter(TodayDate);
                 console.log(TodayDate);
@@ -358,31 +368,52 @@ block content
 
                     case 'All Plant 3':
                         $('#GridForEverything').jqxGrid('removefilter', 'AccountNumber');
+                        $('.data').jqxChart('refresh');
                         break;
                     case 'P8':
+                        $('.data').jqxChart('refresh');
                        AddFilterTab('5010110000');
                         break;
                     case 'Primary Ops':
+                        $('.data').jqxChart('refresh');
                         AddFilterTabFour('5010020000','5010240000', '5010210000', '5010220000');
                         break;
                     case 'Sleeves':
+                        $('.data').jqxChart('refresh');
                         AddFilterTab('5010060000');
                         break;
                     case '737 Windows':
+                        $('.data').jqxChart('refresh');
                         AddFilterTab('5010070000');
                         break;
                     case '787 Windows':
+                        $('.data').jqxChart('refresh');
                         AddFilterTab('5010090000');
                         break;
                     case 'BSI Windows':
+                        $('.data').jqxChart('refresh');
                         AddFilterTab('5010180000');
                         break;
                     case 'All Windows':
+                        $('.data').jqxChart('refresh');
                         AddFilterTabThree('5010070000', '5010090000', '5010180000');
                         break;
                 }
             });
-
+            /*
+            $('#plan4').jqxTabs({
+                width: tabWidth,
+                height: tabHeight,
+                position: 'top',
+                animationType: 'fade',
+                selectionTracker: true,
+                reorder: false
+            }).on('tabclick', function () {
+                $('#GridForEverything').jqxGrid('removefilter', 'MonthDate');
+                $('.data').jqxChart('refresh');
+                addfilter(TodayDate);
+            });
+            */
             $('#plantAll').jqxTabs({
                 width: tabWidth,
                 height: tabHeight,
@@ -620,7 +651,7 @@ block content
             plantOneDataFetch(unitInterval, MinValueRange, MinDate, MaxDate);
             plantTwoDataFetch(unitInterval, MinValueRange, MinDate, MaxDate);
             plantThreeDataFetch(unitInterval, MinValueRange, MinDate, MaxDate);
-            //plantFourDataFetch(Year);
+            //plantFourDataFetch(unitInterval, MinValueRange, MinDate, MaxDate);
             $('.data').jqxChart('refresh');
         });
 
@@ -1020,6 +1051,11 @@ block content
                 }
             });
         }
+
+        /*
+        function PlantFourDataFetch(unitInterval, MinValueRange, MinDate, MaxDate) {
+
+        }*/
 
         $('.PlantDiv').click(function () {
             $('.data').jqxChart('refresh');

@@ -344,7 +344,7 @@ function PlantOneCoversDetails(data, unitInterval, MinValueRange, MinDate, MaxDa
                 dataField: 'Date',
                 baseUnit: 'month',
                 gridLines: {visible: true},
-                unitInterval: 1,
+                unitInterval: unitInterval,
                 serieType: 'area',
                 minorTicksInterval: 1,
                 labels: {

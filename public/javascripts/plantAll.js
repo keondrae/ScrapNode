@@ -60,7 +60,7 @@ function PlantAllDetails(data, unitInterval, MinValueRange, MinDate, MaxDate) {
                 dataField: 'Date',
                 baseUnit: 'month',
                 gridLines: {visible: true},
-                unitInterval: 1,
+                unitInterval: unitInterval,
                 serieType: 'area',
                 minorTicksInterval: 1,
                 labels: {angle: -30}

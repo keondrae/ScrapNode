@@ -57,7 +57,7 @@ function PlantOneAllDetails(data, unitInterval, MinValueRange, MinDate, MaxDate)
                 dataField: 'Date',
                 baseUnit: 'month',
                 gridLines: {visible: true},
-                unitInterval: 1,
+                unitInterval: unitInterval,
                 serieType: 'area',
                 minorTicksInterval: 1,
                 labels: {
@@ -145,7 +145,7 @@ function PlantOneDuctDetails(data, unitInterval, MinValueRange, MinDate, MaxDate
                 dataField: 'Date',
                 baseUnit: 'month',
                 gridLines: {visible: true},
-                unitInterval: 1,
+                unitInterval: unitInterval,
                 serieType: 'area',
                 minorTicksInterval: 1,
                 labels: {
@@ -244,7 +244,7 @@ function PlantOneTubeDetails(data, unitInterval, MinValueRange, MinDate, MaxDate
                 dataField: 'Date',
                 baseUnit: 'month',
                 gridLines: {visible: true},
-                unitInterval: 1,
+                unitInterval: unitInterval,
                 serieType: 'area',
                 minorTicksInterval: 1,
                 labels: {
@@ -443,7 +443,7 @@ function PlantOneAssemblyDetails(data, unitInterval, MinValueRange, MinDate, Max
                 dataField: 'Date',
                 baseUnit: 'month',
                 gridLines: {visible: true},
-                unitInterval: 1,
+                unitInterval: unitInterval,
                 serieType: 'area',
                 minorTicksInterval: 1,
                 labels: {
@@ -543,7 +543,7 @@ function PlantOneSpaceDetails(data, unitInterval, MinValueRange, MinDate, MaxDat
                 dataField: 'Date',
                 baseUnit: 'month',
                 gridLines: {visible: true},
-                unitInterval: 1,
+                unitInterval: unitInterval,
                 serieType: 'area',
                 minorTicksInterval: 1,
                 labels: {
@@ -643,7 +643,7 @@ function PlantOneOtherDetails(data, unitInterval, MinValueRange, MinDate, MaxDat
                 dataField: 'Date',
                 baseUnit: 'month',
                 gridLines: {visible: true},
-                unitInterval: 1,
+                unitInterval: unitInterval,
                 serieType: 'area',
                 minorTicksInterval: 1,
                 labels: {

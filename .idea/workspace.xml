@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84f9f0e2-2a39-4b4f-a441-31ecfef358ed" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Modules_Help.txt" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/html/bargraphtest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/html/bargraphtest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/html/test.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/javascripts/callJQXLib.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/javascripts/jquery.snowfall.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/javascripts/tabs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/required/Connection.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/javascripts/test.js" afterPath="$PROJECT_DIR$/Test Code/test.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/MSSQL.js" afterPath="$PROJECT_DIR$/routes/MSSQL.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/PlantThreeFetch.js" afterPath="$PROJECT_DIR$/routes/PlantThreeFetch.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/test.js" afterPath="$PROJECT_DIR$/routes/test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/plantAll.js" afterPath="$PROJECT_DIR$/public/javascripts/plantAll.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/plantOne.js" afterPath="$PROJECT_DIR$/public/javascripts/plantOne.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/plantThree.js" afterPath="$PROJECT_DIR$/public/javascripts/plantThree.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/plantTwo.js" afterPath="$PROJECT_DIR$/public/javascripts/plantTwo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,36 +49,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.jade" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/index.jade">
+      <file leaf-file-name="plantAll.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/plantAll.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
-              <caret line="252" column="32" lean-forward="false" selection-start-line="252" selection-start-column="32" selection-end-line="252" selection-end-column="32" />
+            <state relative-caret-position="272">
+              <caret line="51" column="30" lean-forward="true" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plantOne.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/plantOne.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="593" column="1" lean-forward="true" selection-start-line="593" selection-start-column="1" selection-end-line="593" selection-end-column="1" />
               <folding>
-                <element signature="n#div#0;n#main#0;n#block#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#main#0;n#block#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#main#0;n#block#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#PlantOneAllDetails#0" expanded="false" />
+                <element signature="n#!!block;n#PlantOneDuctDetails#0" expanded="false" />
+                <element signature="n#!!block;n#PlantOneTubeDetails#0" expanded="false" />
+                <element signature="n#!!block;n#PlantOneCoversDetails#0" expanded="false" />
+                <element signature="n#!!block;n#PlantOneAssemblyDetails#0" expanded="false" />
+                <element signature="n#!!block;n#PlantOneSpaceDetails#0" expanded="false" />
+                <element signature="n#!!block;n#PlantOneOtherDetails#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
+      <file leaf-file-name="plantTwo.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/plantTwo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-              <folding />
+            <state relative-caret-position="255">
+              <caret line="303" column="85" lean-forward="false" selection-start-line="303" selection-start-column="85" selection-end-line="303" selection-end-column="85" />
+              <folding>
+                <element signature="n#!!block;n#PlantTwoAllDetails#0" expanded="false" />
+                <element signature="n#!!block;n#PlantTwoPlenumsDetails#0" expanded="false" />
+                <element signature="n#!!block;n#PlantTwoFlexHoseCapsDetails#0" expanded="false" />
+                <element signature="n#!!block;n#PlantTwoDownersDetails#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlantAllFetch.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/PlantAllFetch.js">
+      <file leaf-file-name="plantThree.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/plantThree.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-              <folding />
+            <state relative-caret-position="425">
+              <caret line="714" column="90" lean-forward="false" selection-start-line="714" selection-start-column="90" selection-end-line="714" selection-end-column="90" />
+              <folding>
+                <element signature="n#!!block;n#PlantThreeAllDetails#0" expanded="false" />
+                <element signature="n#!!block;n#PlantThreeP8Details#0" expanded="false" />
+                <element signature="n#!!block;n#PlantThreePrimaryOpsDetails#0" expanded="false" />
+                <element signature="n#!!block;n#PlantThreeSleevesDetails#0" expanded="false" />
+                <element signature="n#!!block;n#PlantThree737WindowsDetails#0" expanded="false" />
+                <element signature="n#!!block;n#PlantThree787WindowsDetails#0" expanded="false" />
+                <element signature="n#!!block;n#PlantThreeBSIWindowsDetails#0" expanded="false" />
+                <element signature="n#!!block;n#PlantThreeAllWindowsDetails#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -174,15 +195,9 @@
         <option value="$PROJECT_DIR$/public/javascripts/windows.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/public/javascripts/sliders.js" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/public/javascripts/plantAll.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/plantTwo.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/plantOne.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/plantThree.js" />
         <option value="$PROJECT_DIR$/routes/PlantTwoFetch.js" />
         <option value="$PROJECT_DIR$/routes/PlantOneFetch.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/public/javascripts/test.js" />
         <option value="$PROJECT_DIR$/routes/MSSQL.js" />
         <option value="$PROJECT_DIR$/routes/test.js" />
@@ -190,6 +205,12 @@
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/Modules_Help.txt" />
         <option value="$PROJECT_DIR$/routes/PlantThreeFetch.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/views/index.jade" />
+        <option value="$PROJECT_DIR$/public/javascripts/plantAll.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/plantThree.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/plantTwo.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/plantOne.js" />
       </list>
     </option>
   </component>
@@ -254,7 +275,8 @@
             <path>
               <item name="ScrapNode" type="b2602c69:ProjectViewProjectNode" />
               <item name="ScrapNode" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="javascripts" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -377,7 +399,7 @@
       <workItem from="1502917059963" duration="8411000" />
       <workItem from="1502981328312" duration="35568000" />
       <workItem from="1503321544101" duration="68352000" />
-      <workItem from="1503583154338" duration="2856000" />
+      <workItem from="1503583154338" duration="4669000" />
     </task>
     <task id="LOCAL-00001" summary="C">
       <created>1501868881324</created>
@@ -708,11 +730,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503520778927</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Cleaned up the files, Documented the Modules, Commented the test files.">
+      <created>1503586744104</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1503586744104</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="531358000" />
+    <option name="totallyTimeSpent" value="533171000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -729,11 +758,11 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.120469086" sideWeight="0.48886415" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2260579" sideWeight="0.5143923" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55122495" sideWeight="0.5063966" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2185501" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31514478" sideWeight="0.49573562" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55122495" sideWeight="0.4936034" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17750533" sideWeight="0.5080645" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25389755" sideWeight="0.48560768" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25389755" sideWeight="0.48560768" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17750533" sideWeight="0.4919355" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879817" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.50664455" order="3" side_tool="true" content_ui="tabs" />
@@ -805,7 +834,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Fixed Plant three All window not working" />
     <MESSAGE value="Added All Plant Graph" />
     <MESSAGE value="Grid Fix And Added Node_Modules" />
     <MESSAGE value="Commented out code for year select till it can be fixed." />
@@ -830,11 +858,12 @@
     <MESSAGE value="Added a date range adj" />
     <MESSAGE value="Fixed Plant Two Fetch" />
     <MESSAGE value="Fixed Dec Year" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Dec Year" />
+    <MESSAGE value="Cleaned up the files, Documented the Modules, Commented the test files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up the files, Documented the Modules, Commented the test files." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="172" />
+      <option name="time" value="175" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -848,35 +877,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://JavaScript-modules-diagram/C:/wamp64/www/ScrapNode/public/javascripts/numeral.js">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JavaScript-modules-diagram</ID>
-          <OriginalElement>$PROJECT_DIR$/public/javascripts/numeral.js</OriginalElement>
-          <nodes>
-            <node x="" y="">$PROJECT_DIR$/public/javascripts/numeral.js#expect#121;C:/wamp64/www/ScrapNode/public/javascripts/numeral.js#numeral#71;</node>
-            <node x="" y="">expect;</node>
-            <node x="" y="">numeral</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="104.0" y="121.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>All</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>Details</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/plantFour.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/ef526b02/54d29c17-6a8e-43f6-ac87-0215906f7cd2/MAS_TFI.dbo.GL_Account">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -979,13 +979,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/plantTwo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="303" column="85" lean-forward="false" selection-start-line="303" selection-start-column="85" selection-end-line="303" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test Code/DateTest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="498">
@@ -993,31 +986,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/plantThree.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="714" column="90" lean-forward="false" selection-start-line="714" selection-start-column="90" selection-end-line="714" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/plantOne.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="595" column="83" lean-forward="false" selection-start-line="595" selection-start-column="83" selection-end-line="595" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/sliders.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/plantAll.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1064,13 +1036,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/tabs.js" />
-    <entry file="file://$PROJECT_DIR$/Test Code/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="12" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="710">
@@ -1703,14 +1668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1723,14 +1680,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="60" lean-forward="false" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
           <folding />
         </state>
       </provider>
@@ -1865,14 +1814,109 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="60" lean-forward="false" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test Code/Query Test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test Code/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test Code/PromiseTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/index.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="252" column="32" lean-forward="false" selection-start-line="252" selection-start-column="32" selection-end-line="252" selection-end-column="32" />
+        <state relative-caret-position="323">
+          <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
           <folding>
             <element signature="n#div#0;n#main#0;n#block#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#main#0;n#block#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#main#0;n#block#0;n#!!top" expanded="false" />
             <element signature="n#div#3;n#main#0;n#block#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/plantAll.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="51" column="30" lean-forward="true" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/plantThree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="714" column="90" lean-forward="false" selection-start-line="714" selection-start-column="90" selection-end-line="714" selection-end-column="90" />
+          <folding>
+            <element signature="n#!!block;n#PlantThreeAllDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThreeP8Details#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThreePrimaryOpsDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThreeSleevesDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThree737WindowsDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThree787WindowsDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThreeBSIWindowsDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantThreeAllWindowsDetails#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/plantTwo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="303" column="85" lean-forward="false" selection-start-line="303" selection-start-column="85" selection-end-line="303" selection-end-column="85" />
+          <folding>
+            <element signature="n#!!block;n#PlantTwoAllDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantTwoPlenumsDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantTwoFlexHoseCapsDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantTwoDownersDetails#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/plantOne.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="593" column="1" lean-forward="true" selection-start-line="593" selection-start-column="1" selection-end-line="593" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!block;n#PlantOneAllDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantOneDuctDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantOneTubeDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantOneCoversDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantOneAssemblyDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantOneSpaceDetails#0" expanded="false" />
+            <element signature="n#!!block;n#PlantOneOtherDetails#0" expanded="false" />
           </folding>
         </state>
       </provider>

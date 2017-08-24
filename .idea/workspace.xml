@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="84f9f0e2-2a39-4b4f-a441-31ecfef358ed" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/PlantAllFetch.js" afterPath="$PROJECT_DIR$/routes/PlantAllFetch.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -246,6 +245,11 @@
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -494,14 +498,7 @@
       <workItem from="1502917059963" duration="8411000" />
       <workItem from="1502981328312" duration="35568000" />
       <workItem from="1503321544101" duration="68352000" />
-      <workItem from="1503583154338" duration="10608000" />
-    </task>
-    <task id="LOCAL-00003" summary="Added Tabs, and fixed tabs">
-      <created>1502135843845</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1502135843845</updated>
+      <workItem from="1503583154338" duration="10712000" />
     </task>
     <task id="LOCAL-00004" summary="Removed some files">
       <created>1502136275699</created>
@@ -839,11 +836,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503597563644</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Code Clean up">
+      <created>1503603193552</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1503603193552</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="539110000" />
+    <option name="totallyTimeSpent" value="539214000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -856,11 +860,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.120469086" sideWeight="0.48886415" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25389755" sideWeight="0.5127932" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25389755" sideWeight="0.5127932" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2185501" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55122495" sideWeight="0.4936034" order="10" side_tool="false" content_ui="tabs" />
@@ -936,7 +939,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Commented out code for year select till it can be fixed." />
     <MESSAGE value="Fixed Res for IE" />
     <MESSAGE value="Fixed On Chart Click" />
     <MESSAGE value="Added loader for grid" />
@@ -961,7 +963,8 @@
     <MESSAGE value="Cleaned up the files, Documented the Modules, Commented the test files." />
     <MESSAGE value="Fixed unit interval." />
     <MESSAGE value="Added Code for future implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Code for future implementation" />
+    <MESSAGE value="Code Clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code Clean up" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -72,6 +72,7 @@ header #small_images{
   display:inline-block;
   margin-right: 5px;
 }
+
 #DashboardLogo:hover, #small_images img:hover{
   opacity: .5;
 }

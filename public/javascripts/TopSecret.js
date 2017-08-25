@@ -200,7 +200,6 @@ $('#DashboardLogo').click(function () {
     var time = 0;
     var canvas = document.getElementById("emp").appendChild(document.createElement('canvas'));
 
-//var canvas = document.getElementById('matrix');
     var ctx = canvas.getContext('2d');
     var fontSize = 18;
     var chars = generateChars();
@@ -213,6 +212,7 @@ $('#DashboardLogo').click(function () {
         var chars = '0123456789';
 
         // Get ALL half-width katakana characters by unicode value
+        // I love katakana
         for (var i = 0; i <= 55; i++) {
             chars += String.fromCharCode(i + 65382);
         }
@@ -236,7 +236,6 @@ $('#DashboardLogo').click(function () {
         drawnToBottom = false;
     }
 
-// Resize canvas to fit window
     window.onresize = function() {
         initCanvas();
     };
@@ -269,6 +268,7 @@ $('#DashboardLogo').click(function () {
 
             drops[i]++;
         }
+        //Run for 100 Something...
         time++;
         if(time > 100){
             clearInterval(int);

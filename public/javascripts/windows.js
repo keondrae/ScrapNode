@@ -24,3 +24,13 @@ $('#ChangeLog').dialog({
 });
 
 $('#ChangeLogClose').button();
+
+$('#About').dialog({
+    resizable: false,
+    autoOpen: false,
+    modal: true,
+    width: 410,
+    height: 'auto'
+});
+
+$('#AboutButton').button();

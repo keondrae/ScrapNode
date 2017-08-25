@@ -21,7 +21,7 @@ block content
             button(id='hqButton'       class='button')= 'Plant 3'
             //button(id='plant4Button'   class='button')= 'Plant 4'
         div(id='small_images')
-            //img(src='images/note64x64.png' onclick='' height='32' width='32')
+            img(src='images/note64x64.png' onclick='About()' height='32' width='32')
             img(src='images/zoom64x64.png' onclick='SelectYear()' height='32' width='32')
             img(src='images/help64x64.png' onclick='ChangeLog()' height='32' width='32')
     //End of Header
@@ -38,7 +38,13 @@ block content
         p(class='CLTest')= '0.0.3 Alpha: UI Change, and blasted more bugs into space! '
         p(class='CLTest')= '0.0.2 Alpha: Speed and performance Increase, Bug fixes - Went from a BMW M2 to a Bugatti Chiron *VROOOMMMM*!!'
         p(class='CLTest')= '0.0.1 Alpha: Internal Release! - WhooT!!'
-        button(id='ChangeLogClose' class='HideOnStart')= 'Thank you'
+        button(id='ChangeLogClose' class='HideOnStart')= 'Thank you!'
+
+    div(id='About' title='About' class='HideOnStart')
+        p()= 'Version 1.0.0'
+        p()= 'Dashboard that displays scrap data for the company.'
+        p()= '- Ke\'Ondrae Mell'
+        button(id='AboutButton' class='HideOnStart')= 'Done!'
     //End of Windows
     //Start of Main
     main
@@ -630,6 +636,15 @@ block content
         function ChangeLog() {
             $('#ChangeLog').dialog('open');
         }
+
+        function About() {
+            $('#About').dialog('open');
+        }
+
+
+        $('#AboutButton').click(function () {
+            $('#About').dialog('close');
+        })
 
         $('#ChangeLogClose').click(function () {
             $('#ChangeLog').dialog('close');
